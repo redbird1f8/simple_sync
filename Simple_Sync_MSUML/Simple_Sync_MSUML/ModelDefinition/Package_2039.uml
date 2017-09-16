@@ -2,7 +2,19 @@
 <package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="20a586e9-24f2-45f6-9174-f28ec970c762"
-  name="Package1" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  name="Library" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="fc53588e-d910-421b-832d-a7a646ffcb13">
+      <body>Придумайте для этого класса какое-нибудь хорошее имя.</body>
+      <annotatedElements>
+        <classMoniker
+          Id="d7b70bb8-52cd-4706-a4a6-8ad18d1567a8"
+          LastKnownName="FileEnumeration"
+          LastKnownLocation="Package_2039.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
   <packagedElements>
     <packageHasNamedElement>
       <Interface
@@ -10,6 +22,168 @@
         name="ConfigurationInterface"
         isAbstract="false"
         isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="45253c8d-d8d3-4c20-809d-a50eeeff42c8"
+        name="Share"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="d58a1447-af3b-476a-b2d5-e8d6df1f927c"
+            name="IncludedFiles"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="ed306db8-4fee-4185-bc7a-d44b88ea3497"
+                LastKnownName="FileEnumeration"
+                LastKnownLocation="Package_2039.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="d6bf0bfb-19df-4a24-963d-8b85c8c9aab7"
+            name="ShareID"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="8912ffb1-a0be-4d6d-9abd-3f1f3b8b1e2e"
+                LastKnownName="UUID"
+                LastKnownLocation="Package_2039.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="3c783b70-5bd9-4f56-86c0-78ff8784dede"
+            name="Credentials"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="e7cbf18a-fcf9-4ddd-805f-5b8fffa7ad76"
+                LastKnownName="???"
+                LastKnownLocation="Package_2039.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="da59ae51-b3e9-46f2-9256-2e62d818e354"
+            name="getIncludedFiles"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7c2e9b38-a701-4dd1-83a6-0d78a1535418"
+                  direction="Return">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="ed306db8-4fee-4185-bc7a-d44b88ea3497"
+                      LastKnownName="FileEnumeration"
+                      LastKnownLocation="Package_2039.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0b57ea97-889e-424a-b6fd-f5569c6ef5e6"
+            name="getID"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="93362ecd-3ea2-410d-ac9a-58c375e01845"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="8912ffb1-a0be-4d6d-9abd-3f1f3b8b1e2e"
+                      LastKnownName="UUID"
+                      LastKnownLocation="Package_2039.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="ed306db8-4fee-4185-bc7a-d44b88ea3497"
+        name="FileEnumeration" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="8912ffb1-a0be-4d6d-9abd-3f1f3b8b1e2e"
+        name="UUID" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="75d7b5dc-471b-4c9c-a4bf-12384a3897a7"
+        name="LowLevelInterface"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="b179b9b2-b11f-412c-9e84-ee401d3c63ea"
+        name="ManagingLayerInterface"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="5984b822-56f4-4a49-841f-60c903531547"
+        name="ShareBuilder"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="e7cbf18a-fcf9-4ddd-805f-5b8fffa7ad76"
+        name="???" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d7b70bb8-52cd-4706-a4a6-8ad18d1567a8"
+        name="FileEnumeration"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

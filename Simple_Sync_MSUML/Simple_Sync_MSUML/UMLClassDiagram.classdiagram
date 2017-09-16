@@ -1,5 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="cb0b904c-194c-459e-80e5-0c0e7d7bb000" name="UMLClassDiagram" linkedPackageId="88960386-3994-40b9-9f76-25d376876af0" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="e5811756-f4b5-4a8d-aabf-14aabc212613">
+      <elementDefinition Id="7af5aad3-ace9-451a-83e5-002367dba390" />
+      <body>Этот класс создаёт шару из чего-нибудь сам пока не знаю чего. Вероятно лучше оформить в виде интерфейса или абстрактного класса. На всякий случай.</body>
+      <annotatedElements>
+        <classMoniker Id="e471652c-6402-4dc8-ae95-f00843d88bc5" LastKnownName="ShareBuilder" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances Id="8175b229-9be1-4045-a48b-aa6181bd6568">
       <profileInstance Id="19cff0bb-cfb4-4bab-af5f-4f7f5c2488b1" name="StandardProfileL2">
@@ -16,7 +25,24 @@
   </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
-      <package Id="4e026c65-5651-4d15-ac8b-2b808f1f21ff" name="Package1">
+      <package Id="4e026c65-5651-4d15-ac8b-2b808f1f21ff" name="Library">
+        <ownedCommentsInternal>
+          <comment Id="ad7ed53c-6522-4483-88dd-29b49fb93ee0">
+            <elementDefinition Id="1d412f57-2cb6-4eb8-9dc5-fac4a20faffc" />
+            <body>Идентификация пользователя?
+По открытому/закрытому ключу? Нужно обдумать</body>
+            <annotatedElements>
+              <classMoniker Id="23ff88ae-522c-4811-8485-7db8d1cf2fa9" LastKnownName="Share" />
+            </annotatedElements>
+          </comment>
+          <comment Id="e5592f89-fde3-4252-9122-38c66428ed81">
+            <elementDefinition Id="fc53588e-d910-421b-832d-a7a646ffcb13" />
+            <body>Придумайте для этого класса какое-нибудь хорошее имя.</body>
+            <annotatedElements>
+              <classMoniker Id="a1bf63d1-29db-4eea-8f1f-c39b23938626" LastKnownName="FileEnumeration" />
+            </annotatedElements>
+          </comment>
+        </ownedCommentsInternal>
         <elementDefinition Id="20a586e9-24f2-45f6-9174-f28ec970c762" />
         <packagedElements>
           <packageHasNamedElement>
@@ -24,9 +50,102 @@
               <elementDefinition Id="66e11e2d-e7d0-47f2-9393-903b5ff53c2b" />
             </Interface>
           </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="23ff88ae-522c-4811-8485-7db8d1cf2fa9" name="Share" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="45253c8d-d8d3-4c20-809d-a50eeeff42c8" />
+              <ownedAttributesInternal>
+                <property Id="322049bd-8cf9-41fd-8335-c8d351ccb665" name="IncludedFiles" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d58a1447-af3b-476a-b2d5-e8d6df1f927c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5a09a7b7-120a-4763-a430-b29b24fb8770" LastKnownName="FileEnumeration" />
+                  </type_NamedElement>
+                </property>
+                <property Id="4a6530be-4452-4c7d-bab7-aa14fd3afcbd" name="ShareID" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d6bf0bfb-19df-4a24-963d-8b85c8c9aab7" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="1fe5565e-e3f1-4edf-845a-b19bfff1fa6c" LastKnownName="UUID" />
+                  </type_NamedElement>
+                </property>
+                <property Id="fbdd6f4e-2590-4b93-8881-3895d64bad4f" name="Credentials" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3c783b70-5bd9-4f56-86c0-78ff8784dede" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="141e1dd4-ba8e-4b67-a815-eb59748ed4e2" LastKnownName="???" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="7c2c58f9-74dd-4c2d-bb5b-f3dc71cd71af" name="getIncludedFiles" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="da59ae51-b3e9-46f2-9256-2e62d818e354" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="e4da3a2d-3503-4730-a68d-9843dbae6333" direction="Return">
+                        <elementDefinition Id="7c2e9b38-a701-4dd1-83a6-0d78a1535418" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="e6e8abf7-0968-4100-b6b3-b4366b4349c8" LastKnownName="FileEnumeration" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="70f8acb4-3b05-4f99-893f-4da52c7e8ff4" name="getID" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="0b57ea97-889e-424a-b6fd-f5569c6ef5e6" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="f5e56e04-87d8-46d5-83ca-8d8b4924da81" direction="Return" isUnique="false">
+                        <elementDefinition Id="93362ecd-3ea2-410d-ac9a-58c375e01845" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="1fe5565e-e3f1-4edf-845a-b19bfff1fa6c" LastKnownName="UUID" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <Interface Id="dcd504a6-1513-41ce-8ac4-eb3fde750b91" name="LowLevelInterface" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="75d7b5dc-471b-4c9c-a4bf-12384a3897a7" />
+            </Interface>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <Interface Id="77a7db8d-ce94-4fd0-9cea-6b2dec7169d8" name="ManagingLayerInterface" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="b179b9b2-b11f-412c-9e84-ee401d3c63ea" />
+            </Interface>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="e471652c-6402-4dc8-ae95-f00843d88bc5" name="ShareBuilder" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="5984b822-56f4-4a49-841f-60c903531547" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="a1bf63d1-29db-4eea-8f1f-c39b23938626" name="FileEnumeration" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="d7b70bb8-52cd-4706-a4a6-8ad18d1567a8" />
+            </class>
+          </packageHasNamedElement>
         </packagedElements>
       </package>
     </logicalClassDesignerModelHasPackages>
+    <packageHasNamedElement>
+      <referencedType Id="5a09a7b7-120a-4763-a430-b29b24fb8770" name="FileEnumeration" isAbstract="false" isLeaf="false" cachedFullName="FileEnumeration">
+        <elementDefinition Id="ed306db8-4fee-4185-bc7a-d44b88ea3497" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="1fe5565e-e3f1-4edf-845a-b19bfff1fa6c" name="UUID" isAbstract="false" isLeaf="false" cachedFullName="UUID">
+        <elementDefinition Id="8912ffb1-a0be-4d6d-9abd-3f1f3b8b1e2e" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="e6e8abf7-0968-4100-b6b3-b4366b4349c8" name="FileEnumeration" isAbstract="false" isLeaf="false" cachedFullName="FileEnumeration">
+        <elementDefinition Id="ed306db8-4fee-4185-bc7a-d44b88ea3497" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="141e1dd4-ba8e-4b67-a815-eb59748ed4e2" name="???" isAbstract="false" isLeaf="false" cachedFullName="???">
+        <elementDefinition Id="e7cbf18a-fcf9-4ddd-805f-5b8fffa7ad76" />
+      </referencedType>
+    </packageHasNamedElement>
   </packagedElements>
   <package Id="88960386-3994-40b9-9f76-25d376876af0" name="Simple_Sync_MSUML">
     <elementDefinition Id="ad758e9e-d22b-4504-bcb6-6a4bd0fe0cc2" />

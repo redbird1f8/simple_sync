@@ -3,6 +3,29 @@
   dslVersion="1.0.0.0"
   Id="ad758e9e-d22b-4504-bcb6-6a4bd0fe0cc2"
   name="Simple_Sync_MSUML" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="1d412f57-2cb6-4eb8-9dc5-fac4a20faffc">
+      <body>Идентификация пользователя?
+По открытому/закрытому ключу? Нужно обдумать</body>
+      <annotatedElements>
+        <classMoniker
+          Id="45253c8d-d8d3-4c20-809d-a50eeeff42c8"
+          LastKnownName="Share"
+          LastKnownLocation="Package_2039.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="7af5aad3-ace9-451a-83e5-002367dba390">
+      <body>Этот класс создаёт шару из чего-нибудь сам пока не знаю чего. Вероятно лучше оформить в виде интерфейса или абстрактного класса. На всякий случай.</body>
+      <annotatedElements>
+        <classMoniker
+          Id="5984b822-56f4-4a49-841f-60c903531547"
+          LastKnownName="ShareBuilder"
+          LastKnownLocation="Package_2039.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
       Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
@@ -21,7 +44,7 @@
     <packageHasNamedElement>
       <packageMoniker
         Id="20a586e9-24f2-45f6-9174-f28ec970c762"
-        LastKnownName="Package1"
+        LastKnownName="Library"
         LastKnownLocation="Package_2039.uml" />
     </packageHasNamedElement>
   </packagedElements>

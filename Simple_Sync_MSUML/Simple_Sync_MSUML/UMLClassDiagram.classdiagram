@@ -1,28 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="cb0b904c-194c-459e-80e5-0c0e7d7bb000" name="UMLClassDiagram" linkedPackageId="88960386-3994-40b9-9f76-25d376876af0" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <ownedCommentsInternal>
-    <comment Id="e5811756-f4b5-4a8d-aabf-14aabc212613">
-      <elementDefinition Id="7af5aad3-ace9-451a-83e5-002367dba390" />
-      <body>Этот класс создаёт шару из чего-нибудь сам пока не знаю чего. Вероятно лучше оформить в виде интерфейса или абстрактного класса. На всякий случай.</body>
-      <annotatedElements>
-        <classMoniker Id="e471652c-6402-4dc8-ae95-f00843d88bc5" LastKnownName="ShareBuilder" />
-      </annotatedElements>
-    </comment>
-  </ownedCommentsInternal>
-  <profileInstances>
-    <packageHasProfileInstances Id="8175b229-9be1-4045-a48b-aa6181bd6568">
-      <profileInstance Id="19cff0bb-cfb4-4bab-af5f-4f7f5c2488b1" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="0ced3de6-6d08-4050-91fe-4ae53d12b2f1">
-      <profileInstance Id="d3abf822-9b8c-407d-8bc1-ee459b0eb6c5" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="cb0b904c-194c-459e-80e5-0c0e7d7bb000" name="UMLClassDiagram" linkedPackageId="88960386-3994-40b9-9f76-25d376876af0" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
       <package Id="4e026c65-5651-4d15-ac8b-2b808f1f21ff" name="Library">
@@ -48,6 +25,47 @@
           <packageHasNamedElement>
             <Interface Id="47b39cbe-af1f-4db1-9691-551bf96d526e" name="ConfigurationInterface" isAbstract="false" isLeaf="false">
               <elementDefinition Id="66e11e2d-e7d0-47f2-9393-903b5ff53c2b" />
+              <ownedOperations>
+                <operation Id="d6e2cf1a-33c3-42a0-b67a-9fa0520b345c" name="getCommonConfiguration" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="97b3a820-5ff5-4fd3-a7ba-8a4e8d3a3f2b" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="7cbdf200-eafd-4410-83a9-2a573dc4ea58" direction="Return" isUnique="false">
+                        <elementDefinition Id="c5289446-200e-4e16-b4ba-88d1ff6f0f7e" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="c3d0ecc4-0b84-4d2c-9e91-f06db609665b" LastKnownName="CommonConfig" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="c322db93-0e97-4942-816e-71b3129cad4d" name="getShareList" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="16eb4045-382c-484b-8ac1-945dc009ccc4" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="c917ea01-6764-4f6d-bda3-9be1d5d11a3a" name=")" direction="In" isUnique="false">
+                        <elementDefinition Id="e3e7119e-9a0f-4c14-80ee-0457ac026ea6" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="64f852a5-b611-4b33-8977-283810936045" LastKnownName="AbstractList&lt;Share&gt;(" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="a9de8426-714b-4fbb-a169-747705706f98" name="getDevice" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="72397dcd-798f-4da6-b080-9b01a0137d99" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="333fe6a0-3989-4063-b4af-2f26b2444dca" direction="Return" isUnique="false">
+                        <elementDefinition Id="b0c6c04e-f556-421f-873c-48ddc01f992d" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="1742e937-73cb-468f-bc01-0e4d3e341403" LastKnownName="Device" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperations>
             </Interface>
           </packageHasNamedElement>
           <packageHasNamedElement>
@@ -60,16 +78,22 @@
                     <referencedTypeMoniker Id="5a09a7b7-120a-4763-a430-b29b24fb8770" LastKnownName="FileEnumeration" />
                   </type_NamedElement>
                 </property>
-                <property Id="4a6530be-4452-4c7d-bab7-aa14fd3afcbd" name="ShareID" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <property Id="4a6530be-4452-4c7d-bab7-aa14fd3afcbd" name="shareID" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="d6bf0bfb-19df-4a24-963d-8b85c8c9aab7" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="1fe5565e-e3f1-4edf-845a-b19bfff1fa6c" LastKnownName="UUID" />
+                    <referencedTypeMoniker Id="7e8a679c-ece7-471f-9e5b-f9c0f4e0a3fd" LastKnownName="UUID" />
                   </type_NamedElement>
                 </property>
                 <property Id="fbdd6f4e-2590-4b93-8881-3895d64bad4f" name="Credentials" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="3c783b70-5bd9-4f56-86c0-78ff8784dede" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="141e1dd4-ba8e-4b67-a815-eb59748ed4e2" LastKnownName="???" />
+                    <referencedTypeMoniker Id="3a6c4d6a-1e1c-473b-a9e5-01099ecd3035" LastKnownName="Device" />
+                  </type_NamedElement>
+                </property>
+                <property Id="21b3b28a-cfc7-44e0-b0ae-1edf610afb18" name="shareConfig" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="79c2e96e-2593-4cd1-97a3-c044a6b0b828" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="49809887-2fbb-40f2-a06f-a8b06312bec6" LastKnownName="ShareConfig" />
                   </type_NamedElement>
                 </property>
               </ownedAttributesInternal>
@@ -111,16 +135,80 @@
           <packageHasNamedElement>
             <Interface Id="77a7db8d-ce94-4fd0-9cea-6b2dec7169d8" name="ManagingLayerInterface" isAbstract="false" isLeaf="false">
               <elementDefinition Id="b179b9b2-b11f-412c-9e84-ee401d3c63ea" />
+              <ownedOperations>
+                <operation Id="5d96744e-8a20-43cc-ad08-b5f507d0b6a1" name="sync" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="cea922d6-9405-43f0-a39b-7804befa0f97" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="689e0303-5726-47a8-b1c1-03b8461c38b6" name="share" direction="In" isUnique="false">
+                        <elementDefinition Id="5495202a-6306-4fb0-92f9-aaa8287c2213" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="d7ab2cbd-e6b7-4391-882b-5595eecdf032" LastKnownName="Share" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="465a72a5-c3fb-43c0-a34e-05a41fce87c1" name="device" direction="In" isUnique="false">
+                        <elementDefinition Id="884815b8-bd9a-4817-b509-203f989e4a3c" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="1742e937-73cb-468f-bc01-0e4d3e341403" LastKnownName="Device" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="19a3f5c3-5b6a-4ed3-92a9-9fbd26a17807" name="getConfig" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="7a87e553-90b7-4911-865d-528f43a7c734" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="2330bc80-ad0a-44b7-af88-03a301edd3da" direction="Return" isUnique="false">
+                        <elementDefinition Id="8efdd9b5-2b0a-44c8-9ece-792be72b4763" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="16e65236-333a-4d4f-8245-4ad278d681ee" LastKnownName="ConfigurationInterface" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperations>
             </Interface>
-          </packageHasNamedElement>
-          <packageHasNamedElement>
-            <class Id="e471652c-6402-4dc8-ae95-f00843d88bc5" name="ShareBuilder" isAbstract="false" isLeaf="false" isActiveClass="false">
-              <elementDefinition Id="5984b822-56f4-4a49-841f-60c903531547" />
-            </class>
           </packageHasNamedElement>
           <packageHasNamedElement>
             <class Id="a1bf63d1-29db-4eea-8f1f-c39b23938626" name="FileEnumeration" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="d7b70bb8-52cd-4706-a4a6-8ad18d1567a8" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <Interface Id="72de1a1a-fd8c-436a-9571-38c1280162ba" name="ShareBulider" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="ef41409a-8147-42f4-aec7-7d9f9fb81057" />
+              <ownedOperations>
+                <operation Id="ee615771-a8c1-4b54-8325-8e4eb3dce999" name="getShare" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="42cb4f1d-074c-4c6b-b3cf-0b37659a5c92" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="44b20231-3120-427f-a63b-a4166bbf1c0b" direction="Return" isUnique="false">
+                        <elementDefinition Id="5e00eaa7-5f82-4e0e-8f58-0fc51f11cfd5" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="d7ab2cbd-e6b7-4391-882b-5595eecdf032" LastKnownName="Share" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperations>
+            </Interface>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="1b2940ff-8040-4115-b195-a9a816648af6" name="CommonConfig" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="53a87365-b55c-4beb-b04d-5b18e03a88bf" />
+              <ownedAttributesInternal>
+                <property Id="aa7858e5-c6ec-4ece-a2af-3c54db6199fd" name="device" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d8e349f6-e84d-4093-9b23-9f788ea5795d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="1742e937-73cb-468f-bc01-0e4d3e341403" LastKnownName="Device" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
             </class>
           </packageHasNamedElement>
         </packagedElements>
@@ -142,12 +230,61 @@
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="141e1dd4-ba8e-4b67-a815-eb59748ed4e2" name="???" isAbstract="false" isLeaf="false" cachedFullName="???">
-        <elementDefinition Id="e7cbf18a-fcf9-4ddd-805f-5b8fffa7ad76" />
+      <referencedType Id="c3d0ecc4-0b84-4d2c-9e91-f06db609665b" name="CommonConfig" isAbstract="false" isLeaf="false" cachedFullName="CommonConfig">
+        <elementDefinition Id="dd746dbd-21eb-48d2-8d24-b5901f45d527" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="64f852a5-b611-4b33-8977-283810936045" name="AbstractList&lt;Share&gt;(" isAbstract="false" isLeaf="false" cachedFullName="AbstractList&lt;Share&gt;(">
+        <elementDefinition Id="e4c006a2-3397-49d8-9160-fc444e6fe976" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="d7ab2cbd-e6b7-4391-882b-5595eecdf032" name="Share" isAbstract="false" isLeaf="false" cachedFullName="Simple_Sync_MSUML::Library::Share">
+        <elementDefinition Id="45253c8d-d8d3-4c20-809d-a50eeeff42c8" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="1742e937-73cb-468f-bc01-0e4d3e341403" name="Device" isAbstract="false" isLeaf="false" cachedFullName="Device">
+        <elementDefinition Id="dd6a86ad-478c-4e83-8a96-7edf9bc0b159" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="49809887-2fbb-40f2-a06f-a8b06312bec6" name="ShareConfig" isAbstract="false" isLeaf="false" cachedFullName="ShareConfig">
+        <elementDefinition Id="0893b69e-f4e5-446d-8e99-1a3a7f01ffb9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="7e8a679c-ece7-471f-9e5b-f9c0f4e0a3fd" name="UUID" isAbstract="false" isLeaf="false" cachedFullName="UUID">
+        <elementDefinition Id="8912ffb1-a0be-4d6d-9abd-3f1f3b8b1e2e" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="3a6c4d6a-1e1c-473b-a9e5-01099ecd3035" name="Device" isAbstract="false" isLeaf="false" cachedFullName="Device">
+        <elementDefinition Id="dd6a86ad-478c-4e83-8a96-7edf9bc0b159" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="16e65236-333a-4d4f-8245-4ad278d681ee" name="ConfigurationInterface" isAbstract="false" isLeaf="false" cachedFullName="Simple_Sync_MSUML::Library::ConfigurationInterface">
+        <elementDefinition Id="66e11e2d-e7d0-47f2-9393-903b5ff53c2b" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>
   <package Id="88960386-3994-40b9-9f76-25d376876af0" name="Simple_Sync_MSUML">
     <elementDefinition Id="ad758e9e-d22b-4504-bcb6-6a4bd0fe0cc2" />
+    <profileInstances>
+      <packageHasProfileInstances Id="8175b229-9be1-4045-a48b-aa6181bd6568">
+        <profileInstance Id="19cff0bb-cfb4-4bab-af5f-4f7f5c2488b1" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="0ced3de6-6d08-4050-91fe-4ae53d12b2f1">
+        <profileInstance Id="d3abf822-9b8c-407d-8bc1-ee459b0eb6c5" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>

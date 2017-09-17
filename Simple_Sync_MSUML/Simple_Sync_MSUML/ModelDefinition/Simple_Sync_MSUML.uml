@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
   dslVersion="1.0.0.0"
   Id="ad758e9e-d22b-4504-bcb6-6a4bd0fe0cc2"
   name="Simple_Sync_MSUML" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -12,16 +12,6 @@
         <classMoniker
           Id="45253c8d-d8d3-4c20-809d-a50eeeff42c8"
           LastKnownName="Share"
-          LastKnownLocation="Package_2039.uml" />
-      </annotatedElements>
-    </comment>
-    <comment
-      Id="7af5aad3-ace9-451a-83e5-002367dba390">
-      <body>Этот класс создаёт шару из чего-нибудь сам пока не знаю чего. Вероятно лучше оформить в виде интерфейса или абстрактного класса. На всякий случай.</body>
-      <annotatedElements>
-        <classMoniker
-          Id="5984b822-56f4-4a49-841f-60c903531547"
-          LastKnownName="ShareBuilder"
           LastKnownLocation="Package_2039.uml" />
       </annotatedElements>
     </comment>

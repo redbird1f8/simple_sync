@@ -12,13 +12,6 @@
               <classMoniker Id="23ff88ae-522c-4811-8485-7db8d1cf2fa9" LastKnownName="Share" />
             </annotatedElements>
           </comment>
-          <comment Id="e5592f89-fde3-4252-9122-38c66428ed81">
-            <elementDefinition Id="fc53588e-d910-421b-832d-a7a646ffcb13" />
-            <body>Придумайте для этого класса какое-нибудь хорошее имя.</body>
-            <annotatedElements>
-              <classMoniker Id="a1bf63d1-29db-4eea-8f1f-c39b23938626" LastKnownName="FileEnumeration" />
-            </annotatedElements>
-          </comment>
         </ownedCommentsInternal>
         <elementDefinition Id="20a586e9-24f2-45f6-9174-f28ec970c762" />
         <packagedElements>
@@ -75,7 +68,7 @@
                 <property Id="322049bd-8cf9-41fd-8335-c8d351ccb665" name="IncludedFiles" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="d58a1447-af3b-476a-b2d5-e8d6df1f927c" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="5a09a7b7-120a-4763-a430-b29b24fb8770" LastKnownName="FileEnumeration" />
+                    <referencedTypeMoniker Id="0516f43d-3ec1-4a7d-afae-fa6683f44f44" LastKnownName="FileList" />
                   </type_NamedElement>
                 </property>
                 <property Id="4a6530be-4452-4c7d-bab7-aa14fd3afcbd" name="shareID" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -84,16 +77,10 @@
                     <referencedTypeMoniker Id="7e8a679c-ece7-471f-9e5b-f9c0f4e0a3fd" LastKnownName="UUID" />
                   </type_NamedElement>
                 </property>
-                <property Id="fbdd6f4e-2590-4b93-8881-3895d64bad4f" name="Credentials" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="3c783b70-5bd9-4f56-86c0-78ff8784dede" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="3a6c4d6a-1e1c-473b-a9e5-01099ecd3035" LastKnownName="Device" />
-                  </type_NamedElement>
-                </property>
-                <property Id="21b3b28a-cfc7-44e0-b0ae-1edf610afb18" name="shareConfig" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <property Id="21b3b28a-cfc7-44e0-b0ae-1edf610afb18" name="shareRules" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="79c2e96e-2593-4cd1-97a3-c044a6b0b828" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="49809887-2fbb-40f2-a06f-a8b06312bec6" LastKnownName="ShareConfig" />
+                    <referencedTypeMoniker Id="3cdeb1d0-1c4d-45b4-9e0c-ad86bf9357ba" LastKnownName="ShareRules" />
                   </type_NamedElement>
                 </property>
               </ownedAttributesInternal>
@@ -174,13 +161,42 @@
             </Interface>
           </packageHasNamedElement>
           <packageHasNamedElement>
-            <class Id="a1bf63d1-29db-4eea-8f1f-c39b23938626" name="FileEnumeration" isAbstract="false" isLeaf="false" isActiveClass="false">
+            <class Id="a1bf63d1-29db-4eea-8f1f-c39b23938626" name="FileList" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="d7b70bb8-52cd-4706-a4a6-8ad18d1567a8" />
+              <ownedAttributesInternal>
+                <property Id="92008d1e-8dbf-4c9f-b721-c20948cbe7d1" name="directoryList" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="67962373-0386-4f9f-87bc-45c206131cf9" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="3319127a-dcf1-400c-a153-933c9bdfcb5d" LastKnownName="Directory" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="ec83585c-e2cd-4319-9d94-4df7f06e431e" name="getAllFiles" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="d55429a7-3722-408a-9949-9ab510827c50" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="7e4d880b-2a8b-4ce3-8fc7-797dc0ac2ba3" direction="Return" isUnique="false">
+                        <elementDefinition Id="d20e1e63-dffa-499f-8ca8-b03c76caaf0c" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="889d74ba-86dd-4a9b-a30a-89deb7000560" LastKnownName="AbstractList&lt;File&gt;" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
           <packageHasNamedElement>
             <Interface Id="72de1a1a-fd8c-436a-9571-38c1280162ba" name="ShareBulider" isAbstract="false" isLeaf="false">
               <elementDefinition Id="ef41409a-8147-42f4-aec7-7d9f9fb81057" />
+              <suppliersInternal>
+                <dependency Id="1c8ce2d0-2470-4d87-bb9e-3f2a8ed98cab">
+                  <classMoniker Id="23ff88ae-522c-4811-8485-7db8d1cf2fa9" LastKnownName="Share" />
+                  <elementDefinition Id="24a14af0-4356-433e-b47e-99510a7d6a4f" />
+                </dependency>
+              </suppliersInternal>
               <ownedOperations>
                 <operation Id="ee615771-a8c1-4b54-8325-8e4eb3dce999" name="getShare" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="42cb4f1d-074c-4c6b-b3cf-0b37659a5c92" />
@@ -202,10 +218,174 @@
             <class Id="1b2940ff-8040-4115-b195-a9a816648af6" name="CommonConfig" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="53a87365-b55c-4beb-b04d-5b18e03a88bf" />
               <ownedAttributesInternal>
-                <property Id="aa7858e5-c6ec-4ece-a2af-3c54db6199fd" name="device" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <property Id="aa7858e5-c6ec-4ece-a2af-3c54db6199fd" name="device" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="d8e349f6-e84d-4093-9b23-9f788ea5795d" />
                   <type_NamedElement>
+                    <referencedTypeMoniker Id="fc092763-65ba-4101-a65a-ab2399d9e57b" LastKnownName="Device" />
+                  </type_NamedElement>
+                </property>
+                <property Id="01f85009-b530-446e-bc08-a8733d18e209" name="defaultConfig" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4060708b-4eaa-4de2-9185-8014bd9be765" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="3cdeb1d0-1c4d-45b4-9e0c-ad86bf9357ba" LastKnownName="ShareRules" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="51685a12-971e-4f1f-99bd-1f3cb5ca29ce" name="ShareRules" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="834daaa1-f178-4fab-a516-cd384bd078f7" />
+              <ownedAttributesInternal>
+                <property Id="5e2b36a5-15f6-4a33-ac93-ef2587dee848" name="conflictResolvingMethod" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="12e6dca1-ed51-43cc-adcb-00f853b36b4e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="4ab655c2-811c-44ff-98f1-cbd0d71457db" LastKnownName="ResolvingMethod" />
+                  </type_NamedElement>
+                </property>
+                <property Id="2b658bec-968b-4d6e-8e24-fd1e346c9a42" name="acceptedDevices" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="391fa8ab-166b-4a13-9516-403a37aed58e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a66263ea-ba9a-4d75-bf41-5ff3c20e84e5" LastKnownName="AbstractList&lt;DeviceConfig&gt;" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="6a88933f-b033-466f-8bce-95a0a93f44b2" name="getAcceptedDevicesList" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="ec327167-f573-4225-9d8a-a3508c488b90" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="ed6606af-975f-405a-af47-dff962627f41" direction="Return" isUnique="false">
+                        <elementDefinition Id="9668a3db-6549-41ed-af65-23d6dbd69559" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="a66263ea-ba9a-4d75-bf41-5ff3c20e84e5" LastKnownName="AbstractList&lt;DeviceConfig&gt;" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="8b8efa07-240c-418a-9e74-20a8faebdb03" name="getResolvingMethod" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="0e14c7f9-a444-4aa4-8fca-2e97b5d50ddd" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="698d097e-9ebc-4a30-81ff-70119902f8ce" direction="Return" isUnique="false">
+                        <elementDefinition Id="3f996ba6-574f-4b70-9c39-7a0d84193617" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="4ab655c2-811c-44ff-98f1-cbd0d71457db" LastKnownName="ResolvingMethod" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="6f9f99fe-7b9a-4689-a8ad-7d8de6e1bd78" name="setResolvingMethod" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="138f09c0-3dd8-4770-80c7-7f00cfb2ea2d" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="c662b33b-51b9-429a-8168-8e5a0d119bd5" name="method" direction="In" isUnique="false">
+                        <elementDefinition Id="d334447d-8277-4201-a7e2-1f4bf2aecbb6" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="4ab655c2-811c-44ff-98f1-cbd0d71457db" LastKnownName="ResolvingMethod" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="2b782b32-e6c8-4127-a7ea-968d7ba8e4d2" name="DeviceConfig" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="c88a37e8-fc45-4bb8-bdae-18885429d367" />
+              <ownedAttributesInternal>
+                <property Id="40d05ebc-08df-420d-a480-dceb7f02bf16" name="device" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="82829307-01f8-425a-9929-46496c18a1ad" />
+                  <type_NamedElement>
                     <referencedTypeMoniker Id="1742e937-73cb-468f-bc01-0e4d3e341403" LastKnownName="Device" />
+                  </type_NamedElement>
+                </property>
+                <property Id="cc8f27d8-cf44-4841-815c-31e69d0a92c6" name="priority" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="772cb7ad-f610-4307-b024-21506d504ea4" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="d73f1fb8-685a-407c-a769-1016f83d5cfb" LastKnownName="byte" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="f31d008d-2067-4f12-ae8e-e32fc2ee8100" name="getPriority" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="cd85a08e-5e6d-4faf-adfc-d418bcb7a920" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="aca004bb-019b-46ec-af79-5ff9c3f13dd2" direction="Return" isUnique="false">
+                        <elementDefinition Id="1adbb508-132f-4f47-9de4-735c27d93dff" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="d73f1fb8-685a-407c-a769-1016f83d5cfb" LastKnownName="byte" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="4d5f1d3c-8e69-436d-92e1-385ac6ec68bd" name="getDevice" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="43c1ba18-36b0-4ff5-8e5f-3ac85a4ce7c4" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="4b2195e9-c3f4-47b1-989c-1ef111f568af" direction="Return" isUnique="false">
+                        <elementDefinition Id="03c4505e-0597-4910-bb52-1d0d3a98d386" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="1742e937-73cb-468f-bc01-0e4d3e341403" LastKnownName="Device" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="171ad8da-7be4-47d3-af65-6c5139133f02" name="setPriority" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="dc8f2e23-da3d-41b2-99da-7d9b205e058b" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="6f0a968f-33ed-4fb0-a65a-f51d7f97f01b" name="priority" direction="In" isUnique="false">
+                        <elementDefinition Id="92c8b412-8c2b-4401-9644-18de90e6d17c" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="d73f1fb8-685a-407c-a769-1016f83d5cfb" LastKnownName="byte" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="0b5da580-de96-4e53-8b82-76d765178535" name="Directory" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="748a271f-60b9-4fab-bb93-2a92742b7ad1" />
+              <ownedAttributesInternal>
+                <property Id="70eb136d-0fc6-453e-a252-86966a341483" name="files" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7f31659c-7763-40b3-9b8b-22a8571fad84" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="889d74ba-86dd-4a9b-a30a-89deb7000560" LastKnownName="AbstractList&lt;File&gt;" />
+                  </type_NamedElement>
+                </property>
+                <property Id="36ca4d76-ed1f-4abc-8cea-dd5f89985632" name="directoryPath" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c3fc5ca7-6d84-4c9a-aa5f-9f4a79b94246" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f968e26d-6a4b-483f-9328-3fcffe33a24a" LastKnownName="String" />
+                  </type_NamedElement>
+                </property>
+                <property Id="2fd6fd92-0f46-4f2b-b9f4-295dc1fe18c4" name="subdirectoryList" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b91e7b04-0eff-412c-b737-b437122436f2" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="fdce3769-5b91-455a-9063-ced911459d40" LastKnownName="AbstractList&lt;Directory&gt;" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="600564be-b29c-46e6-b579-514c8aa490f1" name="File" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="5af042cb-8877-48be-bcad-2b7c6d005a7b" />
+              <ownedAttributesInternal>
+                <property Id="7c48c61e-2eeb-452e-9d86-d7f02b01177b" name="fileName" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5f3dfde9-a1bb-47d1-ae4a-e1958140d2e6" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="bf517b60-b9bf-4ae4-a175-7fa6c80aeaf6" LastKnownName="String" />
                   </type_NamedElement>
                 </property>
               </ownedAttributesInternal>
@@ -214,11 +394,6 @@
         </packagedElements>
       </package>
     </logicalClassDesignerModelHasPackages>
-    <packageHasNamedElement>
-      <referencedType Id="5a09a7b7-120a-4763-a430-b29b24fb8770" name="FileEnumeration" isAbstract="false" isLeaf="false" cachedFullName="FileEnumeration">
-        <elementDefinition Id="ed306db8-4fee-4185-bc7a-d44b88ea3497" />
-      </referencedType>
-    </packageHasNamedElement>
     <packageHasNamedElement>
       <referencedType Id="1fe5565e-e3f1-4edf-845a-b19bfff1fa6c" name="UUID" isAbstract="false" isLeaf="false" cachedFullName="UUID">
         <elementDefinition Id="8912ffb1-a0be-4d6d-9abd-3f1f3b8b1e2e" />
@@ -250,23 +425,68 @@
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="49809887-2fbb-40f2-a06f-a8b06312bec6" name="ShareConfig" isAbstract="false" isLeaf="false" cachedFullName="ShareConfig">
-        <elementDefinition Id="0893b69e-f4e5-446d-8e99-1a3a7f01ffb9" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
       <referencedType Id="7e8a679c-ece7-471f-9e5b-f9c0f4e0a3fd" name="UUID" isAbstract="false" isLeaf="false" cachedFullName="UUID">
         <elementDefinition Id="8912ffb1-a0be-4d6d-9abd-3f1f3b8b1e2e" />
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="3a6c4d6a-1e1c-473b-a9e5-01099ecd3035" name="Device" isAbstract="false" isLeaf="false" cachedFullName="Device">
+      <referencedType Id="16e65236-333a-4d4f-8245-4ad278d681ee" name="ConfigurationInterface" isAbstract="false" isLeaf="false" cachedFullName="Simple_Sync_MSUML::Library::ConfigurationInterface">
+        <elementDefinition Id="66e11e2d-e7d0-47f2-9393-903b5ff53c2b" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="3cdeb1d0-1c4d-45b4-9e0c-ad86bf9357ba" name="ShareRules" isAbstract="false" isLeaf="false" cachedFullName="Simple_Sync_MSUML::Library::ShareRules">
+        <elementDefinition Id="834daaa1-f178-4fab-a516-cd384bd078f7" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="4ab655c2-811c-44ff-98f1-cbd0d71457db" name="ResolvingMethod" isAbstract="false" isLeaf="false" cachedFullName="ResolvingMethod">
+        <elementDefinition Id="a0c3fd77-d071-4d80-9610-304b5cb9e7b0" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="fc092763-65ba-4101-a65a-ab2399d9e57b" name="Device" isAbstract="false" isLeaf="false" cachedFullName="Device">
         <elementDefinition Id="dd6a86ad-478c-4e83-8a96-7edf9bc0b159" />
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="16e65236-333a-4d4f-8245-4ad278d681ee" name="ConfigurationInterface" isAbstract="false" isLeaf="false" cachedFullName="Simple_Sync_MSUML::Library::ConfigurationInterface">
-        <elementDefinition Id="66e11e2d-e7d0-47f2-9393-903b5ff53c2b" />
+      <referencedType Id="a66263ea-ba9a-4d75-bf41-5ff3c20e84e5" name="AbstractList&lt;DeviceConfig&gt;" isAbstract="false" isLeaf="false" cachedFullName="AbstractList&lt;DeviceConfig&gt;">
+        <elementDefinition Id="22a17635-dc7c-42f8-a659-a29eb836a895" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="d73f1fb8-685a-407c-a769-1016f83d5cfb" name="byte" isAbstract="false" isLeaf="false" cachedFullName="byte">
+        <elementDefinition Id="4569786c-1a6d-4707-b721-6dad37870408" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="0516f43d-3ec1-4a7d-afae-fa6683f44f44" name="FileList" isAbstract="false" isLeaf="false" cachedFullName="FileList">
+        <elementDefinition Id="b1a3c732-b69a-46e5-b1c8-db226dbfbeee" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="889d74ba-86dd-4a9b-a30a-89deb7000560" name="AbstractList&lt;File&gt;" isAbstract="false" isLeaf="false" cachedFullName="AbstractList&lt;File&gt;">
+        <elementDefinition Id="6c22514c-03c9-4171-bc63-b5806c3e03c5" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="bf517b60-b9bf-4ae4-a175-7fa6c80aeaf6" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="3319127a-dcf1-400c-a153-933c9bdfcb5d" name="Directory" isAbstract="false" isLeaf="false" cachedFullName="Simple_Sync_MSUML::Library::Directory">
+        <elementDefinition Id="748a271f-60b9-4fab-bb93-2a92742b7ad1" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f968e26d-6a4b-483f-9328-3fcffe33a24a" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="fdce3769-5b91-455a-9063-ced911459d40" name="AbstractList&lt;Directory&gt;" isAbstract="false" isLeaf="false" cachedFullName="AbstractList&lt;Directory&gt;">
+        <elementDefinition Id="b9826727-aff2-4c15-9da4-4288a6f10387" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>

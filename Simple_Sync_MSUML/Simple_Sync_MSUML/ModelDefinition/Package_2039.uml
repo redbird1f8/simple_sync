@@ -313,7 +313,54 @@
         name="FileList"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="67962373-0386-4f9f-87bc-45c206131cf9"
+            name="directoryList"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="748a271f-60b9-4fab-bb93-2a92742b7ad1"
+                LastKnownName="Directory"
+                LastKnownLocation="Package_2039.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="d55429a7-3722-408a-9949-9ab510827c50"
+            name="getAllFiles"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d20e1e63-dffa-499f-8ca8-b03c76caaf0c"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="6c22514c-03c9-4171-bc63-b5806c3e03c5"
+                      LastKnownName="AbstractList&lt;File&gt;"
+                      LastKnownLocation="Package_2039.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <undefinedType
@@ -704,6 +751,119 @@
       <undefinedType
         Id="b1a3c732-b69a-46e5-b1c8-db226dbfbeee"
         name="FileList" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="e7e7c2cb-cd74-430a-b1e9-2a1a2ccada9f"
+        name="Directory" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="748a271f-60b9-4fab-bb93-2a92742b7ad1"
+        name="Directory"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="7f31659c-7763-40b3-9b8b-22a8571fad84"
+            name="files"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="6c22514c-03c9-4171-bc63-b5806c3e03c5"
+                LastKnownName="AbstractList&lt;File&gt;"
+                LastKnownLocation="Package_2039.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="c3fc5ca7-6d84-4c9a-aa5f-9f4a79b94246"
+            name="directoryPath"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="b91e7b04-0eff-412c-b737-b437122436f2"
+            name="subdirectoryList"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="b9826727-aff2-4c15-9da4-4288a6f10387"
+                LastKnownName="AbstractList&lt;Directory&gt;"
+                LastKnownLocation="Package_2039.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="b9826727-aff2-4c15-9da4-4288a6f10387"
+        name="AbstractList&lt;Directory&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="6c22514c-03c9-4171-bc63-b5806c3e03c5"
+        name="AbstractList&lt;File&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="5af042cb-8877-48be-bcad-2b7c6d005a7b"
+        name="File"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="5f3dfde9-a1bb-47d1-ae4a-e1958140d2e6"
+            name="fileName"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
     </packageHasNamedElement>
   </packagedElements>
 </package>

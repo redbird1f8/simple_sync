@@ -163,6 +163,29 @@
           <packageHasNamedElement>
             <class Id="a1bf63d1-29db-4eea-8f1f-c39b23938626" name="FileList" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="d7b70bb8-52cd-4706-a4a6-8ad18d1567a8" />
+              <ownedAttributesInternal>
+                <property Id="92008d1e-8dbf-4c9f-b721-c20948cbe7d1" name="directoryList" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="67962373-0386-4f9f-87bc-45c206131cf9" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="3319127a-dcf1-400c-a153-933c9bdfcb5d" LastKnownName="Directory" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="ec83585c-e2cd-4319-9d94-4df7f06e431e" name="getAllFiles" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="d55429a7-3722-408a-9949-9ab510827c50" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="7e4d880b-2a8b-4ce3-8fc7-797dc0ac2ba3" direction="Return" isUnique="false">
+                        <elementDefinition Id="d20e1e63-dffa-499f-8ca8-b03c76caaf0c" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="889d74ba-86dd-4a9b-a30a-89deb7000560" LastKnownName="AbstractList&lt;File&gt;" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
           <packageHasNamedElement>
@@ -330,6 +353,44 @@
               </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="0b5da580-de96-4e53-8b82-76d765178535" name="Directory" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="748a271f-60b9-4fab-bb93-2a92742b7ad1" />
+              <ownedAttributesInternal>
+                <property Id="70eb136d-0fc6-453e-a252-86966a341483" name="files" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7f31659c-7763-40b3-9b8b-22a8571fad84" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="889d74ba-86dd-4a9b-a30a-89deb7000560" LastKnownName="AbstractList&lt;File&gt;" />
+                  </type_NamedElement>
+                </property>
+                <property Id="36ca4d76-ed1f-4abc-8cea-dd5f89985632" name="directoryPath" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c3fc5ca7-6d84-4c9a-aa5f-9f4a79b94246" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f968e26d-6a4b-483f-9328-3fcffe33a24a" LastKnownName="String" />
+                  </type_NamedElement>
+                </property>
+                <property Id="2fd6fd92-0f46-4f2b-b9f4-295dc1fe18c4" name="subdirectoryList" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b91e7b04-0eff-412c-b737-b437122436f2" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="fdce3769-5b91-455a-9063-ced911459d40" LastKnownName="AbstractList&lt;Directory&gt;" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="600564be-b29c-46e6-b579-514c8aa490f1" name="File" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="5af042cb-8877-48be-bcad-2b7c6d005a7b" />
+              <ownedAttributesInternal>
+                <property Id="7c48c61e-2eeb-452e-9d86-d7f02b01177b" name="fileName" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5f3dfde9-a1bb-47d1-ae4a-e1958140d2e6" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="bf517b60-b9bf-4ae4-a175-7fa6c80aeaf6" LastKnownName="String" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+            </class>
+          </packageHasNamedElement>
         </packagedElements>
       </package>
     </logicalClassDesignerModelHasPackages>
@@ -401,6 +462,31 @@
     <packageHasNamedElement>
       <referencedType Id="0516f43d-3ec1-4a7d-afae-fa6683f44f44" name="FileList" isAbstract="false" isLeaf="false" cachedFullName="FileList">
         <elementDefinition Id="b1a3c732-b69a-46e5-b1c8-db226dbfbeee" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="889d74ba-86dd-4a9b-a30a-89deb7000560" name="AbstractList&lt;File&gt;" isAbstract="false" isLeaf="false" cachedFullName="AbstractList&lt;File&gt;">
+        <elementDefinition Id="6c22514c-03c9-4171-bc63-b5806c3e03c5" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="bf517b60-b9bf-4ae4-a175-7fa6c80aeaf6" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="3319127a-dcf1-400c-a153-933c9bdfcb5d" name="Directory" isAbstract="false" isLeaf="false" cachedFullName="Simple_Sync_MSUML::Library::Directory">
+        <elementDefinition Id="748a271f-60b9-4fab-bb93-2a92742b7ad1" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f968e26d-6a4b-483f-9328-3fcffe33a24a" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="fdce3769-5b91-455a-9063-ced911459d40" name="AbstractList&lt;Directory&gt;" isAbstract="false" isLeaf="false" cachedFullName="AbstractList&lt;Directory&gt;">
+        <elementDefinition Id="b9826727-aff2-4c15-9da4-4288a6f10387" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="20a586e9-24f2-45f6-9174-f28ec970c762"
   name="Library" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -11,30 +11,6 @@
         isAbstract="false"
         isLeaf="false">
         <ownedOperations>
-          <operation
-            Id="97b3a820-5ff5-4fd3-a7ba-8a4e8d3a3f2b"
-            name="getCommonConfiguration"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="true"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="c5289446-200e-4e16-b4ba-88d1ff6f0f7e"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="dd746dbd-21eb-48d2-8d24-b5901f45d527"
-                      LastKnownName="CommonConfig"
-                      LastKnownLocation="Package_2039.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
           <operation
             Id="16eb4045-382c-484b-8ac1-945dc009ccc4"
             name="getShareList"
@@ -84,6 +60,14 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="9ad1df4e-8512-48c3-be20-c79976b6d1ee"
+            name="createShare"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
         </ownedOperations>
       </Interface>
     </packageHasNamedElement>
@@ -94,6 +78,138 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="a7f47a35-d789-454e-8ce4-d6fa5af51477"
+            isDerived="false"
+            sourceEndRoleName="Share"
+            targetEndRoleName="DeviceConfig"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="c88a37e8-fc45-4bb8-bdae-18885429d367"
+              LastKnownName="DeviceConfig"
+              LastKnownLocation="Package_2039.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1d3b8a17-27bc-4d8a-ad36-92e006b4a297"
+                  name="Share"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bf97bc00-ae1e-4d77-a961-50c324993804"
+                  name="DeviceConfig"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="340aad1a-62bb-43f1-92e2-8dcb477ce4ae"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="cbe5bdbf-7057-4540-8ed6-b439eed7bd6f"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="5d20328c-47d9-4a6d-890b-6c7bb3226c56"
+            isDerived="false"
+            sourceEndRoleName="Share"
+            targetEndRoleName="Directory"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="748a271f-60b9-4fab-bb93-2a92742b7ad1"
+              LastKnownName="Directory"
+              LastKnownLocation="Package_2039.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7aa70217-7034-4bcf-8d24-dde00d94a7e7"
+                  name="Share"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="be3e7811-4b87-4847-80a0-9205fff1a754"
+                  name="Directory"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="158a8585-5c89-41b2-819a-4bb31b766b61"
+            isDerived="false"
+            sourceEndRoleName="Share"
+            targetEndRoleName="Device"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="554249e6-57e9-4665-8345-3f31c6eaeb3d"
+              LastKnownName="Device"
+              LastKnownLocation="Package_2039.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9901ae21-7a1e-44ec-b32e-826e20f15293"
+                  name="Share"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7fe53544-6b9e-4d29-bfd6-fd59820a9c1c"
+                  name="Device"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="d58a1447-af3b-476a-b2d5-e8d6df1f927c"
@@ -108,9 +224,9 @@
             aggregation="None"
             isComposite="false">
             <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="b1a3c732-b69a-46e5-b1c8-db226dbfbeee"
-                LastKnownName="FileList"
+              <classMoniker
+                Id="748a271f-60b9-4fab-bb93-2a92742b7ad1"
+                LastKnownName="Directory"
                 LastKnownLocation="Package_2039.uml" />
             </type_NamedElement>
           </property>
@@ -134,8 +250,8 @@
             </type_NamedElement>
           </property>
           <property
-            Id="79c2e96e-2593-4cd1-97a3-c044a6b0b828"
-            name="shareRules"
+            Id="15f0a282-28a3-4baf-aac2-86e749297002"
+            name="acceptedDevices"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -146,10 +262,29 @@
             aggregation="None"
             isComposite="false">
             <type_NamedElement>
-              <classMoniker
-                Id="834daaa1-f178-4fab-a516-cd384bd078f7"
-                LastKnownName="ShareRules"
+              <undefinedTypeMoniker
+                Id="22a17635-dc7c-42f8-a659-a29eb836a895"
+                LastKnownName="AbstractList&lt;DeviceConfig&gt;"
                 LastKnownLocation="Package_2039.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="881eeff8-2265-4dcd-a989-4ddf76dee11d"
+            name="name"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -201,6 +336,30 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="2991a96f-f900-4430-a74e-d87dbc1d13c4"
+            name="getAcceptedDevicesList"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="aa72b1f4-5981-429b-9af0-b4217d541039"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="22a17635-dc7c-42f8-a659-a29eb836a895"
+                      LastKnownName="AbstractList&lt;DeviceConfig&gt;"
+                      LastKnownLocation="Package_2039.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -227,6 +386,29 @@
         name="ManagingLayerInterface"
         isAbstract="false"
         isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="b9c4b7c3-63c8-4c9a-9ec5-e8479ddb9f62">
+            <interfaceMoniker
+              Id="66e11e2d-e7d0-47f2-9393-903b5ff53c2b"
+              LastKnownName="ConfigurationInterface"
+              LastKnownLocation="Package_2039.uml" />
+          </dependency>
+          <dependency
+            Id="3889cd10-9d73-4363-a791-6d7ae1c780b0">
+            <classMoniker
+              Id="45253c8d-d8d3-4c20-809d-a50eeeff42c8"
+              LastKnownName="Share"
+              LastKnownLocation="Package_2039.uml" />
+          </dependency>
+          <dependency
+            Id="91fd9ca8-a599-4857-8234-21b8a8b5c92b">
+            <classMoniker
+              Id="554249e6-57e9-4665-8345-3f31c6eaeb3d"
+              LastKnownName="Device"
+              LastKnownLocation="Package_2039.uml" />
+          </dependency>
+        </suppliersInternal>
         <ownedOperations>
           <operation
             Id="cea922d6-9405-43f0-a39b-7804befa0f97"
@@ -285,6 +467,30 @@
                     <interfaceMoniker
                       Id="66e11e2d-e7d0-47f2-9393-903b5ff53c2b"
                       LastKnownName="ConfigurationInterface"
+                      LastKnownLocation="Package_2039.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="8e336eb1-93ce-4810-9c1f-19de9b67f190"
+            name="scan"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="16f8e3f8-7ec3-4298-8ea1-d7f53b3b8f57"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="befe459e-a00a-4341-a838-202aab2f91bf"
+                      LastKnownName="AbstractList&lt;Device&gt;"
                       LastKnownLocation="Package_2039.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -432,10 +638,151 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="fba0f203-959d-4343-a17a-eba31b2c4af4">
+            <interfaceMoniker
+              Id="66e11e2d-e7d0-47f2-9393-903b5ff53c2b"
+              LastKnownName="ConfigurationInterface"
+              LastKnownLocation="Package_2039.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="53fe0cb7-1e62-4cd2-ac7d-395af9da1410"
+            isDerived="false"
+            sourceEndRoleName="CommonConfig"
+            targetEndRoleName="Share"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="45253c8d-d8d3-4c20-809d-a50eeeff42c8"
+              LastKnownName="Share"
+              LastKnownLocation="Package_2039.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="802f0c16-41a6-4ef0-b83d-2143955b3055"
+                  name="CommonConfig"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ce892022-6cdb-4cf2-9895-baa6ca0c12d8"
+                  name="Share"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="01df39c0-9204-4cb3-9beb-7cfc6cd84498"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="df7ad82b-c7c0-4d52-acbe-e2677be6840b"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="f11f2889-1ddc-4b69-a03c-a1ffae468d51"
+            isDerived="false"
+            sourceEndRoleName="CommonConfig"
+            targetEndRoleName="Device"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="554249e6-57e9-4665-8345-3f31c6eaeb3d"
+              LastKnownName="Device"
+              LastKnownLocation="Package_2039.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fadd7aa0-306c-493e-a289-f4f4651bc364"
+                  name="CommonConfig"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="095067d7-35b5-4fcc-9d67-e25c25820ff7"
+                  name="Device"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="19907b48-ad59-437a-92ed-e0629f74fdbc"
+            isDerived="false"
+            sourceEndRoleName="CommonConfig"
+            targetEndRoleName="Rules"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="834daaa1-f178-4fab-a516-cd384bd078f7"
+              LastKnownName="Rules"
+              LastKnownLocation="Package_2039.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d1e64236-b678-4a1d-9217-0b96c3e1017f"
+                  name="CommonConfig"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6bd957bf-ef1a-413c-80ce-55f43e2fd318"
+                  name="Rules"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="d8e349f6-e84d-4093-9b23-9f788ea5795d"
-            name="device"
+            name="thisDevice"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -446,15 +793,15 @@
             aggregation="None"
             isComposite="false">
             <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="dd6a86ad-478c-4e83-8a96-7edf9bc0b159"
+              <classMoniker
+                Id="554249e6-57e9-4665-8345-3f31c6eaeb3d"
                 LastKnownName="Device"
                 LastKnownLocation="Package_2039.uml" />
             </type_NamedElement>
           </property>
           <property
             Id="4060708b-4eaa-4de2-9185-8014bd9be765"
-            name="defaultConfig"
+            name="defaultRules"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -467,17 +814,95 @@
             <type_NamedElement>
               <classMoniker
                 Id="834daaa1-f178-4fab-a516-cd384bd078f7"
-                LastKnownName="ShareRules"
+                LastKnownName="Rules"
+                LastKnownLocation="Package_2039.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="3d971bfb-d6d4-473a-b358-d9c3967ff889"
+            name="shareList"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="2ef824a9-10c3-419a-810e-800dfb969669"
+                LastKnownName="AbstractList&lt;Share&gt;"
                 LastKnownLocation="Package_2039.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="931d8de6-db1d-4718-8345-d31db2f2341c"
+            name="getShareList"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5549ffb9-761d-4679-b06f-3292bf21fc07"
+                  name=")"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="e4c006a2-3397-49d8-9160-fc444e6fe976"
+                      LastKnownName="AbstractList&lt;Share&gt;("
+                      LastKnownLocation="Package_2039.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="808d24e5-a6fb-4c81-a88a-bc319cd7de0b"
+            name="getDevice"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c13d5e95-ee3a-47b5-a39f-906e2fc754e4"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="dd6a86ad-478c-4e83-8a96-7edf9bc0b159"
+                      LastKnownName="Device"
+                      LastKnownLocation="Package_2039.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="c20602fd-2177-42d2-929a-5571bed37aea"
+            name="createShare"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
         Id="834daaa1-f178-4fab-a516-cd384bd078f7"
-        name="ShareRules"
+        name="Rules"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -502,8 +927,8 @@
             </type_NamedElement>
           </property>
           <property
-            Id="391fa8ab-166b-4a13-9516-403a37aed58e"
-            name="acceptedDevices"
+            Id="576891f9-ddb0-40fa-b2ba-857d1764b68f"
+            name="priotirty"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -515,37 +940,13 @@
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="22a17635-dc7c-42f8-a659-a29eb836a895"
-                LastKnownName="AbstractList&lt;DeviceConfig&gt;"
+                Id="4569786c-1a6d-4707-b721-6dad37870408"
+                LastKnownName="byte"
                 LastKnownLocation="Package_2039.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
-          <operation
-            Id="ec327167-f573-4225-9d8a-a3508c488b90"
-            name="getAcceptedDevicesList"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="9668a3db-6549-41ed-af65-23d6dbd69559"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="22a17635-dc7c-42f8-a659-a29eb836a895"
-                      LastKnownName="AbstractList&lt;DeviceConfig&gt;"
-                      LastKnownLocation="Package_2039.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
           <operation
             Id="0e14c7f9-a444-4aa4-8fca-2e97b5d50ddd"
             name="getResolvingMethod"
@@ -589,6 +990,55 @@
                     <undefinedTypeMoniker
                       Id="a0c3fd77-d071-4d80-9610-304b5cb9e7b0"
                       LastKnownName="ResolvingMethod"
+                      LastKnownLocation="Package_2039.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="752bd6fa-cfba-4d40-8fba-964060d17cde"
+            name="getPriority"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="85f9aa6d-e731-4665-889d-7bb6adc87e87"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="4569786c-1a6d-4707-b721-6dad37870408"
+                      LastKnownName="byte"
+                      LastKnownLocation="Package_2039.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="405d0a6f-1215-4d96-818d-289f4a28f529"
+            name="setPriority"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1917543f-d3b6-47ce-800a-a886b00856bb"
+                  name="priority"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="4569786c-1a6d-4707-b721-6dad37870408"
+                      LastKnownName="byte"
                       LastKnownLocation="Package_2039.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -764,6 +1214,96 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="98593c22-f08d-48fb-9fea-3ece90a1c7e8"
+            isSubstitutable="false">
+            <classMoniker
+              Id="ad52185f-c970-4364-b76e-3fce05691cf3"
+              LastKnownName="PathContaining"
+              LastKnownLocation="Package_2039.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="bf77dd69-12af-4cca-be9d-93845a2d68d3"
+            isDerived="false"
+            sourceEndRoleName="Directory"
+            targetEndRoleName="File"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="5af042cb-8877-48be-bcad-2b7c6d005a7b"
+              LastKnownName="File"
+              LastKnownLocation="Package_2039.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9b15772e-0fd5-4868-a662-311533f5b146"
+                  name="Directory"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="964c3e30-dcd1-4f65-8faa-a89937635e9e"
+                  name="File"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="a3d69a89-7df1-4f3a-897f-b56010952ae0"
+            isDerived="false"
+            sourceEndRoleName="Directory"
+            targetEndRoleName="Rules"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="834daaa1-f178-4fab-a516-cd384bd078f7"
+              LastKnownName="Rules"
+              LastKnownLocation="Package_2039.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="62cdd52e-39df-44f6-b9cc-4636e145aa5e"
+                  name="Directory"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c31a6e3a-0487-4faa-9b5c-69b1fa44733d"
+                  name="Rules"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="7f31659c-7763-40b3-9b8b-22a8571fad84"
@@ -785,25 +1325,6 @@
             </type_NamedElement>
           </property>
           <property
-            Id="c3fc5ca7-6d84-4c9a-aa5f-9f4a79b94246"
-            name="directoryPath"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
-                LastKnownName="String"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </type_NamedElement>
-          </property>
-          <property
             Id="b91e7b04-0eff-412c-b737-b437122436f2"
             name="subdirectoryList"
             visibility="Private"
@@ -819,6 +1340,25 @@
               <undefinedTypeMoniker
                 Id="b9826727-aff2-4c15-9da4-4288a6f10387"
                 LastKnownName="AbstractList&lt;Directory&gt;"
+                LastKnownLocation="Package_2039.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e01ba157-b21e-44d8-a33e-231be9837c3b"
+            name="rules"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="834daaa1-f178-4fab-a516-cd384bd078f7"
+                LastKnownName="Rules"
                 LastKnownLocation="Package_2039.uml" />
             </type_NamedElement>
           </property>
@@ -842,10 +1382,156 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="795a61c1-ff80-4d8c-ae87-8f60430f9303"
+            isSubstitutable="false">
+            <classMoniker
+              Id="ad52185f-c970-4364-b76e-3fce05691cf3"
+              LastKnownName="PathContaining"
+              LastKnownLocation="Package_2039.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="a5a4f3ce-49db-4af9-9329-bb2d37ea4571"
+            isDerived="false"
+            sourceEndRoleName="File"
+            targetEndRoleName="Rules"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="834daaa1-f178-4fab-a516-cd384bd078f7"
+              LastKnownName="Rules"
+              LastKnownLocation="Package_2039.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="709a4e9e-8c3d-4255-8cbe-b9fd57629e1c"
+                  name="File"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7dc6d612-053d-4818-a84c-aca2d8dd233a"
+                  name="Rules"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
-            Id="5f3dfde9-a1bb-47d1-ae4a-e1958140d2e6"
-            name="fileName"
+            Id="50956c56-67eb-420e-b148-06648cbda763"
+            name="rules"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="834daaa1-f178-4fab-a516-cd384bd078f7"
+                LastKnownName="Rules"
+                LastKnownLocation="Package_2039.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="6a60eccb-8a93-4b2a-8342-f0ea5441245a"
+        name="Class1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="de8c743b-b90d-42df-adf8-d2d8c13eb306"
+        name="Ruleable??"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedAttributes>
+          <property
+            Id="2af42e8a-9a45-4270-98cb-51d65b909500"
+            name="resolvingMethod"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a0c3fd77-d071-4d80-9610-304b5cb9e7b0"
+                LastKnownName="ResolvingMethod"
+                LastKnownLocation="Package_2039.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributes>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a20817d1-20bc-4a36-aaf4-564b388b21c6"
+        name="RuleContaining"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="f1e4ec7c-4282-4b57-9e67-a39a3bf23753"
+            name="resolvingMethod"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a0c3fd77-d071-4d80-9610-304b5cb9e7b0"
+                LastKnownName="ResolvingMethod"
+                LastKnownLocation="Package_2039.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ad52185f-c970-4364-b76e-3fce05691cf3"
+        name="PathContaining"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="d77ab851-7c06-4418-a704-0d7a6a1d30c2"
+            name="Path"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -863,6 +1549,229 @@
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="2ef824a9-10c3-419a-810e-800dfb969669"
+        name="AbstractList&lt;Share&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="554249e6-57e9-4665-8345-3f31c6eaeb3d"
+        name="Device"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="c9c7c0c0-4001-4c13-b639-aa71b709782d"
+            name="deviceName"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="3b4baa74-a775-4360-b9cc-84370975db72"
+            name="id"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="8912ffb1-a0be-4d6d-9abd-3f1f3b8b1e2e"
+                LastKnownName="UUID"
+                LastKnownLocation="Package_2039.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ca55a982-4c84-41a5-88b2-7c712d70a977"
+        name="ManagingLayer"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="f77e6b11-0f03-4d74-a0e4-9183e3613e3a">
+            <interfaceMoniker
+              Id="b179b9b2-b11f-412c-9e84-ee401d3c63ea"
+              LastKnownName="ManagingLayerInterface"
+              LastKnownLocation="Package_2039.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="5ad10082-5687-4fa6-bf9f-02f77d0b58e3"
+            isDerived="false"
+            sourceEndRoleName="ManagingLayer"
+            targetEndRoleName="ConfigurationInterface"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="66e11e2d-e7d0-47f2-9393-903b5ff53c2b"
+              LastKnownName="ConfigurationInterface"
+              LastKnownLocation="Package_2039.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="dc621c70-ba25-42c0-9415-3619a614944b"
+                  name="ManagingLayer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="db512423-0836-41bf-b857-bae23fb8a2f5"
+                  name="ConfigurationInterface"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="0081defc-51c4-4fd2-b4a2-4df74e6ba93a"
+            name="config"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="66e11e2d-e7d0-47f2-9393-903b5ff53c2b"
+                LastKnownName="ConfigurationInterface"
+                LastKnownLocation="Package_2039.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="3c0b842c-1147-41ec-9182-03b9809b5dc7"
+            name="sync"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ea61cd32-0fa1-411a-acee-fc7c55e60434"
+                  name="share"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="45253c8d-d8d3-4c20-809d-a50eeeff42c8"
+                      LastKnownName="Share"
+                      LastKnownLocation="Package_2039.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4fe413db-70e6-4bb7-a5c5-f0798e15208b"
+                  name="device"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="dd6a86ad-478c-4e83-8a96-7edf9bc0b159"
+                      LastKnownName="Device"
+                      LastKnownLocation="Package_2039.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="9cf57a63-b773-4832-afef-97a999581c70"
+            name="getConfig"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="96044fe0-d325-450a-9cc8-40120e0e1d40"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="66e11e2d-e7d0-47f2-9393-903b5ff53c2b"
+                      LastKnownName="ConfigurationInterface"
+                      LastKnownLocation="Package_2039.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e9c49aea-2e04-4332-9821-2ba7ed3f0133"
+            name="scan"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c2e98181-65dc-413f-865e-8ddba8554cb4"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="befe459e-a00a-4341-a838-202aab2f91bf"
+                      LastKnownName="AbstractList&lt;Device&gt;"
+                      LastKnownLocation="Package_2039.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
   </packagedElements>

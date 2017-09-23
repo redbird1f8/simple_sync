@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="cb0b904c-194c-459e-80e5-0c0e7d7bb000" name="UMLClassDiagram" linkedPackageId="88960386-3994-40b9-9f76-25d376876af0" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="cb0b904c-194c-459e-80e5-0c0e7d7bb000" name="UMLClassDiagram" linkedPackageId="88960386-3994-40b9-9f76-25d376876af0" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
       <package Id="4e026c65-5651-4d15-ac8b-2b808f1f21ff" name="Library">
@@ -34,6 +34,9 @@
                       </parameter>
                     </operationHasOwnedParameters>
                   </ownedParameters>
+                </operation>
+                <operation Id="6294937c-ec93-4f02-83d5-e9b7e4331c9e" name="createShare" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="9ad1df4e-8512-48c3-be20-c79976b6d1ee" />
                 </operation>
               </ownedOperations>
             </Interface>
@@ -118,6 +121,12 @@
                   <elementDefinition Id="15f0a282-28a3-4baf-aac2-86e749297002" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="a66263ea-ba9a-4d75-bf41-5ff3c20e84e5" LastKnownName="AbstractList&lt;DeviceConfig&gt;" />
+                  </type_NamedElement>
+                </property>
+                <property Id="d4b32c08-3f99-4f46-85fb-1a1e94da817a" name="name" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="881eeff8-2265-4dcd-a989-4ddf76dee11d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f968e26d-6a4b-483f-9328-3fcffe33a24a" LastKnownName="String" />
                   </type_NamedElement>
                 </property>
               </ownedAttributesInternal>
@@ -211,6 +220,19 @@
                         <elementDefinition Id="8efdd9b5-2b0a-44c8-9ece-792be72b4763" />
                         <type_NamedElement>
                           <referencedTypeMoniker Id="16e65236-333a-4d4f-8245-4ad278d681ee" LastKnownName="ConfigurationInterface" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="77c2f8a0-32f2-43b0-b2be-28cbec4777e4" name="scan" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="8e336eb1-93ce-4810-9c1f-19de9b67f190" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="dcfedf46-e9d0-4992-9f00-3c0ddcde2c4b" direction="Return" isUnique="false">
+                        <elementDefinition Id="16f8e3f8-7ec3-4298-8ea1-d7f53b3b8f57" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="0e6affdc-8ee1-428b-90b6-c13fd76be623" LastKnownName="AbstractList&lt;Device&gt;" />
                         </type_NamedElement>
                       </parameter>
                     </operationHasOwnedParameters>
@@ -334,6 +356,9 @@
                       </parameter>
                     </operationHasOwnedParameters>
                   </ownedParameters>
+                </operation>
+                <operation Id="c2f1fe1f-2432-4924-a5a1-2f586bfc80e4" name="createShare" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="c20602fd-2177-42d2-929a-5571bed37aea" />
                 </operation>
               </ownedOperationsInternal>
             </class>
@@ -675,6 +700,19 @@
                     </operationHasOwnedParameters>
                   </ownedParameters>
                 </operation>
+                <operation Id="db283498-8163-4bad-8bb6-43c6e6624e3e" name="scan" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="e9c49aea-2e04-4332-9821-2ba7ed3f0133" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="8e5bd179-bdbf-4850-ac72-1d7b8124b69b" direction="Return" isUnique="false">
+                        <elementDefinition Id="c2e98181-65dc-413f-865e-8ddba8554cb4" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="0e6affdc-8ee1-428b-90b6-c13fd76be623" LastKnownName="AbstractList&lt;Device&gt;" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
               </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
@@ -825,6 +863,11 @@
     <packageHasNamedElement>
       <referencedType Id="4d2f5531-761b-4a9c-86f2-93e6437a7f9f" name="ManagingLayerInterface" isAbstract="false" isLeaf="false" cachedFullName="ManagingLayerInterface">
         <elementDefinition Id="5fcecb63-94d6-4123-b630-b484ba9946aa" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="0e6affdc-8ee1-428b-90b6-c13fd76be623" name="AbstractList&lt;Device&gt;" isAbstract="false" isLeaf="false" cachedFullName="AbstractList&lt;Device&gt;">
+        <elementDefinition Id="befe459e-a00a-4341-a838-202aab2f91bf" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>

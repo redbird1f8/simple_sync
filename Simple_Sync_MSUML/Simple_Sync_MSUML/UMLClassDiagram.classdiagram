@@ -81,27 +81,21 @@
                     </associationHasOwnedEnds>
                     <associationHasOwnedEnds>
                       <memberEnd Id="053a03ed-e860-4292-a7c5-3662c6beb8aa" name="Directory" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <lowerValueInternal>
+                          <literalString Id="4e45f51b-1274-448d-8a3c-fa16ccd9da37" name="Lower" value="1">
+                            <elementDefinition Id="7ec0d878-0cde-48e0-b048-30115c1597e4" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="c26dc5a6-2c1d-4ccf-9b6d-1b756afbd0b8" name="Upper" value="*">
+                            <elementDefinition Id="be910081-9a51-46f4-8baa-9d705e9d301d" />
+                          </literalString>
+                        </upperValueInternal>
                         <elementDefinition Id="be3e7811-4b87-4847-80a0-9205fff1a754" />
                       </memberEnd>
                     </associationHasOwnedEnds>
                   </relationshipOwnedElementsInternal>
                   <elementDefinition Id="5d20328c-47d9-4a6d-890b-6c7bb3226c56" />
-                </association>
-                <association Id="bcf84587-146e-4771-ba41-ae7105a4bd5e" isDerived="false" sourceEndRoleName="Share" targetEndRoleName="Device" isLeaf="false" isAbstract="false">
-                  <classMoniker Id="5fda4771-4caa-4f2b-9f71-8cfe1f8f8d94" LastKnownName="Device" />
-                  <relationshipOwnedElementsInternal>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="b2be3aef-8850-4d6e-b83a-be4e6948ab4e" name="Share" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="9901ae21-7a1e-44ec-b32e-826e20f15293" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="0997696b-936e-4565-afbc-ee24c288b47a" name="Device" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
-                        <elementDefinition Id="7fe53544-6b9e-4d29-bfd6-fd59820a9c1c" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                  </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="158a8585-5c89-41b2-819a-4bb31b766b61" />
                 </association>
               </targetEnds>
               <ownedAttributesInternal>
@@ -439,6 +433,24 @@
           <packageHasNamedElement>
             <class Id="2b782b32-e6c8-4127-a7ea-968d7ba8e4d2" name="DeviceConfig" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="c88a37e8-fc45-4bb8-bdae-18885429d367" />
+              <targetEnds>
+                <association Id="c9d73cd5-1f24-4b10-a6ab-c605f43dea43" isDerived="false" sourceEndRoleName="DeviceConfig" targetEndRoleName="Device" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="5fda4771-4caa-4f2b-9f71-8cfe1f8f8d94" LastKnownName="Device" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="8eb790c6-b1be-4df2-b624-2efc1775061c" name="DeviceConfig" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="ae3d1f95-b115-4bd2-af92-39712cd13b8e" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="4fdce64c-8596-45c9-9d26-15f10c4fdd2e" name="Device" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="8e819026-3f85-4963-9244-ea5cc0fa499f" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="6a999f0b-f453-4176-90fe-e0a5c9a49e52" />
+                </association>
+              </targetEnds>
               <ownedAttributesInternal>
                 <property Id="40d05ebc-08df-420d-a480-dceb7f02bf16" name="device" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="82829307-01f8-425a-9929-46496c18a1ad" />
@@ -516,6 +528,16 @@
                     </associationHasOwnedEnds>
                     <associationHasOwnedEnds>
                       <memberEnd Id="8c396ca0-91c5-4f5f-b847-5757b7a7d248" name="File" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <lowerValueInternal>
+                          <literalString Id="16728f4e-9992-4590-beea-6d5159b72ec0" name="Lower" value="1">
+                            <elementDefinition Id="3f720834-22a1-4921-ac53-504235dcf96f" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="78cdb682-9ed7-417f-b9f0-05bada2a6983" name="Upper" value="*">
+                            <elementDefinition Id="3be69d81-bc73-49ff-8e38-088c3ea7c377" />
+                          </literalString>
+                        </upperValueInternal>
                         <elementDefinition Id="964c3e30-dcd1-4f65-8faa-a89937635e9e" />
                       </memberEnd>
                     </associationHasOwnedEnds>

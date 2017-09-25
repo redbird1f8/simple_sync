@@ -1,425 +1,425 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="bf1e7bdc-1642-4564-8f5a-f9e8ddd71a60" name="Activity1" linkedPackageId="123622c7-f249-4be4-aa50-7c7ce248bbe4" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="8146988e-ad66-41a6-84c8-934a9839981b">
-      <profileInstance Id="235a94f8-28af-4438-8eb6-9fa3c6fae1c3" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="399a41b0-ed72-41a6-8e18-43a6b0e8ec37">
-      <profileInstance Id="4bc8582e-eed3-4da4-a120-4fcf4528c392" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="5171f526-026a-4f7a-a86b-76ef23485978" name="Activity1" linkedPackageId="5cc46cb1-aac0-4844-9290-acac7e3e2b55" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
   <packagedElements>
     <activityRootModelHasActivity>
-      <activity Id="e33822b5-e762-42de-85aa-5fae2bc56c36" name="Activity1" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
-        <elementDefinition Id="b5e7b409-70f2-4f27-b13e-afa71412138c" />
+      <activity Id="f677b12a-8cae-4d53-bfb6-fdd9614a610f" name="Activity1" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="7d225a32-e7bb-415c-91c7-bf88670ee66b" />
         <nodes>
-          <opaqueAction Id="1edcde85-9870-46e0-8f8d-68dca044c5d5" name="Создать Share" isLeaf="false">
-            <elementDefinition Id="b553f4b7-7fdc-4b95-82f5-2eac6f5e399c" />
+          <opaqueAction Id="7eb748dd-1395-416d-914c-1fc092857b21" name="Создать Share" isLeaf="false">
+            <elementDefinition Id="fe70cfaf-1ffa-46a3-811a-b66c9964d841" />
             <pins>
               <opaqueActionHasOutputValues>
-                <outputPin Id="7cbda396-290f-433a-a1c8-2ca95680b063" name="s" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
-                  <elementDefinition Id="088a0939-e69d-488e-8fda-5436dc89f20c" />
+                <outputPin Id="a7fd8e7b-790c-4d16-9b85-5c0af780d1f0" name="s" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="f33ffc12-51d6-485e-b6be-ef9350ee3fe2" />
                   <objectFlowTargets>
-                    <objectFlow Id="3d8679d9-b118-4e20-8ac9-a2574369954d" isLeaf="false" isMulticast="false" isMultireceive="false">
-                      <objectNodeMoniker Id="e5f5e239-1ccf-46fb-a690-e0aca7739ffd" LastKnownName="s : Share" />
-                      <elementDefinition Id="d7504ae4-d6f2-48a9-b0d3-01c2fd559f50" />
+                    <objectFlow Id="b17e385a-bf54-4746-85b8-b610058891fe" isLeaf="false" isMulticast="false" isMultireceive="false">
+                      <objectNodeMoniker Id="f4529afa-aad8-498f-a4c8-c7996eb37e65" LastKnownName="s : Share" />
+                      <elementDefinition Id="6e45ca32-87a6-472a-8516-5cecf1db33ee" />
                     </objectFlow>
-                    <objectFlow Id="b204928b-e086-4fc3-8f62-06bf3f26fd5f" isLeaf="false" isMulticast="false" isMultireceive="false">
-                      <mergeNodeMoniker Id="268736ca-3fc0-4625-b203-d250234edeab" LastKnownName="Merge1" />
-                      <elementDefinition Id="7cb57cca-2ee5-4bc0-bd00-d3d2724bf6d6" />
+                    <objectFlow Id="ca1b1e1f-6917-4f92-8060-99a6ab8a057c" isLeaf="false" isMulticast="false" isMultireceive="false">
+                      <mergeNodeMoniker Id="acb13269-6896-48a6-9b75-c9b723eecfe0" LastKnownName="Merge1" />
+                      <elementDefinition Id="5c944645-e44b-4c3d-9d5d-92db00ac3c01" />
                     </objectFlow>
                   </objectFlowTargets>
                   <upperBound>
-                    <literalInteger Id="b30095c7-f395-4925-b17d-be61a40e1e68" name="2147483647" value="2147483647">
-                      <elementDefinition Id="7891d408-b0e4-4def-a5f0-123ab7908483" />
+                    <literalInteger Id="91fc61d8-61c9-4c46-8e18-e398edb4fddb" name="2147483647" value="2147483647">
+                      <elementDefinition Id="758bcabc-5292-43cb-af6a-27cb06642bf8" />
                     </literalInteger>
                   </upperBound>
                 </outputPin>
               </opaqueActionHasOutputValues>
             </pins>
           </opaqueAction>
-          <initialNode Id="08ff1e8f-d412-44cf-99f4-02afdc9a3779" name="Initial1" isLeaf="false">
-            <elementDefinition Id="ae661ac3-99bc-4948-a032-d5a1c756ae3e" />
+          <initialNode Id="9df91930-8c7a-41f6-8688-657fee18b2b7" name="Initial1" isLeaf="false">
+            <elementDefinition Id="3df08c5a-7ced-4c13-8b73-5ce7002b0469" />
             <flowNodeTargets>
-              <controlFlow Id="9126ee03-0e8b-4c99-b74d-d487929a3df5" isLeaf="false">
-                <mergeNodeMoniker Id="c43ef8f9-d965-475c-ab4f-b5ca45fb4f08" LastKnownName="Merge3" />
-                <elementDefinition Id="fc95dbca-a682-44a6-b1df-b741bfcc66e0" />
+              <controlFlow Id="cf05047c-12af-4aa2-b1e9-214156843fa8" isLeaf="false">
+                <mergeNodeMoniker Id="70c44506-90c1-4b04-9622-6a4e79273525" LastKnownName="Merge3" />
+                <elementDefinition Id="25e3489a-b1b0-41c7-8de0-da4245482260" />
               </controlFlow>
             </flowNodeTargets>
           </initialNode>
-          <opaqueAction Id="26484233-e0ce-4f06-895b-788a14e0754a" name="Выбрать пункт с настройками Share" isLeaf="false">
-            <elementDefinition Id="1156311a-6ce6-43f8-9504-8c9ceb8edd98" />
+          <opaqueAction Id="a9fa9aeb-3df7-4806-909b-85d2f4943cdf" name="Выбрать пункт с настройками Share" isLeaf="false">
+            <elementDefinition Id="0cd4c696-9c0c-406b-b85c-0652975c4a9a" />
             <pins>
               <opaqueActionHasInputValues>
-                <inputPin Id="bcd0dbd0-7265-404f-bf2a-4a5dff65473d" name="s" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
-                  <elementDefinition Id="3ccc10e3-b2a2-4a4e-84ba-91ba7052eb6f" />
+                <inputPin Id="735fdda8-4d33-4594-a08b-7d3950beaf4d" name="s" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="96e4a007-b3bb-4db6-84ee-4ac5a9882409" />
                   <upperBound>
-                    <literalInteger Id="a06bb613-5e61-4810-bdc0-07a284dc4066" name="2147483647" value="2147483647">
-                      <elementDefinition Id="b31a99a0-6e07-4fa8-9f4b-1f84616861f8" />
+                    <literalInteger Id="9b765641-5dd5-4bd9-92e2-d337f4ef60e8" name="2147483647" value="2147483647">
+                      <elementDefinition Id="8a3346a9-4a38-4863-b709-b5ad10b4fd42" />
                     </literalInteger>
                   </upperBound>
                 </inputPin>
               </opaqueActionHasInputValues>
               <opaqueActionHasOutputValues>
-                <outputPin Id="771feb23-38dd-4076-95c6-76c493a189e6" name="s" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
-                  <elementDefinition Id="ed033fc5-fb4c-4a34-9021-4e57aaf6ba00" />
+                <outputPin Id="ea04accb-f09d-48c3-9368-b35052c57e82" name="s" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="63ee999a-6e2b-4eb3-a89c-9a51170fa4a2" />
                   <objectFlowTargets>
-                    <objectFlow Id="ba66d600-8b1b-4e70-b6fe-797f0ba8b14b" isLeaf="false" isMulticast="false" isMultireceive="false">
-                      <decisionNodeMoniker Id="dd3e9250-2d84-467b-9d2d-5c36c81855a8" LastKnownName="Decision1" />
-                      <elementDefinition Id="b880a54b-163d-44f0-ace0-2d325aa178ed" />
+                    <objectFlow Id="d5d5b2a0-51ea-4333-8581-063dcc3453d2" isLeaf="false" isMulticast="false" isMultireceive="false">
+                      <decisionNodeMoniker Id="3cc8f0d2-afb7-432c-8398-075eb1fa56f2" LastKnownName="Decision1" />
+                      <elementDefinition Id="222dac3d-72a2-4451-aca9-f706dedd0aab" />
                     </objectFlow>
                   </objectFlowTargets>
                   <upperBound>
-                    <literalInteger Id="1eafa224-342a-4f09-a2ed-2300584c1b2b" name="2147483647" value="2147483647">
-                      <elementDefinition Id="f9ee1b4f-2e91-4a24-9d49-1c2d32b82741" />
+                    <literalInteger Id="d29d452e-0bbb-4fad-a45c-97c4ba5262e0" name="2147483647" value="2147483647">
+                      <elementDefinition Id="1525e724-e76d-49eb-9af8-e6da2c49c60d" />
                     </literalInteger>
                   </upperBound>
                 </outputPin>
               </opaqueActionHasOutputValues>
             </pins>
           </opaqueAction>
-          <mergeNode Id="268736ca-3fc0-4625-b203-d250234edeab" name="Merge1" isLeaf="false">
-            <elementDefinition Id="bb91503f-474c-4674-b650-a445944f5151" />
+          <mergeNode Id="acb13269-6896-48a6-9b75-c9b723eecfe0" name="Merge1" isLeaf="false">
+            <elementDefinition Id="9bd4c328-2fe6-4c36-9548-dd52ee8dbf77" />
             <objectFlowTargets>
-              <objectFlow Id="3268a7ad-fe58-469c-97ff-efccb8f0398c" isLeaf="false" isMulticast="false" isMultireceive="false">
-                <inputPinMoniker Id="bcd0dbd0-7265-404f-bf2a-4a5dff65473d" LastKnownName="s" />
-                <elementDefinition Id="506f5296-c2c1-4d7c-bbd1-b51749121c80" />
+              <objectFlow Id="3b142d06-5450-4399-a3da-bb817838b487" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <inputPinMoniker Id="735fdda8-4d33-4594-a08b-7d3950beaf4d" LastKnownName="s" />
+                <elementDefinition Id="0fbd5dd7-468d-4dc7-9880-d2c70afd7ed7" />
               </objectFlow>
             </objectFlowTargets>
           </mergeNode>
-          <opaqueAction Id="f4afc0dd-9620-401c-a98f-de242b29131a" name="Удалить Share" isLeaf="false">
-            <elementDefinition Id="f83a6b4b-75fe-46da-9bb4-cf051934ba91" />
+          <opaqueAction Id="9bafe87a-66c9-4948-9a0d-0de1488acc80" name="Удалить Share" isLeaf="false">
+            <elementDefinition Id="b26cd31e-3f3d-429a-a1fe-47933b9c37b2" />
             <flowNodeTargets>
-              <controlFlow Id="d077d18d-8979-4a2e-a4e9-39242f02b4b6" isLeaf="false">
-                <mergeNodeMoniker Id="c43ef8f9-d965-475c-ab4f-b5ca45fb4f08" LastKnownName="Merge3" />
-                <elementDefinition Id="bd3a489f-7fea-46a6-a014-59e224a366b2" />
+              <controlFlow Id="b7acf496-e81d-4912-8057-973d10faa091" isLeaf="false">
+                <mergeNodeMoniker Id="70c44506-90c1-4b04-9622-6a4e79273525" LastKnownName="Merge3" />
+                <elementDefinition Id="6cf38ebd-eddc-4242-9714-dc999d8cc672" />
               </controlFlow>
             </flowNodeTargets>
             <pins>
               <opaqueActionHasInputValues>
-                <inputPin Id="b4f3d1fe-4979-4fde-a92a-040664c3d275" name="s" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
-                  <elementDefinition Id="92be8af6-c24a-409c-9821-b862020ba725" />
+                <inputPin Id="ad5657c0-56a4-4917-bd70-23f91da67fcc" name="s" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="269086d4-4aed-4ae8-9d9a-0e32a915049d" />
                   <upperBound>
-                    <literalInteger Id="5e1f1089-7866-42c1-be0f-110b366455bc" name="2147483647" value="2147483647">
-                      <elementDefinition Id="01ff3af5-b4bb-433e-9531-b3922e881741" />
+                    <literalInteger Id="0869f6c4-d464-4fbf-a2f3-cb2a9af6f744" name="2147483647" value="2147483647">
+                      <elementDefinition Id="9b23a51c-f899-4742-a4df-b60470230597" />
                     </literalInteger>
                   </upperBound>
                 </inputPin>
               </opaqueActionHasInputValues>
             </pins>
           </opaqueAction>
-          <opaqueAction Id="4caea7ac-655f-4960-8122-3fcc50116974" name="Переименовать" isLeaf="false">
-            <elementDefinition Id="32cf5f77-9a11-470c-a2ed-ec9b32d1f8c0" />
+          <opaqueAction Id="86b90aee-1db7-4495-9641-7f17ca672835" name="Переименовать" isLeaf="false">
+            <elementDefinition Id="23d47bd0-5137-49e4-a404-284b51f3668d" />
             <flowNodeTargets>
-              <controlFlow Id="9a85dff4-0c0b-4b76-8772-bf8e8d1f8e44" isLeaf="false">
-                <mergeNodeMoniker Id="268736ca-3fc0-4625-b203-d250234edeab" LastKnownName="Merge1" />
-                <elementDefinition Id="4ea2751e-1a3b-41a6-bf84-9c131c306f69" />
+              <controlFlow Id="cabc6419-75cb-4289-88e5-9d799215679d" isLeaf="false">
+                <mergeNodeMoniker Id="acb13269-6896-48a6-9b75-c9b723eecfe0" LastKnownName="Merge1" />
+                <elementDefinition Id="53242b3d-2bb1-4592-9fb1-43dafb2a35d9" />
               </controlFlow>
             </flowNodeTargets>
             <pins>
               <opaqueActionHasInputValues>
-                <inputPin Id="e3e8cf5d-6022-4007-b808-81d919553bdf" name="s" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
-                  <elementDefinition Id="8c8938f3-1104-45b3-93eb-df32f1c891a6" />
+                <inputPin Id="83a0452e-2ce9-485a-ba60-c5d33067ce3c" name="s" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="cab40760-35e7-4d66-a419-5054da38fdb9" />
                   <upperBound>
-                    <literalInteger Id="69210516-4f79-45d4-96dc-0fcc3aabe3b6" name="2147483647" value="2147483647">
-                      <elementDefinition Id="4d8e3a6e-1590-46d9-a292-8d5942b2cbd4" />
+                    <literalInteger Id="883b312a-1ded-4f04-9076-03913aa28bee" name="2147483647" value="2147483647">
+                      <elementDefinition Id="cbdcbd1d-d3a2-4bae-b319-472df6d8e860" />
                     </literalInteger>
                   </upperBound>
                 </inputPin>
               </opaqueActionHasInputValues>
               <opaqueActionHasOutputValues>
-                <outputPin Id="6c2f3284-aa44-4cc6-9236-c7bf986c25a3" name="s" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
-                  <elementDefinition Id="747d0172-e679-4888-9f19-4fec3933b913" />
+                <outputPin Id="24fa4be4-3cb9-49ab-a44a-23b5d89bb594" name="s" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="8bbfde40-d2d1-4c50-a9ac-fc3d08e647e6" />
                   <objectFlowTargets>
-                    <objectFlow Id="677bd323-49cc-4030-bd66-24e6ded47fd3" isLeaf="false" isMulticast="false" isMultireceive="false">
-                      <objectNodeMoniker Id="e5f5e239-1ccf-46fb-a690-e0aca7739ffd" LastKnownName="s : Share" />
-                      <elementDefinition Id="3480ba46-c5e1-49a3-bca9-c3d4713c122b" />
+                    <objectFlow Id="1585d83c-b890-4c8b-8c30-bcea094cdb8c" isLeaf="false" isMulticast="false" isMultireceive="false">
+                      <objectNodeMoniker Id="f4529afa-aad8-498f-a4c8-c7996eb37e65" LastKnownName="s : Share" />
+                      <elementDefinition Id="85b9a0dc-75cc-4a90-96a2-6adda5989cb2" />
                     </objectFlow>
                   </objectFlowTargets>
                   <upperBound>
-                    <literalInteger Id="2e00ea81-ce56-4441-92d8-641df5222ec3" name="2147483647" value="2147483647">
-                      <elementDefinition Id="9c84c647-085c-46a0-8811-f9ed201b1af4" />
+                    <literalInteger Id="85a1825c-9803-4849-9dca-10bb1f112c97" name="2147483647" value="2147483647">
+                      <elementDefinition Id="4e06890e-b6d7-4722-82e0-eb4ddac1e3e4" />
                     </literalInteger>
                   </upperBound>
                 </outputPin>
               </opaqueActionHasOutputValues>
             </pins>
           </opaqueAction>
-          <opaqueAction Id="09cb0013-c9eb-45b8-8c6e-8e83b08d10c4" name="Выбрать способ разрешения коллизий" isLeaf="false">
-            <elementDefinition Id="ffec70d5-019f-4d5b-936b-10e90e5cf72d" />
+          <opaqueAction Id="9010370d-78fd-4543-8247-281e8c852392" name="Выбрать способ разрешения коллизий" isLeaf="false">
+            <elementDefinition Id="9bae3829-6177-40ca-b3d7-91c957ee5132" />
             <flowNodeTargets>
-              <controlFlow Id="fdbcdeb6-59af-48dc-920a-c6587570e2af" isLeaf="false">
-                <mergeNodeMoniker Id="268736ca-3fc0-4625-b203-d250234edeab" LastKnownName="Merge1" />
-                <elementDefinition Id="4b9ac5f5-8751-41bb-9b33-f825ab49ac75" />
+              <controlFlow Id="fac45d79-8f4f-456c-b404-b0d31c50b1de" isLeaf="false">
+                <mergeNodeMoniker Id="acb13269-6896-48a6-9b75-c9b723eecfe0" LastKnownName="Merge1" />
+                <elementDefinition Id="d28a3324-a0ad-4348-b288-239105da8178" />
               </controlFlow>
             </flowNodeTargets>
             <pins>
               <opaqueActionHasInputValues>
-                <inputPin Id="3c902cd2-30c2-4993-a5cf-bb03b30de435" name="s" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
-                  <elementDefinition Id="4632b7db-0aac-4f71-945e-db372a914651" />
+                <inputPin Id="d033ce79-a717-44c4-b483-e8669e74990c" name="s" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="f7f673b1-5e7d-4d28-b9e3-61d4637625e6" />
                   <upperBound>
-                    <literalInteger Id="d4130d76-3436-4f38-9009-d3e75116029d" name="2147483647" value="2147483647">
-                      <elementDefinition Id="c5ededc1-059d-43dc-bff9-de399461e4a5" />
+                    <literalInteger Id="74ab7638-6060-4a38-8c6d-515484b677e2" name="2147483647" value="2147483647">
+                      <elementDefinition Id="da3aaa8b-2ba2-4679-9657-a110c4307513" />
                     </literalInteger>
                   </upperBound>
                 </inputPin>
               </opaqueActionHasInputValues>
               <opaqueActionHasOutputValues>
-                <outputPin Id="76d77eae-93d0-44f4-b819-f6f81b6ede58" name="s" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
-                  <elementDefinition Id="c990d53a-f8f4-4671-a359-1cca3a19d5de" />
+                <outputPin Id="3e1d26dd-9d4d-4aa0-ae48-fb0d44dbd999" name="s" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="34394dd7-f4be-43e1-a668-66f51b99fb2b" />
                   <objectFlowTargets>
-                    <objectFlow Id="89279ef3-80e9-4e40-8aff-88ca784aed0e" isLeaf="false" isMulticast="false" isMultireceive="false">
-                      <objectNodeMoniker Id="e5f5e239-1ccf-46fb-a690-e0aca7739ffd" LastKnownName="s : Share" />
-                      <elementDefinition Id="a93b50bb-e138-4ba5-ab9b-872e66e34c73" />
+                    <objectFlow Id="b4334000-c87e-49f5-a109-3090217799e4" isLeaf="false" isMulticast="false" isMultireceive="false">
+                      <objectNodeMoniker Id="f4529afa-aad8-498f-a4c8-c7996eb37e65" LastKnownName="s : Share" />
+                      <elementDefinition Id="0d5a2634-2f57-4a7a-9df1-cf550104d70f" />
                     </objectFlow>
                   </objectFlowTargets>
                   <upperBound>
-                    <literalInteger Id="f6e5217f-7c19-477d-95e5-172048084e0e" name="2147483647" value="2147483647">
-                      <elementDefinition Id="2c491e79-bf23-4402-b9ce-4834af357b2d" />
+                    <literalInteger Id="d7fa17ca-84d3-4730-9df9-181a5a3917fc" name="2147483647" value="2147483647">
+                      <elementDefinition Id="7b5b518e-513e-44e1-86f5-05d33a8d6bc0" />
                     </literalInteger>
                   </upperBound>
                 </outputPin>
               </opaqueActionHasOutputValues>
             </pins>
           </opaqueAction>
-          <objectNode Id="e5f5e239-1ccf-46fb-a690-e0aca7739ffd" name="s : Share" isLeaf="false" ordering="Unordered" isControlType="false">
-            <elementDefinition Id="c53107bf-3e95-48bb-96a4-35117d4cb5a9" />
+          <objectNode Id="f4529afa-aad8-498f-a4c8-c7996eb37e65" name="s : Share" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="d6baf231-425b-4a47-a25b-ee62dc0fcb31" />
             <upperBound>
-              <literalInteger Id="7b5eb868-c36c-4985-a118-210ff4967835" name="2147483647" value="2147483647">
-                <elementDefinition Id="7fcd9238-53ff-49fb-9a48-d892914b9f3c" />
+              <literalInteger Id="f7ab174f-5bf0-46d4-a4c5-a7adfb16b7e1" name="2147483647" value="2147483647">
+                <elementDefinition Id="680559bb-729e-45ab-8e22-2adfcd5002c6" />
               </literalInteger>
             </upperBound>
           </objectNode>
-          <decisionNode Id="dd3e9250-2d84-467b-9d2d-5c36c81855a8" name="Decision1" isLeaf="false">
-            <elementDefinition Id="f558872e-2529-419a-a783-ef78bb537eb1" />
+          <decisionNode Id="3cc8f0d2-afb7-432c-8398-075eb1fa56f2" name="Decision1" isLeaf="false">
+            <elementDefinition Id="2d40ebc7-5f81-47b4-9891-5f7d47fe5b0e" />
             <flowNodeTargets>
-              <controlFlow Id="08b04eab-0640-4f54-a846-552b277cf6ce" isLeaf="false">
-                <mergeNodeMoniker Id="2345f936-01ef-46f9-bc2f-c43bad14c0ae" LastKnownName="Merge41" />
-                <elementDefinition Id="428d2e39-cd6f-4729-bb58-63707571f86f" />
+              <controlFlow Id="09135051-d2e9-4f32-a8d7-8dadd4505060" isLeaf="false">
+                <mergeNodeMoniker Id="69f0dff8-d074-4815-946b-75284976af10" LastKnownName="Merge41" />
+                <elementDefinition Id="64c90670-db5f-4a9e-b858-995e4df8c8f5" />
               </controlFlow>
             </flowNodeTargets>
             <objectFlowTargets>
-              <objectFlow Id="d7168d44-6e89-4c3a-884e-8fbfa8162756" isLeaf="false" isMulticast="false" isMultireceive="false">
-                <inputPinMoniker Id="b4f3d1fe-4979-4fde-a92a-040664c3d275" LastKnownName="s" />
-                <elementDefinition Id="275a14f3-8488-4cf6-9573-e5c1e242884a" />
+              <objectFlow Id="878319ca-e0c9-4f50-88ae-62250c77d3a2" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <inputPinMoniker Id="ad5657c0-56a4-4917-bd70-23f91da67fcc" LastKnownName="s" />
+                <elementDefinition Id="ce23c335-ac77-428c-8fe6-03d941b3bc92" />
               </objectFlow>
-              <objectFlow Id="30789e71-a5cf-4e27-a729-b964a5b4ad16" isLeaf="false" isMulticast="false" isMultireceive="false">
-                <inputPinMoniker Id="e3e8cf5d-6022-4007-b808-81d919553bdf" LastKnownName="s" />
-                <elementDefinition Id="b81305fb-7280-427b-be57-a049586d9485" />
+              <objectFlow Id="8c6aa8ba-aade-4703-bf3b-e83de63f799c" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <inputPinMoniker Id="83a0452e-2ce9-485a-ba60-c5d33067ce3c" LastKnownName="s" />
+                <elementDefinition Id="51d86510-bd36-4bf2-a068-c045f7348700" />
               </objectFlow>
-              <objectFlow Id="8aab91c6-e58c-49a5-8fd7-c940b99d08d2" isLeaf="false" isMulticast="false" isMultireceive="false">
-                <inputPinMoniker Id="3c902cd2-30c2-4993-a5cf-bb03b30de435" LastKnownName="s" />
-                <elementDefinition Id="85083d17-4f9b-4981-8d3a-544c6526f750" />
+              <objectFlow Id="14dfa1b1-8261-468e-bbbd-ce9543f7262e" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <inputPinMoniker Id="d033ce79-a717-44c4-b483-e8669e74990c" LastKnownName="s" />
+                <elementDefinition Id="04af82f1-d350-4f66-93ad-a0438328b2ff" />
               </objectFlow>
             </objectFlowTargets>
           </decisionNode>
-          <mergeNode Id="9e121a30-5735-469e-809b-831d8880ef63" name="Merge2" isLeaf="false">
-            <elementDefinition Id="10e72c97-6c5e-4233-ad57-78c008f5a74c" />
+          <mergeNode Id="cb1bd3b9-57d6-4d37-ba19-1f77b9ebb912" name="Merge2" isLeaf="false">
+            <elementDefinition Id="a06194be-6225-41a6-862e-035749ed3c64" />
             <flowNodeTargets>
-              <controlFlow Id="d4d92fc1-3db5-49e8-9c1c-8d29771161fc" isLeaf="false">
-                <opaqueActionMoniker Id="1edcde85-9870-46e0-8f8d-68dca044c5d5" LastKnownName="Создать Share" />
-                <elementDefinition Id="bef925bf-1edd-41d7-b2e3-0d165df33235" />
+              <controlFlow Id="ccdbfb15-2855-4069-af26-5fea482109a9" isLeaf="false">
+                <opaqueActionMoniker Id="7eb748dd-1395-416d-914c-1fc092857b21" LastKnownName="Создать Share" />
+                <elementDefinition Id="d4504878-2f76-4a9a-b6ab-76e68221decc" />
               </controlFlow>
             </flowNodeTargets>
           </mergeNode>
-          <opaqueAction Id="364256bf-06a3-4500-8167-8796350af7b7" name="Открыть пользовательский интерфейс программы" isLeaf="false">
-            <elementDefinition Id="eb2fa6eb-e7cf-4d68-8c31-2bb58d42b812" />
+          <opaqueAction Id="e50770ff-c564-40b1-8610-d543ac04453b" name="Открыть пользовательский интерфейс программы" isLeaf="false">
+            <elementDefinition Id="0c948afe-0fe1-402c-9591-9ee1267dcdaf" />
             <flowNodeTargets>
-              <controlFlow Id="8f509bef-10e6-41ba-ae90-7f23ebead432" isLeaf="false">
-                <decisionNodeMoniker Id="f7be4ec9-ec55-42f4-bc8b-78400493dc0b" LastKnownName="Decision2" />
-                <elementDefinition Id="33238c60-c1b1-46e6-b717-efd378f731af" />
+              <controlFlow Id="15da11a5-45ae-4a11-ac08-89ece3676466" isLeaf="false">
+                <decisionNodeMoniker Id="3cd65e7a-8f0c-4a59-8183-787e7bb79517" LastKnownName="Decision2" />
+                <elementDefinition Id="18bfd480-cb15-4eaf-aca1-12c818996c88" />
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
-          <opaqueAction Id="5f1f550b-99e1-400d-8eb6-857d425462b8" name="Открыть настройки программы" isLeaf="false">
-            <elementDefinition Id="96298d52-7955-47c5-8849-2505d8003ce7" />
+          <opaqueAction Id="b01106cc-5e5d-45e9-9e04-b9f1b05b5111" name="Открыть настройки программы" isLeaf="false">
+            <elementDefinition Id="cddc265e-4151-42a1-af56-f2bff52dd2aa" />
             <flowNodeTargets>
-              <controlFlow Id="bc713d15-a7c0-4ff2-8cbe-1f219f15287a" isLeaf="false">
-                <decisionNodeMoniker Id="45b3f2cb-5de1-4e89-90fb-2262053d091b" LastKnownName="Decision3" />
-                <elementDefinition Id="4e6af06f-7e83-4147-b65a-575ef3d489eb" />
+              <controlFlow Id="f01782c1-a740-4126-b0aa-08ccfb3ee88b" isLeaf="false">
+                <decisionNodeMoniker Id="9d7ab8e6-208a-4bad-921f-3986fb000392" LastKnownName="Decision3" />
+                <elementDefinition Id="39a3e407-5961-4e29-b9bc-8df9c4fafcf8" />
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
-          <decisionNode Id="f7be4ec9-ec55-42f4-bc8b-78400493dc0b" name="Decision2" isLeaf="false">
-            <elementDefinition Id="0b7876e4-e5e3-426f-a6cb-3b58ffc99306" />
+          <decisionNode Id="3cd65e7a-8f0c-4a59-8183-787e7bb79517" name="Decision2" isLeaf="false">
+            <elementDefinition Id="604bf89f-f918-4087-94cc-607d75522bcb" />
             <flowNodeTargets>
-              <controlFlow Id="df23e09c-0d66-4a0c-9bcd-e44800d40365" isLeaf="false">
-                <mergeNodeMoniker Id="9e121a30-5735-469e-809b-831d8880ef63" LastKnownName="Merge2" />
-                <elementDefinition Id="fc52485b-400a-474b-895e-5d81162d2c9a" />
+              <controlFlow Id="204e46b1-d0c5-4960-9295-d7f469713026" isLeaf="false">
+                <mergeNodeMoniker Id="cb1bd3b9-57d6-4d37-ba19-1f77b9ebb912" LastKnownName="Merge2" />
+                <elementDefinition Id="300f40e2-d190-4574-ad82-0a1ccb3f58ff" />
               </controlFlow>
-              <controlFlow Id="4cdd4e75-752b-46a7-9643-b549ab1c9347" isLeaf="false">
-                <mergeNodeMoniker Id="403fdd3d-9eb6-4c71-b7bc-a299b2c73043" LastKnownName="Merge4" />
-                <elementDefinition Id="30898d6e-45e4-437e-8319-94775bd0b515" />
+              <controlFlow Id="97aba6aa-aab7-41e0-9852-50957846135e" isLeaf="false">
+                <mergeNodeMoniker Id="9076dc16-a371-41e8-a03a-de5440e64940" LastKnownName="Merge4" />
+                <elementDefinition Id="f653c05b-12ac-4193-bace-63ee2d4bada9" />
               </controlFlow>
-              <controlFlow Id="7a853557-72af-4e19-848d-dbdb2c593b0f" isLeaf="false">
-                <opaqueActionMoniker Id="7dd0d43a-af9b-4cbe-a1ff-a39d0f4ca614" LastKnownName="Начать синхронизацию" />
-                <elementDefinition Id="e68ce2b5-73da-4e35-aa46-96acf37777f5" />
+              <controlFlow Id="9e61d897-fe83-4e21-a877-0694e0cb6b66" isLeaf="false">
+                <opaqueActionMoniker Id="74cd0f3d-0295-439d-add4-3cfacb6237a6" LastKnownName="Начать синхронизацию" />
+                <elementDefinition Id="86ef86d9-460e-4082-b15b-6534447f0349" />
               </controlFlow>
-              <controlFlow Id="932fbf38-0a61-4a49-8e21-7d75ac24d5bd" isLeaf="false">
-                <mergeNodeMoniker Id="3d1ed032-2ec3-4a50-879f-f0336e8ed18d" LastKnownName="Merge42" />
-                <elementDefinition Id="742b291f-eee2-4cd5-9a06-4f10e101c9d7" />
+              <controlFlow Id="159288ba-afc7-41a2-9cea-ec96e1950a02" isLeaf="false">
+                <mergeNodeMoniker Id="fd5acf5e-5072-4261-87ae-2bdb4ff0f64d" LastKnownName="Merge42" />
+                <elementDefinition Id="0656dbd2-f62d-4269-ab39-e54d64c31314" />
               </controlFlow>
             </flowNodeTargets>
           </decisionNode>
-          <opaqueAction Id="f79f6ace-10d7-4be3-9f8d-ff4639ef1c18" name="Настроить  возможность автоматического запуска" isLeaf="false">
-            <elementDefinition Id="1d7f49ef-3e9d-4109-8dde-6896182c7e1e" />
+          <opaqueAction Id="338b48cc-a1ad-4cc0-b22d-cba6e4d20aee" name="Настроить  возможность автоматического запуска" isLeaf="false">
+            <elementDefinition Id="fd1c91b6-944e-4825-8d15-41efd49ae690" />
             <flowNodeTargets>
-              <controlFlow Id="f49531cd-1b52-49d1-b796-9f21d1d8af41" isLeaf="false">
-                <mergeNodeMoniker Id="403fdd3d-9eb6-4c71-b7bc-a299b2c73043" LastKnownName="Merge4" />
-                <elementDefinition Id="a2d399e0-7458-4c07-a351-213c1229b317" />
+              <controlFlow Id="d6f72e54-4f5c-4bdd-aa01-d78a8e4b5a83" isLeaf="false">
+                <mergeNodeMoniker Id="9076dc16-a371-41e8-a03a-de5440e64940" LastKnownName="Merge4" />
+                <elementDefinition Id="67756095-0df1-4b40-9dbc-c6c5b47c5a53" />
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
-          <decisionNode Id="45b3f2cb-5de1-4e89-90fb-2262053d091b" name="Decision3" isLeaf="false">
-            <elementDefinition Id="740fd7e7-4fc4-4756-98d0-dee90afa2a0d" />
+          <decisionNode Id="9d7ab8e6-208a-4bad-921f-3986fb000392" name="Decision3" isLeaf="false">
+            <elementDefinition Id="51ff0496-2bff-4356-aab9-55c286ff3b78" />
             <flowNodeTargets>
-              <controlFlow Id="9a9af741-abc9-4f55-aeb6-33a4f9c3c89a" isLeaf="false">
-                <opaqueActionMoniker Id="f79f6ace-10d7-4be3-9f8d-ff4639ef1c18" LastKnownName="Настроить  возможность автоматического запуска" />
-                <elementDefinition Id="40a28c66-88d2-4751-bbfd-34727b838baf" />
+              <controlFlow Id="10dc5416-7a1d-4eb2-9fb5-fca4348d3c9d" isLeaf="false">
+                <opaqueActionMoniker Id="338b48cc-a1ad-4cc0-b22d-cba6e4d20aee" LastKnownName="Настроить  возможность автоматического запуска" />
+                <elementDefinition Id="64a3f136-b874-4637-a6ef-db72f830422f" />
               </controlFlow>
-              <controlFlow Id="1438eb89-65af-44fd-bb80-4b74696d6e42" isLeaf="false">
-                <mergeNodeMoniker Id="2345f936-01ef-46f9-bc2f-c43bad14c0ae" LastKnownName="Merge41" />
-                <elementDefinition Id="73fb9796-e358-48bf-92cb-8bc4526eb142" />
+              <controlFlow Id="48ab6b33-5e15-4c63-94b1-4517abf6826b" isLeaf="false">
+                <mergeNodeMoniker Id="69f0dff8-d074-4815-946b-75284976af10" LastKnownName="Merge41" />
+                <elementDefinition Id="4ee54c34-117f-4bd3-92fe-581df9507754" />
               </controlFlow>
-              <controlFlow Id="2db70dbe-eaf7-407f-ac42-bed81a89ddbe" isLeaf="false">
-                <mergeNodeMoniker Id="3d1ed032-2ec3-4a50-879f-f0336e8ed18d" LastKnownName="Merge42" />
-                <elementDefinition Id="17097b5e-3a03-402e-9984-7f1c2987b201" />
+              <controlFlow Id="3f77cbdd-c9db-42de-bb41-789bba5c2281" isLeaf="false">
+                <mergeNodeMoniker Id="fd5acf5e-5072-4261-87ae-2bdb4ff0f64d" LastKnownName="Merge42" />
+                <elementDefinition Id="00d52924-84b8-40cf-afb1-95c3feafab42" />
               </controlFlow>
             </flowNodeTargets>
           </decisionNode>
-          <mergeNode Id="c43ef8f9-d965-475c-ab4f-b5ca45fb4f08" name="Merge3" isLeaf="false">
-            <elementDefinition Id="deec4fff-69e2-4c53-baa7-4f8e130582e6" />
+          <mergeNode Id="70c44506-90c1-4b04-9622-6a4e79273525" name="Merge3" isLeaf="false">
+            <elementDefinition Id="7dbec645-3f4a-48b4-bc39-752594e355a8" />
             <flowNodeTargets>
-              <controlFlow Id="5add0a2f-15cc-4e79-8245-2d228cc5076d" isLeaf="false">
-                <opaqueActionMoniker Id="364256bf-06a3-4500-8167-8796350af7b7" LastKnownName="Открыть пользовательский интерфейс программы" />
-                <elementDefinition Id="bf9cddf9-2653-4375-ab90-3efd153e076f" />
+              <controlFlow Id="71c91846-a2bc-4681-bdb9-3582d533df4c" isLeaf="false">
+                <opaqueActionMoniker Id="e50770ff-c564-40b1-8610-d543ac04453b" LastKnownName="Открыть пользовательский интерфейс программы" />
+                <elementDefinition Id="f524903b-b115-4fa5-bc26-f2b44461bf58" />
               </controlFlow>
             </flowNodeTargets>
           </mergeNode>
-          <mergeNode Id="403fdd3d-9eb6-4c71-b7bc-a299b2c73043" name="Merge4" isLeaf="false">
-            <elementDefinition Id="b0483a9d-87d8-44f9-b4d8-d1d057777151" />
+          <mergeNode Id="9076dc16-a371-41e8-a03a-de5440e64940" name="Merge4" isLeaf="false">
+            <elementDefinition Id="e9275bb9-6f9c-4eb2-b6aa-80882a0be4dc" />
             <flowNodeTargets>
-              <controlFlow Id="5f76a0f9-9f5b-4628-a0fd-b22579899906" isLeaf="false">
-                <opaqueActionMoniker Id="5f1f550b-99e1-400d-8eb6-857d425462b8" LastKnownName="Открыть настройки программы" />
-                <elementDefinition Id="b55bbfc8-5079-483e-83e8-79ad420db36b" />
+              <controlFlow Id="4a8ac817-e4eb-4131-858d-32d61e62b06b" isLeaf="false">
+                <opaqueActionMoniker Id="b01106cc-5e5d-45e9-9e04-b9f1b05b5111" LastKnownName="Открыть настройки программы" />
+                <elementDefinition Id="7e7cffa2-c0ee-43eb-94bb-e30e680b6953" />
               </controlFlow>
             </flowNodeTargets>
           </mergeNode>
-          <opaqueAction Id="db3ef356-d8f5-491d-a440-92a69dda0212" name="Открыть настройки элементов Share" isLeaf="false">
-            <elementDefinition Id="ae0a7389-e0db-448c-900d-28429eb017fc" />
+          <opaqueAction Id="d96f00d3-6fa6-4104-b0b0-8b768aa49aff" name="Открыть настройки элементов Share" isLeaf="false">
+            <elementDefinition Id="319be18c-b664-4e31-810a-8f7982594a78" />
             <flowNodeTargets>
-              <controlFlow Id="76c3cc87-a20e-4bcc-9486-ffb7b735c2d1" isLeaf="false">
-                <decisionNodeMoniker Id="ff021dd7-a1a3-41b3-8e84-ccf4435b033a" LastKnownName="Decision31" />
-                <elementDefinition Id="19d4fead-1e54-42eb-b365-8f89da13afed" />
+              <controlFlow Id="dad790f6-1d8e-4aba-8c0e-93918d5e4941" isLeaf="false">
+                <decisionNodeMoniker Id="eea21e44-8dc6-4d6c-bf77-c8973889dba0" LastKnownName="Decision31" />
+                <elementDefinition Id="93d14757-9131-4907-9e12-77d23337612f" />
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
-          <opaqueAction Id="7874d4ed-34dc-41ce-b31c-a017902125c3" name="Настроить процесс синхронизации файлов и папок" isLeaf="false">
-            <elementDefinition Id="fed72371-580e-46c3-8435-0ed3c3546ab8" />
+          <opaqueAction Id="e0dbdd06-f82a-47b1-9ddd-cca3c24d953d" name="Настроить процесс синхронизации файлов и папок" isLeaf="false">
+            <elementDefinition Id="b179f3c6-6a5b-4af4-8f57-c9b7d7dbf53b" />
             <flowNodeTargets>
-              <controlFlow Id="6f8c2479-60d1-4069-a578-c4516df56cd4" isLeaf="false">
-                <mergeNodeMoniker Id="2345f936-01ef-46f9-bc2f-c43bad14c0ae" LastKnownName="Merge41" />
-                <elementDefinition Id="e2d85349-a3e0-4eb3-94c9-3651f8a3a6c7" />
+              <controlFlow Id="74fb29a8-a3c7-44ef-9c0d-809e2f609c03" isLeaf="false">
+                <mergeNodeMoniker Id="69f0dff8-d074-4815-946b-75284976af10" LastKnownName="Merge41" />
+                <elementDefinition Id="4349a82f-2a85-4cf0-a5fc-3683c67640c3" />
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
-          <opaqueAction Id="b66641ba-2e99-4053-8c2d-de0261e8f61e" name="Измененить способ разрешения коллизий по умолчанию" isLeaf="false">
-            <elementDefinition Id="92e15cec-49be-482e-ac12-5ae88e4c4413" />
+          <opaqueAction Id="14e7bfc7-ebc3-4714-9d54-65d32240a2cf" name="Измененить способ разрешения коллизий по умолчанию" isLeaf="false">
+            <elementDefinition Id="f912c072-855b-4541-80e9-253fae8f0c44" />
             <flowNodeTargets>
-              <controlFlow Id="8044274c-32cd-45d0-9d0c-f8abd12e6ee5" isLeaf="false">
-                <mergeNodeMoniker Id="2345f936-01ef-46f9-bc2f-c43bad14c0ae" LastKnownName="Merge41" />
-                <elementDefinition Id="4770bd31-b17c-4119-9886-7427804a4a95" />
+              <controlFlow Id="8563ec58-5927-4025-9e7a-83913e0ca314" isLeaf="false">
+                <mergeNodeMoniker Id="69f0dff8-d074-4815-946b-75284976af10" LastKnownName="Merge41" />
+                <elementDefinition Id="13228e0d-98aa-4eec-b067-a0e488940679" />
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
-          <decisionNode Id="ff021dd7-a1a3-41b3-8e84-ccf4435b033a" name="Decision31" isLeaf="false">
-            <elementDefinition Id="179188cb-f2fa-42ca-b9a3-87a9a70b5553" />
+          <decisionNode Id="eea21e44-8dc6-4d6c-bf77-c8973889dba0" name="Decision31" isLeaf="false">
+            <elementDefinition Id="ed1569c8-55ce-4f93-b8d5-a24ac6a6467a" />
             <flowNodeTargets>
-              <controlFlow Id="5c3f05d0-d0c9-46dd-937b-3c57a605ca47" isLeaf="false">
-                <opaqueActionMoniker Id="7874d4ed-34dc-41ce-b31c-a017902125c3" LastKnownName="Настроить процесс синхронизации файлов и папок" />
-                <elementDefinition Id="5c249f38-6dd5-4ad3-b775-6ff1a182c092" />
+              <controlFlow Id="8ac22efb-c042-4bf2-aed8-f630ffe530cc" isLeaf="false">
+                <opaqueActionMoniker Id="e0dbdd06-f82a-47b1-9ddd-cca3c24d953d" LastKnownName="Настроить процесс синхронизации файлов и папок" />
+                <elementDefinition Id="85396576-0d12-4000-bb79-f678dfba58c1" />
               </controlFlow>
-              <controlFlow Id="d45ac1fc-2598-4716-ac07-58976f9a953f" isLeaf="false">
-                <opaqueActionMoniker Id="b66641ba-2e99-4053-8c2d-de0261e8f61e" LastKnownName="Измененить способ разрешения коллизий по умолчанию" />
-                <elementDefinition Id="776d647b-a68c-4a11-b522-0a6bf26104b8" />
+              <controlFlow Id="897d3bb8-c30d-42e7-bc8d-2e71e903c80b" isLeaf="false">
+                <opaqueActionMoniker Id="14e7bfc7-ebc3-4714-9d54-65d32240a2cf" LastKnownName="Измененить способ разрешения коллизий по умолчанию" />
+                <elementDefinition Id="07d6a661-41c3-4ff2-8232-a077b14078f6" />
               </controlFlow>
-              <controlFlow Id="ef7d9b61-a181-4fde-926b-ad17132c1480" guard="выбрать ещё" isLeaf="false">
-                <mergeNodeMoniker Id="403fdd3d-9eb6-4c71-b7bc-a299b2c73043" LastKnownName="Merge4" />
-                <elementDefinition Id="18c11940-8715-4efe-9209-33a830772e3e" />
+              <controlFlow Id="af35d4e5-1c16-4ff9-a26e-99859c3f5743" guard="выбрать ещё" isLeaf="false">
+                <mergeNodeMoniker Id="9076dc16-a371-41e8-a03a-de5440e64940" LastKnownName="Merge4" />
+                <elementDefinition Id="ee7540fc-c581-489d-807e-8d62d2a673d4" />
               </controlFlow>
-              <controlFlow Id="65ef82fa-0f0c-4eeb-b7c8-f121235f5ce8" isLeaf="false">
-                <mergeNodeMoniker Id="268736ca-3fc0-4625-b203-d250234edeab" LastKnownName="Merge1" />
-                <elementDefinition Id="4098c2f3-3395-488f-bbee-a36b78d18156" />
+              <controlFlow Id="b04b5010-91b4-4750-87f7-b8ab28a9713c" isLeaf="false">
+                <mergeNodeMoniker Id="acb13269-6896-48a6-9b75-c9b723eecfe0" LastKnownName="Merge1" />
+                <elementDefinition Id="a3bb425d-a992-402f-b018-99d69941651b" />
               </controlFlow>
-              <controlFlow Id="0e122e3b-bde2-40f0-99ae-65d4da9c0d05" isLeaf="false">
-                <mergeNodeMoniker Id="3d1ed032-2ec3-4a50-879f-f0336e8ed18d" LastKnownName="Merge42" />
-                <elementDefinition Id="18190831-e832-4a29-b6ae-99efcf92c3c7" />
+              <controlFlow Id="516382e6-75d2-431c-9e2d-978af6c98d1e" isLeaf="false">
+                <mergeNodeMoniker Id="fd5acf5e-5072-4261-87ae-2bdb4ff0f64d" LastKnownName="Merge42" />
+                <elementDefinition Id="5031869c-0bfd-40af-b334-cdf083604627" />
               </controlFlow>
             </flowNodeTargets>
           </decisionNode>
-          <mergeNode Id="2345f936-01ef-46f9-bc2f-c43bad14c0ae" name="Merge41" isLeaf="false">
-            <elementDefinition Id="e784f06c-958d-4a29-85dc-a52c3809cf2c" />
+          <mergeNode Id="69f0dff8-d074-4815-946b-75284976af10" name="Merge41" isLeaf="false">
+            <elementDefinition Id="256abbcc-82c9-4cca-8176-12b886ff2e53" />
             <flowNodeTargets>
-              <controlFlow Id="625a27c6-61e4-421f-b116-9559e11e8e12" isLeaf="false">
-                <opaqueActionMoniker Id="db3ef356-d8f5-491d-a440-92a69dda0212" LastKnownName="Открыть настройки элементов Share" />
-                <elementDefinition Id="19f182a8-c25f-4fed-a08c-ff7827c320a6" />
+              <controlFlow Id="da8f1796-12e5-44aa-bbbc-0eb848e9bee5" isLeaf="false">
+                <opaqueActionMoniker Id="d96f00d3-6fa6-4104-b0b0-8b768aa49aff" LastKnownName="Открыть настройки элементов Share" />
+                <elementDefinition Id="482d1d2b-881d-4a08-9e6d-5511984b4dc1" />
               </controlFlow>
             </flowNodeTargets>
           </mergeNode>
-          <opaqueAction Id="7dd0d43a-af9b-4cbe-a1ff-a39d0f4ca614" name="Начать синхронизацию" isLeaf="false">
-            <elementDefinition Id="565e494c-7453-4304-af9b-839d293a127f" />
+          <opaqueAction Id="74cd0f3d-0295-439d-add4-3cfacb6237a6" name="Начать синхронизацию" isLeaf="false">
+            <elementDefinition Id="37fbed7e-ce50-4f84-8787-c325d435dd76" />
             <flowNodeTargets>
-              <controlFlow Id="54485519-e7cd-46c6-8a7f-227d926d7e8b" isLeaf="false">
-                <decisionNodeMoniker Id="48ccd000-7947-432b-b21d-a99efcbd6adb" LastKnownName="Decision21" />
-                <elementDefinition Id="45901f2a-ff14-4826-af0d-0c1aaf8d1138" />
+              <controlFlow Id="57958957-1926-49cd-a7b1-fb2bd8ed2848" isLeaf="false">
+                <decisionNodeMoniker Id="521e5bb8-7519-442f-a4cd-058f029469f2" LastKnownName="Decision21" />
+                <elementDefinition Id="9849245f-2797-486a-800b-de81942bfc17" />
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
-          <decisionNode Id="48ccd000-7947-432b-b21d-a99efcbd6adb" name="Decision21" isLeaf="false">
-            <elementDefinition Id="24074b36-2a79-4427-b450-3a0f1634d82a" />
+          <decisionNode Id="521e5bb8-7519-442f-a4cd-058f029469f2" name="Decision21" isLeaf="false">
+            <elementDefinition Id="f0e486bb-4450-4f84-b851-23e9bfe888d1" />
             <flowNodeTargets>
-              <controlFlow Id="205473f3-11c3-487f-b274-fba3f0bd6a8e" isLeaf="false">
-                <mergeNodeMoniker Id="c43ef8f9-d965-475c-ab4f-b5ca45fb4f08" LastKnownName="Merge3" />
-                <elementDefinition Id="f3a222e9-8f66-4636-8ec0-19ad9c0115bc" />
+              <controlFlow Id="d07c7c40-a027-4573-8bf2-c3d976a52fd6" isLeaf="false">
+                <mergeNodeMoniker Id="70c44506-90c1-4b04-9622-6a4e79273525" LastKnownName="Merge3" />
+                <elementDefinition Id="d278d6cc-00ea-422f-97f6-9cfd208d1205" />
               </controlFlow>
-              <controlFlow Id="0af2a989-d3e1-4b92-aed9-4db7d2612f60" isLeaf="false">
-                <mergeNodeMoniker Id="3d1ed032-2ec3-4a50-879f-f0336e8ed18d" LastKnownName="Merge42" />
-                <elementDefinition Id="5cc996aa-5cf5-414b-88e2-d356f82f86e1" />
+              <controlFlow Id="7c54087e-154f-442c-b475-2f1602513800" isLeaf="false">
+                <mergeNodeMoniker Id="fd5acf5e-5072-4261-87ae-2bdb4ff0f64d" LastKnownName="Merge42" />
+                <elementDefinition Id="485dfadf-55ce-4d26-8126-bd266f615f86" />
               </controlFlow>
             </flowNodeTargets>
           </decisionNode>
-          <opaqueAction Id="3f18a9d4-2aa8-4a64-bea6-5efc6c5c1d04" name="Закрыие окна программы" isLeaf="false">
-            <elementDefinition Id="d68e314f-1b8c-4461-b510-238dfcbe30f2" />
+          <opaqueAction Id="987da795-5db5-4a1e-810d-53eb97fc3444" name="Закрыие окна программы" isLeaf="false">
+            <elementDefinition Id="f2b77546-d9cf-4a22-825c-072d5561cee5" />
             <flowNodeTargets>
-              <controlFlow Id="425e792d-2657-4b7e-b604-42d471ea3ef0" isLeaf="false">
-                <activityFinalNodeMoniker Id="6a7681d6-54a4-40ef-8b30-2ac26d3c96fc" LastKnownName="ActivityFinal1" />
-                <elementDefinition Id="f1495672-b62e-466f-907f-11f8f288a085" />
+              <controlFlow Id="187d9ec8-8052-4968-93bf-c0c949f9b81c" isLeaf="false">
+                <activityFinalNodeMoniker Id="217c485d-9b3c-48b9-8b6c-54b633d64583" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="34b30390-ae9f-4b3b-871a-2dd0873c8253" />
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
-          <mergeNode Id="3d1ed032-2ec3-4a50-879f-f0336e8ed18d" name="Merge42" isLeaf="false">
-            <elementDefinition Id="95af588e-e536-4db5-8a25-a3e9c53881c8" />
+          <mergeNode Id="fd5acf5e-5072-4261-87ae-2bdb4ff0f64d" name="Merge42" isLeaf="false">
+            <elementDefinition Id="077193a0-33ee-4afe-843c-8ca0ec1fc254" />
             <flowNodeTargets>
-              <controlFlow Id="13d01746-ceee-420b-b154-a2be85bd3b41" isLeaf="false">
-                <opaqueActionMoniker Id="3f18a9d4-2aa8-4a64-bea6-5efc6c5c1d04" LastKnownName="Закрыие окна программы" />
-                <elementDefinition Id="0def2cd7-197f-4c5e-b0f1-62ba1e54db86" />
+              <controlFlow Id="b5c6fa67-016b-4289-afee-0d779722ea1b" isLeaf="false">
+                <opaqueActionMoniker Id="987da795-5db5-4a1e-810d-53eb97fc3444" LastKnownName="Закрыие окна программы" />
+                <elementDefinition Id="2259b565-e30b-47d8-9942-2cee83e8c8aa" />
               </controlFlow>
             </flowNodeTargets>
           </mergeNode>
-          <activityFinalNode Id="6a7681d6-54a4-40ef-8b30-2ac26d3c96fc" name="ActivityFinal1" isLeaf="false">
-            <elementDefinition Id="a82ecaf9-b233-4702-80b7-1eb71c4ea9cb" />
+          <activityFinalNode Id="217c485d-9b3c-48b9-8b6c-54b633d64583" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="d9c9dc94-25d8-499f-b936-0c20b91c53b2" />
           </activityFinalNode>
         </nodes>
       </activity>
     </activityRootModelHasActivity>
   </packagedElements>
-  <package Id="123622c7-f249-4be4-aa50-7c7ce248bbe4" name="Simple_Sync_MSUML">
+  <package Id="5cc46cb1-aac0-4844-9290-acac7e3e2b55" name="Simple_Sync_MSUML">
     <elementDefinition Id="ad758e9e-d22b-4504-bcb6-6a4bd0fe0cc2" />
+    <profileInstances>
+      <packageHasProfileInstances Id="33c7efd1-5276-4fb1-871a-dcdd98500b59">
+        <profileInstance Id="d25ed4be-569b-45e6-82e1-1ec9d43159de" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="4bf05f11-5044-47b7-bc47-0e6f8b398506">
+        <profileInstance Id="54a498f9-5d26-496e-99db-0c0ce9da477a" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </activityRootModel>

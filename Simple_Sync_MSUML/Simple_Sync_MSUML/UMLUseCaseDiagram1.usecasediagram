@@ -1,222 +1,222 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="943167ca-c2dd-4a4c-ad57-27414453d4ee" name="UMLUseCaseDiagram1" linkedPackageId="af16cd7a-7c11-4bfe-be89-8d0ebf698c96" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
   <ownedCommentsInternal>
-    <comment Id="c3a25aa2-f12f-4014-b4d1-b389f4f7e02a">
-      <elementDefinition Id="b929eb69-90fa-4e98-93e3-3445129a19d6" />
+    <comment Id="7a860f0f-f76d-48d2-be9f-fe5b4ac77b02">
+      <elementDefinition Id="c38bdc9e-8392-4660-b5aa-60f7e8361cec" />
       <body>Удаление связей (не файлов)</body>
       <annotatedElements>
-        <useCaseMoniker Id="5e3d9f1d-fc91-4cc0-af26-1e200c3dc63b" LastKnownName="Удаление share1" />
+        <useCaseMoniker Id="653e9287-efe2-43bb-916b-ba6cf1dd316c" LastKnownName="Удаление share" />
       </annotatedElements>
     </comment>
   </ownedCommentsInternal>
   <packagedElements>
     <useCaseModelRootHasTypes>
-      <actor Id="00c416f8-f3cc-4aec-bd59-e69b37ab882e" name="Пользователь1" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="cbe9ed6a-e0f4-4d50-91fc-673b714a5151" />
+      <actor Id="35ab0c96-f53b-405e-97c8-336c9a912d71" name="Пользователь" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="78cf14e0-8df6-432b-bc37-4d3e54e70d9a" />
         <targetEnds>
-          <association Id="2f88a5dc-a897-4615-a444-1e5bd82dceac" isDerived="false" sourceEndRoleName="Пользователь" targetEndRoleName="Создание нового share" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="3e686ee7-c3cf-4db8-a37c-2f68a37e3b36" LastKnownName="Создание нового share1" />
+          <association Id="2999ca60-bef1-493e-b11f-846de1aef879" isDerived="false" sourceEndRoleName="Пользователь" targetEndRoleName="Создание нового share" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="1776631e-7ee0-468e-b844-50e124e8a1f5" LastKnownName="Создание нового share" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
-                <memberEnd Id="fa6a7795-e621-4c1d-9ac3-eb40525e0a00" name="Пользователь" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="874eec56-d41a-46fb-81d1-6ea0db24b7d7" />
+                <memberEnd Id="780accf8-b933-4d1f-a3da-d4dc1c64ef65" name="Пользователь" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="47bb2b42-d2d5-4e8e-bfba-9454f5d16a21" />
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
-                <memberEnd Id="52a2405d-acc9-4bb9-9c62-a065d88f8787" name="Создание нового share" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="7cc6168f-b747-4efb-8402-e010f57cfce2" />
+                <memberEnd Id="1eabfb39-8bf6-44ee-8633-870669ecca1f" name="Создание нового share" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8dbce881-f93a-4ff6-968b-94224f1d3696" />
                 </memberEnd>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
-            <elementDefinition Id="11ef2af4-b8a2-4e77-aea4-969e9d9cf1dd" />
+            <elementDefinition Id="c9c30a92-851b-4e98-9bd9-1bbc5acc3c5f" />
           </association>
-          <association Id="61b250a7-d0e8-48de-9f1d-1569173eba82" isDerived="false" sourceEndRoleName="Пользователь" targetEndRoleName="Просмотр share" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="b0d8089d-e4e1-480c-9850-fc5e860b9bde" LastKnownName="Просмотр share" />
+          <association Id="d8fb84dc-16ae-42db-a395-cdbdd8b5296e" isDerived="false" sourceEndRoleName="Пользователь" targetEndRoleName="Просмотр share" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ae4832e6-0d6e-41f9-bbb4-daa16c240112" LastKnownName="Просмотр share" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
-                <memberEnd Id="7a521e85-27f5-4d04-aeb8-d91a3e6a7ce2" name="Пользователь" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="933650df-078d-4893-b80e-127aab0ac53d" />
+                <memberEnd Id="fbefbd4e-8ffe-4bfe-95dc-653c1dac99aa" name="Пользователь" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5b1f0677-1ec3-4a28-b769-e6498a48b3ff" />
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
-                <memberEnd Id="1cbf95ff-1edc-42de-97fb-881582be21b7" name="Просмотр share" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="246f4871-310c-4941-8150-e8a68d8e8b90" />
+                <memberEnd Id="f017dd75-34e6-4021-ba23-c004c11e3cd8" name="Просмотр share" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7bb46e0b-7b4f-436d-a6d8-65c93a18f3e3" />
                 </memberEnd>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
-            <elementDefinition Id="dd6176fa-9464-4725-8a3d-d6ef29d13e21" />
+            <elementDefinition Id="99fed368-58aa-45b8-95dd-1ea64f717b35" />
           </association>
         </targetEnds>
       </actor>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="c19e8273-69c9-40c1-9c69-7434983b28e2" name="Синхронизация share1" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="d03ad450-5863-4648-b04c-aa23514d87ca" />
+      <useCase Id="1d552881-c863-4563-9708-53bcc6749460" name="Синхронизация share" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e04b1669-82cb-4258-8e23-2542ddede956" />
         <extendedCases>
-          <extend Id="ba24eed6-1289-42ce-b762-dc24b9a5d6b0">
-            <useCaseMoniker Id="b0d8089d-e4e1-480c-9850-fc5e860b9bde" LastKnownName="Просмотр share" />
-            <elementDefinition Id="09d724ca-c529-4d95-b0e0-6874c84bcd67" />
+          <extend Id="4b0e14df-d2a1-430e-80f8-e4a3d6bd5dd9">
+            <useCaseMoniker Id="ae4832e6-0d6e-41f9-bbb4-daa16c240112" LastKnownName="Просмотр share" />
+            <elementDefinition Id="c699e9c5-e508-40db-a956-34c869fe606e" />
           </extend>
         </extendedCases>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="3e686ee7-c3cf-4db8-a37c-2f68a37e3b36" name="Создание нового share1" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="15ff0757-a141-4fc1-a767-5c65bf370aff" />
+      <useCase Id="1776631e-7ee0-468e-b844-50e124e8a1f5" name="Создание нового share" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c40c02e8-bf96-43e5-9ba8-3b17745c00bc" />
         <additions>
-          <include Id="fe08a774-6001-4c92-a142-c3cb8c0f8584">
-            <useCaseMoniker Id="1fe366d9-df2a-42d9-b284-db7e49098e26" LastKnownName="Выбор директории1" />
-            <elementDefinition Id="f4fb4827-de1f-47d2-b813-e3f68cafb4b6" />
+          <include Id="3a2a0d97-0732-40c2-8057-9f5aa815e56c">
+            <useCaseMoniker Id="f10f600f-ad19-4e7f-8ec4-518d67787236" LastKnownName="Выбор директории" />
+            <elementDefinition Id="581c253f-0604-4a8f-952f-d7b83e70a373" />
           </include>
         </additions>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="d5f23d89-990d-48ed-8492-5b6523a0f90c" name="Настройка " isAbstract="false" isLeaf="false">
-        <elementDefinition Id="1817c07c-d738-43f7-bf93-64bee894b505" />
+      <useCase Id="1c9a1344-ae75-48af-b7dd-f611dcf5d8d0" name="Настройка " isAbstract="false" isLeaf="false">
+        <elementDefinition Id="904556e2-3a0a-4391-bf2f-f4550ca363be" />
         <extendedCases>
-          <extend Id="fdeaa849-6d33-4b6c-8ae4-0416ee7c1d65">
-            <useCaseMoniker Id="b0d8089d-e4e1-480c-9850-fc5e860b9bde" LastKnownName="Просмотр share" />
-            <elementDefinition Id="fef7d0a1-6319-4610-8e85-85dd3bc2f81d" />
+          <extend Id="78306a76-b677-4a3f-a2a6-4d9187391551">
+            <useCaseMoniker Id="ae4832e6-0d6e-41f9-bbb4-daa16c240112" LastKnownName="Просмотр share" />
+            <elementDefinition Id="a70d86d2-7a61-459b-ac23-2b3f9806d749" />
           </extend>
         </extendedCases>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="1fe366d9-df2a-42d9-b284-db7e49098e26" name="Выбор директории1" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="e1efa6f8-19f6-43ae-b315-3201498d23ef" />
+      <useCase Id="f10f600f-ad19-4e7f-8ec4-518d67787236" name="Выбор директории" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b947bedc-0a32-4179-a066-33eef28cebef" />
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="53d8f2d4-9994-4abb-a79e-a25508a91d74" name="Настройки share 1" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="cd5769a6-7436-49ca-a8ac-ef4c0604c3e5" />
+      <useCase Id="edabef91-7871-4c85-9f22-cfd42ecd8b47" name="Настройки share " isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4eff5430-f46e-48ab-afc1-1eb104af3f34" />
         <generalsInternal>
-          <generalization Id="cfb49ef7-6459-46bb-9756-13740e65f690" isSubstitutable="false">
-            <useCaseMoniker Id="d5f23d89-990d-48ed-8492-5b6523a0f90c" LastKnownName="Настройка " />
-            <elementDefinition Id="33f805f4-58e2-4daa-acd4-f57f03b813e6" />
+          <generalization Id="811a89f1-8bf3-497b-9673-f3e850909aaa" isSubstitutable="false">
+            <useCaseMoniker Id="1c9a1344-ae75-48af-b7dd-f611dcf5d8d0" LastKnownName="Настройка " />
+            <elementDefinition Id="28ce6574-6dae-40f5-bfa7-66370b9fddd2" />
           </generalization>
         </generalsInternal>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="337f781e-dad8-48b6-8fd6-8a15502c4453" name="Разрешение коллизий1" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="dd2e259b-0abb-49a8-a19c-0ae062fcc478" />
+      <useCase Id="0c59130d-3bce-4a0d-812f-ba2e186c0021" name="Разрешение коллизий" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1ba5114e-91c5-4903-b9c6-f97f58a75c80" />
         <generalsInternal>
-          <generalization Id="606f2c0a-c885-4ee1-b2db-d39b28d892e6" isSubstitutable="false">
-            <useCaseMoniker Id="53d8f2d4-9994-4abb-a79e-a25508a91d74" LastKnownName="Настройки share 1" />
-            <elementDefinition Id="e3f6ca9e-6a09-4c7b-b759-e72fa28d7e21" />
+          <generalization Id="962e534d-59db-4d71-a8b0-5096e9aae756" isSubstitutable="false">
+            <useCaseMoniker Id="edabef91-7871-4c85-9f22-cfd42ecd8b47" LastKnownName="Настройки share " />
+            <elementDefinition Id="ac23c56c-4432-4664-b978-87678bb9864d" />
           </generalization>
         </generalsInternal>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="c621f275-714a-4100-b429-27be8a0dda22" name="Переименовать share 1" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="be956800-026e-4d49-a5c0-7e58c6c410f5" />
+      <useCase Id="e6ae72fa-99ca-411d-89ba-cddd176c7ab2" name="Переименовать share " isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5ca80d3a-eb74-41a2-9db6-4d37c1eaf8d1" />
         <generalsInternal>
-          <generalization Id="9ff1ff43-619d-40da-816d-8ab621bfad3f" isSubstitutable="false">
-            <useCaseMoniker Id="53d8f2d4-9994-4abb-a79e-a25508a91d74" LastKnownName="Настройки share 1" />
-            <elementDefinition Id="2fd375c5-f637-43f5-affd-72e290b50d1b" />
+          <generalization Id="db8fa3d2-eb2c-46c2-aa0f-c29c543bf831" isSubstitutable="false">
+            <useCaseMoniker Id="edabef91-7871-4c85-9f22-cfd42ecd8b47" LastKnownName="Настройки share " />
+            <elementDefinition Id="dec7fad1-6471-40b0-be73-d881d897d826" />
           </generalization>
         </generalsInternal>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="bd19ee0c-5ac4-4739-8634-4fc10151c559" name="Настройки синхронизации файлов/папок1" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="1c28b1d1-1b4f-4c38-98e8-0df9217c1197" />
+      <useCase Id="722e8499-7de7-4a2a-9590-3a4e91e27503" name="Настройки синхронизации файлов/папок" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5553387b-bf6d-47f3-8e43-7ade084a5f51" />
         <generalsInternal>
-          <generalization Id="6e54ba98-5c0f-48d3-a1df-bcca81aab9d2" isSubstitutable="false">
-            <useCaseMoniker Id="53d8f2d4-9994-4abb-a79e-a25508a91d74" LastKnownName="Настройки share 1" />
-            <elementDefinition Id="fd83a934-610e-469f-8186-f9dfc26d581e" />
+          <generalization Id="4ad05301-7671-4999-8f11-c034bb087942" isSubstitutable="false">
+            <useCaseMoniker Id="edabef91-7871-4c85-9f22-cfd42ecd8b47" LastKnownName="Настройки share " />
+            <elementDefinition Id="36c6dd22-3fe5-4b42-9f23-f9359febdbc9" />
           </generalization>
         </generalsInternal>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="5e3d9f1d-fc91-4cc0-af26-1e200c3dc63b" name="Удаление share1" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="fbb8ddeb-881e-4c9e-9af1-6179237f694d" />
+      <useCase Id="653e9287-efe2-43bb-916b-ba6cf1dd316c" name="Удаление share" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f0d13d7e-ef38-41c3-8dbf-d094dd1cb486" />
         <generalsInternal>
-          <generalization Id="bf6979cb-5c12-4295-899a-3e406e1c3005" isSubstitutable="false">
-            <useCaseMoniker Id="53d8f2d4-9994-4abb-a79e-a25508a91d74" LastKnownName="Настройки share 1" />
-            <elementDefinition Id="0cafbe93-66a4-46c7-ac29-db1816f5af5b" />
+          <generalization Id="102e5688-a7f9-4887-8e0f-4e420de7bd7a" isSubstitutable="false">
+            <useCaseMoniker Id="edabef91-7871-4c85-9f22-cfd42ecd8b47" LastKnownName="Настройки share " />
+            <elementDefinition Id="521fef51-6758-4b58-a4ed-9bfbed64f26d" />
           </generalization>
         </generalsInternal>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="d28f2e99-60fa-4283-a93e-902782929d4d" name="Выбор синхронизируемых файлов" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="311b8214-06ba-4a1c-b08d-3de9fb797fc2" />
+      <useCase Id="91769e1d-4a3e-48a5-bae9-1690493a7cfd" name="Выбор синхронизируемых файлов" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="868af797-a930-4bba-b952-61ca33477ff3" />
         <generalsInternal>
-          <generalization Id="def30fe0-5599-4596-8436-29ddc3e1e8e8" isSubstitutable="false">
-            <useCaseMoniker Id="bd19ee0c-5ac4-4739-8634-4fc10151c559" LastKnownName="Настройки синхронизации файлов/папок1" />
-            <elementDefinition Id="8d6abc15-8955-4ec3-8c9b-98dfbd832926" />
+          <generalization Id="ce785839-fef5-4b00-8e93-a27555c76d3c" isSubstitutable="false">
+            <useCaseMoniker Id="722e8499-7de7-4a2a-9590-3a4e91e27503" LastKnownName="Настройки синхронизации файлов/папок" />
+            <elementDefinition Id="66ae7cec-630f-488d-b2f2-b2e3cf89ea6f" />
           </generalization>
         </generalsInternal>
         <extendedCases>
-          <extend Id="b3982005-0b73-4368-a488-5a77b1b83e5a">
-            <useCaseMoniker Id="1fe366d9-df2a-42d9-b284-db7e49098e26" LastKnownName="Выбор директории1" />
-            <elementDefinition Id="059098c2-40c2-48de-90e9-11aa30aa71c2" />
+          <extend Id="3ae3a47b-da05-448f-9066-440393ac9ffc">
+            <useCaseMoniker Id="f10f600f-ad19-4e7f-8ec4-518d67787236" LastKnownName="Выбор директории" />
+            <elementDefinition Id="1f601229-59e8-43d8-a32f-c1e6fe071591" />
           </extend>
         </extendedCases>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="aad1b260-30d4-4160-ac67-5797218eb29d" name="Настройка автоматического запуска" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="9c61f81f-3775-42cd-96f8-7d5e6566b001" />
+      <useCase Id="a4b1c9b0-9d8d-464e-bea3-fe93f1fe2d6a" name="Настройка автоматического запуска" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6403b567-93f4-4c22-9c3f-65e886c85b48" />
         <generalsInternal>
-          <generalization Id="62459e02-b436-40df-a643-e0bb89ab8e98" isSubstitutable="false">
-            <useCaseMoniker Id="d5f23d89-990d-48ed-8492-5b6523a0f90c" LastKnownName="Настройка " />
-            <elementDefinition Id="f0d09f25-4d86-4d1f-970d-f73c895948bd" />
+          <generalization Id="a5751b65-4497-4574-a1fa-3ee41ea55185" isSubstitutable="false">
+            <useCaseMoniker Id="1c9a1344-ae75-48af-b7dd-f611dcf5d8d0" LastKnownName="Настройка " />
+            <elementDefinition Id="db5704dc-7ff1-4cfa-82b2-ef10f3e561ce" />
           </generalization>
         </generalsInternal>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="aa771b9b-41aa-4cf8-a06a-89459fdfa9b0" name="Настройка сети" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="1f15db05-5dcb-46d0-807c-8036838ca378" />
+      <useCase Id="46ae1ce9-4751-4a4c-a822-dce573d63c75" name="Настройка сети" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="41d25242-a07d-4e31-9206-323d5211586e" />
         <generalsInternal>
-          <generalization Id="228512da-f4a3-400b-8221-c55815393d91" isSubstitutable="false">
-            <useCaseMoniker Id="d5f23d89-990d-48ed-8492-5b6523a0f90c" LastKnownName="Настройка " />
-            <elementDefinition Id="d92c12ce-c83d-413b-8eff-74ca036d18d7" />
+          <generalization Id="97109528-0d97-4e37-861b-fee96e5ae82c" isSubstitutable="false">
+            <useCaseMoniker Id="1c9a1344-ae75-48af-b7dd-f611dcf5d8d0" LastKnownName="Настройка " />
+            <elementDefinition Id="6b18f18a-585e-41b8-8a42-42415682e38f" />
           </generalization>
         </generalsInternal>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="bcd0aa58-b548-4dbf-a38c-b932b926f0a8" name="Настройка  скорости передачи данных" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="24fddfbf-7835-4d7b-940c-72dc6d92dfb3" />
+      <useCase Id="0cfd86a7-3184-4e06-b614-5b2e85b70851" name="Настройка  скорости передачи данных" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c0fb45ec-6ef2-4ac4-9e6c-0d8d023b3c10" />
         <generalsInternal>
-          <generalization Id="c1c06061-c46f-41f5-8d71-525a15e1197c" isSubstitutable="false">
-            <useCaseMoniker Id="aa771b9b-41aa-4cf8-a06a-89459fdfa9b0" LastKnownName="Настройка сети" />
-            <elementDefinition Id="6e62eabd-418b-421a-bf70-3a6942d4d8e2" />
+          <generalization Id="c9bcbad7-12f2-4149-8157-8657c9db6b5a" isSubstitutable="false">
+            <useCaseMoniker Id="46ae1ce9-4751-4a4c-a822-dce573d63c75" LastKnownName="Настройка сети" />
+            <elementDefinition Id="7cbc8174-ed83-4908-b6cc-7b937a13fe76" />
           </generalization>
         </generalsInternal>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="dea4e5ef-841c-47ef-9bcd-1be357380e47" name="Настройка портов" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="6e04f2b6-f854-4214-9cad-2c75fb4f1e05" />
+      <useCase Id="a5e50920-d509-4de2-9743-2bcff51577ba" name="Настройка портов" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b74d6fba-5b63-416b-b623-c256681cf940" />
         <generalsInternal>
-          <generalization Id="37ea3fa1-d4bb-4666-a0de-7a6376729227" isSubstitutable="false">
-            <useCaseMoniker Id="aa771b9b-41aa-4cf8-a06a-89459fdfa9b0" LastKnownName="Настройка сети" />
-            <elementDefinition Id="44783385-806c-476c-abc9-3afc5b89b58d" />
+          <generalization Id="b99eb7c2-b74e-48d3-af95-63514699bc0a" isSubstitutable="false">
+            <useCaseMoniker Id="46ae1ce9-4751-4a4c-a822-dce573d63c75" LastKnownName="Настройка сети" />
+            <elementDefinition Id="df2236c8-d94a-4fcc-9d6d-c78b558cb5cc" />
           </generalization>
         </generalsInternal>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="87893056-be4d-4dda-a3b8-f5fc0eb61c34" name="Настройка последовательности загрузки файлов" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="3f4a94eb-4d79-4a04-834b-e186d5b35d6b" />
+      <useCase Id="a59d5a59-957c-4b4d-ade8-0f38cb44101b" name="Настройка последовательности загрузки файлов" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4d106558-0baa-47f4-ab55-8a9306505b09" />
         <generalsInternal>
-          <generalization Id="9056e70e-c817-4df2-9b1b-e5fc7bc78c59" isSubstitutable="false">
-            <useCaseMoniker Id="bd19ee0c-5ac4-4739-8634-4fc10151c559" LastKnownName="Настройки синхронизации файлов/папок1" />
-            <elementDefinition Id="198e424c-1e1b-401e-be26-42cb6a9cc2b7" />
+          <generalization Id="1ce55764-03bc-4388-b4e6-faeaf5b173bc" isSubstitutable="false">
+            <useCaseMoniker Id="722e8499-7de7-4a2a-9590-3a4e91e27503" LastKnownName="Настройки синхронизации файлов/папок" />
+            <elementDefinition Id="7a3426a3-6b65-4def-affe-98e54bae25fd" />
           </generalization>
         </generalsInternal>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="b0d8089d-e4e1-480c-9850-fc5e860b9bde" name="Просмотр share" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="0c0a0bec-6aa2-46b6-91bf-1158e07eb492" />
+      <useCase Id="ae4832e6-0d6e-41f9-bbb4-daa16c240112" name="Просмотр share" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cd9f639d-0bd8-4c64-8729-1c40c964445f" />
       </useCase>
     </useCaseModelRootHasTypes>
   </packagedElements>

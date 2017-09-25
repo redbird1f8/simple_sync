@@ -25,6 +25,9 @@
     <Content Include="ModelDefinition\Package_2039.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="ModelDefinition\Package_2316.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Sinch.sequencediagram">
       <SubType>Content</SubType>
     </Content>

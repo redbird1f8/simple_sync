@@ -46,6 +46,22 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="99fed368-58aa-45b8-95dd-1ea64f717b35" />
           </association>
+          <association Id="dcee40c9-b0d0-4600-941c-d0f3a528e9a8" isDerived="false" sourceEndRoleName="Пользователь" targetEndRoleName="Настройка " isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="1c9a1344-ae75-48af-b7dd-f611dcf5d8d0" LastKnownName="Настройка " />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fe2101c0-0410-45b1-84ec-fc35aaa68773" name="Пользователь" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e78bc0f3-e1d5-4513-876d-97fd3471743a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ced151b5-910d-4b48-81ee-9ddcc1014206" name="Настройка " isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ed9d88a4-0e67-416f-aab7-9d440f56d054" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7b06ee26-e1eb-4eba-875a-39bd1e95fa6e" />
+          </association>
         </targetEnds>
       </actor>
     </useCaseModelRootHasTypes>
@@ -74,12 +90,6 @@
     <useCaseModelRootHasTypes>
       <useCase Id="1c9a1344-ae75-48af-b7dd-f611dcf5d8d0" name="Настройка " isAbstract="false" isLeaf="false">
         <elementDefinition Id="904556e2-3a0a-4391-bf2f-f4550ca363be" />
-        <extendedCases>
-          <extend Id="78306a76-b677-4a3f-a2a6-4d9187391551">
-            <useCaseMoniker Id="ae4832e6-0d6e-41f9-bbb4-daa16c240112" LastKnownName="Просмотр share" />
-            <elementDefinition Id="a70d86d2-7a61-459b-ac23-2b3f9806d749" />
-          </extend>
-        </extendedCases>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
@@ -96,6 +106,12 @@
             <elementDefinition Id="28ce6574-6dae-40f5-bfa7-66370b9fddd2" />
           </generalization>
         </generalsInternal>
+        <extendedCases>
+          <extend Id="862c04e9-9ecb-465f-af2f-238ff7e9f490">
+            <useCaseMoniker Id="ae4832e6-0d6e-41f9-bbb4-daa16c240112" LastKnownName="Просмотр share" />
+            <elementDefinition Id="7d62539e-d6ca-42b4-94d9-dcca72920d6b" />
+          </extend>
+        </extendedCases>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
@@ -166,39 +182,6 @@
           <generalization Id="a5751b65-4497-4574-a1fa-3ee41ea55185" isSubstitutable="false">
             <useCaseMoniker Id="1c9a1344-ae75-48af-b7dd-f611dcf5d8d0" LastKnownName="Настройка " />
             <elementDefinition Id="db5704dc-7ff1-4cfa-82b2-ef10f3e561ce" />
-          </generalization>
-        </generalsInternal>
-      </useCase>
-    </useCaseModelRootHasTypes>
-    <useCaseModelRootHasTypes>
-      <useCase Id="46ae1ce9-4751-4a4c-a822-dce573d63c75" name="Настройка сети" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="41d25242-a07d-4e31-9206-323d5211586e" />
-        <generalsInternal>
-          <generalization Id="97109528-0d97-4e37-861b-fee96e5ae82c" isSubstitutable="false">
-            <useCaseMoniker Id="1c9a1344-ae75-48af-b7dd-f611dcf5d8d0" LastKnownName="Настройка " />
-            <elementDefinition Id="6b18f18a-585e-41b8-8a42-42415682e38f" />
-          </generalization>
-        </generalsInternal>
-      </useCase>
-    </useCaseModelRootHasTypes>
-    <useCaseModelRootHasTypes>
-      <useCase Id="0cfd86a7-3184-4e06-b614-5b2e85b70851" name="Настройка  скорости передачи данных" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="c0fb45ec-6ef2-4ac4-9e6c-0d8d023b3c10" />
-        <generalsInternal>
-          <generalization Id="c9bcbad7-12f2-4149-8157-8657c9db6b5a" isSubstitutable="false">
-            <useCaseMoniker Id="46ae1ce9-4751-4a4c-a822-dce573d63c75" LastKnownName="Настройка сети" />
-            <elementDefinition Id="7cbc8174-ed83-4908-b6cc-7b937a13fe76" />
-          </generalization>
-        </generalsInternal>
-      </useCase>
-    </useCaseModelRootHasTypes>
-    <useCaseModelRootHasTypes>
-      <useCase Id="a5e50920-d509-4de2-9743-2bcff51577ba" name="Настройка портов" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="b74d6fba-5b63-416b-b623-c256681cf940" />
-        <generalsInternal>
-          <generalization Id="b99eb7c2-b74e-48d3-af95-63514699bc0a" isSubstitutable="false">
-            <useCaseMoniker Id="46ae1ce9-4751-4a4c-a822-dce573d63c75" LastKnownName="Настройка сети" />
-            <elementDefinition Id="df2236c8-d94a-4fcc-9d6d-c78b558cb5cc" />
           </generalization>
         </generalsInternal>
       </useCase>

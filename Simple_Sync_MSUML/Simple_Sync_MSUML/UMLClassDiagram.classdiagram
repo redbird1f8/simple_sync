@@ -7,7 +7,7 @@
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="d3ee8945-bfa3-42c3-9911-792d5e7a7f6f" name="boolean" isAbstract="false" isLeaf="false" cachedFullName="boolean">
+      <referencedType Id="d3ee8945-bfa3-42c3-9911-792d5e7a7f6f" name="bool" isAbstract="false" isLeaf="false" cachedFullName="bool">
         <elementDefinition Id="e963b15d-cd54-43ef-9a8c-848573f761ae" />
       </referencedType>
     </packageHasNamedElement>
@@ -22,12 +22,12 @@
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="72d10c21-2a72-4ae0-9873-c4da2f4303f6" name="UUID" isAbstract="false" isLeaf="false" cachedFullName="UUID">
+      <referencedType Id="72d10c21-2a72-4ae0-9873-c4da2f4303f6" name="GUID" isAbstract="false" isLeaf="false" cachedFullName="GUID">
         <elementDefinition Id="8912ffb1-a0be-4d6d-9abd-3f1f3b8b1e2e" />
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="1e93d703-be60-4e2d-8a22-30a95dd9c4f2" name="AbstractList&lt;DeviceConfig&gt;" isAbstract="false" isLeaf="false" cachedFullName="AbstractList&lt;DeviceConfig&gt;">
+      <referencedType Id="1e93d703-be60-4e2d-8a22-30a95dd9c4f2" name="IList&lt;DeviceConfig&gt;" isAbstract="false" isLeaf="false" cachedFullName="IList&lt;DeviceConfig&gt;">
         <elementDefinition Id="22a17635-dc7c-42f8-a659-a29eb836a895" />
       </referencedType>
     </packageHasNamedElement>
@@ -42,7 +42,7 @@
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="c354151d-d22e-4ce1-924c-57e7e2ae20e8" name="AbstractList&lt;Share&gt;" isAbstract="false" isLeaf="false" cachedFullName="AbstractList&lt;Share&gt;">
+      <referencedType Id="c354151d-d22e-4ce1-924c-57e7e2ae20e8" name="IList&lt;Share&gt;" isAbstract="false" isLeaf="false" cachedFullName="IList&lt;Share&gt;">
         <elementDefinition Id="2ef824a9-10c3-419a-810e-800dfb969669" />
       </referencedType>
     </packageHasNamedElement>
@@ -62,12 +62,12 @@
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="f97b5ad9-aec8-4a9a-8bc7-392f1a875e19" name="AbstractList&lt;File&gt;" isAbstract="false" isLeaf="false" cachedFullName="AbstractList&lt;File&gt;">
+      <referencedType Id="f97b5ad9-aec8-4a9a-8bc7-392f1a875e19" name="IList&lt;File&gt;" isAbstract="false" isLeaf="false" cachedFullName="IList&lt;File&gt;">
         <elementDefinition Id="6c22514c-03c9-4171-bc63-b5806c3e03c5" />
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="99047dbc-a51d-4e30-859a-b7dcd214fd56" name="AbstractList&lt;Directory&gt;" isAbstract="false" isLeaf="false" cachedFullName="AbstractList&lt;Directory&gt;">
+      <referencedType Id="99047dbc-a51d-4e30-859a-b7dcd214fd56" name="IList&lt;Directory&gt;" isAbstract="false" isLeaf="false" cachedFullName="IList&lt;Directory&gt;">
         <elementDefinition Id="b9826727-aff2-4c15-9da4-4288a6f10387" />
       </referencedType>
     </packageHasNamedElement>
@@ -82,7 +82,7 @@
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="1aebb4c2-7c77-45a7-bf1e-72f9046ecc69" name="UUID" isAbstract="false" isLeaf="false" cachedFullName="UUID">
+      <referencedType Id="1aebb4c2-7c77-45a7-bf1e-72f9046ecc69" name="GUID" isAbstract="false" isLeaf="false" cachedFullName="GUID">
         <elementDefinition Id="8912ffb1-a0be-4d6d-9abd-3f1f3b8b1e2e" />
       </referencedType>
     </packageHasNamedElement>
@@ -92,7 +92,7 @@
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="f0d50738-58b7-4df8-9cc2-88596d7e6f73" name="AbstractList&lt;Share&gt;(" isAbstract="false" isLeaf="false" cachedFullName="AbstractList&lt;Share&gt;(">
+      <referencedType Id="f0d50738-58b7-4df8-9cc2-88596d7e6f73" name="IList&lt;Share&gt;(" isAbstract="false" isLeaf="false" cachedFullName="IList&lt;Share&gt;(">
         <elementDefinition Id="e4c006a2-3397-49d8-9160-fc444e6fe976" />
       </referencedType>
     </packageHasNamedElement>
@@ -112,7 +112,7 @@
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="1a740bb6-7b6d-463a-906c-24a32c38cc2e" name="AbstractList&lt;Device&gt;" isAbstract="false" isLeaf="false" cachedFullName="AbstractList&lt;Device&gt;">
+      <referencedType Id="1a740bb6-7b6d-463a-906c-24a32c38cc2e" name="IList&lt;Device&gt;" isAbstract="false" isLeaf="false" cachedFullName="IList&lt;Device&gt;">
         <elementDefinition Id="befe459e-a00a-4341-a838-202aab2f91bf" />
       </referencedType>
     </packageHasNamedElement>
@@ -167,7 +167,7 @@
           <property Id="e45e9ab4-5825-4698-a689-6e134d92f124" name="autorun" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="ad0be156-1df6-4b4d-aa86-832d5139085a" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="d3ee8945-bfa3-42c3-9911-792d5e7a7f6f" LastKnownName="boolean" />
+              <referencedTypeMoniker Id="d3ee8945-bfa3-42c3-9911-792d5e7a7f6f" LastKnownName="bool" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -203,7 +203,7 @@
                       <parameter Id="cbc1b594-ab53-476e-9530-23c17ad0ac65" name=")" direction="In" isUnique="false">
                         <elementDefinition Id="80748471-6b22-426b-9fc1-ce20e1afa1cf" />
                         <type_NamedElement>
-                          <referencedTypeMoniker Id="f0d50738-58b7-4df8-9cc2-88596d7e6f73" LastKnownName="AbstractList&lt;Share&gt;(" />
+                          <referencedTypeMoniker Id="f0d50738-58b7-4df8-9cc2-88596d7e6f73" LastKnownName="IList&lt;Share&gt;(" />
                         </type_NamedElement>
                       </parameter>
                     </operationHasOwnedParameters>
@@ -295,13 +295,13 @@
                 <property Id="09a0d350-e0fd-45e8-8ce7-e9f1d00d5950" name="shareID" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="fbfa4a48-eda3-4ebf-8c83-1cab72afc38f" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="72d10c21-2a72-4ae0-9873-c4da2f4303f6" LastKnownName="UUID" />
+                    <referencedTypeMoniker Id="72d10c21-2a72-4ae0-9873-c4da2f4303f6" LastKnownName="GUID" />
                   </type_NamedElement>
                 </property>
                 <property Id="d6bded2e-798e-4c5e-9b1b-4ada25e8fd1c" name="acceptedDevices" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="c95ffdfe-3c1d-42d8-82b0-fb68d6e75ab7" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="1e93d703-be60-4e2d-8a22-30a95dd9c4f2" LastKnownName="AbstractList&lt;DeviceConfig&gt;" />
+                    <referencedTypeMoniker Id="1e93d703-be60-4e2d-8a22-30a95dd9c4f2" LastKnownName="IList&lt;DeviceConfig&gt;" />
                   </type_NamedElement>
                 </property>
                 <property Id="065f4369-0e67-4056-b569-0f64ba7ec040" name="name" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -332,7 +332,7 @@
                       <parameter Id="6cd87180-0f9b-48f7-8b1b-b3038598bddd" direction="Return" isUnique="false">
                         <elementDefinition Id="6becba02-9088-4531-8681-8fdac6d72c53" />
                         <type_NamedElement>
-                          <referencedTypeMoniker Id="1aebb4c2-7c77-45a7-bf1e-72f9046ecc69" LastKnownName="UUID" />
+                          <referencedTypeMoniker Id="1aebb4c2-7c77-45a7-bf1e-72f9046ecc69" LastKnownName="GUID" />
                         </type_NamedElement>
                       </parameter>
                     </operationHasOwnedParameters>
@@ -345,7 +345,7 @@
                       <parameter Id="f95e6a29-0a24-4576-afb3-8e8713250997" direction="Return" isUnique="false">
                         <elementDefinition Id="5b6c037d-e770-41a7-98f5-ae56d4bfaac7" />
                         <type_NamedElement>
-                          <referencedTypeMoniker Id="1e93d703-be60-4e2d-8a22-30a95dd9c4f2" LastKnownName="AbstractList&lt;DeviceConfig&gt;" />
+                          <referencedTypeMoniker Id="1e93d703-be60-4e2d-8a22-30a95dd9c4f2" LastKnownName="IList&lt;DeviceConfig&gt;" />
                         </type_NamedElement>
                       </parameter>
                     </operationHasOwnedParameters>
@@ -452,7 +452,7 @@
                       <parameter Id="3559adfd-306a-4b16-8b82-83412d54e0c1" direction="Return" isUnique="false">
                         <elementDefinition Id="ea6dc850-adeb-4b3a-b458-cc9be6ce3a09" />
                         <type_NamedElement>
-                          <referencedTypeMoniker Id="1a740bb6-7b6d-463a-906c-24a32c38cc2e" LastKnownName="AbstractList&lt;Device&gt;" />
+                          <referencedTypeMoniker Id="1a740bb6-7b6d-463a-906c-24a32c38cc2e" LastKnownName="IList&lt;Device&gt;" />
                         </type_NamedElement>
                       </parameter>
                     </operationHasOwnedParameters>
@@ -546,7 +546,7 @@
                 <property Id="bf6a1401-230c-493c-abab-87e7dbf103c5" name="shareList" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="135fa276-9821-4957-989e-0f877ea8f38a" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="c354151d-d22e-4ce1-924c-57e7e2ae20e8" LastKnownName="AbstractList&lt;Share&gt;" />
+                    <referencedTypeMoniker Id="c354151d-d22e-4ce1-924c-57e7e2ae20e8" LastKnownName="IList&lt;Share&gt;" />
                   </type_NamedElement>
                 </property>
                 <property Id="3d91ec26-1698-4368-bdde-81acbece0019" name="portList" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -561,7 +561,7 @@
                       <parameter Id="4152b67e-731f-4a78-a017-b2c3e91397a0" name=")" direction="In" isUnique="false">
                         <elementDefinition Id="9f604c6f-b49a-47e9-aef0-629f314d114c" />
                         <type_NamedElement>
-                          <referencedTypeMoniker Id="f0d50738-58b7-4df8-9cc2-88596d7e6f73" LastKnownName="AbstractList&lt;Share&gt;(" />
+                          <referencedTypeMoniker Id="f0d50738-58b7-4df8-9cc2-88596d7e6f73" LastKnownName="IList&lt;Share&gt;(" />
                         </type_NamedElement>
                       </parameter>
                     </operationHasOwnedParameters>
@@ -794,13 +794,13 @@
                 <property Id="27d83f06-ea16-4b79-aa70-2a3bc3e93363" name="files" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="3e9cdc6e-3ad8-4cc3-a147-af7f514b9dc2" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="f97b5ad9-aec8-4a9a-8bc7-392f1a875e19" LastKnownName="AbstractList&lt;File&gt;" />
+                    <referencedTypeMoniker Id="f97b5ad9-aec8-4a9a-8bc7-392f1a875e19" LastKnownName="IList&lt;File&gt;" />
                   </type_NamedElement>
                 </property>
                 <property Id="363ae494-4012-4131-a087-4520bc1289c6" name="subdirectoryList" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="8ca000e4-7004-4861-bc93-00bf861a11a2" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="99047dbc-a51d-4e30-859a-b7dcd214fd56" LastKnownName="AbstractList&lt;Directory&gt;" />
+                    <referencedTypeMoniker Id="99047dbc-a51d-4e30-859a-b7dcd214fd56" LastKnownName="IList&lt;Directory&gt;" />
                   </type_NamedElement>
                 </property>
                 <property Id="2909f6c9-03e9-4473-a95c-5c90ea6a3ae5" name="rules" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -850,7 +850,7 @@
                       <parameter Id="43c19f50-4e20-4fa1-ac42-1ba589ad0093" direction="Return" isUnique="false">
                         <elementDefinition Id="46c1baad-7464-44b8-a3fd-92859ed60681" />
                         <type_NamedElement>
-                          <referencedTypeMoniker Id="99047dbc-a51d-4e30-859a-b7dcd214fd56" LastKnownName="AbstractList&lt;Directory&gt;" />
+                          <referencedTypeMoniker Id="99047dbc-a51d-4e30-859a-b7dcd214fd56" LastKnownName="IList&lt;Directory&gt;" />
                         </type_NamedElement>
                       </parameter>
                     </operationHasOwnedParameters>
@@ -889,7 +889,7 @@
                       <parameter Id="873793b8-bc72-48fa-b588-210085753c70" direction="Return" isUnique="false">
                         <elementDefinition Id="9ffd8997-074f-45f8-8715-dbfc43a769a3" />
                         <type_NamedElement>
-                          <referencedTypeMoniker Id="f97b5ad9-aec8-4a9a-8bc7-392f1a875e19" LastKnownName="AbstractList&lt;File&gt;" />
+                          <referencedTypeMoniker Id="f97b5ad9-aec8-4a9a-8bc7-392f1a875e19" LastKnownName="IList&lt;File&gt;" />
                         </type_NamedElement>
                       </parameter>
                     </operationHasOwnedParameters>
@@ -995,7 +995,7 @@
                 <property Id="74b9b5df-88eb-4781-a7d7-355c7c43f1c7" name="id" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="75fd5861-d5a8-46e3-8921-fe243f8cb7f9" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="1aebb4c2-7c77-45a7-bf1e-72f9046ecc69" LastKnownName="UUID" />
+                    <referencedTypeMoniker Id="1aebb4c2-7c77-45a7-bf1e-72f9046ecc69" LastKnownName="GUID" />
                   </type_NamedElement>
                 </property>
               </ownedAttributesInternal>
@@ -1106,7 +1106,7 @@
                       <parameter Id="9c1186ee-1996-425b-96b8-dda878a63f93" direction="Return" isUnique="false">
                         <elementDefinition Id="909f59da-a61d-4dd1-beda-c00ce6dc8049" />
                         <type_NamedElement>
-                          <referencedTypeMoniker Id="1a740bb6-7b6d-463a-906c-24a32c38cc2e" LastKnownName="AbstractList&lt;Device&gt;" />
+                          <referencedTypeMoniker Id="1a740bb6-7b6d-463a-906c-24a32c38cc2e" LastKnownName="IList&lt;Device&gt;" />
                         </type_NamedElement>
                       </parameter>
                     </operationHasOwnedParameters>

@@ -25,6 +25,16 @@
     <Content Include="ModelDefinition\Package_2039.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="ModelDefinition\Package_2316.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Sinch.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Sinch.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Sinch.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="UMLActivityDiagram1.activitydiagram">
       <SubType>Content</SubType>
     </Content>
@@ -38,6 +48,13 @@
     <Content Include="UMLClassDiagram.classdiagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>UMLClassDiagram.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="UMLUseCaseDiagram1.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLUseCaseDiagram1.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLUseCaseDiagram1.usecasediagram</DependentUpon>
     </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="ModelDefinition\Simple_Sync_MSUML.uml">

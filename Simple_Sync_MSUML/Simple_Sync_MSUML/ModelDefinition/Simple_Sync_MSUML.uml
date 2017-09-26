@@ -10,7 +10,7 @@
       <annotatedElements>
         <useCaseMoniker
           Id="94474b9f-0e2b-46b6-a4e8-708962aa3222"
-          LastKnownName="Удаление share1"
+          LastKnownName="Удаление share"
           LastKnownLocation="Simple_Sync_MSUML.uml" />
       </annotatedElements>
     </comment>
@@ -855,72 +855,52 @@
             </operands>
           </combinedFragment>
           <operandOccurrenceSpecification
-            Id="e07f6c18-3d89-4c75-9321-4523eb88b054"
-            name="OperandOccurrenceSpecification15">
+            Id="54be34ce-23af-49a1-9c5d-e16216aaa421"
+            name="OperandOccurrenceSpecification5">
             <covered>
               <lifelineMoniker
-                Id="c8f19a58-021a-40bf-8d65-0401503e64fa"
-                LastKnownName="deviceConfig : DeviceConfig"
+                Id="226c6d1a-77da-4220-bb39-c8b27fa3aac0"
+                LastKnownName="managingLayer : ManagingLayer"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="8ab1c047-54aa-4416-80ed-a7a3de3e3399"
-            name="OperandOccurrenceSpecification23">
+            Id="ee53dcd1-1014-4e54-a91d-faeca674c44f"
+            name="OperandOccurrenceSpecification17">
             <covered>
               <lifelineMoniker
-                Id="d30c944e-3136-4efb-a18d-270558698400"
-                LastKnownName="rules : Rules"
+                Id="4e5d2665-7a94-48a9-bcd6-1249e64c52ed"
+                LastKnownName="directory : Directory"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="86894956-d866-40b3-98ff-46ba67d46d76"
-            name="OperandOccurrenceSpecification1">
+            Id="e9116992-722d-4abf-b949-6aee08d5d02a"
+            name="OperandOccurrenceSpecification11">
             <covered>
               <lifelineMoniker
-                Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                LastKnownName="Subject"
+                Id="71579606-4ee2-422d-a7d7-218d3e4020a6"
+                LastKnownName="share : Share"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="eed5a1d7-762a-416f-a3b9-b31878577d4c"
-            name="OperandOccurrenceSpecification27">
+            Id="f005f6b9-60a0-4755-8450-dbd5892845e9"
+            name="OperandOccurrenceSpecification19">
             <covered>
               <lifelineMoniker
-                Id="ba852ee4-f754-450e-a4d9-741f33137a23"
-                LastKnownName="? : Directory"
+                Id="24c70eba-9df9-4b69-99f6-aae1b78731e6"
+                LastKnownName="files : IList&lt;File&gt;"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="858a332a-ad48-45ba-806c-bf6e5e0f58e9"
-            name="OperandOccurrenceSpecification3">
+            Id="fdfa9ae8-a826-440b-b77f-0b6a33fc50d9"
+            name="OperandOccurrenceSpecification9">
             <covered>
               <lifelineMoniker
-                Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
-                LastKnownName="Main"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="07a1c814-38da-448f-849a-e546d3f467c0"
-            name="OperandOccurrenceSpecification13">
-            <covered>
-              <lifelineMoniker
-                Id="7aa49ca7-f209-45da-846e-397b8833fe66"
-                LastKnownName="acceptedDevices : IList&lt;DeviceConfig&gt;"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="ffa003b1-02ef-4831-a75b-5cfe869942db"
-            name="OperandOccurrenceSpecification25">
-            <covered>
-              <lifelineMoniker
-                Id="58ca3921-79b6-4a14-a4c2-b318276062fa"
-                LastKnownName="subdirectoryList : IList&lt;Directory&gt;"
+                Id="630f7bda-9293-489f-9d1b-e06620eb050d"
+                LastKnownName="shareList : IList&lt;Share&gt;"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -945,52 +925,72 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="fdfa9ae8-a826-440b-b77f-0b6a33fc50d9"
-            name="OperandOccurrenceSpecification9">
+            Id="07a1c814-38da-448f-849a-e546d3f467c0"
+            name="OperandOccurrenceSpecification13">
             <covered>
               <lifelineMoniker
-                Id="630f7bda-9293-489f-9d1b-e06620eb050d"
-                LastKnownName="shareList : IList&lt;Share&gt;"
+                Id="7aa49ca7-f209-45da-846e-397b8833fe66"
+                LastKnownName="acceptedDevices : IList&lt;DeviceConfig&gt;"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="f005f6b9-60a0-4755-8450-dbd5892845e9"
-            name="OperandOccurrenceSpecification19">
+            Id="858a332a-ad48-45ba-806c-bf6e5e0f58e9"
+            name="OperandOccurrenceSpecification3">
             <covered>
               <lifelineMoniker
-                Id="24c70eba-9df9-4b69-99f6-aae1b78731e6"
-                LastKnownName="files : IList&lt;File&gt;"
+                Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
+                LastKnownName="Main"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="e9116992-722d-4abf-b949-6aee08d5d02a"
-            name="OperandOccurrenceSpecification11">
+            Id="eed5a1d7-762a-416f-a3b9-b31878577d4c"
+            name="OperandOccurrenceSpecification27">
             <covered>
               <lifelineMoniker
-                Id="71579606-4ee2-422d-a7d7-218d3e4020a6"
-                LastKnownName="share : Share"
+                Id="ba852ee4-f754-450e-a4d9-741f33137a23"
+                LastKnownName="? : Directory"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="ee53dcd1-1014-4e54-a91d-faeca674c44f"
-            name="OperandOccurrenceSpecification17">
+            Id="86894956-d866-40b3-98ff-46ba67d46d76"
+            name="OperandOccurrenceSpecification1">
             <covered>
               <lifelineMoniker
-                Id="4e5d2665-7a94-48a9-bcd6-1249e64c52ed"
-                LastKnownName="directory : Directory"
+                Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
+                LastKnownName="Subject"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="54be34ce-23af-49a1-9c5d-e16216aaa421"
-            name="OperandOccurrenceSpecification5">
+            Id="8ab1c047-54aa-4416-80ed-a7a3de3e3399"
+            name="OperandOccurrenceSpecification23">
             <covered>
               <lifelineMoniker
-                Id="226c6d1a-77da-4220-bb39-c8b27fa3aac0"
-                LastKnownName="managingLayer : ManagingLayer"
+                Id="d30c944e-3136-4efb-a18d-270558698400"
+                LastKnownName="rules : Rules"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="e07f6c18-3d89-4c75-9321-4523eb88b054"
+            name="OperandOccurrenceSpecification15">
+            <covered>
+              <lifelineMoniker
+                Id="c8f19a58-021a-40bf-8d65-0401503e64fa"
+                LastKnownName="deviceConfig : DeviceConfig"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="ffa003b1-02ef-4831-a75b-5cfe869942db"
+            name="OperandOccurrenceSpecification25">
+            <covered>
+              <lifelineMoniker
+                Id="58ca3921-79b6-4a14-a4c2-b318276062fa"
+                LastKnownName="subdirectoryList : IList&lt;Directory&gt;"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -1151,22 +1151,22 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="88fbc9ad-4104-4435-ac68-45c06dcebd6e"
-            name="MessageOccurrenceSpecification21">
-            <covered>
-              <lifelineMoniker
-                Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
-                LastKnownName="Main"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="41077aa0-3a0a-4aa7-8a29-939636cdd0e2"
             name="MessageOccurrenceSpecification20">
             <covered>
               <lifelineMoniker
                 Id="226c6d1a-77da-4220-bb39-c8b27fa3aac0"
                 LastKnownName="managingLayer : ManagingLayer"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="88fbc9ad-4104-4435-ac68-45c06dcebd6e"
+            name="MessageOccurrenceSpecification21">
+            <covered>
+              <lifelineMoniker
+                Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
+                LastKnownName="Main"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -1419,22 +1419,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="bed75017-bbae-4117-a26c-4116209a4ccf"
-            name="MessageOccurrenceSpecification158">
-            <covered>
-              <lifelineMoniker
-                Id="71579606-4ee2-422d-a7d7-218d3e4020a6"
-                LastKnownName="share : Share"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="a58be4a0-6331-47fb-bf57-3066aa111a8e"
             name="MessageOccurrenceSpecification159">
             <covered>
               <lifelineMoniker
                 Id="7aa49ca7-f209-45da-846e-397b8833fe66"
                 LastKnownName="acceptedDevices : IList&lt;DeviceConfig&gt;"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="bed75017-bbae-4117-a26c-4116209a4ccf"
+            name="MessageOccurrenceSpecification158">
+            <covered>
+              <lifelineMoniker
+                Id="71579606-4ee2-422d-a7d7-218d3e4020a6"
+                LastKnownName="share : Share"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -1707,16 +1707,6 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="1d6ac9ec-9877-44e5-894a-e1fc29587814"
-            name="MessageOccurrenceSpecification170">
-            <covered>
-              <lifelineMoniker
-                Id="4e5d2665-7a94-48a9-bcd6-1249e64c52ed"
-                LastKnownName="directory : Directory"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="cab8f34c-c40a-4d51-80db-99386006b527"
             name="MessageOccurrenceSpecification171">
             <covered>
@@ -1726,6 +1716,26 @@
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="1d6ac9ec-9877-44e5-894a-e1fc29587814"
+            name="MessageOccurrenceSpecification170">
+            <covered>
+              <lifelineMoniker
+                Id="4e5d2665-7a94-48a9-bcd6-1249e64c52ed"
+                LastKnownName="directory : Directory"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="e8964cbc-7f58-40f5-b5b1-4925ecdcef6c"
+            name="OperandOccurrenceSpecification115">
+            <covered>
+              <lifelineMoniker
+                Id="62630d0f-dc4f-4bd7-b070-8730bd600f44"
+                LastKnownName="file : File"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
             Id="d655b4ea-66de-4bd0-b2b7-26e82e1b6ea9"
             name="OperandOccurrenceSpecification113">
@@ -1743,16 +1753,6 @@
               <lifelineMoniker
                 Id="d30c944e-3136-4efb-a18d-270558698400"
                 LastKnownName="rules : Rules"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="e8964cbc-7f58-40f5-b5b1-4925ecdcef6c"
-            name="OperandOccurrenceSpecification115">
-            <covered>
-              <lifelineMoniker
-                Id="62630d0f-dc4f-4bd7-b070-8730bd600f44"
-                LastKnownName="file : File"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -1943,22 +1943,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="30a46ac3-88d6-45b4-a38a-6b48267aae9e"
-            name="MessageOccurrenceSpecification177">
-            <covered>
-              <lifelineMoniker
-                Id="24c70eba-9df9-4b69-99f6-aae1b78731e6"
-                LastKnownName="files : IList&lt;File&gt;"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="334c8e6a-3c81-432f-a4da-fb1e8a5b4680"
             name="MessageOccurrenceSpecification176">
             <covered>
               <lifelineMoniker
                 Id="62630d0f-dc4f-4bd7-b070-8730bd600f44"
                 LastKnownName="file : File"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="30a46ac3-88d6-45b4-a38a-6b48267aae9e"
+            name="MessageOccurrenceSpecification177">
+            <covered>
+              <lifelineMoniker
+                Id="24c70eba-9df9-4b69-99f6-aae1b78731e6"
+                LastKnownName="files : IList&lt;File&gt;"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2119,22 +2119,22 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="6a4d75d2-c66a-4f71-aef0-bba8682f3a96"
-            name="MessageOccurrenceSpecification180">
-            <covered>
-              <lifelineMoniker
-                Id="d30c944e-3136-4efb-a18d-270558698400"
-                LastKnownName="rules : Rules"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="effa62df-bc98-41d9-b661-77d659509683"
             name="MessageOccurrenceSpecification181">
             <covered>
               <lifelineMoniker
                 Id="4e5d2665-7a94-48a9-bcd6-1249e64c52ed"
                 LastKnownName="directory : Directory"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="6a4d75d2-c66a-4f71-aef0-bba8682f3a96"
+            name="MessageOccurrenceSpecification180">
+            <covered>
+              <lifelineMoniker
+                Id="d30c944e-3136-4efb-a18d-270558698400"
+                LastKnownName="rules : Rules"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2371,22 +2371,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="c7a13f6d-dc36-4606-bf69-66c182f3f4fe"
-            name="OperandOccurrenceSpecification172">
-            <covered>
-              <lifelineMoniker
-                Id="ba852ee4-f754-450e-a4d9-741f33137a23"
-                LastKnownName="? : Directory"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="ef94f7df-3a99-4416-8106-0d6db21220ad"
             name="OperandOccurrenceSpecification170">
             <covered>
               <lifelineMoniker
                 Id="58ca3921-79b6-4a14-a4c2-b318276062fa"
                 LastKnownName="subdirectoryList : IList&lt;Directory&gt;"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="c7a13f6d-dc36-4606-bf69-66c182f3f4fe"
+            name="OperandOccurrenceSpecification172">
+            <covered>
+              <lifelineMoniker
+                Id="ba852ee4-f754-450e-a4d9-741f33137a23"
+                LastKnownName="? : Directory"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -2593,22 +2593,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="1111a87d-a39c-4e96-8822-7c839f0cd0b7"
-            name="MessageOccurrenceSpecification71">
-            <covered>
-              <lifelineMoniker
-                Id="630f7bda-9293-489f-9d1b-e06620eb050d"
-                LastKnownName="shareList : IList&lt;Share&gt;"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="b88827d3-c614-4d13-907c-f9852d677ab5"
             name="MessageOccurrenceSpecification70">
             <covered>
               <lifelineMoniker
                 Id="30ae8dcd-cd9e-4338-8d50-0efcdb609544"
                 LastKnownName="commonConfig : CommonConfig"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="1111a87d-a39c-4e96-8822-7c839f0cd0b7"
+            name="MessageOccurrenceSpecification71">
+            <covered>
+              <lifelineMoniker
+                Id="630f7bda-9293-489f-9d1b-e06620eb050d"
+                LastKnownName="shareList : IList&lt;Share&gt;"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2689,22 +2689,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="fe57c737-7b9c-4e30-b155-73cfcd8daf0a"
-            name="MessageOccurrenceSpecification9">
-            <covered>
-              <lifelineMoniker
-                Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                LastKnownName="Subject"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="a9d3dcf9-f3f8-4d15-b604-bfc2282604f0"
             name="MessageOccurrenceSpecification8">
             <covered>
               <lifelineMoniker
                 Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
                 LastKnownName="Main"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="fe57c737-7b9c-4e30-b155-73cfcd8daf0a"
+            name="MessageOccurrenceSpecification9">
+            <covered>
+              <lifelineMoniker
+                Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
+                LastKnownName="Subject"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2727,132 +2727,12 @@
             </covered>
           </executionOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="85f4d5ec-af18-4128-8544-ae67fbfdd5cf"
-            name="OperandOccurrenceSpecification8">
-            <covered>
-              <lifelineMoniker
-                Id="30ae8dcd-cd9e-4338-8d50-0efcdb609544"
-                LastKnownName="commonConfig : CommonConfig"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="a471ae91-fba9-4bb2-be96-3bc91e9b54cf"
-            name="OperandOccurrenceSpecification12">
-            <covered>
-              <lifelineMoniker
-                Id="71579606-4ee2-422d-a7d7-218d3e4020a6"
-                LastKnownName="share : Share"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="e1031023-f028-44f2-92ae-3066f13f8a2c"
-            name="OperandOccurrenceSpecification20">
-            <covered>
-              <lifelineMoniker
-                Id="24c70eba-9df9-4b69-99f6-aae1b78731e6"
-                LastKnownName="files : IList&lt;File&gt;"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="3480c8c2-989d-4aea-9774-e20d63f880d7"
-            name="OperandOccurrenceSpecification18">
-            <covered>
-              <lifelineMoniker
-                Id="4e5d2665-7a94-48a9-bcd6-1249e64c52ed"
-                LastKnownName="directory : Directory"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="b3e078ea-43e0-48c1-9254-a4690caf1267"
-            name="OperandOccurrenceSpecification16">
-            <covered>
-              <lifelineMoniker
-                Id="c8f19a58-021a-40bf-8d65-0401503e64fa"
-                LastKnownName="deviceConfig : DeviceConfig"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="df980cdb-de04-4ea5-ac0b-6c27d0e38c53"
-            name="OperandOccurrenceSpecification28">
-            <covered>
-              <lifelineMoniker
-                Id="ba852ee4-f754-450e-a4d9-741f33137a23"
-                LastKnownName="? : Directory"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="689486bf-6b76-40d1-9b36-0c031ae6ce37"
-            name="OperandOccurrenceSpecification2">
-            <covered>
-              <lifelineMoniker
-                Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                LastKnownName="Subject"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="822f98c0-e51d-4464-aaf2-6f0f8af37aa3"
-            name="OperandOccurrenceSpecification26">
-            <covered>
-              <lifelineMoniker
-                Id="58ca3921-79b6-4a14-a4c2-b318276062fa"
-                LastKnownName="subdirectoryList : IList&lt;Directory&gt;"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="c6215e79-d27b-45a4-9f55-06d067a531ff"
             name="OperandOccurrenceSpecification4">
             <covered>
               <lifelineMoniker
                 Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
                 LastKnownName="Main"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="a819b8d5-b766-4580-8eb1-66ff73e345f3"
-            name="OperandOccurrenceSpecification14">
-            <covered>
-              <lifelineMoniker
-                Id="7aa49ca7-f209-45da-846e-397b8833fe66"
-                LastKnownName="acceptedDevices : IList&lt;DeviceConfig&gt;"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="b183eb00-99ea-4a72-96c0-fc0a8645e5cf"
-            name="OperandOccurrenceSpecification24">
-            <covered>
-              <lifelineMoniker
-                Id="d30c944e-3136-4efb-a18d-270558698400"
-                LastKnownName="rules : Rules"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="a0aee3fd-b781-4b48-92e9-1c69959d4332"
-            name="OperandOccurrenceSpecification10">
-            <covered>
-              <lifelineMoniker
-                Id="630f7bda-9293-489f-9d1b-e06620eb050d"
-                LastKnownName="shareList : IList&lt;Share&gt;"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="49d6565e-5a0c-4947-ae9b-a48acaea959f"
-            name="OperandOccurrenceSpecification6">
-            <covered>
-              <lifelineMoniker
-                Id="226c6d1a-77da-4220-bb39-c8b27fa3aac0"
-                LastKnownName="managingLayer : ManagingLayer"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -2867,28 +2747,48 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="78b7e98a-7e76-4914-81a6-f025869831ec"
-            name="OperandOccurrenceSpecification47">
+            Id="49d6565e-5a0c-4947-ae9b-a48acaea959f"
+            name="OperandOccurrenceSpecification6">
             <covered>
               <lifelineMoniker
-                Id="24c70eba-9df9-4b69-99f6-aae1b78731e6"
-                LastKnownName="files : IList&lt;File&gt;"
+                Id="226c6d1a-77da-4220-bb39-c8b27fa3aac0"
+                LastKnownName="managingLayer : ManagingLayer"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="c2341f7c-51e7-4bb9-b21b-51f73c9d62c8"
-            name="OperandOccurrenceSpecification49">
+            Id="a0aee3fd-b781-4b48-92e9-1c69959d4332"
+            name="OperandOccurrenceSpecification10">
             <covered>
               <lifelineMoniker
-                Id="62630d0f-dc4f-4bd7-b070-8730bd600f44"
-                LastKnownName="file : File"
+                Id="630f7bda-9293-489f-9d1b-e06620eb050d"
+                LastKnownName="shareList : IList&lt;Share&gt;"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="5fa48731-fa3b-4138-b537-8f5d32cf3863"
-            name="OperandOccurrenceSpecification53">
+            Id="b183eb00-99ea-4a72-96c0-fc0a8645e5cf"
+            name="OperandOccurrenceSpecification24">
+            <covered>
+              <lifelineMoniker
+                Id="d30c944e-3136-4efb-a18d-270558698400"
+                LastKnownName="rules : Rules"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="a819b8d5-b766-4580-8eb1-66ff73e345f3"
+            name="OperandOccurrenceSpecification14">
+            <covered>
+              <lifelineMoniker
+                Id="7aa49ca7-f209-45da-846e-397b8833fe66"
+                LastKnownName="acceptedDevices : IList&lt;DeviceConfig&gt;"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="822f98c0-e51d-4464-aaf2-6f0f8af37aa3"
+            name="OperandOccurrenceSpecification26">
             <covered>
               <lifelineMoniker
                 Id="58ca3921-79b6-4a14-a4c2-b318276062fa"
@@ -2897,12 +2797,142 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="ce3973d9-b910-47e8-b3c2-30c9c860a3ce"
-            name="OperandOccurrenceSpecification33">
+            Id="df980cdb-de04-4ea5-ac0b-6c27d0e38c53"
+            name="OperandOccurrenceSpecification28">
             <covered>
               <lifelineMoniker
-                Id="226c6d1a-77da-4220-bb39-c8b27fa3aac0"
-                LastKnownName="managingLayer : ManagingLayer"
+                Id="ba852ee4-f754-450e-a4d9-741f33137a23"
+                LastKnownName="? : Directory"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="b3e078ea-43e0-48c1-9254-a4690caf1267"
+            name="OperandOccurrenceSpecification16">
+            <covered>
+              <lifelineMoniker
+                Id="c8f19a58-021a-40bf-8d65-0401503e64fa"
+                LastKnownName="deviceConfig : DeviceConfig"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="3480c8c2-989d-4aea-9774-e20d63f880d7"
+            name="OperandOccurrenceSpecification18">
+            <covered>
+              <lifelineMoniker
+                Id="4e5d2665-7a94-48a9-bcd6-1249e64c52ed"
+                LastKnownName="directory : Directory"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="e1031023-f028-44f2-92ae-3066f13f8a2c"
+            name="OperandOccurrenceSpecification20">
+            <covered>
+              <lifelineMoniker
+                Id="24c70eba-9df9-4b69-99f6-aae1b78731e6"
+                LastKnownName="files : IList&lt;File&gt;"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="a471ae91-fba9-4bb2-be96-3bc91e9b54cf"
+            name="OperandOccurrenceSpecification12">
+            <covered>
+              <lifelineMoniker
+                Id="71579606-4ee2-422d-a7d7-218d3e4020a6"
+                LastKnownName="share : Share"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="85f4d5ec-af18-4128-8544-ae67fbfdd5cf"
+            name="OperandOccurrenceSpecification8">
+            <covered>
+              <lifelineMoniker
+                Id="30ae8dcd-cd9e-4338-8d50-0efcdb609544"
+                LastKnownName="commonConfig : CommonConfig"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="689486bf-6b76-40d1-9b36-0c031ae6ce37"
+            name="OperandOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
+                LastKnownName="Subject"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="d473c49b-9f13-4826-b80a-341e59f704b6"
+            name="OperandOccurrenceSpecification51">
+            <covered>
+              <lifelineMoniker
+                Id="d30c944e-3136-4efb-a18d-270558698400"
+                LastKnownName="rules : Rules"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="15910e14-5870-40b8-b278-dd6e933084c4"
+            name="OperandOccurrenceSpecification43">
+            <covered>
+              <lifelineMoniker
+                Id="c8f19a58-021a-40bf-8d65-0401503e64fa"
+                LastKnownName="deviceConfig : DeviceConfig"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="9c1c62a4-f6b7-422f-b852-c7b978d14b2b"
+            name="OperandOccurrenceSpecification29">
+            <covered>
+              <lifelineMoniker
+                Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
+                LastKnownName="Subject"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="e73dd720-854b-4f80-9120-e1f27b10cdfb"
+            name="OperandOccurrenceSpecification55">
+            <covered>
+              <lifelineMoniker
+                Id="ba852ee4-f754-450e-a4d9-741f33137a23"
+                LastKnownName="? : Directory"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="e085f830-8953-487a-b44a-fb06c4ad1944"
+            name="OperandOccurrenceSpecification35">
+            <covered>
+              <lifelineMoniker
+                Id="30ae8dcd-cd9e-4338-8d50-0efcdb609544"
+                LastKnownName="commonConfig : CommonConfig"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="b5fc2c3b-064e-4149-aff5-5becc3d0550c"
+            name="OperandOccurrenceSpecification45">
+            <covered>
+              <lifelineMoniker
+                Id="4e5d2665-7a94-48a9-bcd6-1249e64c52ed"
+                LastKnownName="directory : Directory"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="26f3aee1-06f3-4277-a7a2-299326821ac5"
+            name="OperandOccurrenceSpecification31">
+            <covered>
+              <lifelineMoniker
+                Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
+                LastKnownName="Main"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -2927,6 +2957,46 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
+            Id="ce3973d9-b910-47e8-b3c2-30c9c860a3ce"
+            name="OperandOccurrenceSpecification33">
+            <covered>
+              <lifelineMoniker
+                Id="226c6d1a-77da-4220-bb39-c8b27fa3aac0"
+                LastKnownName="managingLayer : ManagingLayer"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="5fa48731-fa3b-4138-b537-8f5d32cf3863"
+            name="OperandOccurrenceSpecification53">
+            <covered>
+              <lifelineMoniker
+                Id="58ca3921-79b6-4a14-a4c2-b318276062fa"
+                LastKnownName="subdirectoryList : IList&lt;Directory&gt;"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="c2341f7c-51e7-4bb9-b21b-51f73c9d62c8"
+            name="OperandOccurrenceSpecification49">
+            <covered>
+              <lifelineMoniker
+                Id="62630d0f-dc4f-4bd7-b070-8730bd600f44"
+                LastKnownName="file : File"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="78b7e98a-7e76-4914-81a6-f025869831ec"
+            name="OperandOccurrenceSpecification47">
+            <covered>
+              <lifelineMoniker
+                Id="24c70eba-9df9-4b69-99f6-aae1b78731e6"
+                LastKnownName="files : IList&lt;File&gt;"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
             Id="1c68e8b1-818d-43cc-8d92-cfca66a56ecd"
             name="OperandOccurrenceSpecification41">
             <covered>
@@ -2937,192 +3007,12 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="26f3aee1-06f3-4277-a7a2-299326821ac5"
-            name="OperandOccurrenceSpecification31">
-            <covered>
-              <lifelineMoniker
-                Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
-                LastKnownName="Main"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="d473c49b-9f13-4826-b80a-341e59f704b6"
-            name="OperandOccurrenceSpecification51">
-            <covered>
-              <lifelineMoniker
-                Id="d30c944e-3136-4efb-a18d-270558698400"
-                LastKnownName="rules : Rules"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="b5fc2c3b-064e-4149-aff5-5becc3d0550c"
-            name="OperandOccurrenceSpecification45">
-            <covered>
-              <lifelineMoniker
-                Id="4e5d2665-7a94-48a9-bcd6-1249e64c52ed"
-                LastKnownName="directory : Directory"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="e085f830-8953-487a-b44a-fb06c4ad1944"
-            name="OperandOccurrenceSpecification35">
-            <covered>
-              <lifelineMoniker
-                Id="30ae8dcd-cd9e-4338-8d50-0efcdb609544"
-                LastKnownName="commonConfig : CommonConfig"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="e73dd720-854b-4f80-9120-e1f27b10cdfb"
-            name="OperandOccurrenceSpecification55">
-            <covered>
-              <lifelineMoniker
-                Id="ba852ee4-f754-450e-a4d9-741f33137a23"
-                LastKnownName="? : Directory"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="9c1c62a4-f6b7-422f-b852-c7b978d14b2b"
-            name="OperandOccurrenceSpecification29">
+            Id="c2c635fb-9b4d-431e-813a-7e4582303d99"
+            name="OperandOccurrenceSpecification30">
             <covered>
               <lifelineMoniker
                 Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
                 LastKnownName="Subject"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="15910e14-5870-40b8-b278-dd6e933084c4"
-            name="OperandOccurrenceSpecification43">
-            <covered>
-              <lifelineMoniker
-                Id="c8f19a58-021a-40bf-8d65-0401503e64fa"
-                LastKnownName="deviceConfig : DeviceConfig"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="75150326-0bef-4887-bafb-6feae85e323c"
-            name="OperandOccurrenceSpecification50">
-            <covered>
-              <lifelineMoniker
-                Id="62630d0f-dc4f-4bd7-b070-8730bd600f44"
-                LastKnownName="file : File"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="8ee3be98-aa11-4eea-bb5b-530b2a8beff4"
-            name="OperandOccurrenceSpecification40">
-            <covered>
-              <lifelineMoniker
-                Id="71579606-4ee2-422d-a7d7-218d3e4020a6"
-                LastKnownName="share : Share"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="70cf4ed7-ad8b-4182-b562-67e2bdda9ab9"
-            name="OperandOccurrenceSpecification54">
-            <covered>
-              <lifelineMoniker
-                Id="58ca3921-79b6-4a14-a4c2-b318276062fa"
-                LastKnownName="subdirectoryList : IList&lt;Directory&gt;"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="8306b941-2f7f-4ea0-b2bc-00e8bcd2cb1a"
-            name="OperandOccurrenceSpecification38">
-            <covered>
-              <lifelineMoniker
-                Id="630f7bda-9293-489f-9d1b-e06620eb050d"
-                LastKnownName="shareList : IList&lt;Share&gt;"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="9633adf9-432d-48d5-a421-88070ba9f6c0"
-            name="OperandOccurrenceSpecification36">
-            <covered>
-              <lifelineMoniker
-                Id="30ae8dcd-cd9e-4338-8d50-0efcdb609544"
-                LastKnownName="commonConfig : CommonConfig"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="6bf18b6b-4ab9-45cb-a88b-6c8648184741"
-            name="OperandOccurrenceSpecification42">
-            <covered>
-              <lifelineMoniker
-                Id="7aa49ca7-f209-45da-846e-397b8833fe66"
-                LastKnownName="acceptedDevices : IList&lt;DeviceConfig&gt;"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="2303f6ac-b7aa-4341-a740-0e7eaae493d9"
-            name="OperandOccurrenceSpecification44">
-            <covered>
-              <lifelineMoniker
-                Id="c8f19a58-021a-40bf-8d65-0401503e64fa"
-                LastKnownName="deviceConfig : DeviceConfig"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="96a4b591-cb08-424e-9c38-b214f5046cf6"
-            name="OperandOccurrenceSpecification56">
-            <covered>
-              <lifelineMoniker
-                Id="ba852ee4-f754-450e-a4d9-741f33137a23"
-                LastKnownName="? : Directory"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="45cce23b-5a1a-4f1f-bdef-4d7a71779457"
-            name="OperandOccurrenceSpecification52">
-            <covered>
-              <lifelineMoniker
-                Id="d30c944e-3136-4efb-a18d-270558698400"
-                LastKnownName="rules : Rules"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="6dc9add2-89d2-45d6-8f40-1293e3cfd0a2"
-            name="OperandOccurrenceSpecification32">
-            <covered>
-              <lifelineMoniker
-                Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
-                LastKnownName="Main"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="457041b2-4b75-434d-ac55-d8ce13d524f8"
-            name="OperandOccurrenceSpecification48">
-            <covered>
-              <lifelineMoniker
-                Id="24c70eba-9df9-4b69-99f6-aae1b78731e6"
-                LastKnownName="files : IList&lt;File&gt;"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="3d1c19c8-b07a-46f5-b26c-387b1d1e3b9e"
-            name="OperandOccurrenceSpecification34">
-            <covered>
-              <lifelineMoniker
-                Id="226c6d1a-77da-4220-bb39-c8b27fa3aac0"
-                LastKnownName="managingLayer : ManagingLayer"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -3137,12 +3027,122 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="c2c635fb-9b4d-431e-813a-7e4582303d99"
-            name="OperandOccurrenceSpecification30">
+            Id="3d1c19c8-b07a-46f5-b26c-387b1d1e3b9e"
+            name="OperandOccurrenceSpecification34">
             <covered>
               <lifelineMoniker
-                Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                LastKnownName="Subject"
+                Id="226c6d1a-77da-4220-bb39-c8b27fa3aac0"
+                LastKnownName="managingLayer : ManagingLayer"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="457041b2-4b75-434d-ac55-d8ce13d524f8"
+            name="OperandOccurrenceSpecification48">
+            <covered>
+              <lifelineMoniker
+                Id="24c70eba-9df9-4b69-99f6-aae1b78731e6"
+                LastKnownName="files : IList&lt;File&gt;"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="6dc9add2-89d2-45d6-8f40-1293e3cfd0a2"
+            name="OperandOccurrenceSpecification32">
+            <covered>
+              <lifelineMoniker
+                Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
+                LastKnownName="Main"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="45cce23b-5a1a-4f1f-bdef-4d7a71779457"
+            name="OperandOccurrenceSpecification52">
+            <covered>
+              <lifelineMoniker
+                Id="d30c944e-3136-4efb-a18d-270558698400"
+                LastKnownName="rules : Rules"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="96a4b591-cb08-424e-9c38-b214f5046cf6"
+            name="OperandOccurrenceSpecification56">
+            <covered>
+              <lifelineMoniker
+                Id="ba852ee4-f754-450e-a4d9-741f33137a23"
+                LastKnownName="? : Directory"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="2303f6ac-b7aa-4341-a740-0e7eaae493d9"
+            name="OperandOccurrenceSpecification44">
+            <covered>
+              <lifelineMoniker
+                Id="c8f19a58-021a-40bf-8d65-0401503e64fa"
+                LastKnownName="deviceConfig : DeviceConfig"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="9633adf9-432d-48d5-a421-88070ba9f6c0"
+            name="OperandOccurrenceSpecification36">
+            <covered>
+              <lifelineMoniker
+                Id="30ae8dcd-cd9e-4338-8d50-0efcdb609544"
+                LastKnownName="commonConfig : CommonConfig"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="8306b941-2f7f-4ea0-b2bc-00e8bcd2cb1a"
+            name="OperandOccurrenceSpecification38">
+            <covered>
+              <lifelineMoniker
+                Id="630f7bda-9293-489f-9d1b-e06620eb050d"
+                LastKnownName="shareList : IList&lt;Share&gt;"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="70cf4ed7-ad8b-4182-b562-67e2bdda9ab9"
+            name="OperandOccurrenceSpecification54">
+            <covered>
+              <lifelineMoniker
+                Id="58ca3921-79b6-4a14-a4c2-b318276062fa"
+                LastKnownName="subdirectoryList : IList&lt;Directory&gt;"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="8ee3be98-aa11-4eea-bb5b-530b2a8beff4"
+            name="OperandOccurrenceSpecification40">
+            <covered>
+              <lifelineMoniker
+                Id="71579606-4ee2-422d-a7d7-218d3e4020a6"
+                LastKnownName="share : Share"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="75150326-0bef-4887-bafb-6feae85e323c"
+            name="OperandOccurrenceSpecification50">
+            <covered>
+              <lifelineMoniker
+                Id="62630d0f-dc4f-4bd7-b070-8730bd600f44"
+                LastKnownName="file : File"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="6bf18b6b-4ab9-45cb-a88b-6c8648184741"
+            name="OperandOccurrenceSpecification42">
+            <covered>
+              <lifelineMoniker
+                Id="7aa49ca7-f209-45da-846e-397b8833fe66"
+                LastKnownName="acceptedDevices : IList&lt;DeviceConfig&gt;"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -3233,6 +3233,16 @@
             </operands>
           </combinedFragment>
           <operandOccurrenceSpecification
+            Id="ee43ed61-2086-440c-99a8-8c242d9d5370"
+            name="OperandOccurrenceSpecification61">
+            <covered>
+              <lifelineMoniker
+                Id="226c6d1a-77da-4220-bb39-c8b27fa3aac0"
+                LastKnownName="managingLayer : ManagingLayer"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
             Id="1aa6aa47-95de-457e-9e66-19e05ed22c67"
             name="OperandOccurrenceSpecification63">
             <covered>
@@ -3259,16 +3269,6 @@
               <lifelineMoniker
                 Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
                 LastKnownName="Main"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="ee43ed61-2086-440c-99a8-8c242d9d5370"
-            name="OperandOccurrenceSpecification61">
-            <covered>
-              <lifelineMoniker
-                Id="226c6d1a-77da-4220-bb39-c8b27fa3aac0"
-                LastKnownName="managingLayer : ManagingLayer"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -3537,22 +3537,22 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="bc33a1a6-5fb9-4b46-9a77-bdcd32febcdc"
-            name="MessageOccurrenceSpecification52">
-            <covered>
-              <lifelineMoniker
-                Id="30ae8dcd-cd9e-4338-8d50-0efcdb609544"
-                LastKnownName="commonConfig : CommonConfig"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="75f40a2d-441f-49e1-b697-62412ae04ca2"
             name="MessageOccurrenceSpecification53">
             <covered>
               <lifelineMoniker
                 Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
                 LastKnownName="Main"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="bc33a1a6-5fb9-4b46-9a77-bdcd32febcdc"
+            name="MessageOccurrenceSpecification52">
+            <covered>
+              <lifelineMoniker
+                Id="30ae8dcd-cd9e-4338-8d50-0efcdb609544"
+                LastKnownName="commonConfig : CommonConfig"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -4585,66 +4585,6 @@
             </operands>
           </combinedFragment>
           <operandOccurrenceSpecification
-            Id="f4588a53-7907-4598-ac09-a33998ef1f3a"
-            name="OperandOccurrenceSpecification73">
-            <covered>
-              <lifelineMoniker
-                Id="630f7bda-9293-489f-9d1b-e06620eb050d"
-                LastKnownName="shareList : IList&lt;Share&gt;"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="a256d174-13e7-4624-ac69-9994bcc276b3"
-            name="OperandOccurrenceSpecification77">
-            <covered>
-              <lifelineMoniker
-                Id="4e5d2665-7a94-48a9-bcd6-1249e64c52ed"
-                LastKnownName="directory : Directory"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="687790f0-075f-4fa1-899f-ff46d3fea8c6"
-            name="OperandOccurrenceSpecification71">
-            <covered>
-              <lifelineMoniker
-                Id="30ae8dcd-cd9e-4338-8d50-0efcdb609544"
-                LastKnownName="commonConfig : CommonConfig"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="5a6417aa-6678-4a5f-a7e6-a35a3a18de96"
-            name="OperandOccurrenceSpecification75">
-            <covered>
-              <lifelineMoniker
-                Id="71579606-4ee2-422d-a7d7-218d3e4020a6"
-                LastKnownName="share : Share"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="52e09761-15d8-471d-98f1-500ca6f4f1dd"
-            name="OperandOccurrenceSpecification69">
-            <covered>
-              <lifelineMoniker
-                Id="226c6d1a-77da-4220-bb39-c8b27fa3aac0"
-                LastKnownName="managingLayer : ManagingLayer"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="b3e1ac5f-5cab-49a3-803f-9d3d0d05d0ca"
-            name="OperandOccurrenceSpecification79">
-            <covered>
-              <lifelineMoniker
-                Id="24c70eba-9df9-4b69-99f6-aae1b78731e6"
-                LastKnownName="files : IList&lt;File&gt;"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="6fb0c6d3-5d5a-4b93-945d-44c70e67661f"
             name="OperandOccurrenceSpecification65">
             <covered>
@@ -4655,12 +4595,12 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="0c668afc-6eac-4aaf-b20b-2fee7f0146d7"
-            name="OperandOccurrenceSpecification81">
+            Id="37b6a499-3747-41d1-a4ec-cc5e5a3639ad"
+            name="OperandOccurrenceSpecification67">
             <covered>
               <lifelineMoniker
-                Id="62630d0f-dc4f-4bd7-b070-8730bd600f44"
-                LastKnownName="file : File"
+                Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
+                LastKnownName="Main"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -4675,12 +4615,72 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="37b6a499-3747-41d1-a4ec-cc5e5a3639ad"
-            name="OperandOccurrenceSpecification67">
+            Id="0c668afc-6eac-4aaf-b20b-2fee7f0146d7"
+            name="OperandOccurrenceSpecification81">
             <covered>
               <lifelineMoniker
-                Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
-                LastKnownName="Main"
+                Id="62630d0f-dc4f-4bd7-b070-8730bd600f44"
+                LastKnownName="file : File"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="b3e1ac5f-5cab-49a3-803f-9d3d0d05d0ca"
+            name="OperandOccurrenceSpecification79">
+            <covered>
+              <lifelineMoniker
+                Id="24c70eba-9df9-4b69-99f6-aae1b78731e6"
+                LastKnownName="files : IList&lt;File&gt;"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="5a6417aa-6678-4a5f-a7e6-a35a3a18de96"
+            name="OperandOccurrenceSpecification75">
+            <covered>
+              <lifelineMoniker
+                Id="71579606-4ee2-422d-a7d7-218d3e4020a6"
+                LastKnownName="share : Share"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="687790f0-075f-4fa1-899f-ff46d3fea8c6"
+            name="OperandOccurrenceSpecification71">
+            <covered>
+              <lifelineMoniker
+                Id="30ae8dcd-cd9e-4338-8d50-0efcdb609544"
+                LastKnownName="commonConfig : CommonConfig"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="a256d174-13e7-4624-ac69-9994bcc276b3"
+            name="OperandOccurrenceSpecification77">
+            <covered>
+              <lifelineMoniker
+                Id="4e5d2665-7a94-48a9-bcd6-1249e64c52ed"
+                LastKnownName="directory : Directory"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="f4588a53-7907-4598-ac09-a33998ef1f3a"
+            name="OperandOccurrenceSpecification73">
+            <covered>
+              <lifelineMoniker
+                Id="630f7bda-9293-489f-9d1b-e06620eb050d"
+                LastKnownName="shareList : IList&lt;Share&gt;"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="52e09761-15d8-471d-98f1-500ca6f4f1dd"
+            name="OperandOccurrenceSpecification69">
+            <covered>
+              <lifelineMoniker
+                Id="226c6d1a-77da-4220-bb39-c8b27fa3aac0"
+                LastKnownName="managingLayer : ManagingLayer"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -4787,46 +4787,6 @@
             </covered>
           </messageOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="3ceafd82-b2e2-42df-b6d6-a213843e0e0e"
-            name="OperandOccurrenceSpecification107">
-            <covered>
-              <lifelineMoniker
-                Id="24c70eba-9df9-4b69-99f6-aae1b78731e6"
-                LastKnownName="files : IList&lt;File&gt;"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="dfee5dd1-831e-40c3-bd50-21a9bc90585c"
-            name="OperandOccurrenceSpecification99">
-            <covered>
-              <lifelineMoniker
-                Id="30ae8dcd-cd9e-4338-8d50-0efcdb609544"
-                LastKnownName="commonConfig : CommonConfig"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="24f72875-5401-4903-813d-127b38769749"
-            name="OperandOccurrenceSpecification111">
-            <covered>
-              <lifelineMoniker
-                Id="d30c944e-3136-4efb-a18d-270558698400"
-                LastKnownName="rules : Rules"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="49469d2d-40cf-42be-87d0-13b80b98fcfc"
-            name="OperandOccurrenceSpecification109">
-            <covered>
-              <lifelineMoniker
-                Id="62630d0f-dc4f-4bd7-b070-8730bd600f44"
-                LastKnownName="file : File"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="cd4c7369-289e-4df7-b095-97de568909ed"
             name="OperandOccurrenceSpecification101">
             <covered>
@@ -4837,22 +4797,12 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="18524dca-f893-4ca0-a9cc-5539d411fe27"
-            name="OperandOccurrenceSpecification95">
+            Id="4b20b938-574a-4e5d-bb6e-4bcb4be8ae95"
+            name="OperandOccurrenceSpecification103">
             <covered>
               <lifelineMoniker
-                Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
-                LastKnownName="Main"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="941a5b88-c2d3-4aef-943f-ec60f99193a0"
-            name="OperandOccurrenceSpecification105">
-            <covered>
-              <lifelineMoniker
-                Id="4e5d2665-7a94-48a9-bcd6-1249e64c52ed"
-                LastKnownName="directory : Directory"
+                Id="71579606-4ee2-422d-a7d7-218d3e4020a6"
+                LastKnownName="share : Share"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -4867,12 +4817,62 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="4b20b938-574a-4e5d-bb6e-4bcb4be8ae95"
-            name="OperandOccurrenceSpecification103">
+            Id="941a5b88-c2d3-4aef-943f-ec60f99193a0"
+            name="OperandOccurrenceSpecification105">
             <covered>
               <lifelineMoniker
-                Id="71579606-4ee2-422d-a7d7-218d3e4020a6"
-                LastKnownName="share : Share"
+                Id="4e5d2665-7a94-48a9-bcd6-1249e64c52ed"
+                LastKnownName="directory : Directory"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="18524dca-f893-4ca0-a9cc-5539d411fe27"
+            name="OperandOccurrenceSpecification95">
+            <covered>
+              <lifelineMoniker
+                Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
+                LastKnownName="Main"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="49469d2d-40cf-42be-87d0-13b80b98fcfc"
+            name="OperandOccurrenceSpecification109">
+            <covered>
+              <lifelineMoniker
+                Id="62630d0f-dc4f-4bd7-b070-8730bd600f44"
+                LastKnownName="file : File"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="24f72875-5401-4903-813d-127b38769749"
+            name="OperandOccurrenceSpecification111">
+            <covered>
+              <lifelineMoniker
+                Id="d30c944e-3136-4efb-a18d-270558698400"
+                LastKnownName="rules : Rules"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="dfee5dd1-831e-40c3-bd50-21a9bc90585c"
+            name="OperandOccurrenceSpecification99">
+            <covered>
+              <lifelineMoniker
+                Id="30ae8dcd-cd9e-4338-8d50-0efcdb609544"
+                LastKnownName="commonConfig : CommonConfig"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="3ceafd82-b2e2-42df-b6d6-a213843e0e0e"
+            name="OperandOccurrenceSpecification107">
+            <covered>
+              <lifelineMoniker
+                Id="24c70eba-9df9-4b69-99f6-aae1b78731e6"
+                LastKnownName="files : IList&lt;File&gt;"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -5035,16 +5035,6 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="1b7470ab-0831-4b8f-bd85-b3cbe76bb99a"
-            name="MessageOccurrenceSpecification83">
-            <covered>
-              <lifelineMoniker
-                Id="30ae8dcd-cd9e-4338-8d50-0efcdb609544"
-                LastKnownName="commonConfig : CommonConfig"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="bf604fe6-e116-467b-a58d-41d0ab153bd1"
             name="MessageOccurrenceSpecification82">
             <covered>
@@ -5055,8 +5045,8 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="48e62ba3-35e1-4378-bc0e-7fb3317310e2"
-            name="MessageOccurrenceSpecification84">
+            Id="1b7470ab-0831-4b8f-bd85-b3cbe76bb99a"
+            name="MessageOccurrenceSpecification83">
             <covered>
               <lifelineMoniker
                 Id="30ae8dcd-cd9e-4338-8d50-0efcdb609544"
@@ -5071,6 +5061,16 @@
               <lifelineMoniker
                 Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
                 LastKnownName="Main"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="48e62ba3-35e1-4378-bc0e-7fb3317310e2"
+            name="MessageOccurrenceSpecification84">
+            <covered>
+              <lifelineMoniker
+                Id="30ae8dcd-cd9e-4338-8d50-0efcdb609544"
+                LastKnownName="commonConfig : CommonConfig"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -5807,22 +5807,12 @@
             </covered>
           </executionOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="c3096179-4af7-47e0-b777-2f25bff1ebeb"
-            name="OperandOccurrenceSpecification130">
+            Id="f08b4b59-d019-49ed-99ce-27ea5cbe323a"
+            name="OperandOccurrenceSpecification124">
             <covered>
               <lifelineMoniker
-                Id="d30c944e-3136-4efb-a18d-270558698400"
-                LastKnownName="rules : Rules"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="39afca4e-cf1e-40a2-8b0b-1cadc684ea11"
-            name="OperandOccurrenceSpecification128">
-            <covered>
-              <lifelineMoniker
-                Id="4e5d2665-7a94-48a9-bcd6-1249e64c52ed"
-                LastKnownName="directory : Directory"
+                Id="630f7bda-9293-489f-9d1b-e06620eb050d"
+                LastKnownName="shareList : IList&lt;Share&gt;"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -5837,12 +5827,22 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="f08b4b59-d019-49ed-99ce-27ea5cbe323a"
-            name="OperandOccurrenceSpecification124">
+            Id="39afca4e-cf1e-40a2-8b0b-1cadc684ea11"
+            name="OperandOccurrenceSpecification128">
             <covered>
               <lifelineMoniker
-                Id="630f7bda-9293-489f-9d1b-e06620eb050d"
-                LastKnownName="shareList : IList&lt;Share&gt;"
+                Id="4e5d2665-7a94-48a9-bcd6-1249e64c52ed"
+                LastKnownName="directory : Directory"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="c3096179-4af7-47e0-b777-2f25bff1ebeb"
+            name="OperandOccurrenceSpecification130">
+            <covered>
+              <lifelineMoniker
+                Id="d30c944e-3136-4efb-a18d-270558698400"
+                LastKnownName="rules : Rules"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -5997,22 +5997,22 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="7ec66513-ea57-4a72-9e31-0a172daffa2a"
-            name="MessageOccurrenceSpecification216">
-            <covered>
-              <lifelineMoniker
-                Id="4e5d2665-7a94-48a9-bcd6-1249e64c52ed"
-                LastKnownName="directory : Directory"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="791678ae-3f36-4497-880d-291554481601"
             name="MessageOccurrenceSpecification217">
             <covered>
               <lifelineMoniker
                 Id="630f7bda-9293-489f-9d1b-e06620eb050d"
                 LastKnownName="shareList : IList&lt;Share&gt;"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="7ec66513-ea57-4a72-9e31-0a172daffa2a"
+            name="MessageOccurrenceSpecification216">
+            <covered>
+              <lifelineMoniker
+                Id="4e5d2665-7a94-48a9-bcd6-1249e64c52ed"
+                LastKnownName="directory : Directory"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -6213,22 +6213,22 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="6f62653b-21c6-453f-8a1f-45304c255c8a"
-            name="MessageOccurrenceSpecification229">
-            <covered>
-              <lifelineMoniker
-                Id="24c70eba-9df9-4b69-99f6-aae1b78731e6"
-                LastKnownName="files : IList&lt;File&gt;"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="f96578df-8c74-485a-9892-372cdbd88a73"
             name="MessageOccurrenceSpecification228">
             <covered>
               <lifelineMoniker
                 Id="62630d0f-dc4f-4bd7-b070-8730bd600f44"
                 LastKnownName="file : File"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="6f62653b-21c6-453f-8a1f-45304c255c8a"
+            name="MessageOccurrenceSpecification229">
+            <covered>
+              <lifelineMoniker
+                Id="24c70eba-9df9-4b69-99f6-aae1b78731e6"
+                LastKnownName="files : IList&lt;File&gt;"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -6575,26 +6575,6 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="5c589f04-f2a7-4fbb-aca4-f921ec9b2f11"
-            name="OperandOccurrenceSpecification148">
-            <covered>
-              <lifelineMoniker
-                Id="24c70eba-9df9-4b69-99f6-aae1b78731e6"
-                LastKnownName="files : IList&lt;File&gt;"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="aa1983e5-baf0-4454-9444-8abdf68fe2a5"
-            name="OperandOccurrenceSpecification150">
-            <covered>
-              <lifelineMoniker
-                Id="62630d0f-dc4f-4bd7-b070-8730bd600f44"
-                LastKnownName="file : File"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="ff7d2aaa-580d-47cb-9bec-f5579fce3d4f"
             name="OperandOccurrenceSpecification144">
             <covered>
@@ -6611,6 +6591,26 @@
               <lifelineMoniker
                 Id="4e5d2665-7a94-48a9-bcd6-1249e64c52ed"
                 LastKnownName="directory : Directory"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="5c589f04-f2a7-4fbb-aca4-f921ec9b2f11"
+            name="OperandOccurrenceSpecification148">
+            <covered>
+              <lifelineMoniker
+                Id="24c70eba-9df9-4b69-99f6-aae1b78731e6"
+                LastKnownName="files : IList&lt;File&gt;"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="aa1983e5-baf0-4454-9444-8abdf68fe2a5"
+            name="OperandOccurrenceSpecification150">
+            <covered>
+              <lifelineMoniker
+                Id="62630d0f-dc4f-4bd7-b070-8730bd600f44"
+                LastKnownName="file : File"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -6831,22 +6831,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="89eb70bb-f327-4c62-96f1-b14b57fa15af"
-            name="MessageOccurrenceSpecification225">
-            <covered>
-              <lifelineMoniker
-                Id="630f7bda-9293-489f-9d1b-e06620eb050d"
-                LastKnownName="shareList : IList&lt;Share&gt;"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="8db8eecc-5b2a-4bff-b3c7-81072c347db2"
             name="MessageOccurrenceSpecification224">
             <covered>
               <lifelineMoniker
                 Id="24c70eba-9df9-4b69-99f6-aae1b78731e6"
                 LastKnownName="files : IList&lt;File&gt;"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="89eb70bb-f327-4c62-96f1-b14b57fa15af"
+            name="MessageOccurrenceSpecification225">
+            <covered>
+              <lifelineMoniker
+                Id="630f7bda-9293-489f-9d1b-e06620eb050d"
+                LastKnownName="shareList : IList&lt;Share&gt;"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -7101,62 +7101,12 @@
             </covered>
           </executionOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="331cca6d-a018-47cc-986b-0a0835574bb9"
-            name="OperandOccurrenceSpecification96">
+            Id="623a472e-173a-4612-90c4-883546ee7668"
+            name="OperandOccurrenceSpecification108">
             <covered>
               <lifelineMoniker
-                Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
-                LastKnownName="Main"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="5ff02b39-4b1f-46a6-b0b4-80e51c12aab7"
-            name="OperandOccurrenceSpecification112">
-            <covered>
-              <lifelineMoniker
-                Id="d30c944e-3136-4efb-a18d-270558698400"
-                LastKnownName="rules : Rules"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="e7d649a0-bc50-44c5-935e-f1256303ab4a"
-            name="OperandOccurrenceSpecification110">
-            <covered>
-              <lifelineMoniker
-                Id="62630d0f-dc4f-4bd7-b070-8730bd600f44"
-                LastKnownName="file : File"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="323d906c-7e5a-46f4-bddc-800736193464"
-            name="OperandOccurrenceSpecification98">
-            <covered>
-              <lifelineMoniker
-                Id="226c6d1a-77da-4220-bb39-c8b27fa3aac0"
-                LastKnownName="managingLayer : ManagingLayer"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="0fc83945-1b77-47a8-b27f-45ae4e4fb45b"
-            name="OperandOccurrenceSpecification106">
-            <covered>
-              <lifelineMoniker
-                Id="4e5d2665-7a94-48a9-bcd6-1249e64c52ed"
-                LastKnownName="directory : Directory"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="5abf4bf8-e2ce-457c-bc81-79907d5f3859"
-            name="OperandOccurrenceSpecification104">
-            <covered>
-              <lifelineMoniker
-                Id="71579606-4ee2-422d-a7d7-218d3e4020a6"
-                LastKnownName="share : Share"
+                Id="24c70eba-9df9-4b69-99f6-aae1b78731e6"
+                LastKnownName="files : IList&lt;File&gt;"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -7171,6 +7121,26 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
+            Id="5abf4bf8-e2ce-457c-bc81-79907d5f3859"
+            name="OperandOccurrenceSpecification104">
+            <covered>
+              <lifelineMoniker
+                Id="71579606-4ee2-422d-a7d7-218d3e4020a6"
+                LastKnownName="share : Share"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="0fc83945-1b77-47a8-b27f-45ae4e4fb45b"
+            name="OperandOccurrenceSpecification106">
+            <covered>
+              <lifelineMoniker
+                Id="4e5d2665-7a94-48a9-bcd6-1249e64c52ed"
+                LastKnownName="directory : Directory"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
             Id="5446087a-adfd-4ddf-87c9-861fb31663a4"
             name="OperandOccurrenceSpecification102">
             <covered>
@@ -7181,12 +7151,42 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="623a472e-173a-4612-90c4-883546ee7668"
-            name="OperandOccurrenceSpecification108">
+            Id="e7d649a0-bc50-44c5-935e-f1256303ab4a"
+            name="OperandOccurrenceSpecification110">
             <covered>
               <lifelineMoniker
-                Id="24c70eba-9df9-4b69-99f6-aae1b78731e6"
-                LastKnownName="files : IList&lt;File&gt;"
+                Id="62630d0f-dc4f-4bd7-b070-8730bd600f44"
+                LastKnownName="file : File"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="5ff02b39-4b1f-46a6-b0b4-80e51c12aab7"
+            name="OperandOccurrenceSpecification112">
+            <covered>
+              <lifelineMoniker
+                Id="d30c944e-3136-4efb-a18d-270558698400"
+                LastKnownName="rules : Rules"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="331cca6d-a018-47cc-986b-0a0835574bb9"
+            name="OperandOccurrenceSpecification96">
+            <covered>
+              <lifelineMoniker
+                Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
+                LastKnownName="Main"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="323d906c-7e5a-46f4-bddc-800736193464"
+            name="OperandOccurrenceSpecification98">
+            <covered>
+              <lifelineMoniker
+                Id="226c6d1a-77da-4220-bb39-c8b27fa3aac0"
+                LastKnownName="managingLayer : ManagingLayer"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -7229,72 +7229,12 @@
             </covered>
           </executionOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="3dacdf63-b280-4797-9b66-830d040be228"
-            name="OperandOccurrenceSpecification74">
+            Id="608fc0ad-ea5f-46fb-96c5-179b2521e2c7"
+            name="OperandOccurrenceSpecification78">
             <covered>
               <lifelineMoniker
-                Id="630f7bda-9293-489f-9d1b-e06620eb050d"
-                LastKnownName="shareList : IList&lt;Share&gt;"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="fbe648ad-a507-4fa1-bbfd-42ab9309e06a"
-            name="OperandOccurrenceSpecification80">
-            <covered>
-              <lifelineMoniker
-                Id="24c70eba-9df9-4b69-99f6-aae1b78731e6"
-                LastKnownName="files : IList&lt;File&gt;"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="ae2ab39d-df84-4a38-8470-590528a0502f"
-            name="OperandOccurrenceSpecification72">
-            <covered>
-              <lifelineMoniker
-                Id="30ae8dcd-cd9e-4338-8d50-0efcdb609544"
-                LastKnownName="commonConfig : CommonConfig"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="ebb342bc-12ee-4b41-8003-4d11e5b1c667"
-            name="OperandOccurrenceSpecification82">
-            <covered>
-              <lifelineMoniker
-                Id="62630d0f-dc4f-4bd7-b070-8730bd600f44"
-                LastKnownName="file : File"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="ba6b6746-511f-4bc4-9041-abb08192821a"
-            name="OperandOccurrenceSpecification68">
-            <covered>
-              <lifelineMoniker
-                Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
-                LastKnownName="Main"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="14fd9656-c7e4-4c14-9554-79bd203a0ac7"
-            name="OperandOccurrenceSpecification70">
-            <covered>
-              <lifelineMoniker
-                Id="226c6d1a-77da-4220-bb39-c8b27fa3aac0"
-                LastKnownName="managingLayer : ManagingLayer"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="3bcecaaf-505b-4a93-ab10-647f264bb70f"
-            name="OperandOccurrenceSpecification66">
-            <covered>
-              <lifelineMoniker
-                Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                LastKnownName="Subject"
+                Id="4e5d2665-7a94-48a9-bcd6-1249e64c52ed"
+                LastKnownName="directory : Directory"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -7309,6 +7249,26 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
+            Id="3bcecaaf-505b-4a93-ab10-647f264bb70f"
+            name="OperandOccurrenceSpecification66">
+            <covered>
+              <lifelineMoniker
+                Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
+                LastKnownName="Subject"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="14fd9656-c7e4-4c14-9554-79bd203a0ac7"
+            name="OperandOccurrenceSpecification70">
+            <covered>
+              <lifelineMoniker
+                Id="226c6d1a-77da-4220-bb39-c8b27fa3aac0"
+                LastKnownName="managingLayer : ManagingLayer"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
             Id="c8134b1b-85b8-447c-ab2b-0898b8cd0958"
             name="OperandOccurrenceSpecification84">
             <covered>
@@ -7319,12 +7279,52 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="608fc0ad-ea5f-46fb-96c5-179b2521e2c7"
-            name="OperandOccurrenceSpecification78">
+            Id="ebb342bc-12ee-4b41-8003-4d11e5b1c667"
+            name="OperandOccurrenceSpecification82">
             <covered>
               <lifelineMoniker
-                Id="4e5d2665-7a94-48a9-bcd6-1249e64c52ed"
-                LastKnownName="directory : Directory"
+                Id="62630d0f-dc4f-4bd7-b070-8730bd600f44"
+                LastKnownName="file : File"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="ae2ab39d-df84-4a38-8470-590528a0502f"
+            name="OperandOccurrenceSpecification72">
+            <covered>
+              <lifelineMoniker
+                Id="30ae8dcd-cd9e-4338-8d50-0efcdb609544"
+                LastKnownName="commonConfig : CommonConfig"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="fbe648ad-a507-4fa1-bbfd-42ab9309e06a"
+            name="OperandOccurrenceSpecification80">
+            <covered>
+              <lifelineMoniker
+                Id="24c70eba-9df9-4b69-99f6-aae1b78731e6"
+                LastKnownName="files : IList&lt;File&gt;"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="3dacdf63-b280-4797-9b66-830d040be228"
+            name="OperandOccurrenceSpecification74">
+            <covered>
+              <lifelineMoniker
+                Id="630f7bda-9293-489f-9d1b-e06620eb050d"
+                LastKnownName="shareList : IList&lt;Share&gt;"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="ba6b6746-511f-4bc4-9041-abb08192821a"
+            name="OperandOccurrenceSpecification68">
+            <covered>
+              <lifelineMoniker
+                Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
+                LastKnownName="Main"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -7608,22 +7608,12 @@
             </operands>
           </combinedFragment>
           <operandOccurrenceSpecification
-            Id="68627839-b7ab-4484-b7cb-837f150e72d2"
-            name="OperandOccurrenceSpecification93">
+            Id="512b2804-0d5b-4dd8-9c1f-2f0baaefa79e"
+            name="OperandOccurrenceSpecification89">
             <covered>
               <lifelineMoniker
-                Id="630f7bda-9293-489f-9d1b-e06620eb050d"
-                LastKnownName="shareList : IList&lt;Share&gt;"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="2a69d4e1-7a3f-4da5-a360-9e854359077b"
-            name="OperandOccurrenceSpecification87">
-            <covered>
-              <lifelineMoniker
-                Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
-                LastKnownName="Main"
+                Id="226c6d1a-77da-4220-bb39-c8b27fa3aac0"
+                LastKnownName="managingLayer : ManagingLayer"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -7648,12 +7638,22 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="512b2804-0d5b-4dd8-9c1f-2f0baaefa79e"
-            name="OperandOccurrenceSpecification89">
+            Id="68627839-b7ab-4484-b7cb-837f150e72d2"
+            name="OperandOccurrenceSpecification93">
             <covered>
               <lifelineMoniker
-                Id="226c6d1a-77da-4220-bb39-c8b27fa3aac0"
-                LastKnownName="managingLayer : ManagingLayer"
+                Id="630f7bda-9293-489f-9d1b-e06620eb050d"
+                LastKnownName="shareList : IList&lt;Share&gt;"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="2a69d4e1-7a3f-4da5-a360-9e854359077b"
+            name="OperandOccurrenceSpecification87">
+            <covered>
+              <lifelineMoniker
+                Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
+                LastKnownName="Main"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -7870,22 +7870,22 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="dd6e60a8-42c7-467d-8e06-04b609a6f8ff"
-            name="MessageOccurrenceSpecification129">
-            <covered>
-              <lifelineMoniker
-                Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
-                LastKnownName="Main"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="2ab05721-b1b2-4e98-80fb-be11aaa39d89"
             name="MessageOccurrenceSpecification128">
             <covered>
               <lifelineMoniker
                 Id="226c6d1a-77da-4220-bb39-c8b27fa3aac0"
                 LastKnownName="managingLayer : ManagingLayer"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="dd6e60a8-42c7-467d-8e06-04b609a6f8ff"
+            name="MessageOccurrenceSpecification129">
+            <covered>
+              <lifelineMoniker
+                Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
+                LastKnownName="Main"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -8066,16 +8066,6 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="52d86de2-d4de-49a6-a9d1-596fdbfa1252"
-            name="MessageOccurrenceSpecification138">
-            <covered>
-              <lifelineMoniker
-                Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
-                LastKnownName="Main"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="55c75e40-32d6-4332-8c9c-6c781f862e00"
             name="MessageOccurrenceSpecification139">
             <covered>
@@ -8086,8 +8076,8 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="77f12cbf-2b9c-432c-9372-15d4b0f08670"
-            name="MessageOccurrenceSpecification141">
+            Id="52d86de2-d4de-49a6-a9d1-596fdbfa1252"
+            name="MessageOccurrenceSpecification138">
             <covered>
               <lifelineMoniker
                 Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
@@ -8102,6 +8092,16 @@
               <lifelineMoniker
                 Id="630f7bda-9293-489f-9d1b-e06620eb050d"
                 LastKnownName="shareList : IList&lt;Share&gt;"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="77f12cbf-2b9c-432c-9372-15d4b0f08670"
+            name="MessageOccurrenceSpecification141">
+            <covered>
+              <lifelineMoniker
+                Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
+                LastKnownName="Main"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -8252,22 +8252,22 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="9af91bcc-f5f9-44e7-b583-c4efd3c6c0a3"
-            name="OperandOccurrenceSpecification155">
-            <covered>
-              <lifelineMoniker
-                Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
-                LastKnownName="Main"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="b404ffe3-0bd9-4adc-9b63-1441c8c8f33b"
             name="OperandOccurrenceSpecification157">
             <covered>
               <lifelineMoniker
                 Id="226c6d1a-77da-4220-bb39-c8b27fa3aac0"
                 LastKnownName="managingLayer : ManagingLayer"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="9af91bcc-f5f9-44e7-b583-c4efd3c6c0a3"
+            name="OperandOccurrenceSpecification155">
+            <covered>
+              <lifelineMoniker
+                Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
+                LastKnownName="Main"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -8606,6 +8606,36 @@
             </covered>
           </executionOccurrenceSpecification>
           <operandOccurrenceSpecification
+            Id="96d1ffe1-a7bd-4a37-8729-01c9423260fd"
+            name="OperandOccurrenceSpecification92">
+            <covered>
+              <lifelineMoniker
+                Id="30ae8dcd-cd9e-4338-8d50-0efcdb609544"
+                LastKnownName="commonConfig : CommonConfig"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="5015573c-1030-4a02-b78c-f9c7837f0d26"
+            name="OperandOccurrenceSpecification94">
+            <covered>
+              <lifelineMoniker
+                Id="630f7bda-9293-489f-9d1b-e06620eb050d"
+                LastKnownName="shareList : IList&lt;Share&gt;"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="47016576-c3e1-4569-bab8-e7552a5f2699"
+            name="OperandOccurrenceSpecification90">
+            <covered>
+              <lifelineMoniker
+                Id="226c6d1a-77da-4220-bb39-c8b27fa3aac0"
+                LastKnownName="managingLayer : ManagingLayer"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
             Id="e5025cab-b091-4a89-9883-655c054c78a4"
             name="OperandOccurrenceSpecification86">
             <covered>
@@ -8622,36 +8652,6 @@
               <lifelineMoniker
                 Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
                 LastKnownName="Main"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="5015573c-1030-4a02-b78c-f9c7837f0d26"
-            name="OperandOccurrenceSpecification94">
-            <covered>
-              <lifelineMoniker
-                Id="630f7bda-9293-489f-9d1b-e06620eb050d"
-                LastKnownName="shareList : IList&lt;Share&gt;"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="96d1ffe1-a7bd-4a37-8729-01c9423260fd"
-            name="OperandOccurrenceSpecification92">
-            <covered>
-              <lifelineMoniker
-                Id="30ae8dcd-cd9e-4338-8d50-0efcdb609544"
-                LastKnownName="commonConfig : CommonConfig"
-                LastKnownLocation="Simple_Sync_MSUML.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="47016576-c3e1-4569-bab8-e7552a5f2699"
-            name="OperandOccurrenceSpecification90">
-            <covered>
-              <lifelineMoniker
-                Id="226c6d1a-77da-4220-bb39-c8b27fa3aac0"
-                LastKnownName="managingLayer : ManagingLayer"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -13239,7 +13239,7 @@
     <packageHasNamedElement>
       <actor
         Id="3b01e98f-4380-4188-86f1-90ea3c29c110"
-        name="Пользователь1"
+        name="Пользователь"
         isAbstract="false"
         isLeaf="false">
         <targetEnds>
@@ -13252,7 +13252,7 @@
             isAbstract="false">
             <useCaseMoniker
               Id="741aeb92-18e5-4bd7-a862-8c822542ede6"
-              LastKnownName="Создание нового share1"
+              LastKnownName="Создание нового share"
               LastKnownLocation="Simple_Sync_MSUML.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -13291,7 +13291,7 @@
             isAbstract="false">
             <useCaseMoniker
               Id="1d5e1884-cbda-4258-a6d5-3ad3ddbbd05f"
-              LastKnownName="Просмотр share1"
+              LastKnownName="Просмотр share"
               LastKnownLocation="Simple_Sync_MSUML.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -13330,7 +13330,7 @@
             isAbstract="false">
             <useCaseMoniker
               Id="b9349d80-7c10-4f35-be63-1efd7903eb9b"
-              LastKnownName="Настройка 1"
+              LastKnownName="Настройка"
               LastKnownLocation="Simple_Sync_MSUML.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -13366,7 +13366,7 @@
     <packageHasNamedElement>
       <useCase
         Id="84eceded-686b-4e28-ae4d-cb8a65b7c325"
-        name="Синхронизация share1"
+        name="Синхронизация share"
         isAbstract="false"
         isLeaf="false">
         <extendedCases>
@@ -13374,7 +13374,7 @@
             Id="a58e322e-97fe-469b-9478-7d6dd03f2e4e">
             <useCaseMoniker
               Id="1d5e1884-cbda-4258-a6d5-3ad3ddbbd05f"
-              LastKnownName="Просмотр share1"
+              LastKnownName="Просмотр share"
               LastKnownLocation="Simple_Sync_MSUML.uml" />
           </extend>
         </extendedCases>
@@ -13383,7 +13383,7 @@
     <packageHasNamedElement>
       <useCase
         Id="741aeb92-18e5-4bd7-a862-8c822542ede6"
-        name="Создание нового share1"
+        name="Создание нового share"
         isAbstract="false"
         isLeaf="false">
         <additions>
@@ -13391,7 +13391,7 @@
             Id="188b6461-df51-4935-bfbd-7f144de28ea3">
             <useCaseMoniker
               Id="62127fb2-b61c-47a7-9009-db3713214bb7"
-              LastKnownName="Выбор директории1"
+              LastKnownName="Выбор директории"
               LastKnownLocation="Simple_Sync_MSUML.uml" />
           </include>
         </additions>
@@ -13400,21 +13400,21 @@
     <packageHasNamedElement>
       <useCase
         Id="b9349d80-7c10-4f35-be63-1efd7903eb9b"
-        name="Настройка 1"
+        name="Настройка"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="62127fb2-b61c-47a7-9009-db3713214bb7"
-        name="Выбор директории1"
+        name="Выбор директории"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="f43e9ff3-9bb0-4dfc-a1b0-7041d6e58b83"
-        name="Настройки share 1"
+        name="Настройки share"
         isAbstract="false"
         isLeaf="false">
         <generalsInternal>
@@ -13423,7 +13423,7 @@
             isSubstitutable="false">
             <useCaseMoniker
               Id="b9349d80-7c10-4f35-be63-1efd7903eb9b"
-              LastKnownName="Настройка 1"
+              LastKnownName="Настройка"
               LastKnownLocation="Simple_Sync_MSUML.uml" />
           </generalization>
         </generalsInternal>
@@ -13432,7 +13432,7 @@
             Id="e757ea5a-47b0-431b-87f1-102c7016ec43">
             <useCaseMoniker
               Id="1d5e1884-cbda-4258-a6d5-3ad3ddbbd05f"
-              LastKnownName="Просмотр share1"
+              LastKnownName="Просмотр share"
               LastKnownLocation="Simple_Sync_MSUML.uml" />
           </extend>
         </extendedCases>
@@ -13441,7 +13441,7 @@
     <packageHasNamedElement>
       <useCase
         Id="a0135e71-1550-41f9-84c5-d72a99e82972"
-        name="Разрешение коллизий1"
+        name="Разрешение коллизий"
         isAbstract="false"
         isLeaf="false">
         <generalsInternal>
@@ -13450,7 +13450,7 @@
             isSubstitutable="false">
             <useCaseMoniker
               Id="f43e9ff3-9bb0-4dfc-a1b0-7041d6e58b83"
-              LastKnownName="Настройки share 1"
+              LastKnownName="Настройки share"
               LastKnownLocation="Simple_Sync_MSUML.uml" />
           </generalization>
         </generalsInternal>
@@ -13459,7 +13459,7 @@
     <packageHasNamedElement>
       <useCase
         Id="21b1baba-d2f5-4b1f-998a-9bd14fb56ac3"
-        name="Переименовать share 1"
+        name="Переименовать share"
         isAbstract="false"
         isLeaf="false">
         <generalsInternal>
@@ -13468,7 +13468,7 @@
             isSubstitutable="false">
             <useCaseMoniker
               Id="f43e9ff3-9bb0-4dfc-a1b0-7041d6e58b83"
-              LastKnownName="Настройки share 1"
+              LastKnownName="Настройки share"
               LastKnownLocation="Simple_Sync_MSUML.uml" />
           </generalization>
         </generalsInternal>
@@ -13477,7 +13477,7 @@
     <packageHasNamedElement>
       <useCase
         Id="a41ce767-2f67-4e7c-ba9e-de4f519e7136"
-        name="Настройки синхронизации файлов/папок1"
+        name="Настройки синхронизации файлов/папок"
         isAbstract="false"
         isLeaf="false">
         <generalsInternal>
@@ -13486,7 +13486,7 @@
             isSubstitutable="false">
             <useCaseMoniker
               Id="f43e9ff3-9bb0-4dfc-a1b0-7041d6e58b83"
-              LastKnownName="Настройки share 1"
+              LastKnownName="Настройки share"
               LastKnownLocation="Simple_Sync_MSUML.uml" />
           </generalization>
         </generalsInternal>
@@ -13495,7 +13495,7 @@
     <packageHasNamedElement>
       <useCase
         Id="94474b9f-0e2b-46b6-a4e8-708962aa3222"
-        name="Удаление share1"
+        name="Удаление share"
         isAbstract="false"
         isLeaf="false">
         <generalsInternal>
@@ -13504,7 +13504,7 @@
             isSubstitutable="false">
             <useCaseMoniker
               Id="f43e9ff3-9bb0-4dfc-a1b0-7041d6e58b83"
-              LastKnownName="Настройки share 1"
+              LastKnownName="Настройки share"
               LastKnownLocation="Simple_Sync_MSUML.uml" />
           </generalization>
         </generalsInternal>
@@ -13513,7 +13513,7 @@
     <packageHasNamedElement>
       <useCase
         Id="19d346af-ab9e-4126-9695-aa043ca7a894"
-        name="Выбор синхронизируемых файлов1"
+        name="Выбор синхронизируемых файлов"
         isAbstract="false"
         isLeaf="false">
         <generalsInternal>
@@ -13522,7 +13522,7 @@
             isSubstitutable="false">
             <useCaseMoniker
               Id="a41ce767-2f67-4e7c-ba9e-de4f519e7136"
-              LastKnownName="Настройки синхронизации файлов/папок1"
+              LastKnownName="Настройки синхронизации файлов/папок"
               LastKnownLocation="Simple_Sync_MSUML.uml" />
           </generalization>
         </generalsInternal>
@@ -13531,7 +13531,7 @@
             Id="21049068-7dd6-456c-b6ad-b324720ffaac">
             <useCaseMoniker
               Id="62127fb2-b61c-47a7-9009-db3713214bb7"
-              LastKnownName="Выбор директории1"
+              LastKnownName="Выбор директории"
               LastKnownLocation="Simple_Sync_MSUML.uml" />
           </extend>
         </extendedCases>
@@ -13540,7 +13540,7 @@
     <packageHasNamedElement>
       <useCase
         Id="ec3e5c9f-5bca-45cb-8afc-f6e29e249c8e"
-        name="Настройка автоматического запуска1"
+        name="Настройка автоматического запуска"
         isAbstract="false"
         isLeaf="false">
         <generalsInternal>
@@ -13549,7 +13549,7 @@
             isSubstitutable="false">
             <useCaseMoniker
               Id="b9349d80-7c10-4f35-be63-1efd7903eb9b"
-              LastKnownName="Настройка 1"
+              LastKnownName="Настройка"
               LastKnownLocation="Simple_Sync_MSUML.uml" />
           </generalization>
         </generalsInternal>
@@ -13558,7 +13558,7 @@
     <packageHasNamedElement>
       <useCase
         Id="6acdc582-cad7-4c06-8ca5-0997c72bdc0a"
-        name="Настройка последовательности загрузки файлов1"
+        name="Настройка последовательности загрузки файлов"
         isAbstract="false"
         isLeaf="false">
         <generalsInternal>
@@ -13567,7 +13567,7 @@
             isSubstitutable="false">
             <useCaseMoniker
               Id="a41ce767-2f67-4e7c-ba9e-de4f519e7136"
-              LastKnownName="Настройки синхронизации файлов/папок1"
+              LastKnownName="Настройки синхронизации файлов/папок"
               LastKnownLocation="Simple_Sync_MSUML.uml" />
           </generalization>
         </generalsInternal>
@@ -13576,7 +13576,7 @@
     <packageHasNamedElement>
       <useCase
         Id="1d5e1884-cbda-4258-a6d5-3ad3ddbbd05f"
-        name="Просмотр share1"
+        name="Просмотр share"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>

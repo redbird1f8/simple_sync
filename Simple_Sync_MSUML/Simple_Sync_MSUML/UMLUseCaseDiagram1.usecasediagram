@@ -9,6 +9,78 @@
       </annotatedElements>
     </comment>
   </ownedCommentsInternal>
+  <appliedStereotypesInternal>
+    <stereotypeInstance Id="29e22324-ebbf-41b5-a64f-0032a3f3fcaa" name="namespace" profile="CSharpProfile">
+      <elementDefinition Id="95056018-f7ba-4e3d-b1e1-ec4bb7210c67" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="0ea3dc3b-e68a-49aa-99bf-f3767864f00a">
+          <propertyInstance Id="becebf46-54df-43dc-8d05-837176d1d948" name="BaseName">
+            <elementDefinition Id="5a30607c-438c-4546-b8cf-12d93164179d" />
+          </propertyInstance>
+          <elementDefinition Id="83db510f-664d-481d-a5a7-dfc8dc7554cc" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="5f151407-899e-4c0e-b969-067f78894014">
+          <propertyInstance Id="7a985190-bd1c-45d1-8db8-401442f5804e" name="ClrAttributes">
+            <elementDefinition Id="106700a6-b73a-4483-b3d5-5be3f57a79c3" />
+          </propertyInstance>
+          <elementDefinition Id="fc7cb785-546b-484f-872f-63352e413e56" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="c18fe3ef-f707-4671-8c30-f5b3e11d7103">
+          <propertyInstance Id="43adf7ab-cb4f-42ba-a76d-e45a49a58235" name="Usings">
+            <elementDefinition Id="5c0a8c1a-1d66-4644-a1dc-e8ce025672dd" />
+          </propertyInstance>
+          <elementDefinition Id="b7ec7233-5993-40ce-a64a-0ac2c6653217" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance Id="04d2ef4c-d937-4682-b81c-a2c8744e3a61" name="TextTemplateBindings" profile="TextTemplateBindings">
+      <elementDefinition Id="194d6a27-5256-48c4-b646-e3125d341412" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="a2a62117-b803-4043-99bc-ee5ab161e2d6">
+          <propertyInstance Id="8479bc70-621c-4774-a418-1e59978e9bba" name="Alias" value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate">
+            <elementDefinition Id="9e006714-0f23-4786-9736-c397a91b5fde" />
+          </propertyInstance>
+          <elementDefinition Id="308cbc15-38bf-4ec9-8c7f-7dc52c098c3f" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="98502ec4-ffe6-49e7-9924-5918f66b22bb">
+          <propertyInstance Id="5293afbd-bfd6-4643-bcc1-8a83822f324b" name="TemplateFilePath" value="ClassTemplate=F:\MSVS\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=F:\MSVS\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=F:\MSVS\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=F:\MSVS\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4">
+            <elementDefinition Id="72de9cb9-6bc8-49f4-a537-85feea58e980" />
+          </propertyInstance>
+          <elementDefinition Id="8cf8291a-2888-4d5f-8003-6145c58d6898" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="9d9c074a-509d-46fe-8b90-9b4f2e20f6c7">
+          <propertyInstance Id="9fca29a6-6169-4ce3-b629-035c3b803017" name="ProjectPath" value="ClassTemplate=..\Simple_Sync_MSUMLLib\Simple_Sync_MSUMLLib.csproj|EnumTemplate=..\Simple_Sync_MSUMLLib\Simple_Sync_MSUMLLib.csproj|InterfaceTemplate=..\Simple_Sync_MSUMLLib\Simple_Sync_MSUMLLib.csproj|StructTemplate=..\Simple_Sync_MSUMLLib\Simple_Sync_MSUMLLib.csproj">
+            <elementDefinition Id="b6ab14e9-6490-4513-92ef-d1d2501362ff" />
+          </propertyInstance>
+          <elementDefinition Id="526f6cc2-b143-45ff-b4b2-6389518f1f58" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="6651a6be-4e2c-4c22-a103-8955323a3fbc">
+          <propertyInstance Id="cbcacbf4-d696-4376-a822-c7c266284ad6" name="TargetDirectory" value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}">
+            <elementDefinition Id="38f0838c-3b6f-4783-8326-72e84dee1a0b" />
+          </propertyInstance>
+          <elementDefinition Id="08958a48-1d09-47df-adaf-66e92bded290" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="36ee8c72-fda1-45eb-a4b7-90c1cc9e748a">
+          <propertyInstance Id="a4fa7e14-ca3f-48a3-b6bf-6a85aeda5df7" name="TargetName" value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}">
+            <elementDefinition Id="64d4adba-bbc9-4f7e-84f3-b991d9f2b280" />
+          </propertyInstance>
+          <elementDefinition Id="d0427a14-d9c3-4c63-9761-6656ce9165fe" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="d52cf88b-cc96-46e0-a3cf-b327f4896d77">
+          <propertyInstance Id="a4253237-b01a-4af4-bf89-b0a7f9ae916c" name="Overwrite" value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True">
+            <elementDefinition Id="2bb408d3-418a-44b9-908e-e4f5611a8316" />
+          </propertyInstance>
+          <elementDefinition Id="ebbe8246-3641-4aec-aac5-34972eb98cb2" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="beceb65d-5fef-4893-8537-4943088902fe">
+          <propertyInstance Id="95416744-9c6b-4632-aed6-88d7ade558ec" name="Parameters">
+            <elementDefinition Id="016b5ee8-0334-472c-91aa-916ff8330a86" />
+          </propertyInstance>
+          <elementDefinition Id="3fe3481a-da0f-433a-be12-7e88ad5f2487" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="0b5e1f08-08c5-4319-8a50-894da2a7efa8" name="Пользователь" isAbstract="false" isLeaf="false">
@@ -62,12 +134,46 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="d8ba378e-8a7c-42bf-9191-21720cf3a33c" />
           </association>
+          <association Id="910ce8c9-4236-4161-9fb9-cfd186038fc1" isDerived="false" sourceEndRoleName="Пользователь" targetEndRoleName="Настройка автоматического запуска" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="a3dbb157-418f-4a7f-a2c1-b5275412fcbe" LastKnownName="Настройка автоматического запуска" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="34d80a6d-5daa-463f-ae7d-59404670b4ed" name="Пользователь" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="39a1ce42-f92e-4e3b-8d50-d80dc62c9a48" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="304c3b37-9dd4-4084-9afd-636ab5cb8b94" name="Настройка автоматического запуска" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="288787e8-8c31-4201-a5cc-c9668ed52ae3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5d9838de-4b79-42fe-9f9b-7695f07d8f0d" />
+          </association>
         </targetEnds>
       </actor>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
       <useCase Id="1660725b-b1f9-4900-9162-d2557552e389" name="Синхронизация share" isAbstract="false" isLeaf="false">
         <elementDefinition Id="84eceded-686b-4e28-ae4d-cb8a65b7c325" />
+        <targetEnds>
+          <association Id="774943f0-b161-41c3-9870-d27bff5801f4" isDerived="false" sourceEndRoleName="Синхронизация share" targetEndRoleName="Другое устройство" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="b83ee914-5a62-4147-9715-6f73b0bbfa8f" LastKnownName="Другое устройство" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="40406f39-5446-41de-a5a7-ce6e348fffeb" name="Синхронизация share" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d9b93660-e55f-40cf-96d7-6c82087d517c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="40c191f0-08b5-4598-b439-8adbe3e8159b" name="Другое устройство" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6f130483-80d4-4842-84d7-67a4e29383ef" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7ca8c1ed-95a3-4056-8b55-98efee9f8fa7" />
+          </association>
+        </targetEnds>
         <extendedCases>
           <extend Id="411d155e-489f-44ae-8c32-40627e4a38c5">
             <useCaseMoniker Id="73163a80-bf85-4857-9049-d7f7c58c4dc8" LastKnownName="Просмотр share" />
@@ -202,6 +308,11 @@
         <elementDefinition Id="1d5e1884-cbda-4258-a6d5-3ad3ddbbd05f" />
       </useCase>
     </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="b83ee914-5a62-4147-9715-6f73b0bbfa8f" name="Другое устройство" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e295ebcd-695a-44ee-852d-0497a14fed49" />
+      </actor>
+    </useCaseModelRootHasTypes>
   </packagedElements>
   <package Id="af16cd7a-7c11-4bfe-be89-8d0ebf698c96" name="Simple_Sync_MSUML">
     <elementDefinition Id="ad758e9e-d22b-4504-bcb6-6a4bd0fe0cc2" />
@@ -217,6 +328,18 @@
           <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
         </profileInstance>
         <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="68275e1a-ddd7-4cca-bb5c-a0d5bcfa32e8">
+        <profileInstance Id="a3ef2171-71cc-4ba9-942f-387689e7970d" name="CSharpProfile">
+          <elementDefinition Id="29cef680-3b80-492d-8994-e7f423de863e" />
+        </profileInstance>
+        <elementDefinition Id="d120da80-cb41-4cfe-98a7-472540e06aee" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="124786ad-9c14-4172-afd7-28196169287e">
+        <profileInstance Id="bed3709c-6093-414b-89a6-521b863a6eb8" name="TextTemplateBindings">
+          <elementDefinition Id="b916fcd1-b813-427c-adb8-a503bbda3701" />
+        </profileInstance>
+        <elementDefinition Id="6af2fa6e-c5b7-4c80-bf3a-2398cfbb31fb" />
       </packageHasProfileInstances>
     </profileInstances>
   </package>

@@ -15,6 +15,88 @@
       </annotatedElements>
     </comment>
   </ownedCommentsInternal>
+  <appliedStereotypesInternal>
+    <stereotypeInstance
+      Id="95056018-f7ba-4e3d-b1e1-ec4bb7210c67"
+      name="namespace"
+      profile="CSharpProfile">
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="83db510f-664d-481d-a5a7-dfc8dc7554cc">
+          <propertyInstance
+            Id="5a30607c-438c-4546-b8cf-12d93164179d"
+            name="BaseName" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="fc7cb785-546b-484f-872f-63352e413e56">
+          <propertyInstance
+            Id="106700a6-b73a-4483-b3d5-5be3f57a79c3"
+            name="ClrAttributes" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="b7ec7233-5993-40ce-a64a-0ac2c6653217">
+          <propertyInstance
+            Id="5c0a8c1a-1d66-4644-a1dc-e8ce025672dd"
+            name="Usings" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance
+      Id="194d6a27-5256-48c4-b646-e3125d341412"
+      name="TextTemplateBindings"
+      profile="TextTemplateBindings">
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="308cbc15-38bf-4ec9-8c7f-7dc52c098c3f">
+          <propertyInstance
+            Id="9e006714-0f23-4786-9736-c397a91b5fde"
+            name="Alias"
+            value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="8cf8291a-2888-4d5f-8003-6145c58d6898">
+          <propertyInstance
+            Id="72de9cb9-6bc8-49f4-a537-85feea58e980"
+            name="TemplateFilePath"
+            value="ClassTemplate=F:\MSVS\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=F:\MSVS\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=F:\MSVS\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=F:\MSVS\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="526f6cc2-b143-45ff-b4b2-6389518f1f58">
+          <propertyInstance
+            Id="b6ab14e9-6490-4513-92ef-d1d2501362ff"
+            name="ProjectPath"
+            value="ClassTemplate=..\Simple_Sync_MSUMLLib\Simple_Sync_MSUMLLib.csproj|EnumTemplate=..\Simple_Sync_MSUMLLib\Simple_Sync_MSUMLLib.csproj|InterfaceTemplate=..\Simple_Sync_MSUMLLib\Simple_Sync_MSUMLLib.csproj|StructTemplate=..\Simple_Sync_MSUMLLib\Simple_Sync_MSUMLLib.csproj" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="08958a48-1d09-47df-adaf-66e92bded290">
+          <propertyInstance
+            Id="38f0838c-3b6f-4783-8326-72e84dee1a0b"
+            name="TargetDirectory"
+            value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="d0427a14-d9c3-4c63-9761-6656ce9165fe">
+          <propertyInstance
+            Id="64d4adba-bbc9-4f7e-84f3-b991d9f2b280"
+            name="TargetName"
+            value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="ebbe8246-3641-4aec-aac5-34972eb98cb2">
+          <propertyInstance
+            Id="2bb408d3-418a-44b9-908e-e4f5611a8316"
+            name="Overwrite"
+            value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="3fe3481a-da0f-433a-be12-7e88ad5f2487">
+          <propertyInstance
+            Id="016b5ee8-0334-472c-91aa-916ff8330a86"
+            name="Parameters" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
   <profileInstances>
     <packageHasProfileInstances
       Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
@@ -27,6 +109,18 @@
       <profileInstance
         Id="532ea607-fb19-44b8-8502-3351b05452be"
         name="StandardProfileL3" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="d120da80-cb41-4cfe-98a7-472540e06aee">
+      <profileInstance
+        Id="29cef680-3b80-492d-8994-e7f423de863e"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="6af2fa6e-c5b7-4c80-bf3a-2398cfbb31fb">
+      <profileInstance
+        Id="b916fcd1-b813-427c-adb8-a503bbda3701"
+        name="TextTemplateBindings" />
     </packageHasProfileInstances>
   </profileInstances>
   <packagedElements>
@@ -155,7 +249,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                LastKnownName="Subject"
+                LastKnownName="Пользователь"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </coveredLifelines>
             <finish>
@@ -263,7 +357,7 @@
             <covered>
               <lifelineMoniker
                 Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                LastKnownName="Subject"
+                LastKnownName="Пользователь"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -276,7 +370,7 @@
             <covered>
               <lifelineMoniker
                 Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                LastKnownName="Subject"
+                LastKnownName="Пользователь"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -287,7 +381,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                LastKnownName="Subject"
+                LastKnownName="Пользователь"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
               <lifelineMoniker
                 Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
@@ -349,7 +443,7 @@
                 <coveredLifelines>
                   <lifelineMoniker
                     Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                    LastKnownName="Subject"
+                    LastKnownName="Пользователь"
                     LastKnownLocation="Simple_Sync_MSUML.uml" />
                   <lifelineMoniker
                     Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
@@ -678,7 +772,7 @@
                 <coveredLifelines>
                   <lifelineMoniker
                     Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                    LastKnownName="Subject"
+                    LastKnownName="Пользователь"
                     LastKnownLocation="Simple_Sync_MSUML.uml" />
                   <lifelineMoniker
                     Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
@@ -960,7 +1054,7 @@
             <covered>
               <lifelineMoniker
                 Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                LastKnownName="Subject"
+                LastKnownName="Пользователь"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -1066,7 +1160,7 @@
             <covered>
               <lifelineMoniker
                 Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                LastKnownName="Subject"
+                LastKnownName="Пользователь"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2704,7 +2798,7 @@
             <covered>
               <lifelineMoniker
                 Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                LastKnownName="Subject"
+                LastKnownName="Пользователь"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2862,7 +2956,7 @@
             <covered>
               <lifelineMoniker
                 Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                LastKnownName="Subject"
+                LastKnownName="Пользователь"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -2892,7 +2986,7 @@
             <covered>
               <lifelineMoniker
                 Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                LastKnownName="Subject"
+                LastKnownName="Пользователь"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -3012,7 +3106,7 @@
             <covered>
               <lifelineMoniker
                 Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                LastKnownName="Subject"
+                LastKnownName="Пользователь"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -3153,7 +3247,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                LastKnownName="Subject"
+                LastKnownName="Пользователь"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
               <lifelineMoniker
                 Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
@@ -3175,7 +3269,7 @@
                 <coveredLifelines>
                   <lifelineMoniker
                     Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                    LastKnownName="Subject"
+                    LastKnownName="Пользователь"
                     LastKnownLocation="Simple_Sync_MSUML.uml" />
                   <lifelineMoniker
                     Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
@@ -3258,7 +3352,7 @@
             <covered>
               <lifelineMoniker
                 Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                LastKnownName="Subject"
+                LastKnownName="Пользователь"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -3344,7 +3438,7 @@
             <covered>
               <lifelineMoniker
                 Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                LastKnownName="Subject"
+                LastKnownName="Пользователь"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -3580,7 +3674,7 @@
             <covered>
               <lifelineMoniker
                 Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                LastKnownName="Subject"
+                LastKnownName="Пользователь"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -3628,7 +3722,7 @@
             <covered>
               <lifelineMoniker
                 Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                LastKnownName="Subject"
+                LastKnownName="Пользователь"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -3659,7 +3753,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                LastKnownName="Subject"
+                LastKnownName="Пользователь"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
               <lifelineMoniker
                 Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
@@ -3705,7 +3799,7 @@
                 <coveredLifelines>
                   <lifelineMoniker
                     Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                    LastKnownName="Subject"
+                    LastKnownName="Пользователь"
                     LastKnownLocation="Simple_Sync_MSUML.uml" />
                   <lifelineMoniker
                     Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
@@ -4590,7 +4684,7 @@
             <covered>
               <lifelineMoniker
                 Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                LastKnownName="Subject"
+                LastKnownName="Пользователь"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -4772,7 +4866,7 @@
             <covered>
               <lifelineMoniker
                 Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                LastKnownName="Subject"
+                LastKnownName="Пользователь"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -7206,7 +7300,7 @@
             <covered>
               <lifelineMoniker
                 Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                LastKnownName="Subject"
+                LastKnownName="Пользователь"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -7254,7 +7348,7 @@
             <covered>
               <lifelineMoniker
                 Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                LastKnownName="Subject"
+                LastKnownName="Пользователь"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -7335,7 +7429,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                LastKnownName="Subject"
+                LastKnownName="Пользователь"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
               <lifelineMoniker
                 Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
@@ -7361,7 +7455,7 @@
                 <coveredLifelines>
                   <lifelineMoniker
                     Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                    LastKnownName="Subject"
+                    LastKnownName="Пользователь"
                     LastKnownLocation="Simple_Sync_MSUML.uml" />
                   <lifelineMoniker
                     Id="7da5f921-9fed-44a4-a46c-af0b0ce3459a"
@@ -7623,7 +7717,7 @@
             <covered>
               <lifelineMoniker
                 Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                LastKnownName="Subject"
+                LastKnownName="Пользователь"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -7785,7 +7879,7 @@
             <covered>
               <lifelineMoniker
                 Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                LastKnownName="Subject"
+                LastKnownName="Пользователь"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -8573,7 +8667,7 @@
             <covered>
               <lifelineMoniker
                 Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                LastKnownName="Subject"
+                LastKnownName="Пользователь"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -8641,7 +8735,7 @@
             <covered>
               <lifelineMoniker
                 Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                LastKnownName="Subject"
+                LastKnownName="Пользователь"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -8669,7 +8763,7 @@
             <covered>
               <lifelineMoniker
                 Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-                LastKnownName="Subject"
+                LastKnownName="Пользователь"
                 LastKnownLocation="Simple_Sync_MSUML.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -8677,9 +8771,14 @@
         <lifelines>
           <lifeline
             Id="ac4f29bf-b7ca-4c12-b4d9-9a195310b03d"
-            name="Subject"
+            name="Пользователь"
             isActor="true"
-            lifelineDisplayName="Subject">
+            lifelineDisplayName="Пользователь">
+            <represents>
+              <propertyMoniker
+                Id="bb6a14ca-c8c8-4539-ad50-ca6b1cdcbf40"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
+            </represents>
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker
                 Id="90d44092-a668-46ee-b450-fdd8f3b892e4"
@@ -11089,7 +11188,7 @@
           </message>
           <message
             Id="524b57da-e7ab-4cf5-af97-0f0994c37115"
-            name="getShareList()"
+            name="get()"
             messageKind="Complete"
             messageSort="SynchCall"
             createSelfMessage="false">
@@ -11626,6 +11725,22 @@
                 Id="748a271f-60b9-4fab-bb93-2a92742b7ad1"
                 LastKnownName="Directory"
                 LastKnownLocation="Package_2039.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="bb6a14ca-c8c8-4539-ad50-ca6b1cdcbf40"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <actorMoniker
+                Id="78cf14e0-8df6-432b-bc37-4d3e54e70d9a"
+                LastKnownName="Пользователь"
+                LastKnownLocation="Simple_Sync_MSUML.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -13116,10 +13231,53 @@
     <packageHasNamedElement>
       <class
         Id="757093e2-fb7a-4284-b843-60ead378da27"
-        name="Main1"
+        name="Main"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="d59e431b-1f4b-4e53-ac78-319dea825c2a"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e6f26854-4aa5-4932-ab35-543181796a5e">
+                <propertyInstance
+                  Id="c3c451b4-3c95-4495-84a1-105cd4b362df"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f24d8959-f734-4246-bc17-3569d2bc9bdc">
+                <propertyInstance
+                  Id="168d5029-c32e-466c-a99f-80276b9ac36f"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e66ce377-45b4-4d65-9591-6e00e9d69583">
+                <propertyInstance
+                  Id="af9ab0cb-67a9-414a-a226-0dad5bac315d"
+                  name="IsStatic"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b463ff61-30ed-4734-934a-7a0a9beb67bc">
+                <propertyInstance
+                  Id="ba32a258-6137-424e-aa59-48e7b214a8ff"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d6309dfa-1a5f-4a52-a364-496fbe5996ba">
+                <propertyInstance
+                  Id="60a6796c-cdef-4427-9ec9-da574c7b49f9"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
         <targetEnds>
           <association
             Id="121e0448-5f15-4d55-afb9-cbf71252845a"
@@ -13174,6 +13332,63 @@
             isDerivedUnion="false"
             aggregation="None"
             isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7a79ce37-9429-4545-892b-30c016ce5cfd"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e3825523-3e60-4694-a954-5ea6ce0e212e">
+                    <propertyInstance
+                      Id="d4cdb88f-c622-40b9-b280-399e225187c6"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ca41ae44-40a7-4d35-9e6a-14010561c1e6">
+                    <propertyInstance
+                      Id="a7e38fe8-26b6-4168-be0d-d7e9f4e6857b"
+                      name="Get"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="710b2563-a854-4972-b35c-c38fa7f4fcfc">
+                    <propertyInstance
+                      Id="905ed7e2-14e9-4d30-aa9b-d03e1391234e"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0ef831e5-835d-46e8-afa4-5d442e0b35ea">
+                    <propertyInstance
+                      Id="89a1bff5-a598-4758-97f7-5fc6272aa3a4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a815eea4-740d-401d-afca-81fd299f945b">
+                    <propertyInstance
+                      Id="22d16d40-874c-4a9b-9abf-2c905e692289"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bbd43f1f-ba97-4534-9337-0017d4cf7bd5">
+                    <propertyInstance
+                      Id="bd0cd577-6025-431f-8de4-e81f94c26827"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3b3b2a51-0873-4210-8692-49eb7fb07365">
+                    <propertyInstance
+                      Id="1c788907-d6c1-47d9-8f20-38d0407c783d"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
             <type_NamedElement>
               <undefinedTypeMoniker
                 Id="5fcecb63-94d6-4123-b630-b484ba9946aa"
@@ -13193,6 +13408,63 @@
             isDerivedUnion="false"
             aggregation="None"
             isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="efa11325-a558-47f2-8106-1f65fb2b6ad7"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="358ffbed-d163-4bef-ac27-2b693bfad6ed">
+                    <propertyInstance
+                      Id="2b1b1fd2-13df-405e-80d4-17df2e61adc3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="92a202df-8a09-4cd8-9169-5ef2a09887b4">
+                    <propertyInstance
+                      Id="d9adc526-b8e9-428a-b442-9594dede0315"
+                      name="Get"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="199b28a3-c674-4ee9-b39a-42c5f63f644c">
+                    <propertyInstance
+                      Id="cdd80750-b623-4081-9cb2-33f5329f10b2"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2d11607f-c5a8-4b8e-9fc1-415c015c4b10">
+                    <propertyInstance
+                      Id="f60fe1e7-a946-4943-bd65-d52d83e778f9"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="48083cfc-686b-438f-a97d-9ce67fbe7437">
+                    <propertyInstance
+                      Id="35fa5c6f-9b8c-4f6a-922f-839dc811f12b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="478090e6-2f00-485c-abc8-5a46c471bff7">
+                    <propertyInstance
+                      Id="6a6e1054-4bbc-4d53-9a81-f8ebb0cf932c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="744610fb-3662-449d-9463-7e462cd05f78">
+                    <propertyInstance
+                      Id="0ce25184-2095-41b9-b0b6-24636d9c40b2"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
             <type_NamedElement>
               <undefinedTypeMoniker
                 Id="e963b15d-cd54-43ef-9a8c-848573f761ae"
@@ -13210,6 +13482,56 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c1bcfffe-b4d3-49a1-b6e1-23054500eb0f"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c8500f39-eeca-46de-b211-4c8d0980bf4e">
+                    <propertyInstance
+                      Id="454a9357-9461-4189-9db1-7132f4b93fe8"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="84b0a0ea-4663-436c-9a97-214e19fde0b9">
+                    <propertyInstance
+                      Id="a85957a8-ab24-4e98-9045-51d69ac8604c"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6f94f011-c9e6-4645-b7db-a91743ec9eaf">
+                    <propertyInstance
+                      Id="b5f18b04-fc8a-4505-845f-ba027b423cd8"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fb41e75a-18b5-48fa-9bf9-aee692dea5d0">
+                    <propertyInstance
+                      Id="c83df8c9-bb2e-4570-b5e9-86ec968ea782"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="052fbff7-508b-469c-8d73-6bcce4350005">
+                    <propertyInstance
+                      Id="5c90ef2e-e840-498a-9906-8f7b80d658cb"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b564aef4-11c8-40be-9150-1ab66c5cde7b">
+                    <propertyInstance
+                      Id="1cee3be2-1398-4892-a73c-886dc4446bc1"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
@@ -13233,7 +13555,7 @@
     <packageHasNamedElement>
       <packageMoniker
         Id="92d69b8c-39a2-49bb-8284-de24de893daa"
-        LastKnownName="Library1"
+        LastKnownName="Library"
         LastKnownLocation="Package_2316.uml" />
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -13360,6 +13682,45 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="5d9838de-4b79-42fe-9f9b-7695f07d8f0d"
+            isDerived="false"
+            sourceEndRoleName="Пользователь"
+            targetEndRoleName="Настройка автоматического запуска"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="ec3e5c9f-5bca-45cb-8afc-f6e29e249c8e"
+              LastKnownName="Настройка автоматического запуска"
+              LastKnownLocation="Simple_Sync_MSUML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="39a1ce42-f92e-4e3b-8d50-d80dc62c9a48"
+                  name="Пользователь"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="288787e8-8c31-4201-a5cc-c9668ed52ae3"
+                  name="Настройка автоматического запуска"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
       </actor>
     </packageHasNamedElement>
@@ -13369,6 +13730,47 @@
         name="Синхронизация share"
         isAbstract="false"
         isLeaf="false">
+        <targetEnds>
+          <association
+            Id="7ca8c1ed-95a3-4056-8b55-98efee9f8fa7"
+            isDerived="false"
+            sourceEndRoleName="Синхронизация share"
+            targetEndRoleName="Другое устройство"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="e295ebcd-695a-44ee-852d-0497a14fed49"
+              LastKnownName="Другое устройство"
+              LastKnownLocation="Simple_Sync_MSUML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d9b93660-e55f-40cf-96d7-6c82087d517c"
+                  name="Синхронизация share"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6f130483-80d4-4842-84d7-67a4e29383ef"
+                  name="Другое устройство"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <extendedCases>
           <extend
             Id="a58e322e-97fe-469b-9478-7d6dd03f2e4e">
@@ -13577,6 +13979,13 @@
       <useCase
         Id="1d5e1884-cbda-4258-a6d5-3ad3ddbbd05f"
         name="Просмотр share"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="e295ebcd-695a-44ee-852d-0497a14fed49"
+        name="Другое устройство"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>

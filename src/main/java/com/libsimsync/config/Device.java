@@ -3,6 +3,8 @@ package com.libsimsync.config;
 import java.util.UUID;
 
 public class Device {
+
+    
     private String name;
     private UUID id;
 

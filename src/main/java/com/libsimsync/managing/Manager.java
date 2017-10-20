@@ -1,4 +1,4 @@
-package com.managing;
+package com.libsimsync.managing
 import com.*;
 import com.libsimsync.config.CommonConfig;
 import com.libsimsync.config.Share;

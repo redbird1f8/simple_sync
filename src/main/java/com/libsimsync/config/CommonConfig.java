@@ -7,7 +7,7 @@ public class CommonConfig {
     private LinkedList<Share> shareList;
     private final Device thisDevice;
 
-    CommonConfig(Rules rule, Device device){
+    CommonConfig(Rules rule, Device device){ //TODO there should be builder. No public constructors.
         defaultRules = rule;
         thisDevice = device;
     }

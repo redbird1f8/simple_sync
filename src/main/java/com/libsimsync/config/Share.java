@@ -15,4 +15,8 @@ public class Share {
         }
         return false;
     }
+
+    public FileLister.Iterator GetFileIterator(){
+        return files.getIterator();
+    }
 }

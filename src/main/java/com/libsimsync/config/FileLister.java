@@ -2,6 +2,7 @@ package com.libsimsync.config;
 
 
 import java.io.IOException;
+import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
@@ -20,25 +21,30 @@ public class FileLister {
 
     public class Iterator{
         ListIterator<FileEntry> iterator = pathList.listIterator();
+        DirectoryStream<Path> directoryStream = null;
         java.util.Iterator<Path> currentDirectoryIterator = null;
         FileEntry current = null;
 
         public FileEntry next() throws IOException{ //We assume that pathList Contains only files and directories that do not contain other directories. It may change.
             FileEntry ret = null;                   //and class should be redone.
             if (hasNext()){
+                if(currentDirectoryIterator != null && !currentDirectoryIterator.hasNext())
+                {
+                    directoryStream.close();
+                    directoryStream = null;
+                    currentDirectoryIterator = null;
+                }
                 if(currentDirectoryIterator == null) {           //TODO make another implementation
                     ret = iterator.next();
                     current = ret;
                 }
                 if(current.getPath().toFile().isDirectory()){
                     if(currentDirectoryIterator == null) {
-                        currentDirectoryIterator = Files.newDirectoryStream(ret.getPath()).iterator();
+                        directoryStream = Files.newDirectoryStream(ret.getPath());
+                        currentDirectoryIterator = directoryStream.iterator();
                     }
                     if (currentDirectoryIterator.hasNext()){
                         ret = new FileEntry(currentDirectoryIterator.next(), current.getRule());
-                    }
-                    else {
-                        currentDirectoryIterator = null;
                     }
                 }
             }
@@ -50,11 +56,6 @@ public class FileLister {
             if(currentDirectoryIterator != null) {
                 if (currentDirectoryIterator.hasNext()) {
                     return true;
-                }
-                else {
-                    if(iterator.hasNext()){
-                        return true;
-                    }
                 }
             }
             if(iterator.hasNext()){

@@ -1,6 +1,6 @@
 package com.libsimsync.config;
 
-public class Rules {
+public class Rule {
     private ResolvingMethod method;
     private byte priority;
 

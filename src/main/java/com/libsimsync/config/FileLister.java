@@ -34,7 +34,7 @@ public class FileLister {
                     directoryStream = null;
                     currentDirectoryIterator = null;
                 }
-                if(currentDirectoryIterator == null) {           //TODO make another implementation
+                if(currentDirectoryIterator == null) {
                     ret = iterator.next();
                     current = ret;
                 }

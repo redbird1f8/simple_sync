@@ -17,4 +17,12 @@ public class Device {
     public UUID getId() {
         return id;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(obj instanceof Device)
+            return id.equals(((Device)obj).getId());
+        else
+            return false;
+    }
 }

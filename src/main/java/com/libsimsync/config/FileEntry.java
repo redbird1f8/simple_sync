@@ -4,9 +4,9 @@ import java.nio.file.Path;
 
 public class FileEntry {
     private Path path;
-    private Rules rule;
+    private Rule rule;
 
-    public FileEntry(Path entryPath, Rules enrtyRule){
+    public FileEntry(Path entryPath, Rule enrtyRule){
         path = entryPath;
         rule = enrtyRule;
     }
@@ -15,11 +15,11 @@ public class FileEntry {
         return path;
     }
 
-    public Rules getRule() {
+    public Rule getRule() {
         return rule;
     }
 
-    public void setRule(Rules rule) {
+    public void setRule(Rule rule) {
         this.rule = rule;
     }
 

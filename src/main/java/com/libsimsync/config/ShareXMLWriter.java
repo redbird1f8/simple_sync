@@ -13,11 +13,15 @@ import java.nio.file.Path;
 public class ShareXMLWriter implements ShareWriter{
     Path shareFilesPath;
 
+    public ShareXMLWriter(Path path){
+        shareFilesPath = path;
+    }
+
     public void write(Share share) throws XMLStreamException, IOException{
         XMLOutputFactory outputFactory = XMLOutputFactory.newInstance();
         XMLEventWriter eventWriter = outputFactory
                 .createXMLEventWriter(new FileOutputStream(FileSystems.getDefault()
-                        .getPath(shareFilesPath.toString(), share.getName()).toString()));
+                        .getPath(shareFilesPath.toString(), share.getName()).toString()+".xml"));  //TODO do it less bulky way
         XMLEventFactory eventFactory = XMLEventFactory.newInstance();
         XMLEvent end = eventFactory.createDTD("\n");
         XMLEvent tab = eventFactory.createDTD("\t");
@@ -31,11 +35,13 @@ public class ShareXMLWriter implements ShareWriter{
         //Accepted devices section
         eventWriter.add(tab);//should be redone
         eventWriter.add(eventFactory.createStartElement("", "", "Devices"));
+        eventWriter.add(end);
         for (Device d: share.acceptedDevices) {
             DeviceXMLNodeWriter.writeNode(eventWriter, d, 2);
         }
         eventWriter.add(tab);//should be redone
         eventWriter.add(eventFactory.createEndElement("", "", "Devices"));
+        eventWriter.add(end);
         //FileLister section
         eventWriter.add(tab);
         writeFileLister(eventWriter, share.files, 1);
@@ -52,11 +58,13 @@ public class ShareXMLWriter implements ShareWriter{
         // create Start node
         XMLWriteMethods.createIndentation(eventWriter, currentTabLevel);
         eventWriter.add(eventFactory.createStartElement("", "", "Files"));
+        eventWriter.add(end);
         // create Content
         for (FileEntry i: fileLister.pathList) {
             writeFileEntry(eventWriter, i, currentTabLevel + 1);
         }
         // create End node
+        XMLWriteMethods.createIndentation(eventWriter, currentTabLevel);
         eventWriter.add(eventFactory.createEndElement("", "", "Files"));
         eventWriter.add(end);
     }
@@ -71,10 +79,12 @@ public class ShareXMLWriter implements ShareWriter{
             eventWriter.add(tab);
         }
         eventWriter.add(eventFactory.createStartElement("", "", "FileEntry"));
+        eventWriter.add(end);
         // create Content
         XMLWriteMethods.createNode(eventWriter, "Path", fileEntry.getPath().toString(), currentTabLevel + 1);
         RuleXMLNodeWriter.write(eventWriter, fileEntry.getRule(), currentTabLevel + 1);
         // create End node
+        XMLWriteMethods.createIndentation(eventWriter, currentTabLevel);
         eventWriter.add(eventFactory.createEndElement("", "", "FileEntry"));
         eventWriter.add(end);
     }

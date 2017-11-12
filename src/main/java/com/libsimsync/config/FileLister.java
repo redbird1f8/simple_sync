@@ -11,8 +11,9 @@ import java.util.ListIterator;
 public class FileLister {
     List<FileEntry> pathList;
 
-    public FileLister(List<FileEntry> le){
-        pathList = le;
+
+    public FileLister(List<FileEntry> files){
+        pathList = files;
     }
 
     public FileLister.Iterator getIterator(){

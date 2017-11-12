@@ -14,10 +14,12 @@ public abstract class RuleXMLNodeWriter {
         // create Start node
         XMLWriteMethods.createIndentation(eventWriter, currentTabLevel);
         eventWriter.add(eventFactory.createStartElement("", "", "Rule"));
+        eventWriter.add(end);
         // create Content
         XMLWriteMethods.createNode(eventWriter, "Priority", Byte.toString(rule.getPriority()), currentTabLevel + 1);
         XMLWriteMethods.createNode(eventWriter, "Method", rule.getMethod().methodName(), currentTabLevel + 1);
         // create End node
+        XMLWriteMethods.createIndentation(eventWriter, currentTabLevel);
         eventWriter.add(eventFactory.createEndElement("", "", "Rule"));
         eventWriter.add(end);
     }

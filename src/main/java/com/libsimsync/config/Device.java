@@ -6,6 +6,15 @@ public class Device {
     private String name;
     private UUID id;
 
+    Device(String name, UUID id){
+        setName(name);
+        this.id = id;
+    }
+
+    public Device(String name){
+        setName(name);
+        this.id = UUID.randomUUID();
+    }
     public String getName() {
         return name;
     }

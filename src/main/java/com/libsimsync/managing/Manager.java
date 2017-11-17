@@ -1,6 +1,7 @@
-package com.libsimsync.managing
+package com.libsimsync.managing;
 import com.*;
 import com.libsimsync.config.CommonConfig;
+import com.libsimsync.config.Device;
 import com.libsimsync.config.Share;
 
 
@@ -37,16 +38,16 @@ public Manager(Share share, CommonConfig config){
 
     }
 
-    public void viewShare(){
+    public void viewShare(Share share){
 
     }
 
-    public Share deleteShare(){ // ?
+    public Share deleteShare(Share share){ // ?
 
+        return  share;
     }
 
-    public void  synchronizeShare(){ // maybe just "synchronize",
-        // but its can be confused with java  "synchronize" (for thread synchronization)
+    public void syncShare(Share share, Device device){
 
     }
 

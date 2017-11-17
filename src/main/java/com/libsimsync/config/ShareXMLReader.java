@@ -76,7 +76,7 @@ public class ShareXMLReader implements ShareReader{
                         endCheck = eventReader.nextEvent();
                         if(endCheck.isStartElement() &&
                                 endCheck.asStartElement().getName().getLocalPart().equals("FileEntry")) {
-                            files.add(readFileEntryNode(eventReader));
+                            files.add(readFileEntryNode(eventReader, rootPath));
                         }
                     }while(!(endCheck.isEndElement() &&
                             endCheck.asEndElement().getName().getLocalPart().equals("Files")));
@@ -94,7 +94,7 @@ public class ShareXMLReader implements ShareReader{
         return new Share(devices, name, uuid, rootPath, fileLister);
     }
 
-    FileEntry readFileEntryNode(XMLEventReader eventReader)
+    private FileEntry readFileEntryNode(XMLEventReader eventReader, Path root)
                     throws XMLStreamException, NullPointerException{
             Path path = null;
             Rule rule = null;
@@ -106,7 +106,7 @@ public class ShareXMLReader implements ShareReader{
 
                     if(startElement.getName().getLocalPart().equals("Path")){
                         event = eventReader.nextEvent();
-                        path = Paths.get(event.asCharacters().getData());
+                        path = root.resolve(event.asCharacters().getData());
                     }
                     if(startElement.getName().getLocalPart().equals("Rule")){
                         event = eventReader.nextEvent();

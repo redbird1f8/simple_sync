@@ -44,13 +44,13 @@ public class ShareXMLWriter implements ShareWriter{
         eventWriter.add(end);
         //FileLister section
         eventWriter.add(tab);
-        writeFileLister(eventWriter, share.files, 1);
+        writeFileLister(eventWriter, share.files, share.rootPath, 1);
         //end element
         eventWriter.add(eventFactory.createEndElement("", "", "Share"));
         eventWriter.add(end);
     }
 
-    private void writeFileLister(XMLEventWriter eventWriter, FileLister fileLister, int currentTabLevel)
+    private void writeFileLister(XMLEventWriter eventWriter, FileLister fileLister, Path root, int currentTabLevel)
             throws XMLStreamException {
         XMLEventFactory eventFactory = XMLEventFactory.newInstance();
         XMLEvent end = eventFactory.createDTD("\n");
@@ -61,7 +61,7 @@ public class ShareXMLWriter implements ShareWriter{
         eventWriter.add(end);
         // create Content
         for (FileEntry i: fileLister.pathList) {
-            writeFileEntry(eventWriter, i, currentTabLevel + 1);
+            writeFileEntry(eventWriter, i, root, currentTabLevel + 1);
         }
         // create End node
         XMLWriteMethods.createIndentation(eventWriter, currentTabLevel);
@@ -69,7 +69,7 @@ public class ShareXMLWriter implements ShareWriter{
         eventWriter.add(end);
     }
 
-    private void writeFileEntry(XMLEventWriter eventWriter, FileEntry fileEntry, int currentTabLevel)
+    private void writeFileEntry(XMLEventWriter eventWriter, FileEntry fileEntry, Path root, int currentTabLevel)
             throws XMLStreamException {
         XMLEventFactory eventFactory = XMLEventFactory.newInstance();
         XMLEvent end = eventFactory.createDTD("\n");
@@ -81,7 +81,7 @@ public class ShareXMLWriter implements ShareWriter{
         eventWriter.add(eventFactory.createStartElement("", "", "FileEntry"));
         eventWriter.add(end);
         // create Content
-        XMLWriteMethods.createNode(eventWriter, "Path", fileEntry.getPath().toString(), currentTabLevel + 1);
+        XMLWriteMethods.createNode(eventWriter, "Path", root.relativize(fileEntry.getPath()).toString(), currentTabLevel + 1);
         RuleXMLNodeWriter.write(eventWriter, fileEntry.getRule(), currentTabLevel + 1);
         // create End node
         XMLWriteMethods.createIndentation(eventWriter, currentTabLevel);

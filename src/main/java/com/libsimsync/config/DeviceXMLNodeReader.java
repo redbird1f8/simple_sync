@@ -6,6 +6,7 @@ import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
 import java.util.UUID;
 
+//n
 public class DeviceXMLNodeReader {
     static Device readNode(XMLEventReader eventReader)
             throws XMLStreamException, NullPointerException{

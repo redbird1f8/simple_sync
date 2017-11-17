@@ -1,8 +1,8 @@
 package com.libsimsync.managing;
 import com.*;
-import com.libsimsync.config.CommonConfig;
-import com.libsimsync.config.Device;
-import com.libsimsync.config.Share;
+import com.libsimsync.config.*;
+
+import java.io.FileOutputStream;
 
 
 /**
@@ -14,8 +14,11 @@ import com.libsimsync.config.Share;
 public class Manager {
 
 
-Share share;
-CommonConfig config;
+
+  Share share;
+  CommonConfig config;
+
+public Manager(){}
 
 
 public Manager(Share share, CommonConfig config){
@@ -30,15 +33,21 @@ public Manager(Share share, CommonConfig config){
 
 
 
-    public void createNewShare(){
+    public Share createNewShare(String shareName, ){
+
+
+   // Share share = new Share();
+
 
     }
 
     public void setConfiguration(){
+        FileOutputStream fileOutputStream = new FileOutputStream("blabla")
+
 
     }
 
-    public void viewShare(Share share){
+    public Share viewShare(Share share){
 
     }
 

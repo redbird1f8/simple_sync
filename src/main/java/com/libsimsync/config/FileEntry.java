@@ -23,5 +23,4 @@ public class FileEntry {
         this.rule = rule;
     }
 
-
 }

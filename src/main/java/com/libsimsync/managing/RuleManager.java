@@ -11,10 +11,21 @@ import com.libsimsync.config.methods.ChooseLocal;
 
      //Rule rule; // возможно, следует сделать общение посредством объекта
 
+    /**
+     * Фабричный метод получения нового Rule
+     * @param resolvingMethod метод разрешения коллизий
+     * @param priority приоритет синхронизации
+     * @return
+     */
     static Rule createRule(ResolvingMethod resolvingMethod, byte priority) {
         return new Rule(resolvingMethod,priority);
     }
 
+    /**
+     * Метод устанавливает правила синхронизации файлов.
+     * Использует стандартное значение для ResolvingMethod (метод разрешения коллизий)
+     * @param priority  приоритет в синхронизации
+     */
     static Rule setPriority(byte priority) {
          //Rule newRule = new Rule(ResolvingMethod.LOCAL,priority); // Может перечисление?
          //

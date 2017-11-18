@@ -6,6 +6,8 @@ import sun.security.provider.SHA;
 import javax.xml.stream.XMLStreamException;
 import java.io.IOException;
 import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -13,6 +15,12 @@ import java.util.List;
  */
  class ShareManager {
 
+    /**
+     * ?
+     * Добавить новый Share в список
+     * @param newShare  добавляемыый Share
+     * @param path Путь к директории с Share(s)
+     */
       static void addShare(Share newShare,Path path) {
           ShareWriter shareWriter = new ShareXMLWriter(path);
           try {
@@ -22,7 +30,13 @@ import java.util.List;
           }
       }
 
-      static Share getShare(String name){ // will be changed
+    /**
+     * Получить Share
+     * @param name Имя для поиска
+     * @return Найденный Share
+     */
+
+    static Share getShare(String name){ // will be changed
 
           ShareXMLReader shareXMLReader = new ShareXMLReader(name);
           Share share = null; // don't be afraid
@@ -36,6 +50,23 @@ import java.util.List;
           }
           return share;
 
+      }
+
+
+    /**
+     * Метод для получения списка Share(s)
+     * Метод еще в разработке.
+     * javadoc будет написан после завершения технических работ)
+     * @param name
+     * @return Список Share
+     */
+      static LinkedList<Share> getShareList(String name) { // Will be another declaration
+          LinkedList<Share> shareList = new LinkedList<>();
+          //
+          // чтение в список Share
+          //
+
+          return shareList;
       }
 
 

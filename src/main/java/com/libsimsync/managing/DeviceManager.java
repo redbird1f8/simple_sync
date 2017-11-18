@@ -7,7 +7,13 @@ import com.libsimsync.config.Device;
  */
  class DeviceManager {
 
+    /**
+     *
+     * @param name - новое имя устройства
+     * @return объект класса Device
+     */
      static Device setDevice(String name) {
          return new Device(name);
      }
+
 }

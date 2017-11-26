@@ -4,7 +4,7 @@ public class Rule {
     private ResolvingMethod method;
     private byte priority;
 
-    public Rule(ResolvingMethod method, byte priority){ //public is temporary
+    public Rule(ResolvingMethod method, byte priority){ //public is actually not temporary
         setPriority(priority);
         this.method = method;
     }

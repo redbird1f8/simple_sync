@@ -22,7 +22,7 @@ public class CommonConfig {
      * @param name Имя устройства
      */
     public CommonConfig(String name){
-        defaultRules = new Rule(new ChooseForeign(), (byte)0);
+        defaultRules = new Rule(new ChooseForeign(), false);
         shareList = new ArrayList<>(10);
         thisDevice = new Device(name);
     }

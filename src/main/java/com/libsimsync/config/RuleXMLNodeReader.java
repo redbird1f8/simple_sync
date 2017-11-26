@@ -5,7 +5,7 @@ import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
 import java.util.UUID;
-
+//n
 public class RuleXMLNodeReader {
     static Rule readNode(XMLEventReader eventReader)
             throws XMLStreamException, NullPointerException{

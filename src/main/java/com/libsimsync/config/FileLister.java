@@ -7,10 +7,21 @@ import java.io.File;
 import java.nio.file.Path;
 import java.util.*;
 
+//y
 public class FileLister {
     List<FileEntry> pathList;
 
     List<FileEntry> cacheList;
+
+    /**
+     * Конструктор, предполагающий что все файлы подлежат синхронизации
+     * и используется правило по умолчанию
+     * @param root Путь к корню шары. Всегда должен быть равен rootPath в Share
+     */
+    FileLister(Path root){
+        pathList = new LinkedList<>();
+        pathList.add(new FileEntry(root, CommonConfig.getRules()));
+    }
 
     public FileLister(List<FileEntry> files){
         pathList = files;

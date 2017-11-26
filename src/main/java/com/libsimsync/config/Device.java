@@ -1,10 +1,13 @@
 package com.libsimsync.config;
 
+import java.net.InetAddress;
 import java.util.UUID;
 
 public class Device {
+
     private String name;
     private UUID id;
+    private InetAddress currentAddress = null;
 
     Device(String name, UUID id){
         setName(name);
@@ -15,16 +18,25 @@ public class Device {
         setName(name);
         this.id = UUID.randomUUID();
     }
+
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
-        this.name = name;//do we really need this?
+        this.name = name;
     }
 
     public UUID getId() {
         return id;
+    }
+
+    public InetAddress getCurrentAddress() {
+        return currentAddress;
+    }
+
+    public void setCurrentAddress(InetAddress addr){
+        currentAddress = addr;
     }
 
     @Override

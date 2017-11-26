@@ -5,7 +5,7 @@ import javax.xml.stream.XMLEventWriter;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.events.XMLEvent;
 
-
+//n
 
 public abstract class DeviceXMLNodeWriter {
     static void writeNode(XMLEventWriter eventWriter, Device device, int currentTabLevel)

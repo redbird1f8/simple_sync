@@ -4,7 +4,7 @@ import javax.xml.stream.XMLEventFactory;
 import javax.xml.stream.XMLEventWriter;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.events.XMLEvent;
-
+//n
 public abstract class RuleXMLNodeWriter {
     static void write(XMLEventWriter eventWriter, Rule rule, int currentTabLevel)
             throws XMLStreamException {

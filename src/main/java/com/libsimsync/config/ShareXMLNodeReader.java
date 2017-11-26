@@ -6,7 +6,7 @@ import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
 import java.io.IOException;
 import java.util.UUID;
-
+//n
 public class ShareXMLNodeReader {
     static Share readNode(XMLEventReader eventReader)
             throws XMLStreamException, NullPointerException, IOException {

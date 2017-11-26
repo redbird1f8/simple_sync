@@ -3,6 +3,7 @@ package com.libsimsync.config;
 import com.libsimsync.config.methods.ChooseForeign;
 import com.libsimsync.config.methods.ChooseLocal;
 
+// n
 public class ResolvingMethodFactory {
 
     static ResolvingMethod construct(String methodString){ //TODO static?

@@ -11,8 +11,6 @@ import java.util.*;
 public class FileLister {
     List<FileEntry> pathList;
 
-    List<FileEntry> cacheList;
-
     /**
      * Конструктор, предполагающий что все файлы подлежат синхронизации
      * и используется правило по умолчанию
@@ -28,7 +26,11 @@ public class FileLister {
     }
 
     public Iterator<FileEntry> getIterator(){
-        cacheList = new LinkedList<>();
+        return getFileList().iterator();
+    }
+
+    public List<FileEntry> getFileList() {
+        List<FileEntry> cacheList = new LinkedList<>();
         for (FileEntry e: pathList) {
             if(e.getPath().toFile().isFile()){
                 cacheList.add(e);
@@ -42,9 +44,6 @@ public class FileLister {
                 }
             }
         }
-        return cacheList.iterator();
+        return cacheList;
     }
-
-
-
 }

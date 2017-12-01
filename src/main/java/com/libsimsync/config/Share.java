@@ -50,6 +50,10 @@ public class Share {
         return uuid;
     }
 
+    public List<Device> getAcceptedDevices() {
+        return acceptedDevices;
+    }
+
     public void addDevice(Device device){
         acceptedDevices.add(device);
     }

@@ -33,9 +33,9 @@ import java.util.List;
     /**
      * Инициализация значением из XML (если такового нет, то стандартным значением)
      */
-    static {
-       getConfig();
-    }
+//    static {
+//       getConfig();
+//    }
 
     /**
      * Метод устанавливает правила синхронизации файлов.
@@ -43,7 +43,7 @@ import java.util.List;
      * @param resolvingMethod  метод разрешения коллизий(локальные/внешние файлы)
      * @param priority  приоритет в синхронизации
      */
-    public static void setRule(ResolvingMethod resolvingMethod, byte priority ) {
+    public static void setRule(ResolvingMethod resolvingMethod, boolean priority ) {
          rule = RuleManager.createRule(resolvingMethod,priority);
     } // need more setRule (for God "setRule")
 
@@ -52,7 +52,7 @@ import java.util.List;
      * Использует стандартное значение для ResolvingMethod (метод разрешения коллизий)
      * @param priority  приоритет в синхронизации
      */
-    public static void setRule(byte priority) { // use Local
+    public static void setRule(boolean priority) { // use Local
         rule  = RuleManager.setPriority(priority);
     }
 
@@ -99,7 +99,7 @@ import java.util.List;
      * (Возможно изменить модификатор доступа)
      * @return config - настройки из xml
      */
-    private static CommonConfig getConfig() { // default value = old value
+     static CommonConfig getConfig() { // default value = old value // was private (but why? What wrong with me)
         CommonConfigXMLReader commonConfigXMLReader = new CommonConfigXMLReader();
 
         CommonConfig config = null; // need default config

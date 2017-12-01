@@ -24,7 +24,7 @@ import java.util.List;
       static void addShare(Share newShare,Path path) {
           ShareWriter shareWriter = new ShareXMLWriter(path);
           try {
-              shareWriter.write(newShare); // maybe need append in ShareWriter?
+              shareWriter.write(newShare);
           } catch (Exception e) {
               e.printStackTrace();
           }

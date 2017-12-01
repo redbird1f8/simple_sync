@@ -17,7 +17,7 @@ import com.libsimsync.config.methods.ChooseLocal;
      * @param priority приоритет синхронизации
      * @return
      */
-    static Rule createRule(ResolvingMethod resolvingMethod, byte priority) {
+    static Rule createRule(ResolvingMethod resolvingMethod, boolean priority) {
         return new Rule(resolvingMethod,priority);
     }
 
@@ -26,7 +26,7 @@ import com.libsimsync.config.methods.ChooseLocal;
      * Использует стандартное значение для ResolvingMethod (метод разрешения коллизий)
      * @param priority  приоритет в синхронизации
      */
-    static Rule setPriority(byte priority) {
+    static Rule setPriority(boolean priority) {
          //Rule newRule = new Rule(ResolvingMethod.LOCAL,priority); // Может перечисление?
          //
          return new Rule(new ChooseLocal(), priority); // temp

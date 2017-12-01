@@ -76,7 +76,7 @@ public Manager(Share share, CommonConfig config){
     public static void main(String[] args) {
         ArrayList<FileEntry> fileList = new ArrayList<>();
 
-        Path path = Paths.get("/Users/Nickitakalinkin/Documents/Workspace/Java/IntelliJIDEA_ReferenceCard.pdf");
+        Path path = Paths.get("/Users/Nickitakalinkin/Documents/Workspace/Java");
 
         FileEntry fileEntry = new FileEntry(path,new Rule(new ChooseLocal(),false));
         List<FileEntry> listFiles =  new ArrayList<FileEntry>();

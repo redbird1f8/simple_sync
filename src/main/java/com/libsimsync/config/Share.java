@@ -70,4 +70,12 @@ public class Share {
     }
 
 
+    // by Nickz (Delete if wrong )
+        public List<Device> getAcceptedDevices() {
+        return acceptedDevices;
+        }
+
+    //
+
+
 }

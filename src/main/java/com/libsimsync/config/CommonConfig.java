@@ -27,8 +27,8 @@ public class CommonConfig {
         thisDevice = new Device(name);
     }
 
-    // update by Nickz (make public)
-   public CommonConfig(Rule rule, Device device, LinkedList<Share> shareList){  //List
+    // update by Nickz (make public) + У меня здесь почему-то  LinkedList (LinkedList -> List)
+   public CommonConfig(Rule rule, Device device, List<Share> shareList){  //List
         defaultRules = rule;
         thisDevice = device;
         this.shareList = shareList;

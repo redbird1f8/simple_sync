@@ -16,7 +16,6 @@ public class CommonConfig {
     private List<Share> shareList;
     private final Device thisDevice;
 
-
     /**
      * Изначальный конструктор. Должен вызываться для создания общей конфигурации при
      * отсутствии файла общей конфигурации. Например, при первом запуске программы.

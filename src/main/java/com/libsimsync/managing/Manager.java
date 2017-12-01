@@ -85,6 +85,8 @@ public Manager(Share share, CommonConfig config){
 
         FileLister fileLister = new FileLister(listFiles);
         Iterator iterator = fileLister.getIterator();
+
+        
         while(iterator.hasNext()){
             FileEntry fE = (FileEntry) iterator.next();
             System.out.println(fE.getPath());

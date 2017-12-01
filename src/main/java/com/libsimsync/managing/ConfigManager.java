@@ -102,7 +102,7 @@ import java.util.List;
      static CommonConfig getConfig() { // default value = old value // was private (but why? What wrong with me)
         CommonConfigXMLReader commonConfigXMLReader = new CommonConfigXMLReader();
 
-        CommonConfig config = null; // need default config
+        CommonConfig config = new CommonConfig("My device"); // need default config
 
         try {
             config = commonConfigXMLReader.read();
@@ -125,7 +125,7 @@ import java.util.List;
      */
     private static CommonConfig createConfig() {//(Rule rule, Device device, LinkedList<Share> shareList) { //List
         CommonConfig commonConfig = new CommonConfig(rule,device,shareList);
-        // is not public??? Are you ahrereli tam (it's already censored)
+
         return commonConfig;
     }
 

@@ -6,10 +6,13 @@ import com.libsimsync.config.*;
 import com.libsimsync.network.OutwardConnectioInitialiser;
 import com.sun.nio.zipfs.ZipPath;
 
-import java.io.FileOutputStream;
+import java.io.*;
+import java.nio.ByteBuffer;
+import java.nio.channels.FileChannel;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -76,7 +79,7 @@ public Manager(Share share, CommonConfig config){
     public static void main(String[] args) {
         ArrayList<FileEntry> fileList = new ArrayList<>();
 
-        Path path = Paths.get("/Users/Nickitakalinkin/Documents/Workspace/Java");
+        Path path = Paths.get("/Users/Nickitakalinkin/Documents/Workspace/Java/ArrayVSLinked");
 
         FileEntry fileEntry = new FileEntry(path,new Rule(new ChooseLocal(),false));
         List<FileEntry> listFiles =  new ArrayList<FileEntry>();
@@ -86,13 +89,22 @@ public Manager(Share share, CommonConfig config){
         FileLister fileLister = new FileLister(listFiles);
         Iterator iterator = fileLister.getIterator();
 
-        
-        while(iterator.hasNext()){
-            FileEntry fE = (FileEntry) iterator.next();
-            System.out.println(fE.getPath());
 
+        try {
+            FileChannel fileChannel = null;
 
+            while(iterator.hasNext()){
+                FileEntry fE = (FileEntry) iterator.next();
+                System.out.println(fE.getPath().toFile());
+                fileChannel = (FileChannel) Files.newByteChannel(fE.getPath(), StandardOpenOption.WRITE,StandardOpenOption.CREATE);
+                ByteBuffer mBuf = ByteBuffer.allocate(26);
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+
+
     }
 
 }

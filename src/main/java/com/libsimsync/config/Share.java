@@ -50,6 +50,10 @@ public class Share {
         return uuid;
     }
 
+    public List<Device> getAcceptedDevices() {
+        return acceptedDevices;
+    }
+
     public void addDevice(Device device){
         acceptedDevices.add(device);
     }
@@ -65,8 +69,12 @@ public class Share {
         return false;
     }
 
-    public Iterator<FileEntry> GetFileIterator(){
+    public Iterator<FileEntry> getFileIterator(){
         return files.getIterator();
+    }
+
+    public List<FileEntry> getFileList(){
+        return files.getFileList();
     }
 
 

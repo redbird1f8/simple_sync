@@ -28,7 +28,7 @@ import java.util.List;
 
      private static Rule rule ;
      private static Device device;
-     private static LinkedList<Share> shareList; // LinkedList?
+     private static List<Share> shareList; // LinkedList?
 
     /**
      * Инициализация значением из XML (если такового нет, то стандартным значением)

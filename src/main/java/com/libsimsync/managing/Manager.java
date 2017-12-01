@@ -11,6 +11,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 
@@ -19,6 +20,7 @@ import java.util.List;
  *
  * Фасад (для упрощения работы с подсистемой)
  * Еще не дорабатывался
+ * Вообще тестовый класс (забейте на него )
  */
 
 
@@ -77,9 +79,18 @@ public Manager(Share share, CommonConfig config){
         Path path = Paths.get("/Users/Nickitakalinkin/Documents/Workspace/Java/IntelliJIDEA_ReferenceCard.pdf");
 
         FileEntry fileEntry = new FileEntry(path,new Rule(new ChooseLocal(),(byte)2));
+        List<FileEntry> listFiles =  new ArrayList<FileEntry>();
+        listFiles.add(fileEntry);
 
 
-        FileLister fileLister = new FileLister();
+        FileLister fileLister = new FileLister(listFiles);
+        Iterator iterator = fileLister.getIterator();
+        while(iterator.hasNext()){
+            FileEntry fE = (FileEntry) iterator.next();
+            System.out.println(fE.getPath());
+
+
+        }
     }
 
 }

@@ -7,7 +7,7 @@ public class CommonConfig {
     private LinkedList<Share> shareList;
     private final Device thisDevice;
 
-    // update by Nickz (make public)
+    
    public CommonConfig(Rule rule, Device device, LinkedList<Share> shareList){  //List
         defaultRules = rule;
         thisDevice = device;

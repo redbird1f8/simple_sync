@@ -2,9 +2,9 @@ package com.libsimsync.config;
 
 public class Rule {
     private ResolvingMethod method;
-    private byte priority;
+    private boolean priority;
 
-    public Rule(ResolvingMethod method, byte priority){ //public is temporary
+    public Rule(ResolvingMethod method, boolean priority){ //public is actually not temporary
         setPriority(priority);
         this.method = method;
     }
@@ -13,11 +13,11 @@ public class Rule {
         return method;
     }
 
-    public byte getPriority() {
+    public boolean getPriority() {
         return priority;
     }
 
-    public void setPriority(byte priority) {
+    public void setPriority(boolean priority) {
         this.priority = priority;
     }
 }

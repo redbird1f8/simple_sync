@@ -9,7 +9,7 @@ import java.util.UUID;
 public class RuleXMLNodeReader {
     static Rule readNode(XMLEventReader eventReader)
             throws XMLStreamException, NullPointerException{
-        byte priority = 0;
+        boolean priority = false;
         ResolvingMethod method = null;
         while (eventReader.hasNext()){
             XMLEvent event = eventReader.nextEvent();
@@ -19,7 +19,7 @@ public class RuleXMLNodeReader {
 
                 if(startElement.getName().getLocalPart().equals("Priority")){
                     event = eventReader.nextEvent();
-                    priority = Byte.parseByte(event.asCharacters().getData());
+                    priority = Boolean.parseBoolean(event.asCharacters().getData());
                 }
                 if(startElement.getName().getLocalPart().equals("Method")){
                     event = eventReader.nextEvent();

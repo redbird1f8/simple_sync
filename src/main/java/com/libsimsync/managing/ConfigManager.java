@@ -3,8 +3,10 @@ package com.libsimsync.managing;
 import com.libsimsync.config.*;
 import io.netty.util.NettyRuntime;
 
+
 import javax.xml.stream.XMLStreamException;
 import java.io.IOException;
+import java.nio.file.Path;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -73,6 +75,11 @@ import java.util.List;
         shareList = ShareManager.getShareList(name); // пока не работает
     }
 
+
+    public static void addShare(String name, Path path) {
+        shareList.add(new Share(name,path));
+    }
+
     /**
      * Подтверждение конфига.
      * Запись конфига в xml файл.
@@ -99,7 +106,7 @@ import java.util.List;
      * (Возможно изменить модификатор доступа)
      * @return config - настройки из xml
      */
-     static CommonConfig getConfig() { // default value = old value // was private (but why? What wrong with me)
+     public static CommonConfig getConfig() { // default value = old value // was private (but why? What wrong with me)
         CommonConfigXMLReader commonConfigXMLReader = new CommonConfigXMLReader();
 
         CommonConfig config = new CommonConfig("My device"); // need default config
@@ -128,6 +135,8 @@ import java.util.List;
 
         return commonConfig;
     }
+
+
 
 
 

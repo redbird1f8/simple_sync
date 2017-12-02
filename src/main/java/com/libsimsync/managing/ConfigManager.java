@@ -20,11 +20,6 @@ import java.util.List;
  */
 // есть вопрос по конструкторам
  public class ConfigManager {
- // will be changed (поддразумевалось существование одного config)
-    // Обращение  планируется посредством объекта
-    // Static - временная версия
-    // все это - костыли
-    // хотя вышло забавно
     // Возможно, я создал свой антипаттерн (надеюсь его назовут в мою честь)
 
 
@@ -76,9 +71,16 @@ import java.util.List;
     }
 
 
+    /**
+     *
+     * @param name
+     * @param path
+     */
     public static void addShare(String name, Path path) {
         shareList.add(new Share(name,path));
     }
+
+
 
     /**
      * Подтверждение конфига.

@@ -6,6 +6,7 @@ import javax.xml.stream.XMLStreamException;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Created by Nickitakalinkin on 18.11.17.
@@ -88,6 +89,9 @@ public class ShareManager {
         return newName; //
     }
 
+//    public Share changeShareSettings() {
+//
+//    }
 
 
     /**
@@ -106,7 +110,6 @@ public class ShareManager {
             e.printStackTrace();
         }
     }
-
 
 
 

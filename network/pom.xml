@@ -13,7 +13,6 @@
     <artifactId>network</artifactId>
     <version>1.0.0</version>
 
-
     <properties>
         <netty-all.version>4.1.17.Final</netty-all.version>
     </properties>

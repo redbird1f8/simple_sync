@@ -13,7 +13,6 @@
         <module>managing</module>
         <module>network</module>
         <module>ui</module>
-        <module>vs</module>
     </modules>
 
     <properties>

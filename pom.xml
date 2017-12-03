@@ -41,4 +41,6 @@
         </plugins>
     </build>
 
+    <packaging>pom</packaging>
+
 </project>

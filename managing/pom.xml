@@ -10,17 +10,17 @@
     <parent>
         <groupId>com.simplesync</groupId>
         <artifactId>simplesync</artifactId>
-        <version>${simplesync.version}</version>
+        <version>1.0.0</version>
     </parent>
 
     <artifactId>managing</artifactId>
-    <version>${simplesync.version}</version>
+    <version>1.0.0</version>
 
     <dependencies>
         <dependency>
             <groupId>com.simplesync</groupId>
             <artifactId>config</artifactId>
-            <version>${simplesync.version}</version>
+            <version>1.0.0</version>
         </dependency>
     </dependencies>
 

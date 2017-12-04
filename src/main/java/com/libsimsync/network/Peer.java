@@ -23,7 +23,7 @@ public class Peer{
     EventLoopGroup dataInBoss;
     EventLoopGroup dataOutBoss;
 
-    NetworkEventProducer networkEvents;
+    NetworkEventProducer networkEvents = new NetworkEventProducer();
     ArrayList<RemotePeer> connections = new ArrayList<>();
 
 
@@ -43,7 +43,8 @@ public class Peer{
                 p.addLast("objectDecoder", new ObjectDecoder(ClassResolvers.cacheDisabled(null)));
                 p.addLast("objectEncoder", new ObjectEncoder());
                 p.addLast("handler",rp.commandHandler);
-                addPeer(rp);
+                signFor(rp);
+                //addPeer(rp);
                 rp.sendCommand(1,null);
 
 
@@ -96,11 +97,20 @@ public class Peer{
 
     public void setPathRouter(PathRouter pathRouter){
         this.pathRouter = pathRouter;
+        for(RemotePeer i:connections){
+            i.setPathRouter(pathRouter);
+        }
+    }
+    public void addListener(NetworkEventListener nel){
+        networkEvents.addListener(nel);
     }
     public void addPeer(RemotePeer rp){
         rp.debugName = debugName;
         connections.add(rp);
         System.err.println(connections.size() + " peers are connected");
+    }
+    public void signFor(RemotePeer rp){
+        rp.NetworkEvents.addListener(peerEventAdapter);
     }
     public void shutDown() {
         for(RemotePeer i : connections)i.shutDown();
@@ -130,7 +140,7 @@ public class Peer{
             connections.get(i).requestFile(name, shareID);
         }
 } //for debug only
-    public void connect(String host, int port) throws InterruptedException{
+    public void connect(String host, int port){
         RemotePeer rp = new RemotePeer(host, port);
         rp.AddListener(peerEventAdapter);
         rp.connect();
@@ -159,5 +169,6 @@ public class Peer{
 
 
     }
+
 
 }

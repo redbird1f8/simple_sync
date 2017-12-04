@@ -119,9 +119,7 @@ public class RemotePeer {
                 else if(com.commandID == 2) {
                     FullName fullName = (FullName)com.args;
                     answerRequest(fullName.name, fullName.shareID);
-                }
-
-                else {
+                } else {
                     userCommand((Command)msg);
                 }
             }
@@ -190,6 +188,7 @@ public class RemotePeer {
         }
         public void start() throws FileNotFoundException {
             currentInputFile       = new File(path + "RECEIVED");
+            //currentInputFile.mkdirs(); //ToDo: Парсинг
             currentInputFileStream = new DataOutputStream(new FileOutputStream(currentInputFile));
             FullName fullName = new FullName(shareID,name);
             sendCommand(2,fullName);

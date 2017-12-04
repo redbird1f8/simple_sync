@@ -19,6 +19,15 @@ import static java.lang.Thread.sleep;
 
             public static void main(String[] args) throws InterruptedException, FileNotFoundException {
 
+                exampleForNikita a = new exampleForNikita();
+                exampleForNikita b = new exampleForNikita();
+
+                a.listen();
+                b.connect("localhost");
+
+                sleep(500);
+                b.sync();
+                /*
                 Peer first =  new Peer();
                 Peer second = new Peer();
                 //Peer third  = new Peer();
@@ -27,10 +36,11 @@ import static java.lang.Thread.sleep;
                 second.debugName = "second";
 
                 second.listen(61020);
+                first.listen(61040);
                 first.connect("localhost",61020);
-                sleep(200);
-                first.request("./test/test.rar", null);
-
+                sleep(5000);
+                first.request("./test.rar", null);
+                */
 
             }
         }

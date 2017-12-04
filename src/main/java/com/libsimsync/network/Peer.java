@@ -3,7 +3,6 @@ import io.netty.bootstrap.ServerBootstrap;
 
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
-import io.netty.channel.socket.ServerSocketChannel;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
@@ -11,17 +10,25 @@ import io.netty.handler.codec.serialization.ClassResolvers;
 import io.netty.handler.codec.serialization.ObjectDecoder;
 import io.netty.handler.codec.serialization.ObjectEncoder;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.UUID;
 
 
-public class Peer implements NetworkEventListener{
+public class Peer{
+    public String debugName;
+
+    EventLoopGroup bossGroup;
+    EventLoopGroup workerGroup;
+    EventLoopGroup dataInBoss;
+    EventLoopGroup dataOutBoss;
+
     NetworkEventProducer networkEvents;
     ArrayList<RemotePeer> connections = new ArrayList<>();
-    MyChannelInitializer inboundConnectionInitializer = new MyChannelInitializer(0);
-    MyChannelInitializer dataInConnectionInitializer  = new MyChannelInitializer(1);
-    MyChannelInitializer dataOutConnectionInitializer = new MyChannelInitializer(2);
+
 
     class MyChannelInitializer extends ChannelInitializer<SocketChannel>{
+
         int channelNumber;
         public  MyChannelInitializer(int channelNumber){
             this.channelNumber = channelNumber;
@@ -35,7 +42,7 @@ public class Peer implements NetworkEventListener{
                 RemotePeer rp = new RemotePeer((NioSocketChannel)ch);
                 p.addLast("objectDecoder", new ObjectDecoder(ClassResolvers.cacheDisabled(null)));
                 p.addLast("objectEncoder", new ObjectEncoder());
-                p.addLast(rp.commandHandler);
+                p.addLast("handler",rp.commandHandler);
                 addPeer(rp);
                 rp.sendCommand(1,null);
 
@@ -47,8 +54,8 @@ public class Peer implements NetworkEventListener{
                     for(int i = 0; i < connections.size(); i++){
                         if(connections.get(i).host.toLowerCase().equals(ch.remoteAddress().getHostName().toLowerCase())){
                             connections.get(i).setInputChannel((NioSocketChannel) ch);
-                            System.err.println("found it!");
-                            p.addLast(connections.get(i).dataInHandler);
+                            System.err.println(debugName + ": found it!");
+                            p.addLast("handler",connections.get(i).dataInHandler);
                             break;
                         }
                     }
@@ -57,8 +64,8 @@ public class Peer implements NetworkEventListener{
                     for(int i = 0; i < connections.size(); i++){
                         if(connections.get(i).host.toLowerCase().equals(ch.remoteAddress().getHostName().toLowerCase())){
                             connections.get(i).setOutputChannel((NioSocketChannel)ch);
-                            System.err.println("found it!");
-                            p.addLast(connections.get(i).dataOutHandler);
+                            System.err.println(debugName + ": found it!");
+                            p.addLast("handler",connections.get(i).dataOutHandler);
                             break;
                         }
                     }
@@ -66,41 +73,56 @@ public class Peer implements NetworkEventListener{
             }
         }
     }
+    MyChannelInitializer inboundConnectionInitializer = new MyChannelInitializer(0);
+    MyChannelInitializer dataInConnectionInitializer  = new MyChannelInitializer(1);
+    MyChannelInitializer dataOutConnectionInitializer = new MyChannelInitializer(2);
+    class PeerEventAdapter extends NetworkEventListenerAdapter{
+        @Override
+        public void newPeerConnection(RemotePeer remotePeer) {
+            addPeer(remotePeer);
+        }
 
-    public void connect(String host, int port) throws InterruptedException{
-        RemotePeer rp = new RemotePeer(host, port);
-        rp.AddListener(this);
-        rp.connectCommand();
-    }
-    public void actionPerformed(NetworkEvent e){
-        if(e instanceof RemotePeerEvent) {// ToDo: мсправить
-            RemotePeerEvent rpe = (RemotePeerEvent) e;
-            if (rpe.connected) {
-                addPeer(rpe.getSource());
-            }
+        @Override
+        public void connectionEstablished(RemotePeer remotePeer) {
+            networkEvents.connectionEstablishedFire(remotePeer);
+        }
+        @Override
+        public void userCommand(Command cmd, RemotePeer src){
+            networkEvents.userCommandFire(cmd,src);
         }
     }
+    PeerEventAdapter peerEventAdapter = new PeerEventAdapter();
+    PathRouter pathRouter = new SimplePathRouter();
+
+    public void setPathRouter(PathRouter pathRouter){
+        this.pathRouter = pathRouter;
+    }
+    public void connect(String host, int port) throws InterruptedException{
+        RemotePeer rp = new RemotePeer(host, port);
+        rp.AddListener(peerEventAdapter);
+        rp.connectCommand();
+    }
     public void addPeer(RemotePeer rp){
+        rp.debugName = debugName;
         connections.add(rp);
-        System.out.println(connections.size() + " peers are connected");
+        System.err.println(connections.size() + " peers are connected");
     }
     public void listen(int port){
-        EventLoopGroup boosGroup = new NioEventLoopGroup();
-        EventLoopGroup workerGroup = new NioEventLoopGroup();
+        bossGroup = new NioEventLoopGroup();
+        workerGroup = new NioEventLoopGroup();
+        dataInBoss = new NioEventLoopGroup();
+        dataOutBoss = new NioEventLoopGroup();
+
         ServerBootstrap bstrap = new ServerBootstrap()
-                .group(boosGroup, workerGroup)
+                .group(bossGroup, workerGroup)
                 .channel(NioServerSocketChannel.class)
                 .childHandler(inboundConnectionInitializer);
         bstrap.bind(port);
-
-        EventLoopGroup dataInBoss = new NioEventLoopGroup();
         ServerBootstrap dinstrap = new ServerBootstrap()
                 .group(dataInBoss, workerGroup)
                 .channel(NioServerSocketChannel.class)
                 .childHandler(dataInConnectionInitializer);
         dinstrap.bind(port + 1);
-
-        EventLoopGroup dataOutBoss = new NioEventLoopGroup();
         ServerBootstrap doutstrap = new ServerBootstrap()
                 .group(dataOutBoss, workerGroup)
                 .channel(NioServerSocketChannel.class)
@@ -108,6 +130,13 @@ public class Peer implements NetworkEventListener{
         doutstrap.bind(port + 2);
 
 
+    }
+    public void shutDown() {
+        for(RemotePeer i : connections)i.shutDown();
+        if(bossGroup != null)bossGroup.shutdownGracefully();
+        if(workerGroup != null)workerGroup.shutdownGracefully();
+        if(dataInBoss != null)dataInBoss.shutdownGracefully();
+        if(dataOutBoss != null)dataOutBoss.shutdownGracefully();
     }
     public void sendStr(String str){
         sendCommand(0,str);
@@ -124,4 +153,9 @@ public class Peer implements NetworkEventListener{
             connections.get(i).sendObject(toSend);
         }
     }
+    public void request(String name, UUID shareID) throws FileNotFoundException {
+        for(int i = 0; i < connections.size(); i++){
+            connections.get(i).requestFile(name, shareID);
+        }
+} //for debug only
 }

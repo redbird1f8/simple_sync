@@ -11,26 +11,26 @@ import io.netty.handler.codec.serialization.ClassResolvers;
 import io.netty.handler.codec.serialization.ObjectDecoder;
 import io.netty.handler.codec.serialization.ObjectEncoder;
 
+import java.io.FileNotFoundException;
+
 import static java.lang.Thread.sleep;
 
         class Main {
 
-            public static void main(String[] args) throws InterruptedException {
+            public static void main(String[] args) throws InterruptedException, FileNotFoundException {
 
                 Peer first =  new Peer();
                 Peer second = new Peer();
-                Peer third  = new Peer();
+                //Peer third  = new Peer();
 
-                first.listen(61005);
-/*
-                third.connect("localhost",61005);
-                second.connect("localhost",61005);
+                first.debugName  = "first";
+                second.debugName = "second";
 
+                second.listen(61020);
+                first.connect("localhost",61020);
                 sleep(200);
-                //first.sendObject(new Command(0,new String("ololol")));
-                first.sendStr("everything is working");
-                first.sendCommand(0,"yes, it is");
-                second.sendStr("wow");*/
+                first.request("./test.rar", null);
+
 
             }
         }

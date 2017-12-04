@@ -100,7 +100,7 @@ public class ShareManager {
      * Добавить новый Share в список
      *
      * @param newShare добавляемыый Share
-     * @param path     Путь к директории с Share(s)
+     * @param path     Путь к директории с Share(MainFrame)
      */
     static void addShare(Share newShare, Path path) {
         ShareWriter shareWriter = new ShareXMLWriter(path);
@@ -138,7 +138,7 @@ public class ShareManager {
 
 
     /**
-     * Метод для получения списка Share(s)
+     * Метод для получения списка Share(MainFrame)
      * Метод еще в разработке.
      * javadoc будет написан после завершения технических работ)
      *

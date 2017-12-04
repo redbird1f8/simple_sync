@@ -14,6 +14,9 @@ import java.util.List;
  */
 public class SyncManager {
 
+
+    static String localDirectory;
+
     public static void syncShare() {
         CommonConfig currentConfig = ConfigManager.getConfig();
         List<Share> shareList = currentConfig.getShareList();

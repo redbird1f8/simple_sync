@@ -76,33 +76,8 @@ public Manager(Share share, CommonConfig config){
     }
 
     public static void main(String[] args) {
-        ArrayList<FileEntry> fileList = new ArrayList<>();
 
-        Path path = Paths.get("/Users/Nickitakalinkin/Documents/Workspace/Java/ArrayVSLinked");
-
-        FileEntry fileEntry = new FileEntry(path,new Rule(new ChooseLocal(),false));
-        List<FileEntry> listFiles =  new ArrayList<FileEntry>();
-        listFiles.add(fileEntry);
-
-
-        FileLister fileLister = new FileLister(listFiles);
-        Iterator iterator = fileLister.getIterator();
-
-
-        try {
-            FileChannel fileChannel = null;
-
-            while(iterator.hasNext()){
-                FileEntry fE = (FileEntry) iterator.next();
-                System.out.println(fE.getPath().toFile());
-                fileChannel = (FileChannel) Files.newByteChannel(fE.getPath(), StandardOpenOption.WRITE,StandardOpenOption.CREATE);
-                ByteBuffer mBuf = ByteBuffer.allocate(26);
-
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
+        String path = "";
 
     }
 

@@ -29,7 +29,7 @@ import static java.lang.Thread.sleep;
                 second.listen(61020);
                 first.connect("localhost",61020);
                 sleep(200);
-                first.request("./test.rar", null);
+                first.request("./test/test.rar", null);
 
 
             }

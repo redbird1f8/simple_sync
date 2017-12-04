@@ -44,17 +44,6 @@ public class RemotePeer {
     boolean outputChannelConnected  = false;
 
 
-    //ToDo Многа файлов, в очередь запихать, например
-
-    //Так-же можно сделать отдельный класс непосредственно для пресылки файлов, надо будет сделать у него интерфейс
-    //с функцией ансерРеквест и просто методом (уже не частью интерфейса) реквестФайл. Воооооооот.
-    //и ещё в нем будет поле для класса реализуещее интерфейс типа ПасВрэнглер или типа того
-    //в интерфейсе этом будет метод берущий ID шары и относительный путь и выплевывать абсолютный.
-    //Или даже просто принимать ID шары и выплевывать абсолютную добавку. Иначе будет писаться куда-то в стандартное
-    //место. И вообще, в будующем, для увелечения скорости, надо будет отправлять по много блоклов за раз, каждый из которых
-    //будет снабжен специальным ID, нужным для того, чтоб удаленный пир знал куда это ложить. Размер файла же можно
-    //посылать заранее вместе с ФайлИнфо. Можно сделать 2 функции. Реквест с заранее известным размером и без.
-
 
     DataInputStream  currentOutputFileStream = null;
     DataOutputStream currentInputFileStream  = null;
@@ -226,15 +215,7 @@ public class RemotePeer {
     public void setPathRouter(PathRouter pathRouter){
         this.pathRouter = pathRouter;
     }
-    public void connectCommand(){
-        group = new NioEventLoopGroup();
-        Bootstrap newConnection = new Bootstrap();
-        newConnection.group(group)
-                     .channel(NioSocketChannel.class)
-                     .handler(new OutboundConnectionInitializer(0));
-        newConnection.connect(host, port);
 
-    }
     public void connectData(){
 
         group1 = new NioEventLoopGroup();
@@ -282,6 +263,34 @@ public class RemotePeer {
     public void AddListener(NetworkEventListener networkEventListener){
         NetworkEvents.addListener(networkEventListener);
     }
+    public void answerRequest(String name, UUID shareID) throws Exception {
+        currentOutputFile       = new File(pathRouter.getAbsolutePath(shareID,name));
+        System.err.println("sending file" + pathRouter.getAbsolutePath(shareID,name));
+        currentOutputFileStream = new DataInputStream(new FileInputStream(currentOutputFile));
+        blockSender.sendFirst();
+    }
+
+    /**
+     *
+     */
+    public void connect(){
+        group = new NioEventLoopGroup();
+        Bootstrap newConnection = new Bootstrap();
+        newConnection.group(group)
+                .channel(NioSocketChannel.class)
+                .handler(new OutboundConnectionInitializer(0));
+        newConnection.connect(host, port);
+
+    }
+
+    /**
+     *
+     *
+     *
+     * @param name
+     * @param ShareID
+     * @throws FileNotFoundException
+     */
     public void requestFile(String name, UUID ShareID) throws FileNotFoundException {
         FileTransfer ft = new FileTransfer(pathRouter.getAbsolutePath(ShareID,name),name,ShareID);
         FileQueue.addLast(ft);
@@ -291,12 +300,9 @@ public class RemotePeer {
         System.err.println("Transmission requested " + pathRouter.getAbsolutePath(ShareID,name));
 
     }
-    public void answerRequest(String name, UUID shareID) throws Exception {
-        currentOutputFile       = new File(pathRouter.getAbsolutePath(shareID,name));
-        System.err.println("sending file" + pathRouter.getAbsolutePath(shareID,name));
-        currentOutputFileStream = new DataInputStream(new FileInputStream(currentOutputFile));
-        blockSender.sendFirst();
-    }
+    /**
+     *
+     */
     public void shutDown(){
         if(group!=null)group.shutdownGracefully();
         if(group1!=null)group1.shutdownGracefully();

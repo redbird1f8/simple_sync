@@ -1,6 +1,8 @@
 package com.libsimsync.network;
 
 import java.util.UUID;
+import com.libsimsync.config.FileEntry;
+import com.libsimsync.config.FileInfo;
 
 public class HighLevelPeer implements PathRouter{
 

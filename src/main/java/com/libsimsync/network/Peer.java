@@ -97,15 +97,43 @@ public class Peer{
     public void setPathRouter(PathRouter pathRouter){
         this.pathRouter = pathRouter;
     }
-    public void connect(String host, int port) throws InterruptedException{
-        RemotePeer rp = new RemotePeer(host, port);
-        rp.AddListener(peerEventAdapter);
-        rp.connectCommand();
-    }
     public void addPeer(RemotePeer rp){
         rp.debugName = debugName;
         connections.add(rp);
         System.err.println(connections.size() + " peers are connected");
+    }
+    public void shutDown() {
+        for(RemotePeer i : connections)i.shutDown();
+        if(bossGroup != null)bossGroup.shutdownGracefully();
+        if(workerGroup != null)workerGroup.shutdownGracefully();
+        if(dataInBoss != null)dataInBoss.shutdownGracefully();
+        if(dataOutBoss != null)dataOutBoss.shutdownGracefully();
+    }
+    public void sendStr(String str){
+        sendCommand(0,str);
+    }
+    public void sendObject(Object msg){
+        for(int i = 0; i < connections.size(); i++){
+            connections.get(i).sendObject(msg);
+        }
+    }
+
+    public void sendCommand(int id, Object args){
+        Command toSend = new Command(id,args);
+        for(int i = 0; i < connections.size(); i++){
+            connections.get(i).sendObject(toSend);
+        }
+    }
+
+    public void request(String name, UUID shareID) throws FileNotFoundException {
+        for(int i = 0; i < connections.size(); i++){
+            connections.get(i).requestFile(name, shareID);
+        }
+} //for debug only
+    public void connect(String host, int port) throws InterruptedException{
+        RemotePeer rp = new RemotePeer(host, port);
+        rp.AddListener(peerEventAdapter);
+        rp.connect();
     }
     public void listen(int port){
         bossGroup = new NioEventLoopGroup();
@@ -131,31 +159,5 @@ public class Peer{
 
 
     }
-    public void shutDown() {
-        for(RemotePeer i : connections)i.shutDown();
-        if(bossGroup != null)bossGroup.shutdownGracefully();
-        if(workerGroup != null)workerGroup.shutdownGracefully();
-        if(dataInBoss != null)dataInBoss.shutdownGracefully();
-        if(dataOutBoss != null)dataOutBoss.shutdownGracefully();
-    }
-    public void sendStr(String str){
-        sendCommand(0,str);
-    }
-    public void sendObject(Object msg){
-        for(int i = 0; i < connections.size(); i++){
-            connections.get(i).sendObject(msg);
-        }
-    }
 
-    public void sendCommand(int id, Object args){
-        Command toSend = new Command(id,args);
-        for(int i = 0; i < connections.size(); i++){
-            connections.get(i).sendObject(toSend);
-        }
-    }
-    public void request(String name, UUID shareID) throws FileNotFoundException {
-        for(int i = 0; i < connections.size(); i++){
-            connections.get(i).requestFile(name, shareID);
-        }
-} //for debug only
 }

@@ -108,10 +108,10 @@ public class RemotePeer {
         }
         @Override
         public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception{
-            System.err.println(debugName + ": channelRead channel number:" + channelNumber);
+            //System.err.println(debugName + ": channelRead channel number:" + channelNumber);
             if(channelNumber == 0) {
                 Command com = (Command)msg;
-                System.err.println(debugName + ": CommandID: " + com.commandID);
+                //System.err.println(debugName + ": CommandID: " + com.commandID);
                 if(com.commandID == 0){
                     System.err.println(msg);
                 }
@@ -174,7 +174,10 @@ public class RemotePeer {
             if(read > 0) {
                 ChannelFuture cf = outputChannel.writeAndFlush(Unpooled.wrappedBuffer(block));
                 cf.addListener(this);
+            }else{
+                currentOutputFileStream.close();
             }
+
         }
     }
     public class FileTransfer {
@@ -187,8 +190,15 @@ public class RemotePeer {
             this.shareID = shareID;
         }
         public void start() throws FileNotFoundException {
-            currentInputFile       = new File(path + "RECEIVED");
-            //currentInputFile.mkdirs(); //ToDo: Парсинг
+            currentInputFile       = new File(path);
+            String[] dirs = path.split("/");
+            String parentDirs = "";
+            for(int i = 0; i < dirs.length - 1; i++){
+                parentDirs +=  dirs[i] + '/';
+            }
+            System.err.println("parent dir - " + parentDirs);
+            File parentDir = new File(parentDirs);
+            parentDir.mkdirs();
             currentInputFileStream = new DataOutputStream(new FileOutputStream(currentInputFile));
             FullName fullName = new FullName(shareID,name);
             sendCommand(2,fullName);
@@ -292,6 +302,7 @@ public class RemotePeer {
      * @throws FileNotFoundException
      */
     public void requestFile(String name, UUID ShareID) throws FileNotFoundException {
+        System.out.println("root   " + pathRouter.getAbsolutePath(ShareID,""));
         FileTransfer ft = new FileTransfer(pathRouter.getAbsolutePath(ShareID,name),name,ShareID);
         FileQueue.addLast(ft);
         if(FileQueue.size() == 1) {

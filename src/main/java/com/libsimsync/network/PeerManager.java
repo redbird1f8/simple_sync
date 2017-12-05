@@ -1,5 +1,6 @@
 package com.libsimsync.network;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.LinkedList;
 import java.util.UUID;
@@ -20,7 +21,7 @@ public class PeerManager implements PathRouter{
         }
     }
     PeerManagerEventAdapter peerManagerEventAdapter = new PeerManagerEventAdapter();
-    private String rootDirectory = ".";
+    private String rootDirectory;
     private PeerManagerHandler peerManagerHandler;
     Peer peer;
     public  PeerManager(){
@@ -36,7 +37,8 @@ public class PeerManager implements PathRouter{
     public void connect(String host){ peer.connect(host,61020);}
     @Override
     public String getAbsolutePath(UUID ShareID, String relativePath) {
-        return rootDirectory+relativePath;
+        System.out.println(relativePath);
+        return rootDirectory + relativePath;//relativePath;
     }
 
     public String getRootDirectory() {
@@ -51,9 +53,13 @@ public class PeerManager implements PathRouter{
     public void shutDown(){
         peer.shutDown();
     }
-    public void requestFile(FileEntry file, UUID shareID) throws FileNotFoundException {
+    public void requestFile(FileEntry file, UUID shareID, RemotePeer remotePeer) throws FileNotFoundException {
         //Пока что шара только одна
         peer.request(file.getPath().toString(),shareID);
+    }
+    public void requestFile(FileInfo file, UUID shareID, RemotePeer remotePeer) throws FileNotFoundException {
+        //Пока что шара только одна
+        peer.request(file.relPath,shareID);
     }
     public void requestFileInfo(){
         peer.sendCommand(20,null);
@@ -62,8 +68,12 @@ public class PeerManager implements PathRouter{
         peer.sendCommand(21,fileInfos);
     }
 
+    public void deleteFile(FileInfo file, UUID shareID){
+        File f = new File(getAbsolutePath(null,file.relPath));
+        System.err.println("delete");
+        f.delete();
 
 
-
+    }
 
 }

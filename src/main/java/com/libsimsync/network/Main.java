@@ -10,6 +10,7 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.codec.serialization.ClassResolvers;
 import io.netty.handler.codec.serialization.ObjectDecoder;
 import io.netty.handler.codec.serialization.ObjectEncoder;
+import java.util.Scanner;
 
 import java.io.FileNotFoundException;
 
@@ -17,16 +18,18 @@ import static java.lang.Thread.sleep;
 
         class Main {
 
-            public static void main(String[] args) throws InterruptedException, FileNotFoundException {
+            public static void main(String[] args) throws InterruptedException, FileNotFoundException, java.io.IOException {
 
-                exampleForNikita a = new exampleForNikita();
-                exampleForNikita b = new exampleForNikita();
+                exampleForNikita a = new exampleForNikita("./A");
+                exampleForNikita b = new exampleForNikita("./B");
 
                 a.listen();
                 b.connect("localhost");
-
-                sleep(500);
-                b.sync();
+                Scanner in = new Scanner(System.in);
+                for(int i = 0; true; i++) {
+                    in.next();
+                    b.sync();
+                }
                 /*
                 Peer first =  new Peer();
                 Peer second = new Peer();

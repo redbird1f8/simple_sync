@@ -53,7 +53,7 @@ public class Peer{
                 if(channelNumber == 1) {
 
                     for(int i = 0; i < connections.size(); i++){
-                        if(connections.get(i).host.toLowerCase().equals(ch.remoteAddress().getHostName().toLowerCase())){
+                        if(connections.get(i).host.toLowerCase().equals(ch.remoteAddress().getAddress().toString())){
                             connections.get(i).setInputChannel((NioSocketChannel) ch);
                             System.err.println(debugName + ": found it!");
                             p.addLast("handler",connections.get(i).dataInHandler);
@@ -63,7 +63,7 @@ public class Peer{
                 }
                 if(channelNumber == 2) {
                     for(int i = 0; i < connections.size(); i++){
-                        if(connections.get(i).host.toLowerCase().equals(ch.remoteAddress().getHostName().toLowerCase())){
+                        if(connections.get(i).host.toLowerCase().equals(ch.remoteAddress().getAddress().toString())){
                             connections.get(i).setOutputChannel((NioSocketChannel)ch);
                             System.err.println(debugName + ": found it!");
                             p.addLast("handler",connections.get(i).dataOutHandler);

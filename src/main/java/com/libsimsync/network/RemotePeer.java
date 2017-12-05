@@ -201,7 +201,7 @@ public class RemotePeer {
     public OutboundConnectionHandler dataOutHandler = new OutboundConnectionHandler(2);
     public RemotePeer(NioSocketChannel commandChannel){
         this.commandChannel = commandChannel;
-        this.host = commandChannel.remoteAddress().getHostName();
+        this.host = commandChannel.remoteAddress().getAddress().toString();
         this.port = commandChannel.remoteAddress().getPort();
         System.err.println(port);
         NetworkEvents = new NetworkEventProducer();
@@ -273,6 +273,7 @@ public class RemotePeer {
      *
      */
     public void connect(){
+
         group = new NioEventLoopGroup();
         Bootstrap newConnection = new Bootstrap();
         newConnection.group(group)

@@ -12,6 +12,11 @@ import java.util.LinkedList;
 
 public class exampleForNikita implements PeerManagerHandler{
     PeerManager peerManager = new PeerManager();
+
+    //Добавить:
+    //массив файл инфо
+    //метод для его рефреша
+    //-----+таймер
     public exampleForNikita(){
         peerManager.setPeerManagerHandler(this);//Теперь методы этого класса будут вызываться пир мэнэджером
     }

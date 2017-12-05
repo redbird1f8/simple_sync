@@ -3,7 +3,7 @@ import com.libsimsync.config.methods.ChooseLocal;
 import com.libsimsync.network.*;
 import com.*;
 import com.libsimsync.config.*;
-import com.libsimsync.network.OutwardConnectioInitialiser;
+//import com.libsimsync.network.OutwardConnectioInitialiser;
 import com.sun.nio.zipfs.ZipPath;
 
 import java.io.*;

@@ -20,8 +20,9 @@ import static java.lang.Thread.sleep;
 
             public static void main(String[] args) throws InterruptedException, FileNotFoundException, java.io.IOException {
 
-                exampleForNikita a = new exampleForNikita("./A");
-                exampleForNikita b = new exampleForNikita("./B");
+                exampleForNikita a = new exampleForNikita("/Users/Nickitakalinkin/Documents/ExceptStudy/KPO/simple_sync/src/main/java/A");
+               // exampleForNikita b = new exampleForNikita("./B");
+                exampleForNikita b = new exampleForNikita("/Users/Nickitakalinkin/Documents/ExceptStudy/KPO/simple_sync/src/main/java/B");
 
                 a.listen();
                 b.connect("localhost");

@@ -20,12 +20,16 @@ public class TempDevice {
 
     // Скорее всего они уйдут (или это будет обертка для device )
     public String toString() {
-        return name + " || " + address;
+        return name + " | " + address;
     }
 
     public static TempDevice fromString(String str) {
 
-        String[] splitStr = str.split(" || ");
+        String[] splitStr = str.split(" [|] ");
+//        System.out.println("Разббиение строки");
+//        for (String s : splitStr) {
+//            System.out.println(s);
+//        }
         return new TempDevice(splitStr[0],splitStr[1]);
     }
 

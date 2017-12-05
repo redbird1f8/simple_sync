@@ -10,22 +10,29 @@ import java.text.ParseException;
 /**
  * Created by Nickitakalinkin on 05.12.17.
  */
-public class DeviceAddition  {
+public class DeviceAddition extends JDialog {
 
     private String address;
     private String name;
+    private boolean flagApply;
 
-    DeviceAddition()  {
+    DeviceAddition(JDialog owner)  {
+    super(owner,true);
+//        JFrame ipNameFrame = new JFrame("Введите информаию о устройстве");
+//        ipNameFrame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+//        ipNameFrame.setVisible(true);
+//        ipNameFrame.setLayout(new GridLayout(3, 1));
 
-        JFrame ipNameFrame = new JFrame("Введите информаию о устройстве");
-        ipNameFrame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        ipNameFrame.setVisible(true);
-        ipNameFrame.setLayout(new GridLayout(3, 1));
+
+        //setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+
+        setLayout(new GridLayout(3, 1));
 
 
         try {
             MaskFormatter maskFormatter = new MaskFormatter("###.###.###.###");
-            maskFormatter.setPlaceholderCharacter('_'); // default
+
+            maskFormatter.setPlaceholderCharacter('0'); // default
 
             //ip
             JPanel ipPanel = new JPanel();
@@ -34,9 +41,10 @@ public class DeviceAddition  {
             JFormattedTextField ipTextField = new JFormattedTextField(maskFormatter);
 
 
+
             ipPanel.add(ipTextField, BorderLayout.CENTER);
 
-            ipNameFrame.add(ipPanel); // warning
+            add(ipPanel); // warning
 
 
             // device
@@ -48,17 +56,24 @@ public class DeviceAddition  {
 
             namePanel.add(deviceName, BorderLayout.CENTER);
 
-            ipNameFrame.add(namePanel);
+            add(namePanel);
 
 
             //OK
+            JPanel okPanel = new JPanel();
+            okPanel.setLayout(new BorderLayout());
             JButton okButton = new JButton("Добавить");
+            okPanel.add(okButton);
+            add(okPanel);
+
+
             okButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     address = ipTextField.getText();
                     name = deviceName.getText();
-                    ipNameFrame.dispose();
+                    flagApply = true;
+                    dispose();
                     // setVisible(false)
                 }
             });
@@ -69,6 +84,10 @@ public class DeviceAddition  {
         }
 
 
+        pack();
+
+        setLocationRelativeTo(owner.getOwner());
+        setVisible(true);
     }
 
     public String getAddress() {
@@ -78,6 +97,7 @@ public class DeviceAddition  {
     public String getName() {
         return name;
     }
+    public boolean isApply() {return flagApply;}
 
 //    @Override
 //    public void actionPerformed(ActionEvent e) {

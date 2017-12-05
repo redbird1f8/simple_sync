@@ -13,9 +13,10 @@ import java.util.List;
 /**
  * Created by Nickitakalinkin on 04.12.17.
  */
-public class SettingsPanel extends JPanel {
+public class SettingsPanel extends JComponent {
 
     Dimension buttonDimension = new Dimension(200,20);
+    Dimension panelDimension = new Dimension(500,200);
 
     // Временная часть (для обработки событий)
          List<TempDevice> devicesList = new ArrayList<>();
@@ -23,7 +24,7 @@ public class SettingsPanel extends JPanel {
         for (int i = 0; i < 12; i++) {
             String adress = "192.168.1." + i;
             String name = "name" + i;
-            devicesList.add(new TempDevice(adress,name));
+            devicesList.add(new TempDevice(name,adress));
         }
     }
 
@@ -40,10 +41,10 @@ public class SettingsPanel extends JPanel {
 
 //    private  static final int HEIGHT = 200;
 //    private  static final int WIDTH = 200;
-    SettingsPanel(int width,int height) {
+    SettingsPanel(JFrame frame,int width,int height) {
 
         setLayout(new BorderLayout());
-        setPreferredSize(new Dimension(500,200));
+        setPreferredSize(panelDimension);
 
 
         JPanel westPanel = new JPanel();
@@ -141,7 +142,13 @@ public class SettingsPanel extends JPanel {
         addDevice.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new DeviceSettings(devicesList);
+                new DeviceSettings(frame,devicesList,jCountOfDevices);
+
+                System.out.println();
+
+                //jCountOfDevices.setText("Всего устройств: " + 100);
+                jCountOfDevices.repaint();
+                jCountOfDevices.revalidate();
             }
         });
 

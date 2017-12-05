@@ -8,9 +8,13 @@ import java.awt.*;
  */
 public class SettingsFrame extends JFrame {
 
+    JTabbedPane jTabbedPane;
+
     SettingsPanel settingsPanel;
 
     public SettingsFrame(String name) {
+
+        jTabbedPane = new JTabbedPane();
 
         this.setLayout(new BorderLayout()); // temp
 
@@ -19,14 +23,19 @@ public class SettingsFrame extends JFrame {
 
 
 
+        SyncPanel syncPanel = new SyncPanel();
+        settingsPanel = new SettingsPanel(this,400,200);
 
-        settingsPanel = new SettingsPanel(400,200);
+        jTabbedPane.addTab("Главная",syncPanel); // заглушка 
+        jTabbedPane.addTab("Настройки",settingsPanel);
+
+        add(jTabbedPane);
+        //add(settingsPanel,BorderLayout.CENTER);
 
 
-        //settingsPanel.setBounds(1,1,400,400);
-        add(settingsPanel,BorderLayout.CENTER);
 
         pack();
+        setLocationRelativeTo(null);
 
         setVisible(true);
 

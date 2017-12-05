@@ -3,6 +3,7 @@ package com.libsimsync.tmpUI;
 import com.libsimsync.managing.TempDevice;
 
 import javax.swing.*;
+import javax.xml.crypto.dsig.spec.DigestMethodParameterSpec;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -11,12 +12,17 @@ import java.util.List;
 /**
  * Created by Nickitakalinkin on 05.12.17.
  */
-public class DeviceSettings extends JFrame {
+public class DeviceSettings extends JDialog {
+    DeviceSettings thisDeviceSettings = this;
 
     JPanel additionPanel = new JPanel();
 
+    //Dimension dim = new Dimension(300,200);
 
-    DeviceSettings(List<TempDevice> deviceList) {
+    DeviceSettings(JFrame owner,List<TempDevice> deviceList,JLabel countOfDevices) {
+
+        super(owner, "Настройки устройств",true);
+
         DefaultListModel listModel = new DefaultListModel();
         JList list = new JList(listModel);
         for (TempDevice device : deviceList) {
@@ -41,11 +47,28 @@ public class DeviceSettings extends JFrame {
         //addButton
         JButton addButton = new JButton("Добавить");
         addButton.setFocusable(false);
+
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                DeviceAddition resAddition = new DeviceAddition();
-                deviceList.add(new TempDevice(resAddition.getName(), resAddition.getAddress()));
+                DeviceAddition resAddition = new DeviceAddition(thisDeviceSettings);
+
+                if(resAddition.isApply()) {
+
+                    TempDevice tempDevice = new TempDevice(resAddition.getName(), resAddition.getAddress());
+
+                    listModel.addElement(tempDevice.toString());
+                    deviceList.add(tempDevice);// look here
+
+                    for (TempDevice td : deviceList)
+                        System.out.println(td.toString());
+
+                    countOfDevices.setText("Всего устройств: " + deviceList.size());
+
+
+                    list.repaint();
+                    list.revalidate();
+                }
             }
         });
         buttonsPanel.add(addButton);
@@ -58,19 +81,47 @@ public class DeviceSettings extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //String textDevice = (String)
-                int index = list.getSelectedIndex();
-                String tmpStr = (String) listModel.getElementAt(index);
-                listModel.remove(index);
-                System.out.println(index);
+                if(!list.isSelectionEmpty()) {
+                    int index = list.getSelectedIndex();
+                    String deletedString = ((String)listModel.getElementAt(index)); // exception
 
 
-                //String tmpStr = (String) listModel.getElementAt(list.getSelectedIndex()); //!!!!!!!
+                    for (int i = 0; i < deviceList.size(); i++) {
+                        TempDevice tempDevice = TempDevice.fromString(deletedString);
 
-                //System.out.println(tmpStr);
-                //TempDevice tempDevice = TempDevice.fromString(tmpStr);
+//                        System.out.println("\n important ");
+//                        System.out.println(deviceList.get(i));
+//                        System.out.println(tempDevice.toString());
+                        if(deviceList.get(i).isEqual(tempDevice))
+                            deviceList.remove(i);
+                    }
+//                    deviceList.remove(deviceList); // TODO использование TempDevice везде изменится
 
-               // deviceList.remove(deviceList.indexOf(tempDevice));
 
+
+//
+//                    for (TempDevice d: deviceList) {
+//                        System.out.println(d.toString());
+//                    }
+                    System.out.println(deviceList.size());
+
+                    countOfDevices.setText("Всего устройств: " + deviceList.size());
+                    listModel.remove(index);
+
+
+
+
+
+                    //System.out.println(index);
+
+
+                    //String deletedString = (String) listModel.getElementAt(list.getSelectedIndex()); //!!!!!!!
+
+                    //System.out.println(deletedString);
+                    //TempDevice tempDevice = TempDevice.fromString(deletedString);
+
+                    // deviceList.remove(deviceList.indexOf(tempDevice));
+                }
             }
         });
         buttonsPanel.add(removeButton);
@@ -78,11 +129,15 @@ public class DeviceSettings extends JFrame {
 
         additionPanel.add(buttonsPanel, BorderLayout.SOUTH);
         add(additionPanel);
+
+        pack();
+        setLocationRelativeTo(owner);
+        setLocation(owner.getX()+10,owner.getY()+20);
         setVisible(true);
         //setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         // сделать красивое появление
-        setLocationRelativeTo(super.getContentPane());//ToDo
-        pack();
+       //ToDo
+
     }
 
 

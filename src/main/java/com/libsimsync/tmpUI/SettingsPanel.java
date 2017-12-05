@@ -1,17 +1,38 @@
 package com.libsimsync.tmpUI;
 
+import com.libsimsync.managing.TempDevice;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.util.*;
+import java.util.List;
 
 /**
  * Created by Nickitakalinkin on 04.12.17.
  */
 public class SettingsPanel extends JPanel {
 
+    Dimension buttonDimension = new Dimension(200,20);
+
+    // Временная часть (для обработки событий)
+         List<TempDevice> devicesList = new ArrayList<>();
+    {
+        for (int i = 0; i < 12; i++) {
+            String adress = "192.168.1." + i;
+            String name = "name" + i;
+            devicesList.add(new TempDevice(adress,name));
+        }
+    }
+
+    //
+
+
+
     JButton chooseLocalDirectory;
+    JButton addDevice;
     String path;
     JLabel pathLabel;
     JTextField pathField;
@@ -26,27 +47,80 @@ public class SettingsPanel extends JPanel {
 
 
         JPanel westPanel = new JPanel();
-        westPanel.setBorder(BorderFactory.createEtchedBorder());
+        westPanel.setBorder(BorderFactory.createEmptyBorder());
+        westPanel.setLayout(new GridLayout(4,1));
+        //westPanel.setLayout(new BorderLayout());
 
 
         JPanel centerPanel = new JPanel();
-        centerPanel.setBorder(BorderFactory.createBevelBorder(3));
+        centerPanel.setBorder(BorderFactory.createEmptyBorder());
+        centerPanel.setLayout(new GridLayout(4,1));
+
+        //centerPanel.setLayout(new BorderLayout());
         JScrollPane centerScrollPane = new JScrollPane(centerPanel);
+
+        centerPanel.setBorder(BorderFactory.createEmptyBorder());
+
+
 
 
         // west panel
+
+        // chooseLocalDirectory
         chooseLocalDirectory = new JButton("Выбрать хранилище");
-        chooseLocalDirectory.setPreferredSize(new Dimension(200,20));
-        westPanel.add(chooseLocalDirectory,BorderLayout.NORTH);
+        chooseLocalDirectory.setPreferredSize(buttonDimension);
+        //westPanel.add(chooseLocalDirectory,BorderLayout.NORTH);
+        westPanel.add(chooseLocalDirectory);
+
+        //addDevice
+        addDevice = new JButton("Добавить устройство");
+        addDevice.setPreferredSize(buttonDimension);
+        westPanel.add(addDevice);
+
         add(westPanel,BorderLayout.WEST);
 
 
 
+
+
         // center panel (scroll)
+
+
+
+        // chooseLocalDirectory Lablel
         pathLabel = new JLabel("path");
+        pathLabel.setBorder(BorderFactory.createEtchedBorder());
         //pathLabel.setBorder(BorderFactory.createEtchedBorder(Color.gray,Color.gray));
-        centerPanel.add(pathLabel,BorderLayout.CENTER);
-        add(centerScrollPane);
+        centerPanel.add(pathLabel);
+
+
+        // combobox for device
+//        JComboBox<String> devicesBox = new JComboBox<>();
+
+//        JMenu devicesMenu = new JMenu();
+//        devicesMenu.setBorder(BorderFactory.createEtchedBorder());
+//        for(TempDevice device : devicesList ) {
+//           // devicesBox.addItem(device.getName() + " | " + device.getAdress()); //  TODO: переделается на нормальный экземпляр
+//            devicesMenu.add(device.getName() + " | " + device.getAdress());
+//        }
+//
+//        centerPanel.add(devicesMenu, BorderLayout.CENTER);
+
+//        devicesBox.setBorder(BorderFactory.createEtchedBorder());
+//        devicesBox.setEditable(false);
+//        for(TempDevice device : devicesList ) {
+//           // devicesBox.addItem(device.getName() + " | " + device.getAdress()); //  TODO: переделается на нормальный экземпляр
+//            devicesBox.addItem(device.getName() + " | " + device.getAdress());
+//        }
+//        centerPanel.add(devicesBox, BorderLayout.CENTER);
+
+        JLabel jCountOfDevices = new JLabel("Всего устройств: " + devicesList.size());
+        jCountOfDevices.setBorder(BorderFactory.createEtchedBorder());
+        centerPanel.add(jCountOfDevices,BorderLayout.CENTER);
+
+
+
+        add(centerScrollPane,BorderLayout.CENTER);
 
 
 
@@ -61,6 +135,13 @@ public class SettingsPanel extends JPanel {
                 //System.out.println(localDirectory.getPath());
                 pathLabel.setText(localDirectory.getPath());
 
+            }
+        });
+
+        addDevice.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new DeviceSettings(devicesList);
             }
         });
 

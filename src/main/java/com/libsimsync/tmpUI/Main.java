@@ -10,7 +10,7 @@ public class Main {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new SettingsFrame("Sync");
+                new MainFrame("Sync");
             }
         });
     }

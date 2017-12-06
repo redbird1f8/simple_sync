@@ -1,9 +1,10 @@
 package com.libsimsync.config;
 
+import java.io.Serializable;
 import java.net.InetAddress;
 import java.util.UUID;
 
-public class Device {
+public class Device implements Serializable {
 
     private String name;
     private UUID id;

@@ -48,19 +48,19 @@ public class SettingsPanel extends JComponent {
 
 
         JPanel westPanel = new JPanel();
-        westPanel.setBorder(BorderFactory.createEmptyBorder());
+        westPanel.setBorder(BorderFactory.createEmptyBorder()); // Todo 1
         westPanel.setLayout(new GridLayout(4,1));
         //westPanel.setLayout(new BorderLayout());
 
 
         JPanel centerPanel = new JPanel();
-        centerPanel.setBorder(BorderFactory.createEmptyBorder());
+        centerPanel.setBorder(BorderFactory.createEmptyBorder()); // Todo 2
         centerPanel.setLayout(new GridLayout(4,1));
 
         //centerPanel.setLayout(new BorderLayout());
         JScrollPane centerScrollPane = new JScrollPane(centerPanel);
 
-        centerPanel.setBorder(BorderFactory.createEmptyBorder());
+        //centerScrollPane.setBorder(BorderFactory.createMatteBorder(0,20,0,0, centerPanel.getBackground())); //Todo 3
 
 
 
@@ -90,7 +90,7 @@ public class SettingsPanel extends JComponent {
 
         // chooseLocalDirectory Lablel
         pathLabel = new JLabel("path");
-        pathLabel.setBorder(BorderFactory.createEtchedBorder());
+        pathLabel.setBorder(BorderFactory.createEtchedBorder()); //Todo 4
         //pathLabel.setBorder(BorderFactory.createEtchedBorder(Color.gray,Color.gray));
         centerPanel.add(pathLabel);
 
@@ -116,7 +116,7 @@ public class SettingsPanel extends JComponent {
 //        centerPanel.add(devicesBox, BorderLayout.CENTER);
 
         JLabel jCountOfDevices = new JLabel("Всего устройств: " + devicesList.size());
-        jCountOfDevices.setBorder(BorderFactory.createEtchedBorder());
+        jCountOfDevices.setBorder(BorderFactory.createEtchedBorder()); // Todo 5
         centerPanel.add(jCountOfDevices,BorderLayout.CENTER);
 
 

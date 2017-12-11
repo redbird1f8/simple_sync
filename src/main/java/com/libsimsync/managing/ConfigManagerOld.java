@@ -17,11 +17,11 @@ import java.util.List;
  * Rule rule, Device device, LinkedList<Share> shareList - объекты, от которых
  * зависит состояние config наданный момент
  *
- *  Сделать новый  ConfigManager
+ *  Сделать новый  ConfigManagerOld
  *
  */
 
- public class ConfigManager {
+ public class ConfigManagerOld {
     // Возможно, я создал свой антипаттерн (надеюсь его назовут в мою честь)
 
 
@@ -60,20 +60,20 @@ import java.util.List;
      * Запись конфига в xml файл.
      * (То, что происходит при нажатии кнопки "Принять")
      */
-    public static void applyConfig() { // apply config
-        CommonConfigXMLWriter commonConfigXMLWriter = new CommonConfigXMLWriter();
-        CommonConfig config = createConfig(); // использует текущее состояние
-
-        try {
-            commonConfigXMLWriter.write(config);
-
-        } catch (XMLStreamException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
+//    public static void applyConfig() { // apply config
+//        CommonConfigXMLWriter commonConfigXMLWriter = new CommonConfigXMLWriter();
+//        CommonConfig config = createConfig(); // использует текущее состояние
+//
+//        try {
+//            commonConfigXMLWriter.write(config);
+//
+//        } catch (XMLStreamException e) {
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//
+//    }
 
     /**
      * Получение  сonfig из xml файла
@@ -93,23 +93,23 @@ import java.util.List;
         } catch (IOException e) {
             System.err.println(e.getMessage()); // TODO: убрать в релизе
         }
-        rule = config.getRules();
+        //rule = config.getRules();
         device = config.thisDevice();
         shareList = config.getShareList();
         return config;
     }
 
-    /**
-     *  Метод создает config, основываясь на текущем состоянии полей класса ConfigManager(rule,device,shareList).
-     *  Это позволяет изменять эти поля, подразумевая автоматическое изменение(получение) обЪекта класса CommonConfig.
-     *
-     * @return объект класса CommonConfig
-     */
-    private static CommonConfig createConfig() {//(Rule rule, Device device, LinkedList<Share> shareList) { //List
-        CommonConfig commonConfig = new CommonConfig(rule,device,shareList);
-
-        return commonConfig;
-    }
+//    /**
+//     *  Метод создает config, основываясь на текущем состоянии полей класса ConfigManagerOld(rule,device,shareList).
+//     *  Это позволяет изменять эти поля, подразумевая автоматическое изменение(получение) обЪекта класса CommonConfig.
+//     *
+//     * @return объект класса CommonConfig
+//     */
+//    private static CommonConfig createConfig() {//(Rule rule, Device device, LinkedList<Share> shareList) { //List
+//        //CommonConfig commonConfig = new CommonConfig(rule,device,shareList);
+//
+//       // return commonConfig;
+//    }
 
 
 

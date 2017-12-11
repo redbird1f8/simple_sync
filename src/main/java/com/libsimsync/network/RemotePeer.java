@@ -50,7 +50,7 @@ public class RemotePeer {
     File             currentOutputFile       = null;
     File             currentInputFile        = null;
     BlockSender      blockSender             = new BlockSender();
-    PathRouter pathRouter = new SimplePathRouter();//ToDo jhj fjdjgdl
+    PathRouter pathRouter = new SimplePathRouter("./");//ToDo jhj fjdjgdl
     LinkedList<FileTransfer> FileQueue = new LinkedList<>();
     class OutboundConnectionInitializer extends ChannelInitializer<SocketChannel>{
         int channelNumber;

@@ -26,7 +26,7 @@ public class SyncPanel extends JPanel {
 
         workingPanel.setLayout(null);
         syncButton = new SyncButton("SYNC");
-        syncButton.setBounds(dimension.width/2 - syncButton.getWidth()/3,
+        syncButton.setBounds(dimension.width/2 - syncButton.getWidth()/2,
                 15, syncButton.getWidth(), syncButton.getHeight());//120 30
         workingPanel.add(syncButton);
 

@@ -6,6 +6,7 @@ package com.libsimsync.managing;
 public class TempDevice {
     private String name;
     private String address;
+    
 
     public TempDevice(String name, String adress) {
         this.name = name;

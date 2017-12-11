@@ -34,6 +34,8 @@ public class SettingsPanel extends JComponent {
 
     JButton chooseLocalDirectory;
     JButton addDevice;
+    JButton deleteAllDevices;
+
     String path;
     JLabel pathLabel;
     JTextField pathField;
@@ -78,9 +80,16 @@ public class SettingsPanel extends JComponent {
         addDevice.setPreferredSize(buttonDimension);
         westPanel.add(addDevice);
 
+
+
+
+        //delete all devices
+        deleteAllDevices = new JButton("Очистить список устройств");
+        deleteAllDevices.setPreferredSize(buttonDimension);
+        westPanel.add(deleteAllDevices);
+
+
         add(westPanel,BorderLayout.WEST);
-
-
 
 
 

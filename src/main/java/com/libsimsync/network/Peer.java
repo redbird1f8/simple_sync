@@ -93,7 +93,7 @@ public class Peer{
         }
     }
     PeerEventAdapter peerEventAdapter = new PeerEventAdapter();
-    PathRouter pathRouter = new SimplePathRouter();
+    PathRouter pathRouter = new SimplePathRouter("./");
 
     public void setPathRouter(PathRouter pathRouter){
         this.pathRouter = pathRouter;

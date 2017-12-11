@@ -4,23 +4,44 @@ import com.libsimsync.config.FileEntry;
 import com.libsimsync.config.FileInfo;
 
 import javax.swing.event.PopupMenuListener;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.UUID;
 
-public class exampleForNikita implements PeerManagerHandler{
-    PeerManager peerManager = new PeerManager();
-    String root;
-    HashMap<String,FileInfo> lastFileInfo = new HashMap<>();
-    public exampleForNikita(String root){
+public class Synchronizer implements PeerManagerHandler{
+    private PeerManager peerManager = new PeerManager();
+    private String root;
+    private HashMap<String,FileInfo> lastFileInfo = new HashMap<>();
+    private FileManager fileManger;
+    public Synchronizer(String root){
         this.root = root;
-        peerManager.setRootDirectory(root);
+        fileManger = new FileManager(root);
+        peerManager.setPathRouter(fileManger);
         peerManager.setPeerManagerHandler(this);//Теперь методы этого класса будут вызываться пир мэнэджером
+    }
+    public void LoadFileInfo(String path){
+        try {
+            ObjectInputStream ois = new ObjectInputStream(new FileInputStream(path));
+            lastFileInfo = (HashMap<String,FileInfo>)ois.readObject();
+            ois.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+    public void SaveFileInfo(String path){
+        try {
+            ObjectOutputStream ois = new ObjectOutputStream(new FileOutputStream(path));
+            ois.writeObject(lastFileInfo);
+            ois.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     //Тебе предстоит реализовать например изменение корневой дирректории извне.
     //Для этого есть сеттер у peerManager
@@ -34,9 +55,10 @@ public class exampleForNikita implements PeerManagerHandler{
      * @param remotePeer пир, куда нам надо послать файлинфы
      */
     @Override
+
     public void FileInfoRequested(RemotePeer remotePeer) {
         try {
-            FileInfoUpdate(new File(root), "");
+            FileInfoUpdate(new File(root), "", null);
         }catch(java.io.IOException e) {
 
         }
@@ -45,7 +67,7 @@ public class exampleForNikita implements PeerManagerHandler{
         peerManager.sendFileInfo(toSend,remotePeer);
 
     }
-    private void FileInfoUpdate(File folder, String path) throws java.io.IOException{
+    private void FileInfoUpdate(File folder, String path, UUID shareID) throws java.io.IOException{
         //lastFileInfo.clear();
         for (FileInfo i : lastFileInfo.values()){
             i.isDeleted = true;
@@ -55,14 +77,14 @@ public class exampleForNikita implements PeerManagerHandler{
             {
                 if (entry.isDirectory())
                 {
-                    FileInfoUpdate(entry, path + '/' + entry.getName());
+                    FileInfoUpdate(entry, path + '/' + entry.getName(),shareID);
                     continue;
                 }
                 System.err.println(path + '/' + entry.getName());
                 if(lastFileInfo.containsKey(path + '/' + entry.getName()) ) {
                     lastFileInfo.get(path + '/' + entry.getName()).isDeleted = false;
                 }else{
-                    lastFileInfo.put(path + '/' + entry.getName(), new FileInfo(root + path + '/' + entry.getName(), path + '/' + entry.getName()));
+                    lastFileInfo.put(path + '/' + entry.getName(), fileManger.getFileInfo(path + '/' + entry.getName(),shareID));
                 }
             }
 
@@ -88,20 +110,20 @@ public class exampleForNikita implements PeerManagerHandler{
      * @param remotePeer
      */
     @Override
-    public void FileInfoArrived(LinkedList<FileInfo> fileInfos, RemotePeer remotePeer) { // Why LinkedList???
+    public void FileInfoArrived(LinkedList<FileInfo> fileInfos, RemotePeer remotePeer) {
 
         try {
-            FileInfoUpdate(new File(root),"");
+            FileInfoUpdate(new File(root),"",null);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.err.println("FileInfoArrived");
+        //System.err.println("FileInfoArrived");
         FileInfo f;
        for(FileInfo i:fileInfos){
            i.origin = remotePeer;
            if(lastFileInfo.containsKey(i.relPath)) {
                f = lastFileInfo.get(i.relPath);
-               System.err.println(f.lastModifiedDate - i.lastModifiedDate);
+               //System.err.println(f.lastModifiedDate - i.lastModifiedDate);
                if(i.isDeleted || f.lastModifiedDate < i.lastModifiedDate - 10000) {
                    f.origin = i.origin;
                    f.lastModifiedDate = i.lastModifiedDate;
@@ -111,12 +133,12 @@ public class exampleForNikita implements PeerManagerHandler{
                 lastFileInfo.put(i.relPath, i);
            }
        }
-        System.err.println(lastFileInfo.size());
+        //System.err.println(lastFileInfo.size());
        for(FileInfo i : lastFileInfo.values()){
            try {
                if(i.origin != null) {
                    if(!i.isDeleted)peerManager.requestFile(i, null, remotePeer);
-                   else peerManager.deleteFile(i,null);
+                   else fileManger.deleteFile(i,null);
                }
 
 
@@ -139,7 +161,7 @@ public class exampleForNikita implements PeerManagerHandler{
      * для тех, которые надо скачать. Все.
      */
     public void sync() throws FileNotFoundException, java.io.IOException{
-        FileInfoUpdate(new File(root),"");
+        FileInfoUpdate(new File(root),"",null);
         peerManager.requestFileInfo();
         //peerManager.requestFileInfo();                                                                 //пока что проэмиттируем запрос инфы
         //peerManager.requestFile(new FileEntry(Paths.get("/test.bmp"),null),null); //и запрос якобы нужного нам файла
@@ -165,4 +187,6 @@ public class exampleForNikita implements PeerManagerHandler{
     public void connect(String host){
         peerManager.connect(host);
     }
+
+
 }

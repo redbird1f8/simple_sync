@@ -1,15 +1,5 @@
 package com.libsimsync.network;
 
-import io.netty.bootstrap.ServerBootstrap;
-import io.netty.buffer.ByteBuf;
-import io.netty.channel.*;
-import io.netty.channel.nio.NioEventLoopGroup;
-import io.netty.channel.socket.SocketChannel;
-import io.netty.channel.socket.nio.NioServerSocketChannel;
-import io.netty.channel.socket.nio.NioSocketChannel;
-import io.netty.handler.codec.serialization.ClassResolvers;
-import io.netty.handler.codec.serialization.ObjectDecoder;
-import io.netty.handler.codec.serialization.ObjectEncoder;
 import java.util.Scanner;
 
 import java.io.FileNotFoundException;
@@ -20,17 +10,20 @@ import static java.lang.Thread.sleep;
 
             public static void main(String[] args) throws InterruptedException, FileNotFoundException, java.io.IOException {
 
-                exampleForNikita a = new exampleForNikita("/Users/Nickitakalinkin/Documents/ExceptStudy/KPO/simple_sync/src/main/java/A");
-               // exampleForNikita b = new exampleForNikita("./B");
-                exampleForNikita b = new exampleForNikita("/Users/Nickitakalinkin/Documents/ExceptStudy/KPO/simple_sync/src/main/java/B");
+                Synchronizer a = new Synchronizer("C:/Users/Andrey/Desktop/KPO - Copy/untitled/A");
+                Synchronizer b = new Synchronizer("C:/Users/Andrey/Desktop/KPO - Copy/untitled/B");
 
                 a.listen();
+                a.LoadFileInfo("./AInfo");
                 b.connect("localhost");
                 Scanner in = new Scanner(System.in);
-                for(int i = 0; true; i++) {
-                    in.next();
+                for(;;) {
+                    if(in.next().equals("exit")) break;
                     b.sync();
                 }
+
+                a.SaveFileInfo("./AInfo");
+                return;
                 /*
                 Peer first =  new Peer();
                 Peer second = new Peer();

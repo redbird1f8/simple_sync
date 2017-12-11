@@ -37,7 +37,7 @@ public class SettingsPanel extends JComponent {
     String path;
     JLabel pathLabel;
     JTextField pathField;
-    File localDirectory;
+    File localDirectory = null;
 
 //    private  static final int HEIGHT = 200;
 //    private  static final int WIDTH = 200;
@@ -134,6 +134,7 @@ public class SettingsPanel extends JComponent {
                 LocalDirectoryChooser localDirectoryChooser = new LocalDirectoryChooser();
                 localDirectory = localDirectoryChooser.getChoosenDirectory();
                 //System.out.println(localDirectory.getPath());
+                if(localDirectory != null)
                 pathLabel.setText(localDirectory.getPath());
 
             }

@@ -17,6 +17,8 @@ import java.util.List;
  * Rule rule, Device device, LinkedList<Share> shareList - объекты, от которых
  * зависит состояние config наданный момент
  *
+ *  Сделать новый  ConfigManager
+ *
  */
 // есть вопрос по конструкторам
  public class ConfigManager {

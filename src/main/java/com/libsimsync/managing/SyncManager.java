@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Created by Nickitakalinkin on 01.12.17.
  */
-<<<<<<< HEAD
+
 public class SyncManager {
 
 
@@ -33,7 +33,7 @@ public class SyncManager {
 
         Iterator<FileEntry> iterator;
         for (Device device : share.getAcceptedDevices()) {
-            iterator = share.GetFileIterator();
+            iterator = share.getFileIterator();
             while (iterator.hasNext()) {
                 Sender.SendObjecet(iterator.next(), device);
             }
@@ -41,7 +41,7 @@ public class SyncManager {
 
     }
 }
-=======
+
 //public class SyncManager {
 //
 //    public static void syncShare() {
@@ -67,4 +67,3 @@ public class SyncManager {
 //
 //    }
 //}
->>>>>>> demo

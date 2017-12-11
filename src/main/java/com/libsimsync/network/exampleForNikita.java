@@ -88,7 +88,7 @@ public class exampleForNikita implements PeerManagerHandler{
      * @param remotePeer
      */
     @Override
-    public void FileInfoArrived(LinkedList<FileInfo> fileInfos, RemotePeer remotePeer) {
+    public void FileInfoArrived(LinkedList<FileInfo> fileInfos, RemotePeer remotePeer) { // Why LinkedList???
 
         try {
             FileInfoUpdate(new File(root),"");

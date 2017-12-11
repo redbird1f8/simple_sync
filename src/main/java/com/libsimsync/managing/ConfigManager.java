@@ -20,40 +20,17 @@ import java.util.List;
  *  Сделать новый  ConfigManager
  *
  */
-// есть вопрос по конструкторам
+
  public class ConfigManager {
     // Возможно, я создал свой антипаттерн (надеюсь его назовут в мою честь)
 
 
-     private static Rule rule ;
+
+
+     //private static Rule rule ;
      private static Device device;
      private static List<Share> shareList; // LinkedList?
 
-    /**
-     * Инициализация значением из XML (если такового нет, то стандартным значением)
-     */
-//    static {
-//       getConfig();
-//    }
-
-    /**
-     * Метод устанавливает правила синхронизации файлов.
-     *
-     * @param resolvingMethod  метод разрешения коллизий(локальные/внешние файлы)
-     * @param priority  приоритет в синхронизации
-     */
-    public static void setRule(ResolvingMethod resolvingMethod, boolean priority ) {
-         rule = RuleManager.createRule(resolvingMethod,priority);
-    } // need more setRule (for God "setRule")
-
-    /**
-     * Метод устанавливает правила синхронизации файлов.
-     * Использует стандартное значение для ResolvingMethod (метод разрешения коллизий)
-     * @param priority  приоритет в синхронизации
-     */
-    public static void setRule(boolean priority) { // use Local
-        rule  = RuleManager.setPriority(priority);
-    }
 
     /**
      * Установить имя для текущего устройства
@@ -64,13 +41,7 @@ import java.util.List;
         device = DeviceManager.setDevice(name);
     }
 
-    /**
-     * Пока метод не готов
-     * @param name самому интересно
-     */
-    public static void setShareList(String name) { // ?
-        shareList = ShareManager.getShareList(name); // пока не работает
-    }
+
 
 
     /**
@@ -110,7 +81,7 @@ import java.util.List;
      * (Возможно изменить модификатор доступа)
      * @return config - настройки из xml
      */
-     public static CommonConfig getConfig() { // default value = old value // was private (but why? What wrong with me)
+     public static CommonConfig getConfig() { // default value = old value //
         CommonConfigXMLReader commonConfigXMLReader = new CommonConfigXMLReader();
 
         CommonConfig config = new CommonConfig("My device"); // need default config

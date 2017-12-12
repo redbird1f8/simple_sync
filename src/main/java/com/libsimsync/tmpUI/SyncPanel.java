@@ -12,13 +12,14 @@ import java.net.UnknownHostException;
  */
 public class SyncPanel extends JPanel {
 
-    Dimension panelDimension = new Dimension(500,200);
+    Dimension panelDimension;
     InetAddress localIP;
 
     JLabel myIP = new JLabel("192.168.1.0");
-    SyncButton syncButton ;
+    SyncButton syncButton;
 
-    SyncPanel(Dimension dimension){
+    SyncPanel(Dimension dimension) {
+        panelDimension = dimension;
 
 
         setLayout(new BorderLayout());
@@ -26,10 +27,9 @@ public class SyncPanel extends JPanel {
 
         workingPanel.setLayout(null);
         syncButton = new SyncButton("SYNC");
-        syncButton.setBounds(dimension.width/2 - syncButton.getWidth()/2,
+        syncButton.setBounds(dimension.width / 2 - syncButton.getWidth() / 2,
                 15, syncButton.getWidth(), syncButton.getHeight());//120 30
         workingPanel.add(syncButton);
-
 
 
         try {
@@ -39,16 +39,13 @@ public class SyncPanel extends JPanel {
         }
 
 
+        myIP.setText("Ваш IP: " + localIP.getHostAddress());
+        myIP.setBounds(panelDimension.width/2 - syncButton.getWidth()/4, panelDimension.height-50,
+                panelDimension.width, 10);
 
-        myIP.setText(localIP.getHostAddress());
-        myIP.setBounds(200,180,100, 10);
+        workingPanel.add(myIP);
 
-         workingPanel.add(myIP);
-
-        add(workingPanel,BorderLayout.CENTER);
-
-
-
+        add(workingPanel, BorderLayout.CENTER);
 
 
     }

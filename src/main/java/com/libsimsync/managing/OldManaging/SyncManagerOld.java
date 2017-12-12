@@ -1,9 +1,10 @@
-package com.libsimsync.managing;
+package com.libsimsync.managing.OldManaging;
 
 import com.libsimsync.config.CommonConfig;
 import com.libsimsync.config.Device;
 import com.libsimsync.config.FileEntry;
 import com.libsimsync.config.Share;
+
 
 import java.util.Iterator;
 import java.util.List;

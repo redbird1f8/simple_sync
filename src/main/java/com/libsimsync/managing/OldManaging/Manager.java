@@ -1,4 +1,4 @@
-package com.libsimsync.managing;
+package com.libsimsync.managing.OldManaging;
 import com.libsimsync.config.methods.ChooseLocal;
 import com.libsimsync.network.*;
 import com.*;

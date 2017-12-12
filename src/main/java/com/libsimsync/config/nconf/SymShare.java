@@ -7,22 +7,22 @@ public class SymShare {
     List<SyncDevice> acceptedDevices;
     String rootPath;
 
-    public SymShare(){
+    public SymShare() {
         acceptedDevices = new ArrayList<>();
         rootPath = System.getProperty("user.dir"); //??
     }
 
-    public SymShare(String root){
+    public SymShare(String root) {
         rootPath = root;
         acceptedDevices = new ArrayList<>();
     }
 
-    public SymShare(String root, List<SyncDevice> devices){
+    public SymShare(String root, List<SyncDevice> devices) {
         rootPath = root;
         acceptedDevices = devices;
     }
 
-    public List<SyncDevice> getDevices(){
+    public List<SyncDevice> getDevices() {
         return acceptedDevices;
     }
 
@@ -30,6 +30,9 @@ public class SymShare {
         return rootPath;
     }
 
+    public void addDevice(SyncDevice newDevice) {
+        acceptedDevices.add(newDevice);
+    }
 
     public void setDevices(List<SyncDevice> acceptedDevices) {
         this.acceptedDevices = acceptedDevices;

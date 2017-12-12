@@ -1,13 +1,11 @@
-package com.libsimsync.managing;
+package com.libsimsync.managing.OldManaging;
 
 import com.libsimsync.config.*;
-import io.netty.util.NettyRuntime;
 
 
 import javax.xml.stream.XMLStreamException;
 import java.io.IOException;
 import java.nio.file.Path;
-import java.util.LinkedList;
 import java.util.List;
 
 /**

@@ -1,4 +1,4 @@
-package com.libsimsync.managing;
+package com.libsimsync.managing.OldManaging;
 
 import com.libsimsync.config.ResolvingMethod;
 import com.libsimsync.config.Rule;

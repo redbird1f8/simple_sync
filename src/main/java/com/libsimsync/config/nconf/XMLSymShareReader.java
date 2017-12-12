@@ -17,7 +17,8 @@ import java.util.LinkedList;
 import java.util.UUID;
 
 public class XMLSymShareReader {
-    static String sharePath = System.getProperty("user.dir");
+   // static String sharePath = System.getProperty("user.dir"); // потом
+   static String sharePath = System.getProperty("user.dir");
 
     public static SymShare read() throws IOException, XMLStreamException {
         Share share = null;

@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.nio.file.FileSystems;
 
 public class XMLSymShareWriter {
+    //static String shareFilesPath = System.getProperty("user.dir");
     static String shareFilesPath = System.getProperty("user.dir");
 
     public static void write(SymShare share) throws XMLStreamException, IOException {

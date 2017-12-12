@@ -1,5 +1,7 @@
 package com.libsimsync.tmpUI;
 
+import com.libsimsync.config.nconf.SyncDevice;
+import com.libsimsync.managing.ConfigManager;
 import com.libsimsync.managing.TempDevice;
 
 import javax.swing.*;
@@ -18,14 +20,15 @@ public class DeviceSettings extends JDialog {
     JPanel additionPanel = new JPanel();
 
     //Dimension dim = new Dimension(300,200);
-
-    DeviceSettings(JFrame owner,List<TempDevice> deviceList,JLabel countOfDevices) {
+    //DeviceSettings(JFrame owner,List<TempDevice> deviceList,JLabel countOfDevices)
+    DeviceSettings(JFrame owner,JLabel countOfDevices) {
 
         super(owner, "Настройки устройств",true);
-
+        List<SyncDevice> deviceList = ConfigManager.getSymShare().getDevices();
         DefaultListModel listModel = new DefaultListModel();
         JList list = new JList(listModel);
-        for (TempDevice device : deviceList) {
+
+        for (SyncDevice device : deviceList) {
             //listModel.addElement(device.getName() + " || " + device.getAdress());
             listModel.addElement(device.toString());
             //listModel.addElement(device);
@@ -55,13 +58,13 @@ public class DeviceSettings extends JDialog {
 
                 if(resAddition.isApply()) {
 
-                    TempDevice tempDevice = new TempDevice(resAddition.getName(), resAddition.getAddress());
+                    SyncDevice syncDevice = new SyncDevice(resAddition.getName(), resAddition.getAddress());
 
-                    listModel.addElement(tempDevice.toString());
-                    deviceList.add(tempDevice);// look here
+                    listModel.addElement(syncDevice.toString());
+                    deviceList.add(syncDevice);// look here
 
-                    for (TempDevice td : deviceList)
-                        System.out.println(td.toString());
+                    for (SyncDevice sd : deviceList)  // TODO delete this
+                        System.out.println(sd.toString());
 
                     countOfDevices.setText("Всего устройств: " + deviceList.size());
 
@@ -87,7 +90,7 @@ public class DeviceSettings extends JDialog {
 
 
                     for (int i = 0; i < deviceList.size(); i++) {
-                        TempDevice tempDevice = TempDevice.fromString(deletedString);
+                        SyncDevice tempDevice = SyncDevice.fromString(deletedString);
 
 //                        System.out.println("\n important ");
 //                        System.out.println(deviceList.get(i));

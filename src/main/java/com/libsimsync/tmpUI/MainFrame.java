@@ -1,5 +1,7 @@
 package com.libsimsync.tmpUI;
 
+import com.libsimsync.network.Synchronizer;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
@@ -15,13 +17,17 @@ public class MainFrame extends JFrame {
     SettingsPanel settingsPanel;
     Dimension dimension = new Dimension(500,200);
 
+    Synchronizer synchronizer;
+
     ImageIcon image;
 
-    public MainFrame(String name) {
+    public MainFrame(String name, Synchronizer synchronizer) {
 
         image = new ImageIcon("./Pictures/ic05.png");
 
         setIconImage(image.getImage());
+
+        this.synchronizer = synchronizer;
 
         jTabbedPane = new JTabbedPane();
 
@@ -33,7 +39,7 @@ public class MainFrame extends JFrame {
 
 
 
-        SyncPanel syncPanel = new SyncPanel(dimension);
+        SyncPanel syncPanel = new SyncPanel(dimension, synchronizer);
         settingsPanel = new SettingsPanel(this,500,200);
 
         jTabbedPane.addTab("Главная",syncPanel); // заглушка
@@ -43,10 +49,13 @@ public class MainFrame extends JFrame {
         //add(settingsPanel,BorderLayout.CENTER);
 
 
+
+
         addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
                 super.windowClosing(e);
+                synchronizer.SaveFileInfo("./Inf");
                 System.out.println("Окно закрыто");
             }
         });

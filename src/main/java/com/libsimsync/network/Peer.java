@@ -55,7 +55,7 @@ public class Peer{
                     for(int i = 0; i < connections.size(); i++){
                         if(connections.get(i).host.toLowerCase().equals(ch.remoteAddress().getAddress().toString())){
                             connections.get(i).setInputChannel((NioSocketChannel) ch);
-                            System.err.println(debugName + ": found it!");
+                            //System.err.println(debugName + ": found it!");
                             p.addLast("handler",connections.get(i).dataInHandler);
                             break;
                         }
@@ -65,7 +65,7 @@ public class Peer{
                     for(int i = 0; i < connections.size(); i++){
                         if(connections.get(i).host.toLowerCase().equals(ch.remoteAddress().getAddress().toString())){
                             connections.get(i).setOutputChannel((NioSocketChannel)ch);
-                            System.err.println(debugName + ": found it!");
+                            //System.err.println(debugName + ": found it!");
                             p.addLast("handler",connections.get(i).dataOutHandler);
                             break;
                         }
@@ -108,7 +108,7 @@ public class Peer{
         rp.debugName = debugName;
         connections.add(rp);
         rp.setPathRouter(pathRouter);
-        System.err.println(connections.size() + " peers are connected");
+        //System.err.println(connections.size() + " peers are connected");
     }
     public void signFor(RemotePeer rp){
         rp.NetworkEvents.addListener(peerEventAdapter);

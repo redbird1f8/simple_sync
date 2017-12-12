@@ -93,13 +93,13 @@ public class RemotePeer {
             else if(channelNumber == 1) {
                 inputChannel = (NioSocketChannel) ctx.channel();
                 inputChannel.pipeline().addFirst("framer", new FixedLengthFrameDecoder(1024));
-                System.err.println(debugName + ": inputChannelIsConnected!");
+                //System.err.println(debugName + ": inputChannelIsConnected!");
                 inputChannelConnected = true;
             }
             else if(channelNumber == 2) {
                 outputChannel = (NioSocketChannel) ctx.channel();
                 outputChannel.pipeline().addFirst("framer", new FixedLengthFrameDecoder(1024));
-                System.err.println(debugName + ": outputChannelIsConnected!");
+                //System.err.println(debugName + ": outputChannelIsConnected!");
                 outputChannelConnected = true;
             }
             if(commandChannelConnected && inputChannelConnected && outputChannelConnected){
@@ -113,7 +113,7 @@ public class RemotePeer {
                 Command com = (Command)msg;
                 //System.err.println(debugName + ": CommandID: " + com.commandID);
                 if(com.commandID == 0){
-                    System.err.println(msg);
+//                    System.err.println(msg);
                 }
                 else if(com.commandID == 1) connectData();
                 else if(com.commandID == 2) {
@@ -129,7 +129,7 @@ public class RemotePeer {
                 byte[] dest = new byte[1024];
                 if(firstBlock){
                      currentFileSize = b.getLong(0);
-                     System.err.println("in size" + currentFileSize);
+//                     System.err.println("in size" + currentFileSize);
                      b.readBytes(dest);
                      currentInputFileStream.write(dest,8,1016);
                      firstBlock = false;
@@ -158,7 +158,7 @@ public class RemotePeer {
         public void sendFirst() throws Exception {
             byte[] block = new byte[1024];
             long length = currentOutputFile.length();
-            System.err.println("out size" + length);
+//            System.err.println("out size" + length);
             if((currentOutputFileStream.read(block,8,1016)) > 0) {
                 ByteBuf toSend = Unpooled.wrappedBuffer(block);
                 toSend.setLong(0,length);
@@ -196,7 +196,7 @@ public class RemotePeer {
             for(int i = 0; i < dirs.length - 1; i++){
                 parentDirs +=  dirs[i] + '/';
             }
-            System.err.println("parent dir - " + parentDirs);
+//            System.err.println("parent dir - " + parentDirs);
             File parentDir = new File(parentDirs);
             parentDir.mkdirs();
             currentInputFileStream = new DataOutputStream(new FileOutputStream(currentInputFile));
@@ -213,7 +213,7 @@ public class RemotePeer {
         this.commandChannel = commandChannel;
         this.host = commandChannel.remoteAddress().getAddress().toString();
         this.port = commandChannel.remoteAddress().getPort();
-        System.err.println(port);
+//        System.err.println(port);
         NetworkEvents = new NetworkEventProducer();
     }
     public RemotePeer(String host, int port){
@@ -243,11 +243,11 @@ public class RemotePeer {
 
     }
     public void setInputChannel(NioSocketChannel channel){
-        System.err.println(debugName + ": DataInChannel set");
+//        System.err.println(debugName + ": DataInChannel set");
         inputChannel = channel;
     }
     public void setOutputChannel(NioSocketChannel channel){
-        System.err.println(debugName + ": DataOutChannel set");
+//        System.err.println(debugName + ": DataOutChannel set");
         outputChannel = channel;
     }
     public void sendObject(Object msg){
@@ -274,7 +274,7 @@ public class RemotePeer {
     }
     public void answerRequest(String name, UUID shareID) throws Exception {
         currentOutputFile       = new File(pathRouter.getAbsolutePath(shareID,name));
-        System.err.println("sending file" + pathRouter.getAbsolutePath(shareID,name));
+//        System.err.println("sending file" + pathRouter.getAbsolutePath(shareID,name));
         currentOutputFileStream = new DataInputStream(new FileInputStream(currentOutputFile));
         blockSender.sendFirst();
     }
@@ -308,7 +308,7 @@ public class RemotePeer {
         if(FileQueue.size() == 1) {
             ft.start();
         }
-        System.err.println("Transmission requested " + pathRouter.getAbsolutePath(ShareID,name));
+//        System.err.println("Transmission requested " + pathRouter.getAbsolutePath(ShareID,name));
 
     }
     /**

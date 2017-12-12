@@ -15,7 +15,7 @@ import java.util.ArrayList;
  */
 public class ConfigManager {
 
-    private static volatile SymShare symShare = new SymShare(); //возможно будет Синглтон
+    private static volatile SymShare symShare = new SymShare(); //возможно будет нормальный Синглтон
     private boolean dirChoosen ;
 
     public static SymShare getSymShare() {
@@ -24,6 +24,10 @@ public class ConfigManager {
 
     public static int getDeviceCount() {
         return symShare.getDevices().size();
+    }
+
+    public static String getPath() {
+        return symShare.getRootPath();
     }
 
     public static void getConfigFromXML() {

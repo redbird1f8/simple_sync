@@ -12,21 +12,29 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.UUID;
 
-public class Synchronizer implements PeerManagerHandler{
+public class Synchronizer implements PeerManagerHandler {
     private PeerManager peerManager = new PeerManager();
+
+    public void setRoot(String root) {
+        this.root = root;
+        fileManger.setRoot(root);
+    }
+
     private String root;
-    private HashMap<String,FileInfo> lastFileInfo = new HashMap<>();
+    private HashMap<String, FileInfo> lastFileInfo = new HashMap<>();
     private FileManager fileManger;
-    public Synchronizer(String root){
+
+    public Synchronizer(String root) {
         this.root = root;
         fileManger = new FileManager(root);
         peerManager.setPathRouter(fileManger);
         peerManager.setPeerManagerHandler(this);//Теперь методы этого класса будут вызываться пир мэнэджером
     }
-    public void LoadFileInfo(String path){
+
+    public void LoadFileInfo(String path) {
         try {
             ObjectInputStream ois = new ObjectInputStream(new FileInputStream(path));
-            lastFileInfo = (HashMap<String,FileInfo>)ois.readObject();
+            lastFileInfo = (HashMap<String, FileInfo>) ois.readObject();
             ois.close();
         } catch (IOException e) {
             e.printStackTrace();
@@ -34,7 +42,12 @@ public class Synchronizer implements PeerManagerHandler{
             e.printStackTrace();
         }
     }
-    public void SaveFileInfo(String path){
+
+    public void SaveFileInfo(String path) {
+
+        for (FileInfo i : lastFileInfo.values()) {
+            i.origin = null;
+        }
         try {
             ObjectOutputStream ois = new ObjectOutputStream(new FileOutputStream(path));
             ois.writeObject(lastFileInfo);
@@ -47,7 +60,6 @@ public class Synchronizer implements PeerManagerHandler{
     //Для этого есть сеттер у peerManager
 
     /**
-     *
      * Этот метод вызывается, когда удаленный пир запросил у нас файл инфо.
      * Надо их ему послать. Для этого в пир-мэнеджере предусмотрен метод
      * sendFileInfo
@@ -57,41 +69,62 @@ public class Synchronizer implements PeerManagerHandler{
     @Override
 
     public void FileInfoRequested(RemotePeer remotePeer) {
+
+        System.err.println("before==========");
+        for (FileInfo i : lastFileInfo.values()) {
+            System.err.println(i.filePath + "   " + i.isDeleted);
+        }
+        System.err.println("before==========");
         try {
-            FileInfoUpdate(new File(root), "", null);
-        }catch(java.io.IOException e) {
+            StartInfoUpdate(new File(root), "", null);
+        } catch (java.io.IOException e) {
 
         }
         LinkedList<FileInfo> toSend = new LinkedList<>(lastFileInfo.values());
 
-        peerManager.sendFileInfo(toSend,remotePeer);
+        peerManager.sendFileInfo(toSend, remotePeer);
+
+        System.err.println("after==========");
+        for (FileInfo i : lastFileInfo.values()) {
+            System.err.println(i.filePath + "   " + i.isDeleted);
+        }
+        System.err.println("after==========");
 
     }
-    private void FileInfoUpdate(File folder, String path, UUID shareID) throws java.io.IOException{
-        //lastFileInfo.clear();
-        for (FileInfo i : lastFileInfo.values()){
+
+    private void StartInfoUpdate(File folder, String path, UUID shareID) throws IOException {
+        for (FileInfo i : lastFileInfo.values()) {
             i.isDeleted = true;
         }
-            File[] folders = folder.listFiles();
-            for (File entry : folders)
-            {
-                if (entry.isDirectory())
-                {
-                    FileInfoUpdate(entry, path + '/' + entry.getName(),shareID);
-                    continue;
-                }
-                System.err.println(path + '/' + entry.getName());
-                if(lastFileInfo.containsKey(path + '/' + entry.getName()) ) {
-                    lastFileInfo.get(path + '/' + entry.getName()).isDeleted = false;
-                }else{
-                    lastFileInfo.put(path + '/' + entry.getName(), fileManger.getFileInfo(path + '/' + entry.getName(),shareID));
-                }
-            }
+
+            FileInfoUpdate(folder, path, shareID);
 
 
     }
+
+    private void FileInfoUpdate(File folder, String path, UUID shareID) throws java.io.IOException {
+        //lastFileInfo.clear();
+
+        File[] folders = folder.listFiles();
+
+
+        for (File entry : folders) {
+            if (entry.isDirectory()) {
+                FileInfoUpdate(entry, path + '/' + entry.getName(), shareID);
+                continue;
+            }
+            System.err.println(path + '/' + entry.getName());
+            if (lastFileInfo.containsKey(path + '/' + entry.getName())) {
+                lastFileInfo.get(path + '/' + entry.getName()).isDeleted = false;
+            } else {
+                lastFileInfo.put(path + '/' + entry.getName(), fileManger.getFileInfo(path + '/' + entry.getName(), shareID));
+            }
+        }
+
+
+    }
+
     /**
-     *
      * Этот метод вызывается, когда нам прислали массив файлИнфо.
      * В нем надо сравнить полученнве файл инфо с тем, что есть
      * на компе. Вместе с листом файл инфо приходит RemotePeer,
@@ -113,40 +146,42 @@ public class Synchronizer implements PeerManagerHandler{
     public void FileInfoArrived(LinkedList<FileInfo> fileInfos, RemotePeer remotePeer) {
 
         try {
-            FileInfoUpdate(new File(root),"",null);
+            StartInfoUpdate(new File(root), "", null);
         } catch (IOException e) {
             e.printStackTrace();
         }
         //System.err.println("FileInfoArrived");
         FileInfo f;
-       for(FileInfo i:fileInfos){
-           i.origin = remotePeer;
-           if(lastFileInfo.containsKey(i.relPath)) {
-               f = lastFileInfo.get(i.relPath);
-               //System.err.println(f.lastModifiedDate - i.lastModifiedDate);
-               if(i.isDeleted || f.lastModifiedDate < i.lastModifiedDate - 10000) {
-                   f.origin = i.origin;
-                   f.lastModifiedDate = i.lastModifiedDate;
-                   f.isDeleted = i.isDeleted;
-               }
-           }else{
+        for (FileInfo i : fileInfos) {
+            i.origin = remotePeer;
+            if (lastFileInfo.containsKey(i.relPath)) {
+                f = lastFileInfo.get(i.relPath);
+                //System.err.println(f.lastModifiedDate - i.lastModifiedDate);
+                if (i.isDeleted || f.lastModifiedDate < i.lastModifiedDate - 10000) {
+                    f.origin = i.origin;
+                    f.lastModifiedDate = i.lastModifiedDate;
+                    f.isDeleted = i.isDeleted;
+                }
+            } else {
                 lastFileInfo.put(i.relPath, i);
-           }
-       }
+            }
+        }
         //System.err.println(lastFileInfo.size());
-       for(FileInfo i : lastFileInfo.values()){
-           try {
-               if(i.origin != null) {
-                   if(!i.isDeleted)peerManager.requestFile(i, null, remotePeer);
-                   else fileManger.deleteFile(i,null);
-               }
+        for (FileInfo i : lastFileInfo.values()) {
+            try {
+                if (i.origin != null) {
+                    if (!i.isDeleted) peerManager.requestFile(i, null, remotePeer);
+                    else fileManger.deleteFile(i, null);
+                }
 
 
-           }catch(java.io.IOException e ){
+            } catch (java.io.IOException e) {
 
-           }
+            }
 
-       }
+
+        }
+
 
     }
 
@@ -160,8 +195,9 @@ public class Synchronizer implements PeerManagerHandler{
      * 3.когда таймер дошел, проходится по списку файлоав(неважно где и как он хранится) и запрашивает реквест,
      * для тех, которые надо скачать. Все.
      */
-    public void sync() throws FileNotFoundException, java.io.IOException{
-        FileInfoUpdate(new File(root),"",null);
+    public void sync() throws FileNotFoundException, java.io.IOException {
+
+        StartInfoUpdate(new File(root), "", null);
         peerManager.requestFileInfo();
         //peerManager.requestFileInfo();                                                                 //пока что проэмиттируем запрос инфы
         //peerManager.requestFile(new FileEntry(Paths.get("/test.bmp"),null),null); //и запрос якобы нужного нам файла
@@ -169,12 +205,10 @@ public class Synchronizer implements PeerManagerHandler{
     }
 
     /**
-     *
      * Функция чисто для тестирования на одном компе,
      * в релизе это будет автоматически, скорее всего
-     *
      */
-    public void listen(){
+    public void listen() {
         peerManager.listen();
     }
 
@@ -182,9 +216,10 @@ public class Synchronizer implements PeerManagerHandler{
      * Пока что коннект делается извне. Вообще коннект
      * пир менеджера будешь вызывать ты, например в
      * обработчике какой-нибудь кнопички
+     *
      * @param host
      */
-    public void connect(String host){
+    public void connect(String host) {
         peerManager.connect(host);
     }
 

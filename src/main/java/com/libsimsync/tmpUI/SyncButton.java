@@ -14,6 +14,7 @@ public class SyncButton extends JButton {
     SyncButton(String name){
 
         setBorderPainted(false);
+        //setOpaque(false);
         setSize(icon.getIconWidth(),icon.getIconHeight());
         setIcon(icon);
 

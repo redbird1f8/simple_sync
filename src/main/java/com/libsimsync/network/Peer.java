@@ -108,7 +108,7 @@ public class Peer{
         rp.debugName = debugName;
         connections.add(rp);
         rp.setPathRouter(pathRouter);
-        //System.err.println(connections.size() + " peers are connected");
+        System.err.println(connections.size() + " peers are connected");
     }
     public void signFor(RemotePeer rp){
         rp.NetworkEvents.addListener(peerEventAdapter);

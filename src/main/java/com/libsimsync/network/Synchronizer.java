@@ -71,6 +71,7 @@ public class Synchronizer implements PeerManagerHandler {
     @Override
 
     public void FileInfoRequested(RemotePeer remotePeer) {
+        System.err.println(" FileInfoArrived");
          try {
             StartInfoUpdate(new File(root), "", null);
         } catch (java.io.IOException e) {

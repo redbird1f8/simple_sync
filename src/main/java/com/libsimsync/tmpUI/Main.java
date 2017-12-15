@@ -9,6 +9,8 @@ import javax.swing.*;
 import javax.xml.stream.XMLStreamException;
 import java.io.IOException;
 
+import static java.lang.Thread.sleep;
+
 /**
  * Created by Nickitakalinkin on 05.12.17.
  */
@@ -26,7 +28,7 @@ public class Main {
 
         ConfigManager.getConfigFromXML();
         Synchronizer synchronizer = new Synchronizer(ConfigManager.getPath());
-        Synchronizer second = new Synchronizer("/Users/Nickitakalinkin/Documents/ExceptStudy/KPO/FORTEST2");
+        Synchronizer second = new Synchronizer("C:\\Users\\Andrey\\Desktop\\Storage1");
         second.listen();
         //synchronizer.listen();
         //synchronizer.LoadFileInfo("./Inf");
@@ -42,11 +44,13 @@ public class Main {
                     new MainFrame("SyncManager",synchronizer);
                 }
             });
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new MainFrame("SyncManager2",second);
-            }
-        });
+            SwingUtilities.invokeLater(new Runnable() {
+                @Override
+                public void run() {
+                    new MainFrame("SyncManager2",second);
+                }
+            });
+
+
     }
 }

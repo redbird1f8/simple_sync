@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class ConfigManager {
 
     private static volatile SymShare symShare = new SymShare(); //возможно будет нормальный Синглтон
-    private boolean dirChoosen ;
+    private boolean dirChoosen;
 
     public static SymShare getSymShare() {
         return symShare;
@@ -38,7 +38,7 @@ public class ConfigManager {
         } catch (IOException e) {
             setDefaultConfig();
             applyConfig();
-           // getConfigFromXML();
+            // getConfigFromXML();
             //e.printStackTrace();
         } catch (XMLStreamException e) {
             e.printStackTrace();
@@ -47,9 +47,7 @@ public class ConfigManager {
     }
 
     public static void setDefaultConfig() {
-
-        symShare.setRootPath("FileDir");
-
+        symShare.setRootPath(System.getProperty("user.dir") + "/DefaultDirectory");
     }
 
     public static void changeDirectory(String path) {
@@ -72,6 +70,15 @@ public class ConfigManager {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static boolean containsDevice(SyncDevice deviceForVerification) {
+        for (SyncDevice device : symShare.getDevices())
+            if (device.isEqual(deviceForVerification))  return true;
+
+        return false;
+
+
     }
 
 

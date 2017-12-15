@@ -2,10 +2,8 @@ package com.libsimsync.tmpUI;
 
 import com.libsimsync.config.nconf.SyncDevice;
 import com.libsimsync.managing.ConfigManager;
-import com.libsimsync.managing.TempDevice;
 
 import javax.swing.*;
-import javax.xml.crypto.dsig.spec.DigestMethodParameterSpec;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -60,8 +58,11 @@ public class DeviceSettings extends JDialog {
 
                     SyncDevice syncDevice = new SyncDevice(resAddition.getName(), resAddition.getAddress());
 
-                    listModel.addElement(syncDevice.toString());
-                    deviceList.add(syncDevice);// look here
+                    if(!ConfigManager.containsDevice(syncDevice)) {
+                        listModel.addElement(syncDevice.toString());
+                        deviceList.add(syncDevice);// look here
+                    }
+
 
                     for (SyncDevice sd : deviceList)  // TODO delete this
                         System.out.println(sd.toString());

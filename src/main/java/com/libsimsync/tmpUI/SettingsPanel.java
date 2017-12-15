@@ -83,7 +83,7 @@ public class SettingsPanel extends JComponent {
         westPanel.add(chooseLocalDirectory);
 
         //addDevice
-        addDevice = new JButton("Добавить устройство");
+        addDevice = new JButton("Список устройств");
         addDevice.setPreferredSize(buttonDimension);
         westPanel.add(addDevice);
 

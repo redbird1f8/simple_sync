@@ -302,7 +302,6 @@ public class RemotePeer {
      * @throws FileNotFoundException
      */
     public void requestFile(String name, UUID ShareID) throws FileNotFoundException {
-        System.out.println("root   " + pathRouter.getAbsolutePath(ShareID,""));
         FileTransfer ft = new FileTransfer(pathRouter.getAbsolutePath(ShareID,name),name,ShareID);
         FileQueue.addLast(ft);
         if(FileQueue.size() == 1) {

@@ -20,6 +20,7 @@ public class LocalDirectoryChooser extends JComponent {
         if(ret == JFileChooser.APPROVE_OPTION) {
 
             choosenDirectory = jFileChooser.getSelectedFile();
+            if(!choosenDirectory.exists()) choosenDirectory.mkdirs();
         }
 
     }

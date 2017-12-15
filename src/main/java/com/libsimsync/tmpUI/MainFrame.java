@@ -23,8 +23,8 @@ public class MainFrame extends JFrame {
 
     public MainFrame(String name, Synchronizer synchronizer) {
 
-        image = new ImageIcon("./Pictures/ic05.png");
-
+        image = new ImageIcon("./Pictures/ic05r.png");
+        setTitle("Sync");
         setIconImage(image.getImage());
 
         this.synchronizer = synchronizer;

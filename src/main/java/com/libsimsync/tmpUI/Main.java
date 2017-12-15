@@ -27,7 +27,8 @@ public class Main {
         ConfigManager.getConfigFromXML();
         Synchronizer synchronizer = new Synchronizer(ConfigManager.getPath());
         synchronizer.listen();
-       // synchronizer.LoadFileInfo("./Inf");
+        synchronizer.LoadFileInfo("./Inf");
+
         for (SyncDevice device : ConfigManager.getSymShare().getDevices())
             synchronizer.connect(device.getIpAddress());
 

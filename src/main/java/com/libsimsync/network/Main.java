@@ -14,7 +14,7 @@ import static java.lang.Thread.sleep;
                 Synchronizer b = new Synchronizer("C:/Users/Andrey/Desktop/KPO - Copy/untitled/B");
 
                 a.listen();
-                a.LoadFileInfo("./AInfo");
+                //a.LoadFileInfo("./AInfo");
                 b.connect("localhost");
                 Scanner in = new Scanner(System.in);
                 for(;;) {

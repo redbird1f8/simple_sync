@@ -22,10 +22,8 @@ public class FileManager implements PathRouter{
     }
     public void deleteFile(FileInfo file, UUID shareID){
         File f = new File(getAbsolutePath(null,file.relPath));
-        System.err.println("delete" + f.getPath());
         f.delete();
 
-        System.err.println("NON deleted" + f.getPath() + " = " +  f.exists());
     }
     public FileInfo getFileInfo(String relativePath,UUID ShareID)throws java.io.IOException{
         FileInfo f = new FileInfo(getAbsolutePath(ShareID,relativePath),relativePath);

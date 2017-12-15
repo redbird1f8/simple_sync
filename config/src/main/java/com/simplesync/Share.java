@@ -1,8 +1,10 @@
 package com.simplesync;
 
 import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.UUID;
 
 public class Share {
     final List<Device> acceptedDevices;
@@ -50,6 +52,10 @@ public class Share {
         return uuid;
     }
 
+    public List<Device> getAcceptedDevices() {
+        return acceptedDevices;
+    }
+
     public void addDevice(Device device){
         acceptedDevices.add(device);
     }
@@ -65,17 +71,15 @@ public class Share {
         return false;
     }
 
-    public Iterator<FileEntry> GetFileIterator(){
+    public Iterator<FileEntry> getFileIterator(){
         return files.getIterator();
     }
 
+    public List<FileEntry> getFileList(){
+        return files.getFileList();
+    }
 
-    // by Nickz (Delete if wrong )
-        public List<Device> getAcceptedDevices() {
-        return acceptedDevices;
-        }
 
-    //
 
 
 }

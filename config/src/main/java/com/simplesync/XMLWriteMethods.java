@@ -6,12 +6,12 @@ import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.events.Characters;
 import javax.xml.stream.events.XMLEvent;
 
-abstract class XMLWriteMethods {
+public abstract class XMLWriteMethods {
     static XMLEventFactory eventFactory = XMLEventFactory.newInstance(); //
     static XMLEvent end = eventFactory.createDTD("\n");
     static XMLEvent tab = eventFactory.createDTD("\t");
 
-    static void createNode(XMLEventWriter eventWriter, String name,
+    public static void createNode(XMLEventWriter eventWriter, String name,
                             String value, int currentTabLevel) throws XMLStreamException {
         // create Start node
         createIndentation(eventWriter, currentTabLevel);
@@ -24,7 +24,7 @@ abstract class XMLWriteMethods {
         eventWriter.add(end);
     }
 
-    static void createIndentation(XMLEventWriter eventWriter, int currentTabLevel)
+    public static void createIndentation(XMLEventWriter eventWriter, int currentTabLevel)
             throws XMLStreamException{
         for (int i = 0; i < currentTabLevel; i++) {
             eventWriter.add(tab);

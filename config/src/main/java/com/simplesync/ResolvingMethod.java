@@ -8,12 +8,12 @@ public interface ResolvingMethod {
     /**
      * Represents value, that means, that local file should be picked
      */
-    static int LOCAL = 0;
+    int LOCAL = 0;
 
     /**
      * Represents value, that means, that foreign file should be picked
      */
-    static int FOREIGN = 1;
+    int FOREIGN = 1;
 
     /**
      * metodName is method that returns string which can be used to identify type of resolving method.

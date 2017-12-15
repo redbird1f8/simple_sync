@@ -1,5 +1,7 @@
-package com.simplesync;
+package com.simplesync.oldmanaging;
 
+import com.simplesync.ResolvingMethod;
+import com.simplesync.Rule;
 import com.simplesync.methods.ChooseLocal;
 
 /**

@@ -1,7 +1,8 @@
 package com.simplesync;
 
-import com.libsimsync.config.methods.ChooseForeign;
-import com.libsimsync.config.methods.ChooseLocal;
+
+import com.simplesync.methods.ChooseForeign;
+import com.simplesync.methods.ChooseLocal;
 
 // n
 public class ResolvingMethodFactory {

@@ -40,7 +40,7 @@ public class MainFrame extends JFrame {
 
 
         SyncPanel syncPanel = new SyncPanel(dimension, synchronizer);
-        settingsPanel = new SettingsPanel(this,500,200);
+        settingsPanel = new SettingsPanel(synchronizer,this,500,200);
 
         jTabbedPane.addTab("Главная",syncPanel); // заглушка
         jTabbedPane.addTab("Настройки",settingsPanel);

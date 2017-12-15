@@ -28,7 +28,7 @@ public class Main {
 
         ConfigManager.getConfigFromXML();
         Synchronizer synchronizer = new Synchronizer(ConfigManager.getPath());
-        Synchronizer second = new Synchronizer("C:\\Users\\Andrey\\Desktop\\Storage1");
+        Synchronizer second = new Synchronizer("/Users/Nickitakalinkin/Documents/ExceptStudy/KPO/FORTEST2");
         second.listen();
         //synchronizer.listen();
         //synchronizer.LoadFileInfo("./Inf");

@@ -20,7 +20,6 @@ import java.util.Enumeration;
 public class SyncPanel extends JPanel {
 
 
-
     Dimension panelDimension;
     InetAddress localIP;
 
@@ -47,14 +46,13 @@ public class SyncPanel extends JPanel {
         try {
 
             localIP = InetAddress.getLocalHost();
-            System.out.println(localIP.getHostName());
-
-            Enumeration<NetworkInterface> networkInterfaces = NetworkInterface.getNetworkInterfaces();
-            for (NetworkInterface neit : Collections.list(networkInterfaces)) {
-
-            }
 
 
+           // System.out.println("результат парсинга:");
+//            for (int b : parseForAndrew(localIP.getHostAddress())) {
+//
+//                System.out.println(b);
+//            }
 
 
         } catch (UnknownHostException e) {
@@ -65,7 +63,7 @@ public class SyncPanel extends JPanel {
 
 
         // myIP.setText("Ваш IP: " + localIP.getHostAddress());
-        myIP.setText("Ваш IP: " + localIP.getHostAddress() );
+        myIP.setText("Ваш IP: " + localIP.getHostAddress());
         myIP.setBounds(panelDimension.width / 2 - syncButton.getWidth() / 4, panelDimension.height - 50,
                 panelDimension.width, 10);
         // for delete
@@ -107,5 +105,19 @@ public class SyncPanel extends JPanel {
 
     }
 
+    public static int[] parseForAndrew(String ip) {
+        //System.out.println(ip);
+        String[] splittedIp = ip.split("[.]");
+        //for(String str : splittedIp) System.out.println(str);
 
-}
+        int[] bIp = new int[4];
+        for (int i = 0; i < 4; i++) {
+            //System.out.println(splittedIp[i]);
+            bIp[i] = Integer.parseInt(splittedIp[i]);
+        }
+            return bIp;
+        }
+
+
+    }
+

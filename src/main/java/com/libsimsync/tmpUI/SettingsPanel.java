@@ -3,6 +3,7 @@ package com.libsimsync.tmpUI;
 import com.libsimsync.config.nconf.SyncDevice;
 import com.libsimsync.managing.ConfigManager;
 import com.libsimsync.managing.TempDevice;
+import com.libsimsync.network.Synchronizer;
 
 import javax.swing.*;
 import java.awt.*;
@@ -47,11 +48,13 @@ public class SettingsPanel extends JComponent {
     JLabel pathLabel;
     JTextField pathField;
     File localDirectory = new File(ConfigManager.getSymShare().getRootPath());
+    Synchronizer synchronizer; // TODO переписать на нормальную реализацию
 
 //    private  static final int HEIGHT = 200;
 //    private  static final int WIDTH = 200;
-    SettingsPanel(JFrame frame,int width,int height) {
+    SettingsPanel(Synchronizer synchronizer,JFrame frame,int width,int height) {
 
+        this.synchronizer = synchronizer;
         setLayout(new BorderLayout());
         setPreferredSize(panelDimension);
 
@@ -214,6 +217,8 @@ public class SettingsPanel extends JComponent {
             @Override
             public void actionPerformed(ActionEvent e) {
                 ConfigManager.applyConfig();
+
+
             }
         });
 

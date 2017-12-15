@@ -7,14 +7,19 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.io.IOException;
-import java.net.InetAddress;
-import java.net.UnknownHostException;
+import java.net.*;
+import java.util.Collections;
+import java.util.Enumeration;
 
 /**
  * Created by Nickitakalinkin on 05.12.17.
  */
 public class SyncPanel extends JPanel {
+
+
 
     Dimension panelDimension;
     InetAddress localIP;
@@ -40,15 +45,48 @@ public class SyncPanel extends JPanel {
 
 
         try {
+
             localIP = InetAddress.getLocalHost();
+            System.out.println(localIP.getHostName());
+
+            Enumeration<NetworkInterface> networkInterfaces = NetworkInterface.getNetworkInterfaces();
+            for (NetworkInterface neit : Collections.list(networkInterfaces)) {
+
+            }
+
+
+
+
         } catch (UnknownHostException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
 
-        myIP.setText("Ваш IP: " + localIP.getHostAddress());
+        // myIP.setText("Ваш IP: " + localIP.getHostAddress());
+        myIP.setText("Ваш IP: " + localIP.getHostAddress() );
         myIP.setBounds(panelDimension.width / 2 - syncButton.getWidth() / 4, panelDimension.height - 50,
                 panelDimension.width, 10);
+        // for delete
+//        myIP.addMouseListener(new MouseAdapter() {
+//            @Override
+//            public void mouseClicked(MouseEvent e) {
+//                super.mouseClicked(e);
+//                JDialog ipDialog = new JDialog();
+//                try {
+//                    InetAddress localIPs = InetAddress.getAllByName("host");
+//                    localIPs.;
+//
+//                    DefaultListModel listModel = new DefaultListModel();
+//                    for()
+//
+//                    JList jList = new JList();
+//                } catch (UnknownHostException e1) {
+//                    e1.printStackTrace();
+//                }
+//            }
+//        });
 
         workingPanel.add(myIP);
 

@@ -33,8 +33,8 @@ public class MainFrame extends JFrame {
 
         this.setLayout(new BorderLayout()); // temp
 
-        setBackground(Color.cyan);
-        setName(name);
+//        setBackground(Color.cyan);
+//        setName(name);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
 

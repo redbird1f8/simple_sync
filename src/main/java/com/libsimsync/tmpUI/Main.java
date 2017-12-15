@@ -3,6 +3,7 @@ package com.libsimsync.tmpUI;
 import com.libsimsync.config.nconf.SyncDevice;
 import com.libsimsync.config.nconf.XMLSymShareWriter;
 import com.libsimsync.managing.ConfigManager;
+import com.libsimsync.managing.LocalNetworkInformation;
 import com.libsimsync.network.Synchronizer;
 
 import javax.swing.*;
@@ -15,14 +16,8 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) {
 
-//
-//        try {
-//            XMLSymShareWriter.write(ConfigManager.getSymShare());
-//        } catch (XMLStreamException e) {
-//            e.printStackTrace();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+
+        LocalNetworkInformation.getNetworkinformation();
 
         ConfigManager.getConfigFromXML();
         Synchronizer synchronizer = new Synchronizer(ConfigManager.getPath());

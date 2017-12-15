@@ -71,7 +71,7 @@ public class ConfigManager {
             e.printStackTrace();
         }
     }
-
+    
     public static boolean containsDevice(SyncDevice deviceForVerification) {
         for (SyncDevice device : symShare.getDevices())
             if (device.isEqual(deviceForVerification))  return true;

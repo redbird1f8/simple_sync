@@ -143,7 +143,7 @@ public class SettingsPanel extends JComponent {
 //        }
 //        centerPanel.add(devicesBox, BorderLayout.CENTER);
 
-        JLabel jCountOfDevices = new JLabel("Всего устройств: " + ConfigManager.getDeviceCount());
+        JLabel jCountOfDevices = new JLabel("Всего устройств в списке: " + ConfigManager.getDeviceCount());
         jCountOfDevices.setBorder(BorderFactory.createEtchedBorder()); // Todo 5
         centerPanel.add(jCountOfDevices,BorderLayout.CENTER);
 

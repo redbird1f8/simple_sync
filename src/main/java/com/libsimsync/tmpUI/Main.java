@@ -26,8 +26,10 @@ public class Main {
 
         ConfigManager.getConfigFromXML();
         Synchronizer synchronizer = new Synchronizer(ConfigManager.getPath());
-        synchronizer.listen();
-        synchronizer.LoadFileInfo("./Inf");
+        Synchronizer second = new Synchronizer("/Users/Nickitakalinkin/Documents/ExceptStudy/KPO/FORTEST2");
+        second.listen();
+        //synchronizer.listen();
+        //synchronizer.LoadFileInfo("./Inf");
 
         for (SyncDevice device : ConfigManager.getSymShare().getDevices())
             synchronizer.connect(device.getIpAddress());
@@ -40,5 +42,11 @@ public class Main {
                     new MainFrame("SyncManager",synchronizer);
                 }
             });
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new MainFrame("SyncManager2",second);
+            }
+        });
     }
 }

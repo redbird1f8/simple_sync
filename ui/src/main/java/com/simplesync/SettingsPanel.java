@@ -187,7 +187,7 @@ public class SettingsPanel extends JComponent {
                 Object[] options = {"Да","Нет"};
                 int n = JOptionPane.showOptionDialog(thisPanel,"Вы действительно хотите очистить список устройств?",
                         "Confirm",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE,
-                        new ImageIcon("./Pictures/ir06.png"),options,options[0]);
+                        new ImageIcon(ClassLoader.getSystemResource("ir06.png")),options,options[0]);
                 if(n == 0)  {
                     ConfigManager.deleteAllDevices();
                     jCountOfDevices.setText("Всего устройств: " + ConfigManager.getDeviceCount());

@@ -23,10 +23,12 @@ public class PeerManager implements PathRouter{
     PeerManagerEventAdapter peerManagerEventAdapter = new PeerManagerEventAdapter();
     private String rootDirectory;
     private PeerManagerHandler peerManagerHandler;
+    private PathRouter pathRouter;
     Peer peer;
+
     public  PeerManager(){
         peer = new Peer();
-        peer.setPathRouter(this);
+        peer.setPathRouter(pathRouter);
         peer.addListener(peerManagerEventAdapter);
     }
 
@@ -37,7 +39,6 @@ public class PeerManager implements PathRouter{
     public void connect(String host){ peer.connect(host,61020);}
     @Override
     public String getAbsolutePath(UUID ShareID, String relativePath) {
-        System.out.println(relativePath);
         return rootDirectory + relativePath;//relativePath;
     }
 
@@ -47,8 +48,12 @@ public class PeerManager implements PathRouter{
     public void setPeerManagerHandler(PeerManagerHandler peerManagerHandler) {
         this.peerManagerHandler = peerManagerHandler;
     }
-    public void setRootDirectory(String rootDirectory) {
+    /*public void setRootDirectory(String rootDirectory) {
         this.rootDirectory = rootDirectory;
+    }*/
+    public void setPathRouter(PathRouter pathRouter){
+        this.pathRouter = pathRouter;
+        peer.setPathRouter(pathRouter);
     }
     public void shutDown(){
         peer.shutDown();
@@ -68,12 +73,5 @@ public class PeerManager implements PathRouter{
         peer.sendCommand(21,fileInfos);
     }
 
-    public void deleteFile(FileInfo file, UUID shareID){
-        File f = new File(getAbsolutePath(null,file.relPath));
-        System.err.println("delete");
-        f.delete();
-
-
-    }
 
 }

@@ -1,134 +1,85 @@
 package com.libsimsync.managing;
 
-import com.libsimsync.config.*;
-import io.netty.util.NettyRuntime;
+import com.libsimsync.config.nconf.SymShare;
+import com.libsimsync.config.nconf.SyncDevice;
+import com.libsimsync.config.nconf.XMLSymShareReader;
+import com.libsimsync.config.nconf.XMLSymShareWriter;
 
 import javax.xml.stream.XMLStreamException;
+import java.io.File;
 import java.io.IOException;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.ArrayList;
 
 /**
- * Created by Nickitakalinkin on 17.11.17.
- * Класс является чем-то похожим на Фасад, скрывающим сложность подсистемы работы с Config.
- *
- * Rule rule, Device device, LinkedList<Share> shareList - объекты, от которых
- * зависит состояние config наданный момент
- *
+ * Created by Nickitakalinkin on 11.12.17.
  */
-// есть вопрос по конструкторам
- public class ConfigManager {
- // will be changed (поддразумевалось существование одного config)
-    // Обращение  планируется посредством объекта
-    // Static - временная версия
-    // все это - костыли
-    // хотя вышло забавно
-    // Возможно, я создал свой антипаттерн (надеюсь его назовут в мою честь)
+public class ConfigManager {
 
+    private static volatile SymShare symShare = new SymShare(); //возможно будет нормальный Синглтон
+    private boolean dirChoosen;
 
-     private static Rule rule ;
-     private static Device device;
-     private static List<Share> shareList; // LinkedList?
-
-    /**
-     * Инициализация значением из XML (если такового нет, то стандартным значением)
-     */
-//    static {
-//       getConfig();
-//    }
-
-    /**
-     * Метод устанавливает правила синхронизации файлов.
-     *
-     * @param resolvingMethod  метод разрешения коллизий(локальные/внешние файлы)
-     * @param priority  приоритет в синхронизации
-     */
-    public static void setRule(ResolvingMethod resolvingMethod, boolean priority ) {
-         rule = RuleManager.createRule(resolvingMethod,priority);
-    } // need more setRule (for God "setRule")
-
-    /**
-     * Метод устанавливает правила синхронизации файлов.
-     * Использует стандартное значение для ResolvingMethod (метод разрешения коллизий)
-     * @param priority  приоритет в синхронизации
-     */
-    public static void setRule(boolean priority) { // use Local
-        rule  = RuleManager.setPriority(priority);
+    public static SymShare getSymShare() {
+        return symShare;
     }
 
-    /**
-     * Установить имя для текущего устройства
-     *
-     * @param name - имя устройства
-     */
-    public static void setDeviceName(String name) {
-        device = DeviceManager.setDevice(name);
+    public static int getDeviceCount() {
+        return symShare.getDevices().size();
     }
 
-    /**
-     * Пока метод не готов
-     * @param name самому интересно
-     */
-    public static void setShareList(String name) { // ?
-        shareList = ShareManager.getShareList(name); // пока не работает
+    public static String getPath() {
+        return symShare.getRootPath();
     }
 
-    /**
-     * Подтверждение конфига.
-     * Запись конфига в xml файл.
-     * (То, что происходит при нажатии кнопки "Принять")
-     */
-    public static void applyConfig() { // apply config
-        CommonConfigXMLWriter commonConfigXMLWriter = new CommonConfigXMLWriter();
-        CommonConfig config = createConfig(); // использует текущее состояние
-
+    public static void getConfigFromXML() {
+        //XMLSymShareReader xmlSymShareReader = new XMLSymShareReader();
+        //SymShare symShare = new SymShare(); //тут можно дефолтный путь
         try {
-            commonConfigXMLWriter.write(config);
+            symShare = XMLSymShareReader.read();
+        } catch (IOException e) {
+            setDefaultConfig();
+            applyConfig();
+            // getConfigFromXML();
+            //e.printStackTrace();
+        } catch (XMLStreamException e) {
+            e.printStackTrace();
+        }
+        //return symShare;
+    }
 
+    public static void setDefaultConfig() {
+        symShare.setRootPath(System.getProperty("user.dir") + "/DefaultDirectory");
+    }
+
+    public static void changeDirectory(String path) {
+        symShare.setRootPath(path);
+    }
+
+    public static void addDevice(String name, String ipAddress) {
+        symShare.addDevice(new SyncDevice(name, ipAddress));
+    }
+
+    public static void deleteAllDevices() {
+        symShare.getDevices().clear();
+    }
+
+    public static void applyConfig() {
+        try {
+            XMLSymShareWriter.write(symShare);
         } catch (XMLStreamException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    
+    public static boolean containsDevice(SyncDevice deviceForVerification) {
+        for (SyncDevice device : symShare.getDevices())
+            if (device.isEqual(deviceForVerification))  return true;
+
+        return false;
+
 
     }
-
-    /**
-     * Получение  сonfig из xml файла
-     * Если получение невозможно, то вернется стандартное занчение
-     * (Возможно изменить модификатор доступа)
-     * @return config - настройки из xml
-     */
-     static CommonConfig getConfig() { // default value = old value // was private (but why? What wrong with me)
-        CommonConfigXMLReader commonConfigXMLReader = new CommonConfigXMLReader();
-
-        CommonConfig config = new CommonConfig("My device"); // need default config
-
-        try {
-            config = commonConfigXMLReader.read();
-        } catch ( XMLStreamException streamException) {
-            System.err.println(streamException.getMessage()); // TODO: убрать в релизе
-        } catch (IOException e) {
-            System.err.println(e.getMessage()); // TODO: убрать в релизе
-        }
-        rule = config.getRules();
-        device = config.thisDevice();
-        shareList = config.getShareList();
-        return config;
-    }
-
-    /**
-     *  Метод создает config, основываясь на текущем состоянии полей класса ConfigManager(rule,device,shareList).
-     *  Это позволяет изменять эти поля, подразумевая автоматическое изменение(получение) обЪекта класса CommonConfig.
-     *
-     * @return объект класса CommonConfig
-     */
-    private static CommonConfig createConfig() {//(Rule rule, Device device, LinkedList<Share> shareList) { //List
-        CommonConfig commonConfig = new CommonConfig(rule,device,shareList);
-
-        return commonConfig;
-    }
-
 
 
 }

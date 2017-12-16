@@ -217,8 +217,11 @@ public class SettingsPanel extends JComponent {
             @Override
             public void actionPerformed(ActionEvent e) {
                 ConfigManager.applyConfig();
-
-
+                //synchronizer.setRoot(ConfigManager.getPath()); //TODO: раскоментить в релизе
+                for(SyncDevice device : ConfigManager.getSymShare().getDevices()) {
+                    System.out.println(device);
+                    synchronizer.connect(device.getIpAddress());
+                }
             }
         });
 

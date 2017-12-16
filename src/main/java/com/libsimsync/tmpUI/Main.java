@@ -20,6 +20,7 @@ public class Main {
 
 
         LocalNetworkInformation.getNetworkinformation();
+        ConfigManager.setDefaultConfig();
 
         ConfigManager.getConfigFromXML();
         Synchronizer synchronizer = new Synchronizer(ConfigManager.getPath());

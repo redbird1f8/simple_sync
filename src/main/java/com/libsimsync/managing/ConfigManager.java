@@ -47,7 +47,11 @@ public class ConfigManager {
     }
 
     public static void setDefaultConfig() {
-        symShare.setRootPath(System.getProperty("user.dir") + "/DefaultDirectory");
+        String path = System.getProperty("user.dir") + "/DefaultDirectory";
+        File dir = new File(path);
+        if(!dir.exists()) dir.mkdirs();
+
+        symShare.setRootPath(path);
     }
 
     public static void changeDirectory(String path) {

@@ -105,18 +105,18 @@ public class SyncPanel extends JPanel {
 
     }
 
-    public static int[] parseForAndrew(String ip) {
-        //System.out.println(ip);
-        String[] splittedIp = ip.split("[.]");
-        //for(String str : splittedIp) System.out.println(str);
-
-        int[] bIp = new int[4];
-        for (int i = 0; i < 4; i++) {
-            //System.out.println(splittedIp[i]);
-            bIp[i] = Integer.parseInt(splittedIp[i]);
-        }
-            return bIp;
-        }
+//    public static int[] parseForAndrew(String ip) {
+//        //System.out.println(ip);
+//        String[] splittedIp = ip.split("[.]");
+//        //for(String str : splittedIp) System.out.println(str);
+//
+//        int[] bIp = new int[4];
+//        for (int i = 0; i < 4; i++) {
+//            //System.out.println(splittedIp[i]);
+//            bIp[i] = Integer.parseInt(splittedIp[i]);
+//        }
+//            return bIp;
+//        }
 
 
     }

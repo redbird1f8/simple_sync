@@ -1,6 +1,7 @@
-package com.simplesync;
+package com.libsimsync.tmpUI;
 
-import com.simplesync.nconf.SyncDevice;
+import com.libsimsync.config.nconf.SyncDevice;
+import com.libsimsync.managing.ConfigManager;
 
 import javax.swing.*;
 import java.awt.*;

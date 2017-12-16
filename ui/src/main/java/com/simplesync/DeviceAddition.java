@@ -1,4 +1,4 @@
-package com.simplesync;
+package com.libsimsync.tmpUI;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;

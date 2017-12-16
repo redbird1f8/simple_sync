@@ -1,10 +1,17 @@
-package com.simplesync;
+package com.libsimsync.tmpUI;
+
+import com.libsimsync.config.nconf.SyncDevice;
+import com.libsimsync.managing.ConfigManager;
+import com.libsimsync.managing.TempDevice;
+import com.libsimsync.network.Synchronizer;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.util.*;
+import java.util.List;
 
 /**
  * Created by Nickitakalinkin on 04.12.17.
@@ -41,11 +48,13 @@ public class SettingsPanel extends JComponent {
     JLabel pathLabel;
     JTextField pathField;
     File localDirectory = new File(ConfigManager.getSymShare().getRootPath());
+    Synchronizer synchronizer; // TODO переписать на нормальную реализацию
 
 //    private  static final int HEIGHT = 200;
 //    private  static final int WIDTH = 200;
-    SettingsPanel(JFrame frame,int width,int height) {
+    SettingsPanel(Synchronizer synchronizer,JFrame frame,int width,int height) {
 
+        this.synchronizer = synchronizer;
         setLayout(new BorderLayout());
         setPreferredSize(panelDimension);
 
@@ -137,7 +146,7 @@ public class SettingsPanel extends JComponent {
 //        }
 //        centerPanel.add(devicesBox, BorderLayout.CENTER);
 
-        JLabel jCountOfDevices = new JLabel("Всего устройств: " + ConfigManager.getDeviceCount());
+        JLabel jCountOfDevices = new JLabel("Всего устройств в списке: " + ConfigManager.getDeviceCount());
         jCountOfDevices.setBorder(BorderFactory.createEtchedBorder()); // Todo 5
         centerPanel.add(jCountOfDevices,BorderLayout.CENTER);
 
@@ -187,7 +196,7 @@ public class SettingsPanel extends JComponent {
                 Object[] options = {"Да","Нет"};
                 int n = JOptionPane.showOptionDialog(thisPanel,"Вы действительно хотите очистить список устройств?",
                         "Confirm",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE,
-                        new ImageIcon(ClassLoader.getSystemResource("ir06.png")),options,options[0]);
+                        new ImageIcon("./Pictures/ir06.png"),options,options[0]);
                 if(n == 0)  {
                     ConfigManager.deleteAllDevices();
                     jCountOfDevices.setText("Всего устройств: " + ConfigManager.getDeviceCount());
@@ -208,6 +217,11 @@ public class SettingsPanel extends JComponent {
             @Override
             public void actionPerformed(ActionEvent e) {
                 ConfigManager.applyConfig();
+                //synchronizer.setRoot(ConfigManager.getPath()); //TODO: раскоментить в релизе
+                for(SyncDevice device : ConfigManager.getSymShare().getDevices()) {
+                    System.out.println(device);
+                    synchronizer.connect(device.getIpAddress());
+                }
             }
         });
 

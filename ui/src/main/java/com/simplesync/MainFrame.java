@@ -1,5 +1,6 @@
-package com.simplesync;
+package com.libsimsync.tmpUI;
 
+import com.libsimsync.network.Synchronizer;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,7 +15,7 @@ public class MainFrame extends JFrame {
     JTabbedPane jTabbedPane;
 
     SettingsPanel settingsPanel;
-    Dimension dimension = new Dimension(500, 200);
+    Dimension dimension = new Dimension(500,200);
 
     Synchronizer synchronizer;
 
@@ -22,7 +23,7 @@ public class MainFrame extends JFrame {
 
     public MainFrame(String name, Synchronizer synchronizer) {
 
-        image = new ImageIcon(ClassLoader.getSystemResource("ic05r.png"));
+        image = new ImageIcon("./Pictures/ic05r.png");
         setTitle("Sync");
         setIconImage(image.getImage());
 
@@ -32,19 +33,22 @@ public class MainFrame extends JFrame {
 
         this.setLayout(new BorderLayout()); // temp
 
-        setBackground(Color.cyan);
-        setName(name);
+//        setBackground(Color.cyan);
+//        setName(name);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
 
-        SyncPanel syncPanel = new SyncPanel(dimension, synchronizer);
-        settingsPanel = new SettingsPanel(this, 500, 200);
 
-        jTabbedPane.addTab("Главная", syncPanel); // заглушка
-        jTabbedPane.addTab("Настройки", settingsPanel);
+        SyncPanel syncPanel = new SyncPanel(dimension, synchronizer);
+        settingsPanel = new SettingsPanel(synchronizer,this,500,200);
+
+        jTabbedPane.addTab("Главная",syncPanel); // заглушка
+        jTabbedPane.addTab("Настройки",settingsPanel);
 
         add(jTabbedPane);
         //add(settingsPanel,BorderLayout.CENTER);
+
+
 
 
         addWindowListener(new WindowAdapter() {
@@ -61,6 +65,7 @@ public class MainFrame extends JFrame {
         setLocationRelativeTo(null);
         setResizable(false);
         setVisible(true);
+
 
 
     }

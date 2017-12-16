@@ -1,4 +1,4 @@
-package com.simplesync;
+package com.libsimsync.tmpUI;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

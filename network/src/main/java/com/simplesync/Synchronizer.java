@@ -68,6 +68,7 @@ public class Synchronizer implements PeerManagerHandler {
      */
     @Override
     public void FileInfoRequested(RemotePeer remotePeer) {
+        System.err.println(" FileInfoArrived");
         try {
             StartInfoUpdate(new File(root), "", null);
         } catch (IOException e) {
@@ -143,7 +144,25 @@ public class Synchronizer implements PeerManagerHandler {
             e.printStackTrace();
         }
         lastFileInfo = FileInfoMerge(lastFileInfo, fileInfos, remotePeer);
-
+        /*try {
+            StartInfoUpdate(new File(root), "", null);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        FileInfo f;
+        for (FileInfo i : fileInfos) {
+            i.origin = remotePeer;
+            if (lastFileInfo.containsKey(i.relPath)) {
+                f = lastFileInfo.get(i.relPath);
+                if (i.isDeleted || f.isDeleted || f.lastModifiedDate < i.lastModifiedDate) {
+                    f.origin = i.origin;
+                    f.lastModifiedDate = i.lastModifiedDate;
+                    f.isDeleted = i.isDeleted;
+                }
+            } else {
+                lastFileInfo.put(i.relPath, i);
+            }
+        }*/
         for (NetworkFileInfo i : lastFileInfo.values()) {
             try {
                 if (i.origin != null) {
@@ -162,11 +181,9 @@ public class Synchronizer implements PeerManagerHandler {
 
     }
 
-    public HashMap<String, NetworkFileInfo> FileInfoMerge(HashMap<String, NetworkFileInfo> currentState,
-                                                          LinkedList<NetworkFileInfo> newInfo,
-                                                          RemotePeer origin) {
-
+    public HashMap<String, NetworkFileInfo> FileInfoMerge(HashMap<String, NetworkFileInfo> currentState, LinkedList<NetworkFileInfo> newInfo, RemotePeer origin) {
         HashMap<String, NetworkFileInfo> ret = new HashMap<>(currentState);
+
         NetworkFileInfo f;
         for (NetworkFileInfo i : newInfo) {
             i.origin = origin;
@@ -183,7 +200,6 @@ public class Synchronizer implements PeerManagerHandler {
         }
         return ret;
     }
-
 
     /**
      * Возможно, звучит слишком пафосно, но все таки, походу уже

@@ -204,7 +204,7 @@ public class RemotePeer {
     public OutboundConnectionHandler dataOutHandler = new OutboundConnectionHandler(2);
     public RemotePeer(NioSocketChannel commandChannel){
         this.commandChannel = commandChannel;
-        this.host = commandChannel.remoteAddress().getAddress().toString();
+        this.host = commandChannel.remoteAddress().getAddress().toString().substring(1);
         this.port = commandChannel.remoteAddress().getPort();
 //        System.err.println(port);
         NetworkEvents = new NetworkEventProducer();

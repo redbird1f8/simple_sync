@@ -29,15 +29,5 @@
             <artifactId>config</artifactId>
             <version>1.0.0</version>
         </dependency>
-        <dependency>
-            <groupId>com.simplesync</groupId>
-            <artifactId>config</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.simplesync</groupId>
-            <artifactId>config</artifactId>
-            <version>1.0.0</version>
-        </dependency>
     </dependencies>
 </project>

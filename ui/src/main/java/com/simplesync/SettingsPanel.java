@@ -1,5 +1,7 @@
 package com.simplesync;
 
+import com.simplesync.nconf.SyncDevice;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -11,8 +13,8 @@ import java.io.File;
  */
 public class SettingsPanel extends JComponent {
 
-    Dimension buttonDimension = new Dimension(200,20);
-    Dimension panelDimension = new Dimension(500,200);
+    Dimension buttonDimension = new Dimension(200, 20);
+    Dimension panelDimension = new Dimension(500, 200);
 
     SettingsPanel thisPanel = this;
 
@@ -31,7 +33,6 @@ public class SettingsPanel extends JComponent {
     //
 
 
-
     JButton chooseLocalDirectory;
     JButton addDevice;
     JButton deleteAllDevices;
@@ -41,31 +42,31 @@ public class SettingsPanel extends JComponent {
     JLabel pathLabel;
     JTextField pathField;
     File localDirectory = new File(ConfigManager.getSymShare().getRootPath());
+    Synchronizer synchronizer; // TODO переписать на нормальную реализацию
 
-//    private  static final int HEIGHT = 200;
+    //    private  static final int HEIGHT = 200;
 //    private  static final int WIDTH = 200;
-    SettingsPanel(JFrame frame,int width,int height) {
+    SettingsPanel(Synchronizer synchronizer, JFrame frame, int width, int height) {
 
+        this.synchronizer = synchronizer;
         setLayout(new BorderLayout());
         setPreferredSize(panelDimension);
 
 
         JPanel westPanel = new JPanel();
         westPanel.setBorder(BorderFactory.createEmptyBorder()); // Todo 1
-        westPanel.setLayout(new GridLayout(5,1));
+        westPanel.setLayout(new GridLayout(5, 1));
         //westPanel.setLayout(new BorderLayout());
 
 
         JPanel centerPanel = new JPanel();
         centerPanel.setBorder(BorderFactory.createEmptyBorder()); // Todo 2
-        centerPanel.setLayout(new GridLayout(5,1));
+        centerPanel.setLayout(new GridLayout(5, 1));
 
         //centerPanel.setLayout(new BorderLayout());
         JScrollPane centerScrollPane = new JScrollPane(centerPanel);
 
         //centerScrollPane.setBorder(BorderFactory.createMatteBorder(0,20,0,0, centerPanel.getBackground())); //Todo 3
-
-
 
 
         // west panel
@@ -82,8 +83,6 @@ public class SettingsPanel extends JComponent {
         westPanel.add(addDevice);
 
 
-
-
         //delete all devices
         deleteAllDevices = new JButton("Очистить список устройств");
         deleteAllDevices.setPreferredSize(buttonDimension);
@@ -97,16 +96,10 @@ public class SettingsPanel extends JComponent {
         westPanel.add(applyConfig);
 
 
-
-        add(westPanel,BorderLayout.WEST);
-
-
-
-
+        add(westPanel, BorderLayout.WEST);
 
 
         // center panel (scroll)
-
 
 
         // chooseLocalDirectory Lablel
@@ -137,14 +130,12 @@ public class SettingsPanel extends JComponent {
 //        }
 //        centerPanel.add(devicesBox, BorderLayout.CENTER);
 
-        JLabel jCountOfDevices = new JLabel("Всего устройств: " + ConfigManager.getDeviceCount());
+        JLabel jCountOfDevices = new JLabel("Всего устройств в списке: " + ConfigManager.getDeviceCount());
         jCountOfDevices.setBorder(BorderFactory.createEtchedBorder()); // Todo 5
-        centerPanel.add(jCountOfDevices,BorderLayout.CENTER);
+        centerPanel.add(jCountOfDevices, BorderLayout.CENTER);
 
 
-
-        add(centerScrollPane,BorderLayout.CENTER);
-
+        add(centerScrollPane, BorderLayout.CENTER);
 
 
 //        this.add(pathLabel, BorderLayout.SOUTH);
@@ -156,7 +147,7 @@ public class SettingsPanel extends JComponent {
                 LocalDirectoryChooser localDirectoryChooser = new LocalDirectoryChooser();
                 localDirectory = localDirectoryChooser.getChoosenDirectory();
                 //System.out.println(localDirectory.getPath());
-                if(localDirectory != null) {
+                if (localDirectory != null) {
                     pathLabel.setText(localDirectory.getPath());
                     ConfigManager.changeDirectory(localDirectory.getPath()); // TODO заменил
                 }
@@ -168,7 +159,7 @@ public class SettingsPanel extends JComponent {
         addDevice.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new DeviceSettings(frame,jCountOfDevices);
+                new DeviceSettings(frame, jCountOfDevices);
 
                 System.out.println();
 
@@ -184,11 +175,11 @@ public class SettingsPanel extends JComponent {
             public void actionPerformed(ActionEvent e) {
 
 
-                Object[] options = {"Да","Нет"};
-                int n = JOptionPane.showOptionDialog(thisPanel,"Вы действительно хотите очистить список устройств?",
-                        "Confirm",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE,
-                        new ImageIcon(ClassLoader.getSystemResource("ir06.png")),options,options[0]);
-                if(n == 0)  {
+                Object[] options = {"Да", "Нет"};
+                int n = JOptionPane.showOptionDialog(thisPanel, "Вы действительно хотите очистить список устройств?",
+                        "Confirm", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE,
+                        new ImageIcon(ClassLoader.getSystemResource("ir06.png")), options, options[0]);
+                if (n == 0) {
                     ConfigManager.deleteAllDevices();
                     jCountOfDevices.setText("Всего устройств: " + ConfigManager.getDeviceCount());
                 }
@@ -201,13 +192,15 @@ public class SettingsPanel extends JComponent {
         });
 
 
-
-
-
         applyConfig.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 ConfigManager.applyConfig();
+                //synchronizer.setRoot(ConfigManager.getPath()); //TODO: раскоментить в релизе
+                for (SyncDevice device : ConfigManager.getSymShare().getDevices()) {
+                    System.out.println(device);
+                    synchronizer.connect(device.getIpAddress());
+                }
             }
         });
 

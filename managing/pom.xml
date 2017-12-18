@@ -24,11 +24,6 @@
             <artifactId>network</artifactId>
             <version>1.0.0</version>
         </dependency>
-        <dependency>
-            <groupId>com.simplesync</groupId>
-            <artifactId>network</artifactId>
-            <version>1.0.0</version>
-        </dependency>
     </dependencies>
 
 </project>

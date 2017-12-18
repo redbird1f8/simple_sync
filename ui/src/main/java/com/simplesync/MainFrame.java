@@ -22,6 +22,8 @@ public class MainFrame extends JFrame {
 
     public MainFrame(String name, Synchronizer synchronizer) {
 
+//        System.out.println(System.getProperty("user.dir"));
+
         image = new ImageIcon(ClassLoader.getSystemResource("ic05r.png"));
         setTitle("Sync");
         setIconImage(image.getImage());
@@ -32,13 +34,13 @@ public class MainFrame extends JFrame {
 
         this.setLayout(new BorderLayout()); // temp
 
-        setBackground(Color.cyan);
-        setName(name);
+//        setBackground(Color.cyan);
+//        setName(name);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
 
         SyncPanel syncPanel = new SyncPanel(dimension, synchronizer);
-        settingsPanel = new SettingsPanel(this, 500, 200);
+        settingsPanel = new SettingsPanel(synchronizer, this, 500, 200);
 
         jTabbedPane.addTab("Главная", syncPanel); // заглушка
         jTabbedPane.addTab("Настройки", settingsPanel);

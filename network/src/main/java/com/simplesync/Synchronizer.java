@@ -68,6 +68,7 @@ public class Synchronizer implements PeerManagerHandler {
      */
     @Override
     public void FileInfoRequested(RemotePeer remotePeer) {
+        System.err.println(" FileInfoArrived");
         try {
             StartInfoUpdate(new File(root), "", null);
         } catch (IOException e) {
@@ -142,14 +143,17 @@ public class Synchronizer implements PeerManagerHandler {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        //System.err.println("FileInfoArrived");
-        NetworkFileInfo f;
-        for (NetworkFileInfo i : fileInfos) {
+        lastFileInfo = FileInfoMerge(lastFileInfo, fileInfos, remotePeer);
+        /*try {
+            StartInfoUpdate(new File(root), "", null);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        FileInfo f;
+        for (FileInfo i : fileInfos) {
             i.origin = remotePeer;
-            //System.err.println(i.relPath);
             if (lastFileInfo.containsKey(i.relPath)) {
                 f = lastFileInfo.get(i.relPath);
-                //System.err.println(i.relPath +  "   " + (i.lastModifiedDate - f.lastModifiedDate) + "   " + f.isDeleted + "   " + i.isDeleted);
                 if (i.isDeleted || f.isDeleted || f.lastModifiedDate < i.lastModifiedDate) {
                     f.origin = i.origin;
                     f.lastModifiedDate = i.lastModifiedDate;
@@ -158,8 +162,7 @@ public class Synchronizer implements PeerManagerHandler {
             } else {
                 lastFileInfo.put(i.relPath, i);
             }
-        }
-        //System.err.println(lastFileInfo.size());
+        }*/
         for (NetworkFileInfo i : lastFileInfo.values()) {
             try {
                 if (i.origin != null) {
@@ -168,7 +171,7 @@ public class Synchronizer implements PeerManagerHandler {
                 }
 
 
-            } catch (IOException e) {
+            } catch (java.io.IOException e) {
 
             }
 
@@ -178,6 +181,25 @@ public class Synchronizer implements PeerManagerHandler {
 
     }
 
+    public HashMap<String, NetworkFileInfo> FileInfoMerge(HashMap<String, NetworkFileInfo> currentState, LinkedList<NetworkFileInfo> newInfo, RemotePeer origin) {
+        HashMap<String, NetworkFileInfo> ret = new HashMap<>(currentState);
+
+        NetworkFileInfo f;
+        for (NetworkFileInfo i : newInfo) {
+            i.origin = origin;
+            if (ret.containsKey(i.relPath)) {
+                f = ret.get(i.relPath);
+                if (i.isDeleted || f.isDeleted || f.lastModifiedDate < i.lastModifiedDate) {
+                    f.origin = i.origin;
+                    f.lastModifiedDate = i.lastModifiedDate;
+                    f.isDeleted = i.isDeleted;
+                }
+            } else {
+                ret.put(i.relPath, i);
+            }
+        }
+        return ret;
+    }
 
     /**
      * Возможно, звучит слишком пафосно, но все таки, походу уже

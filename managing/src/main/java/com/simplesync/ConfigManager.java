@@ -6,6 +6,7 @@ import com.simplesync.nconf.XMLSymShareReader;
 import com.simplesync.nconf.XMLSymShareWriter;
 
 import javax.xml.stream.XMLStreamException;
+import java.io.File;
 import java.io.IOException;
 
 /**
@@ -45,7 +46,11 @@ public class ConfigManager {
     }
 
     public static void setDefaultConfig() {
-        symShare.setRootPath(System.getProperty("user.dir") + "/DefaultDirectory");
+        String path = System.getProperty("user.dir") + "/DefaultDirectory";
+        File dir = new File(path);
+        if(!dir.exists()) dir.mkdirs();
+
+        symShare.setRootPath(path);
     }
 
     public static void changeDirectory(String path) {
@@ -69,7 +74,7 @@ public class ConfigManager {
             e.printStackTrace();
         }
     }
-
+    
     public static boolean containsDevice(SyncDevice deviceForVerification) {
         for (SyncDevice device : symShare.getDevices())
             if (device.isEqual(deviceForVerification)) return true;

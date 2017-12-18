@@ -10,25 +10,41 @@ import javax.swing.*;
 public class Main {
     public static void main(String[] args) {
 
-//
-//        try {
-//            XMLSymShareWriter.write(ConfigManager.getSymShare());
-//        } catch (XMLStreamException e) {
-//            e.printStackTrace();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+
+        LocalNetworkInformation.getNetworkinformation();
+        ConfigManager.setDefaultConfig();
 
         ConfigManager.getConfigFromXML();
+
         Synchronizer synchronizer = new Synchronizer(ConfigManager.getPath());
+
         synchronizer.listen();
        // synchronizer.LoadFileInfo("./Inf");
+
+//        Synchronizer second = new Synchronizer("/Users/Nickitakalinkin/Documents/ExceptStudy/KPO/FORTEST2");
+//        second.listen();
+        //synchronizer.listen();
+        //synchronizer.LoadFileInfo("./Inf");
+
 
         for (SyncDevice device : ConfigManager.getSymShare().getDevices())
             synchronizer.connect(device.getIpAddress());
 
         //if(ConfigManager.getSymShare() == null) ConfigManager.setDefaultConfig();
 
-        SwingUtilities.invokeLater(() -> new MainFrame("SyncManager", synchronizer));
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new MainFrame("SyncManager", synchronizer);
+            }
+        });
+//        SwingUtilities.invokeLater(new Runnable() {
+//            @Override
+//            public void run() {
+//                new MainFrame("SyncManager2", second);
+//            }
+//        });
+
+
     }
 }

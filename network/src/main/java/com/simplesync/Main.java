@@ -3,24 +3,24 @@ package com.simplesync;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-        class Main {
+class Main {
 
-            public static void main(String[] args) throws InterruptedException, FileNotFoundException, java.io.IOException {
+    public static void main(String[] args) throws InterruptedException, FileNotFoundException, java.io.IOException {
 
-                Synchronizer a = new Synchronizer("C:/Users/Andrey/Desktop/KPO - Copy/untitled/A");
-                Synchronizer b = new Synchronizer("C:/Users/Andrey/Desktop/KPO - Copy/untitled/B");
+        Synchronizer a = new Synchronizer("C:/Users/Andrey/Desktop/KPO - Copy/untitled/A");
+        Synchronizer b = new Synchronizer("C:/Users/Andrey/Desktop/KPO - Copy/untitled/B");
 
-                a.listen();
-                //a.LoadFileInfo("./AInfo");
-                b.connect("localhost");
-                Scanner in = new Scanner(System.in);
-                for(;;) {
-                    if(in.next().equals("exit")) break;
-                    b.sync();
-                }
+        a.listen();
+        //a.LoadFileInfo("./AInfo");
+        b.connect("localhost");
+        Scanner in = new Scanner(System.in);
+        for (; ; ) {
+            if (in.next().equals("exit")) break;
+            b.sync();
+        }
 
-                a.SaveFileInfo("./AInfo");
-                return;
+        a.SaveFileInfo("./AInfo");
+        return;
                 /*
                 Peer first =  new Peer();
                 Peer second = new Peer();
@@ -36,5 +36,5 @@ import java.util.Scanner;
                 first.request("./test.rar", null);
                 */
 
-            }
-        }
+    }
+}

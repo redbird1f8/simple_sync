@@ -53,7 +53,7 @@ public class Peer{
                 if(channelNumber == 1) {
 
                     for(int i = 0; i < connections.size(); i++){
-                        if(connections.get(i).host.toLowerCase().equals(ch.remoteAddress().getAddress().toString())){
+                        if(connections.get(i).host.toLowerCase().equals(ch.remoteAddress().getAddress().toString().substring(1))){
                             connections.get(i).setInputChannel((NioSocketChannel) ch);
                             //System.err.println(debugName + ": found it!");
                             p.addLast("handler",connections.get(i).dataInHandler);
@@ -63,7 +63,7 @@ public class Peer{
                 }
                 if(channelNumber == 2) {
                     for(int i = 0; i < connections.size(); i++){
-                        if(connections.get(i).host.toLowerCase().equals(ch.remoteAddress().getAddress().toString())){
+                        if(connections.get(i).host.toLowerCase().equals(ch.remoteAddress().getAddress().toString().substring(1))){
                             connections.get(i).setOutputChannel((NioSocketChannel)ch);
                             //System.err.println(debugName + ": found it!");
                             p.addLast("handler",connections.get(i).dataOutHandler);
@@ -142,7 +142,18 @@ public class Peer{
         }
 } //for debug only
     public void connect(String host, int port){
-        RemotePeer rp = new RemotePeer(host, port);
+        String[] strs = host.split("\\.");
+
+        String trueHost = "" + Integer.parseInt(strs[0]);
+        for(int i = 1; i < strs.length; i++){
+            trueHost += "." + Integer.parseInt(strs[i]);
+        }
+        System.err.println(trueHost + "\n\n");
+        for(RemotePeer rp : connections){
+            System.err.println(rp.host);
+            if(trueHost.equals(rp.host))return;
+        }
+        RemotePeer rp = new RemotePeer(trueHost, port);
         rp.AddListener(peerEventAdapter);
         rp.connect();
     }

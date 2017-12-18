@@ -11,9 +11,9 @@ public class Main {
     public static void main(String[] args) {
 
         try {
-
+           System.out.print(System.getProperty("os.name"));
            // UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-            if(System.getProperty("os.name").equals("Windows"))
+            if(!System.getProperty("os.name").equals("Mac OS X"))
                 UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
 
         } catch (ClassNotFoundException e) {

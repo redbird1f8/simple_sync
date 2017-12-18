@@ -31,6 +31,16 @@
         </dependency>
 
     </dependencies>
+    
+   ы
+    <dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-all</artifactId>
+        <version>1.9.5</version>
+        <scope>test</scope>
+    </dependency>
+    
+
 
     <build>
         <plugins>

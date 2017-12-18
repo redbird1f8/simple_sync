@@ -7,7 +7,7 @@ import javax.swing.*;
 /**
  * Created by Nickitakalinkin on 05.12.17.
  */
-public class Main {
+public class App {
     public static void main(String[] args) {
 
         try {

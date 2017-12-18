@@ -60,7 +60,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>com.simplesync.Main</mainClass>
+                            <mainClass>com.simplesync.App</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

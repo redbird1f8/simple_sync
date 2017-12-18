@@ -12,8 +12,9 @@ public class Main {
 
         try {
 
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-            //UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
+           // UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+            if(System.getProperty("os.name").equals("Windows"))
+                UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
 
         } catch (ClassNotFoundException e) {
             e.printStackTrace();

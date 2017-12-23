@@ -1,1 +1,6 @@
 .vs/
+.idea/
+*.iml
+target/
+out/
+idea/
